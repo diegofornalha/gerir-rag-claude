@@ -1,17 +1,23 @@
 {
   "documents": [
     {
-      "id": "doc_cb2ac1cc",
-      "content": "Arquivo: /Users/agents/.claude/projects/-Users-agents--claude/cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
-      "path": "/Users/agents/.claude/projects/-Users-agents--claude/cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
-      "created": "2025-05-20T02:50:30.250525"
+      "id": "doc_afa4d560",
+      "content": "Arquivo JSONL: afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "path": "/Users/agents/.claude/projects/-Users-agents--claude/afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "created": "2025-05-20T03:15:30.207985"
     },
     {
-      "id": "doc_afa4d560",
-      "content": "Arquivo: /Users/agents/.claude/projects/-Users-agents--claude/afa4d560-57d5-4a29-8598-586978109939.jsonl",
-      "path": "/Users/agents/.claude/projects/-Users-agents--claude/afa4d560-57d5-4a29-8598-586978109939.jsonl",
-      "created": "2025-05-20T02:50:30.250525"
+      "id": "doc_cb2ac1cc",
+      "content": "Arquivo JSONL: cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "path": "/Users/agents/.claude/projects/-Users-agents--claude/cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "created": "2025-05-20T03:15:30.208230"
+    },
+    {
+      "id": "doc_b5e69835",
+      "content": "Arquivo JSONL: b5e69835-8aa3-4238-809e-b43cf4058e94.jsonl",
+      "path": "/Users/agents/.claude/projects/-Users-agents--claude/b5e69835-8aa3-4238-809e-b43cf4058e94.jsonl",
+      "created": "2025-05-20T03:15:30.208692"
     }
   ],
-  "lastUpdated": "2025-05-20T03:09:36.216229"
+  "lastUpdated": "2025-05-20T03:15:30.208694"
 }
