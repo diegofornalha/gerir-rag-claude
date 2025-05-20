@@ -1,0 +1,41 @@
+{
+  "documents": [
+    {
+      "id": "doc_cb2ac1cc",
+      "content": "Arquivo: /Users/agents/.claude/projects/-Users-agents--claude/cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "path": "/Users/agents/.claude/projects/-Users-agents--claude/cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "created": "2025-05-20T02:50:30.250525"
+    },
+    {
+      "id": "doc_afa4d560",
+      "content": "Arquivo: /Users/agents/.claude/projects/-Users-agents--claude/afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "path": "/Users/agents/.claude/projects/-Users-agents--claude/afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "created": "2025-05-20T02:50:30.250525"
+    },
+    {
+      "id": "doc_1747720473740",
+      "content": "LightRAG (Retrieval Augmented Generation) é um sistema leve de recuperação e geração de informações para o Claude. Ele permite armazenar documentos em uma base de conhecimento e recuperá-los com base em consultas de texto. O LightRAG usa um algoritmo de relevância para encontrar os documentos mais adequados para responder a uma consulta específica, melhorando assim a precisão das respostas do Claude com conhecimento contextual.",
+      "source": "manual",
+      "created": "2025-05-20T02:54:33.740545"
+    },
+    {
+      "id": "doc_1747720539538",
+      "content": "Documento doc_cb2ac1cc: \"Histórico MCP - Verificação de Status\" - Registro de conversação Claude sobre listagem de entidades MCP e verificação de status do servidor. Contém comandos de diagnóstico para visualizar o estado dos serviços conectados.",
+      "source": "manual",
+      "created": "2025-05-20T02:55:39.538042"
+    },
+    {
+      "id": "doc_1747720547123",
+      "content": "Documento doc_afa4d560: \"Histórico LightRAG - Depuração e Otimização\" - Histórico de conversação com Claude sobre depuração e otimização do serviço LightRAG. Inclui comandos e mensagens relacionadas à identificação e resolução de problemas no sistema de RAG.",
+      "source": "manual",
+      "created": "2025-05-20T02:55:47.123779"
+    },
+    {
+      "id": "doc_1747720554277",
+      "content": "Documento doc_1747720473740: \"Documentação LightRAG\" - Descrição técnica do sistema LightRAG (Retrieval Augmented Generation), explicando seu funcionamento e benefícios para recuperação de informações contextuais para o Claude.",
+      "source": "manual",
+      "created": "2025-05-20T02:55:54.277841"
+    }
+  ],
+  "lastUpdated": "2025-05-20T02:55:54.277844"
+}

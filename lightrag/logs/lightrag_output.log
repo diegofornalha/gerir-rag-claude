@@ -1,0 +1,15 @@
+Configurações carregadas do arquivo local
+Base de conhecimento carregada com 1 documentos
+Salvamento automático configurado a cada 30 segundos
+======================================================
+LightRAG Servidor rodando em http://127.0.0.1:8020
+======================================================
+Diretório: /Users/agents/.claude/lightrag
+Database: /Users/agents/.claude/lightrag/lightrag_db.json
+Documentos: 1
+Endpoints disponíveis:
+  - GET  /status  - Verifica o status do servidor
+  - POST /query   - Consulta a base de conhecimento
+  - POST /insert  - Adiciona conteúdo à base
+  - POST /clear   - Limpa a base de conhecimento
+======================================================

@@ -1,0 +1,1 @@
+/Users/agents/.claude/lightrag/start_lightrag_service.sh
