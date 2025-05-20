@@ -31,3 +31,16 @@ Base de conhecimento carregada com 6 documentos
 127.0.0.1 - - [20/May/2025 03:06:28] "GET /status HTTP/1.1" 200 -
 127.0.0.1 - - [20/May/2025 03:07:37] "GET /status HTTP/1.1" 200 -
 127.0.0.1 - - [20/May/2025 03:07:38] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:10] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:16] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:16] "POST /delete HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:16] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:21] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:22] "POST /delete HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:22] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:27] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:27] "POST /delete HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:28] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:34] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:36] "POST /delete HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2025 03:09:36] "GET /status HTTP/1.1" 200 -
