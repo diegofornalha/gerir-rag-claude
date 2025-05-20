@@ -3,11 +3,13 @@
 
 """
 Script para carregar automaticamente arquivos JSONL do diretório projects no LightRAG
+Usa a API HTTP para interagir com o servidor LightRAG
 """
 
 import os
 import json
-import requests
+import urllib.request
+import urllib.parse
 import glob
 import sys
 import datetime
@@ -16,46 +18,80 @@ import re
 # Configuração
 LIGHTRAG_URL = "http://127.0.0.1:5000"
 PROJECTS_DIR = "/Users/agents/.claude/projects/-Users-agents--claude"
-DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lightrag_db.json')
 
-def load_knowledge_base():
-    if os.path.exists(DB_FILE):
-        try:
-            with open(DB_FILE, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Erro ao carregar base de conhecimento: {e}")
-            return {"documents": [], "lastUpdated": datetime.datetime.now().isoformat()}
-    return {"documents": [], "lastUpdated": datetime.datetime.now().isoformat()}
-
-def save_knowledge_base(kb):
+def check_server():
+    """Verifica se o servidor LightRAG está ativo"""
     try:
-        with open(DB_FILE, 'w', encoding='utf-8') as f:
-            json.dump(kb, f, indent=2, ensure_ascii=False)
-        return True
+        with urllib.request.urlopen(f"{LIGHTRAG_URL}/status") as response:
+            if response.getcode() == 200:
+                data = json.loads(response.read().decode('utf-8'))
+                print(f"✅ LightRAG está rodando. Documentos: {data.get('documents', 0)}")
+                return True
+            else:
+                print("❌ LightRAG respondeu com erro.")
+                return False
     except Exception as e:
-        print(f"Erro ao salvar base de conhecimento: {e}")
+        print(f"❌ Erro ao conectar ao LightRAG: {e}")
         return False
 
+def get_existing_documents():
+    """Recupera os documentos já existentes na base"""
+    try:
+        # Fazer uma consulta vazia para obter todos os documentos
+        data = json.dumps({"query": "*"}).encode('utf-8')
+        req = urllib.request.Request(
+            f"{LIGHTRAG_URL}/query",
+            data=data,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        
+        with urllib.request.urlopen(req) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            contexts = result.get('context', [])
+            return [ctx.get('document_id') for ctx in contexts]
+    except Exception as e:
+        print(f"Erro ao recuperar documentos existentes: {e}")
+        return []
+
+def insert_document(text, summary, source="file_loader"):
+    """Insere um documento no LightRAG"""
+    data = {
+        "text": text,
+        "summary": summary,
+        "source": source
+    }
+    
+    try:
+        encoded_data = json.dumps(data).encode('utf-8')
+        req = urllib.request.Request(
+            f"{LIGHTRAG_URL}/insert",
+            data=encoded_data,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        
+        with urllib.request.urlopen(req) as response:
+            return json.loads(response.read().decode('utf-8'))
+    except Exception as e:
+        print(f"Erro ao inserir documento: {e}")
+        return {"success": False, "error": str(e)}
+
 def read_jsonl_summary(file_path):
-    """Lê as primeiras linhas do arquivo JSONL para extrair um resumo"""
+    """Lê o início do arquivo JSONL para extrair um resumo"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            # Ler as primeiras 5 linhas
-            lines = []
-            for i, line in enumerate(f):
-                if i >= 5:
-                    break
+            # Ler a primeira linha para verificar se tem um objeto summary
+            first_line = f.readline().strip()
+            if first_line.startswith('{'):
                 try:
-                    data = json.loads(line.strip())
-                    # Extrair os primeiros 100 caracteres do texto da mensagem, se existir
-                    if 'text' in data and isinstance(data['text'], str):
-                        lines.append(data['text'][:100] + ('...' if len(data['text']) > 100 else ''))
+                    data = json.loads(first_line)
+                    if 'summary' in data:
+                        return f"Arquivo JSONL: {os.path.basename(file_path)} - {data['summary']}"
                 except:
-                    continue
+                    pass
             
-            if lines:
-                return "\n".join(lines)
+            # Se não encontrou um summary, usar o nome do arquivo como identificação
             return f"Arquivo JSONL: {os.path.basename(file_path)}"
     except Exception as e:
         return f"Arquivo JSONL: {os.path.basename(file_path)} (Erro ao ler: {str(e)})"
@@ -65,72 +101,92 @@ def extract_short_id(file_path):
     # Obter o nome do arquivo sem a extensão
     filename = os.path.basename(file_path).split('.')[0]
     
-    # Extrair apenas a primeira parte do UUID (antes do primeiro hífen)
-    if '-' in filename:
-        short_id = filename.split('-')[0]
-    else:
-        # Se não tiver hífen, pegar os primeiros 8 caracteres
-        short_id = filename[:8]
+    # Usar o nome completo se for curto o suficiente
+    if len(filename) <= 8:
+        return filename
     
-    return short_id
+    # Caso contrário, extrair apenas o início do UUID
+    return filename.split('-')[0] if '-' in filename else filename[:8]
+
+def generate_file_description(file_path):
+    """Gera uma descrição útil para o arquivo"""
+    filename = os.path.basename(file_path)
+    file_id = extract_short_id(file_path)
+    
+    # Verificar se temos uma descrição específica para este arquivo
+    descriptions = {
+        "afa4d560": "LightRAG Optimization - Melhorias e Otimização",
+        "cb2ac1cc": "MCP Memory - Integração com Grafo de Conhecimento", 
+        "b5e69835": "LightRAG Setup - Configuração e Limpeza do Projeto"
+    }
+    
+    if file_id in descriptions:
+        return descriptions[file_id]
+    
+    # Descrição genérica
+    return f"Arquivo de histórico de conversação com Claude."
 
 def main():
-    # Verificar se o LightRAG está rodando
-    try:
-        response = requests.get(f"{LIGHTRAG_URL}/status", timeout=2)
-        if response.status_code != 200:
-            print("❌ LightRAG não está rodando. Inicie-o com ./compact start")
-            return
-    except Exception as e:
-        print(f"❌ Erro ao conectar ao LightRAG: {e}")
-        return
+    """Função principal"""
+    print("=== Carregador de Projetos Claude para LightRAG ===")
     
-    # Carregar a base de conhecimento atual
-    kb = load_knowledge_base()
+    # Verificar se o servidor está ativo
+    if not check_server():
+        print("Servidor LightRAG não está disponível. Execute ./start_lightrag.sh primeiro.")
+        sys.exit(1)
     
-    # Obter caminhos de arquivos já registrados
-    existing_paths = [doc.get("path", "") for doc in kb["documents"]]
+    # Verificar se o diretório de projetos existe
+    if not os.path.exists(PROJECTS_DIR):
+        print(f"Diretório de projetos não encontrado: {PROJECTS_DIR}")
+        sys.exit(1)
+    
+    # Recuperar documentos existentes
+    existing_docs = get_existing_documents()
+    print(f"Documentos existentes: {len(existing_docs)}")
     
     # Encontrar todos os arquivos JSONL
     jsonl_files = glob.glob(f"{PROJECTS_DIR}/*.jsonl")
+    print(f"Arquivos JSONL encontrados: {len(jsonl_files)}")
     
     if not jsonl_files:
         print(f"Nenhum arquivo JSONL encontrado em {PROJECTS_DIR}")
-        return
+        sys.exit(0)
     
-    new_files = 0
-    
-    # Adicionar arquivos que ainda não estão na base
+    # Processar cada arquivo
+    new_count = 0
     for file_path in jsonl_files:
-        if file_path not in existing_paths:
-            # Extrair ID curto do nome do arquivo
-            short_id = extract_short_id(file_path)
-            doc_id = f"doc_{short_id}"
-            
-            # Ler conteúdo do arquivo para extrair um resumo
-            summary = read_jsonl_summary(file_path)
-            
-            # Adicionar documento à base
-            kb["documents"].append({
-                "id": doc_id,
-                "content": summary,
-                "path": file_path,
-                "created": datetime.datetime.now().isoformat()
-            })
-            new_files += 1
-            print(f"✅ Adicionado: {file_path} (ID: {doc_id})")
+        file_id = extract_short_id(file_path)
+        doc_id = f"doc_{file_id}"
+        
+        # Verificar se este documento já está indexado
+        if doc_id in existing_docs:
+            print(f"⏩ Pulando arquivo já indexado: {os.path.basename(file_path)}")
+            continue
+        
+        # Ler informações do arquivo
+        content = f"Arquivo JSONL: {os.path.basename(file_path)}"
+        description = generate_file_description(file_path)
+        
+        # Inserir no LightRAG
+        print(f"📄 Indexando: {os.path.basename(file_path)}... ", end="")
+        result = insert_document(content, description, doc_id)
+        
+        if result.get("success", False):
+            print("✅")
+            new_count += 1
+        else:
+            print(f"❌ ({result.get('error')})")
     
-    # Atualizar timestamp
-    kb["lastUpdated"] = datetime.datetime.now().isoformat()
-    
-    # Salvar base de conhecimento
-    if save_knowledge_base(kb):
-        print(f"\n✅ Base de conhecimento atualizada com sucesso.")
-        print(f"   Arquivos existentes: {len(existing_paths)}")
-        print(f"   Novos arquivos: {new_files}")
-        print(f"   Total: {len(kb['documents'])}")
-    else:
-        print("❌ Erro ao salvar base de conhecimento")
+    # Resumo
+    print(f"\n=== Resumo da Indexação ===")
+    print(f"✅ Arquivos processados: {len(jsonl_files)}")
+    print(f"✅ Novos documentos adicionados: {new_count}")
+    print(f"✅ Documentos ignorados: {len(jsonl_files) - new_count}")
+    print(f"✅ Total de documentos na base: {len(existing_docs) + new_count}")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\nOperação interrompida pelo usuário.")
+        sys.exit(0)

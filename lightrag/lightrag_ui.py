@@ -105,6 +105,8 @@ with col2:
                             with st.expander(f"Documento {i+1} - Relevância: {ctx.get('relevance', 0):.2f}"):
                                 st.write(ctx.get("content", ""))
                                 st.caption(f"Fonte: {ctx.get('source', 'desconhecido')}")
+                                if "document_id" in ctx:
+                                    st.caption(f"ID: {ctx.get('document_id', '')}")
                     else:
                         st.info("Nenhum documento relevante encontrado.")
                 else:
@@ -136,9 +138,9 @@ with tab1:
                 
             docs_data.append({
                 "ID": doc.get("id", ""),
-                "Conteúdo": content,
-                "Fonte": doc.get("source", doc.get("path", "desconhecido")),
-                "Criado": doc.get("created", "")
+                "Resumo": doc.get("summary", "Arquivo de histórico de conversa"),
+                "Arquivo": content,
+                "Criado": doc.get("created", "").split("T")[0]
             })
         
         # Exibir tabela de documentos
@@ -154,8 +156,9 @@ with tab1:
             if doc:
                 col1, col2 = st.columns([4, 1])
                 with col1:
+                    st.subheader(doc.get("summary", "Documento"))
                     st.text_area("Conteúdo completo:", doc.get("content", ""), height=200)
-                    st.write(f"Fonte: {doc.get('source', doc.get('path', 'desconhecido'))}")
+                    st.write(f"Caminho: {doc.get('path', 'desconhecido')}")
                     st.write(f"Criado em: {doc.get('created', 'N/A')}")
                 with col2:
                     st.write("### Ações do documento")
@@ -173,6 +176,7 @@ with tab2:
     with st.form("insert_form"):
         doc_content = st.text_area("Conteúdo do documento:", height=200)
         doc_source = st.text_input("Fonte:", "manual")
+        doc_summary = st.text_input("Resumo do documento:", "Nota manual")
         
         submitted = st.form_submit_button("Inserir Documento")
         if submitted:
@@ -180,7 +184,7 @@ with tab2:
                 try:
                     response = requests.post(
                         f"{LIGHTRAG_URL}/insert", 
-                        json={"text": doc_content, "source": doc_source},
+                        json={"text": doc_content, "source": doc_source, "summary": doc_summary},
                         timeout=5
                     )
                     if response.status_code == 200:

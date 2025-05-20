@@ -125,7 +125,8 @@ def query():
                 response["context"] = [
                     {
                         "content": doc["doc"]["content"],
-                        "source": doc["doc"].get("id", "documento"),
+                        "source": doc["doc"].get("source", "desconhecido"),
+                        "document_id": doc["doc"].get("id", "doc_desconhecido"),
                         "relevance": doc["relevance"]
                     } for doc in top_docs
                 ]
@@ -150,6 +151,7 @@ def insert():
         data = request.json
         text = data.get('text', '')
         source = data.get('source', 'manual')
+        summary = data.get('summary', 'Documento manual')
         
         if not text:
             return jsonify({
@@ -163,6 +165,7 @@ def insert():
             "id": doc_id,
             "content": text,
             "source": source,
+            "summary": summary,
             "created": datetime.datetime.now().isoformat()
         })
         
