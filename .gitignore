@@ -13,3 +13,6 @@ lightrag/backups/*.bak.*
 lightrag/logs/*.log
 lightrag/ui/__pycache__/
 *.pyc
+
+lightrag/*.pid
+
