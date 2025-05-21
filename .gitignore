@@ -1,3 +1,6 @@
 /.env
 logs/lightrag_error.log
 logs/lightrag_flask_error.log
+logs/**/*.log
+lightrag/logs/**/*.log
+lightrag/logs/lightrag.log
