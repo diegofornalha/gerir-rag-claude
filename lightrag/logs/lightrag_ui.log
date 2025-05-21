@@ -13,3 +13,5 @@
 2025-05-21 00:23:09 [INFO] lightrag_ui: Nome personalizado salvo e verificado para documento doc_1747797504842: 'run streamlit'
 2025-05-21 00:23:13 [INFO] lightrag_ui: Banco de dados inicializado com sucesso
 2025-05-21 00:23:36 [INFO] lightrag_ui: Banco de dados inicializado com sucesso
+2025-05-21 00:42:42 [INFO] lightrag_ui: Solicitada exclusão do documento: doc_1747798929313
+2025-05-21 00:42:42 [INFO] lightrag_ui: Documento doc_1747798929313 excluído com sucesso!
