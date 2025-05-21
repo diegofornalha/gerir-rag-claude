@@ -5,3 +5,4 @@ logs/**/*.log
 lightrag/logs/**/*.log
 lightrag/logs/lightrag.log
 lightrag/lightrag_db.json.bak.*
+lightrag/.sync_timestamp
