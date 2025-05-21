@@ -23,7 +23,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Configuração
-LIGHTRAG_URL = "http://127.0.0.1:5000"
+LIGHTRAG_URL = "http://127.0.0.1:8020"
 BASE_PROJECTS_DIR = "/Users/agents/.claude/projects"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_DIR = os.path.join(SCRIPT_DIR, "logs")

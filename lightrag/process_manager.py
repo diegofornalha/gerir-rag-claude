@@ -70,12 +70,15 @@ LIGHTRAG_PROCESSES = {
 }
 
 # Processos antigos que devem ser encerrados se encontrados
+# NOTA: Para evitar conflitos com monitores válidos, os padrões legacy devem
+# ser mais específicos do que os padrões de processo em LIGHTRAG_PROCESSES.
+# A interface Streamlit foi removida da lista pois é parte da interface atual.
+# Somente versões legadas dos scripts de monitoramento rodam como scripts Python diretos.
 LEGACY_PATTERNS = [
-    'monitor_projects.py',
-    'improved_monitor.py',
-    'lightrag_ui.py',
-    'ui.py',
-    'ui/app.py'
+    # Padrões específicos para monitores legados executados como script Python diretamente
+    # Em vez dos módulos importados pelo unified_monitor
+    'python monitor_projects.py',
+    'python improved_monitor.py'
 ]
 
 def read_pid_file(pid_file):
@@ -261,8 +264,9 @@ def print_process_info(processes_info, verbose=False):
         if info['registered']:
             print(f"  ✅ Registrado (PID: {info['registered']})")
         else:
-            if os.path.exists(info.get('pid_file', '')):
-                print(f"  ❌ Arquivo PID existe mas processo não está rodando: {info['pid_file']}")
+            pid_file = info.get('pid_file')
+            if pid_file and os.path.exists(pid_file):
+                print(f"  ❌ Arquivo PID existe mas processo não está rodando: {pid_file}")
             else:
                 print(f"  ⚠️  Não registrado (arquivo PID não existe)")
         
@@ -387,11 +391,12 @@ def verify_system_integrity():
     # Verificar processos essenciais
     essential_processes = ['server', 'ui', 'monitor']
     for proc_type in essential_processes:
-        info = processes_info.get(proc_type, {})
-        if not info.get('running'):
-            issues.append(f"{LIGHTRAG_PROCESSES[proc_type]['service_name']} não está em execução")
-        elif len(info.get('running', [])) > 1:
-            issues.append(f"Múltiplas instâncias de {LIGHTRAG_PROCESSES[proc_type]['service_name']} em execução")
+        if proc_type in processes_info:
+            info = processes_info[proc_type]
+            if not info.get('running'):
+                issues.append(f"{LIGHTRAG_PROCESSES[proc_type]['service_name']} não está em execução")
+            elif len(info.get('running', [])) > 1:
+                issues.append(f"Múltiplas instâncias de {LIGHTRAG_PROCESSES[proc_type]['service_name']} em execução")
     
     # Verificar processos legados
     if 'legacy' in processes_info and processes_info['legacy']['running']:

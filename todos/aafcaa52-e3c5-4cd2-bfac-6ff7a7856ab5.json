@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Verificar arquivos novos na pasta projects",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Processar arquivos novos encontrados",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

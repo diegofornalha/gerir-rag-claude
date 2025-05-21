@@ -20,11 +20,17 @@ from utils.formatters import APIFormatter
 # Configurar logging
 logger = get_api_logger()
 
-# Inicializar aplicação Flask
-app = Flask(__name__)
-
 # Inicializar banco de dados
 db = LightRAGDatabase()
+
+# Função para criar aplicação Flask
+def create_app():
+    """Cria e configura a aplicação Flask"""
+    flask_app = Flask(__name__)
+    return flask_app
+
+# Inicializar aplicação Flask
+app = create_app()
 
 # Endpoint de status
 @app.route('/status', methods=['GET'])

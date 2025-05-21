@@ -16,7 +16,7 @@ import datetime
 import re
 
 # Configuração
-LIGHTRAG_URL = "http://127.0.0.1:5000"
+LIGHTRAG_URL = "http://127.0.0.1:8020"
 BASE_PROJECTS_DIR = "/Users/agents/.claude/projects"
 
 # Função para encontrar todos os diretórios de projetos automaticamente
