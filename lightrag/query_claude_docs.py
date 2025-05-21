@@ -9,7 +9,7 @@ carregada com o script rag_claude_docs.py.
 
 import json
 import argparse
-from claude import MCP
+from claude import MCP  # Model Context Protocol
 
 def format_response(response_data):
     """Formata a resposta do LightRAG para exibição."""
@@ -74,7 +74,7 @@ def main():
     except Exception as e:
         print(f"Erro ao consultar LightRAG: {e}")
         print("\nVerifique se:")
-        print("1. O serviço LightRAG MCP está em execução")
+        print("1. O serviço LightRAG Model Context Protocol (MCP) está em execução")
         print("2. A documentação foi previamente carregada com rag_claude_docs.py")
         print("3. O servidor LightRAG está configurado corretamente na porta 8020")
 

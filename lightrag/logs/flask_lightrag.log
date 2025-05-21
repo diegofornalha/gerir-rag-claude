@@ -1,8 +1,0 @@
-2025-05-20 21:52:58 [INFO] lightrag_api: Iniciando servidor LightRAG em http://127.0.0.1:5000
-2025-05-20 21:52:58 [INFO] lightrag_api: Base de conhecimento: /Users/agents/.claude/lightrag/lightrag_db.json (15 documentos)
-Base de conhecimento carregada com 15 documentos
- * Serving Flask app 'api.server'
- * Debug mode: on
-Address already in use
-Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
-On macOS, try disabling the 'AirPlay Receiver' service from System Preferences -> General -> AirDrop & Handoff.

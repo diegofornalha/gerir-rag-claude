@@ -12,6 +12,9 @@ import os
 import re
 import pandas as pd
 import time
+
+# Importar módulo de nomeação
+from ui.name_selection import select_document_with_naming
 from typing import Dict, List, Any, Optional
 
 # Importar componentes do LightRAG
@@ -79,12 +82,12 @@ class LightRAGUI:
     
     def load_memory_summary(self):
         """
-        Carrega o arquivo de resumo da integração com Memory MCP
+        Carrega o arquivo de resumo da integração com Memory Model Context Protocol (MCP)
         
         Retorna:
             str: Conteúdo do arquivo de resumo
         """
-        logger.debug("Carregando resumo da integração com Memory MCP")
+        logger.debug("Carregando resumo da integração com Memory Model Context Protocol (MCP)")
         if os.path.exists(MEMORY_SUMMARY_FILE):
             try:
                 with open(MEMORY_SUMMARY_FILE, 'r', encoding='utf-8') as f:
@@ -92,7 +95,7 @@ class LightRAGUI:
             except Exception as e:
                 logger.error(f"Erro ao carregar resumo da integração: {str(e)}")
                 return f"Erro ao carregar resumo da integração Memory: {str(e)}"
-        return "Resumo da integração com Memory MCP não encontrado."
+        return "Resumo da integração com Memory Model Context Protocol (MCP) não encontrado."
     
     def delete_document(self, doc_id):
         """
@@ -123,7 +126,7 @@ class LightRAGUI:
     
     def extract_entities(self, text):
         """
-        Extrai entidades mencionadas em um texto (menções a Memory MCP)
+        Extrai entidades mencionadas em um texto (menções a Memory Model Context Protocol (MCP))
         
         Args:
             text: Texto para análise
@@ -188,12 +191,15 @@ class LightRAGUI:
             df = pd.DataFrame(docs_data)
             st.dataframe(df, use_container_width=True)
             
-            # Visualizar documento completo
-            selected_doc_id = st.selectbox("Selecione um documento para visualizar:", 
-                                          [""] + [doc.get("id", "") for doc in documents])
+            # Visualizar documento completo usando widget de seleção com nomeação
+            selected_doc = select_document_with_naming(
+                documents,
+                label="Selecione um documento para visualizar:",
+                empty_option=True
+            )
             
-            if selected_doc_id:
-                doc = next((d for d in documents if d.get("id") == selected_doc_id), None)
+            if selected_doc:
+                doc = selected_doc
                 if doc:
                     with st.expander("Documento Detalhado", expanded=True):
                         col1, col2 = st.columns([3, 1])
@@ -447,8 +453,8 @@ class LightRAGUI:
             st.info("Nenhum documento encontrado para gerar estatísticas.")
     
     def render_memory_tab(self):
-        """Renderiza a aba de integração com Memory MCP"""
-        st.markdown("## Integração com Memory MCP")
+        """Renderiza a aba de integração com Memory Model Context Protocol (MCP)"""
+        st.markdown("## Integração com Memory Model Context Protocol (MCP)")
         
         # Carregar resumo da integração
         memory_summary = self.load_memory_summary()
@@ -472,7 +478,7 @@ class LightRAGUI:
                     st.markdown(f"### {entity}")
                     if entity == "LightRAG":
                         st.markdown("""
-                        **Tipo:** ServicoMCP
+                        **Tipo:** ServicoModelContextProtocol
                         
                         **Observações:**
                         - Sistema RAG simplificado
@@ -487,7 +493,7 @@ class LightRAGUI:
                         **Relações:**
                         - Utiliza LightRAG
                         """)
-                    elif entity == "IntegradorMCP":
+                    elif entity == "IntegradorModelContextProtocol":
                         st.markdown("""
                         **Tipo:** ServicoIntegrador
                         
@@ -512,13 +518,13 @@ class LightRAGUI:
         ```mermaid
         graph LR
             EcossistemaAgentes -- utiliza --> LightRAG
-            IntegradorMCP -- conectaCom --> LightRAG
+            IntegradorModelContextProtocol -- conectaCom --> LightRAG
             GerenciadorDeConhecimento -- utilizaRAG --> LightRAG
-            LightRAG -- complementa --> MemoryMCP
+            LightRAG -- complementa --> MemoryModelContextProtocol
             
             classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
             classDef principal fill:#d4f1f9,stroke:#0077b6,stroke-width:2px;
-            class LightRAG,MemoryMCP principal;
+            class LightRAG,MemoryModelContextProtocol principal;
         ```
         """)
     
@@ -526,7 +532,7 @@ class LightRAGUI:
         """Executa a aplicação Streamlit"""
         # Cabeçalho com logo e título
         st.title("🔍 LightRAG - Sistema de RAG")
-        st.caption("Retrieval Augmented Generation integrado com Memory MCP")
+        st.caption("Retrieval Augmented Generation integrado com Memory Model Context Protocol (MCP)")
         
         # Layout principal com abas
         tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
@@ -535,7 +541,7 @@ class LightRAGUI:
             "Projetos Claude",
             "Inserir", 
             "Estatísticas", 
-            "Integração MCP"
+            "Integração Model Context Protocol"
         ])
         
         # Renderizar conteúdo de cada aba
@@ -560,4 +566,4 @@ class LightRAGUI:
         # Rodapé
         st.markdown("---")
         st.caption("LightRAG - Sistema simplificado de RAG © 2025")
-        st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory MCP")
+        st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory Model Context Protocol (MCP)")

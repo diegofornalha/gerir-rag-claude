@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Código para executar rag_insert_file via MCP
+# Código para executar rag_insert_file via Model Context Protocol (MCP)
 import json
-from claude import MCP
+from claude import MCP  # Model Context Protocol
 
 # Conectar ao serviço lightrag
 lightrag_service = MCP.connect_to_service('lightrag')

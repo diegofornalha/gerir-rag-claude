@@ -15,6 +15,11 @@ from typing import Dict, List, Any, Optional, Union
 # Importar configurações centralizadas
 from core.settings import DB_FILE
 
+# Importar o gerador de IDs consistentes
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from fixed_id_generator import extract_uuid_from_filename, generate_consistent_id, register_document_name
+
 class LightRAGDatabase:
     """
     Gerenciador da base de conhecimento do LightRAG
@@ -110,6 +115,10 @@ class LightRAGDatabase:
         for doc in self.knowledge_base["documents"]:
             if doc.get("id") == doc_id:
                 return doc
+                
+            # Suporte para IDs legados no campo original_id
+            if doc.get("original_id") == doc_id:
+                return doc
         return None
     
     def get_document_by_hash(self, content_hash: str) -> Optional[Dict]:
@@ -154,15 +163,30 @@ class LightRAGDatabase:
         if not content:
             return {"success": False, "error": "Conteúdo vazio"}
         
-        # Gerar ID único baseado no timestamp
-        doc_id = f"doc_{int(datetime.datetime.now().timestamp() * 1000)}"
+        # Determinar o tipo de documento e gerar ID apropriado
+        doc_id = None
+        display_name = None
+        
+        # Verificar se é uma conversa Claude (para conversas JSONL)
+        if ".jsonl" in source or "Conversa Claude" in (summary or ""):
+            # Extrair UUID do nome do arquivo (source)
+            conv_id, name = generate_consistent_id(source)
+            doc_id = conv_id
+            display_name = name
+        else:
+            # Gerar ID baseado em timestamp para outros tipos de documento
+            doc_id = f"doc_{int(datetime.datetime.now().timestamp() * 1000)}"
+            display_name = summary or "Documento sem resumo"
+        
+        # Registrar nome amigável
+        register_document_name(doc_id, display_name)
         
         # Preparar o documento com metadados
         document = {
             "id": doc_id,
             "content": content,
             "source": source,
-            "summary": summary or "Documento sem resumo",
+            "summary": summary or display_name,
             "created": datetime.datetime.now().isoformat()
         }
         
@@ -182,7 +206,8 @@ class LightRAGDatabase:
             return {
                 "success": True,
                 "message": "Documento inserido com sucesso",
-                "documentId": doc_id
+                "documentId": doc_id,
+                "displayName": display_name
             }
         else:
             return {
@@ -205,7 +230,12 @@ class LightRAGDatabase:
         
         # Verificar se o documento existe
         original_count = len(self.knowledge_base["documents"])
-        documents_filtered = [doc for doc in self.knowledge_base["documents"] if doc.get("id") != doc_id]
+        
+        # Remover documentos com o ID especificado ou com original_id igual ao ID especificado
+        documents_filtered = [
+            doc for doc in self.knowledge_base["documents"] 
+            if doc.get("id") != doc_id and doc.get("original_id") != doc_id
+        ]
         
         if len(documents_filtered) == original_count:
             return {

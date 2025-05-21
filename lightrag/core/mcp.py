@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-LightRAG MCP Client
-Módulo unificado para integrar o LightRAG com o serviço MCP do Claude
+LightRAG Model Context Protocol (MCP) Client
+Módulo unificado para integrar o LightRAG com o serviço Model Context Protocol (MCP) do Claude
 """
 
 import hashlib
@@ -17,10 +17,10 @@ from utils.logger import get_core_logger
 # Configurar logger
 logger = get_core_logger()
 
-# Função para MCP do Claude
+# Função para Model Context Protocol (MCP) do Claude
 def rag_query(query, mode="hybrid", max_results=5):
     """
-    Função de consulta para uso via MCP
+    Função de consulta para uso via Model Context Protocol (MCP)
     
     Args:
         query: Texto da consulta
@@ -30,7 +30,7 @@ def rag_query(query, mode="hybrid", max_results=5):
     Retorna:
         Dict: Resultados da consulta
     """
-    logger.info(f"MCP: rag_query chamado com '{query}'")
+    logger.info(f"Model Context Protocol: rag_query chamado com '{query}'")
     
     # Garantir que o servidor esteja rodando
     if not ensure_server_running():
@@ -43,16 +43,16 @@ def rag_query(query, mode="hybrid", max_results=5):
     result = client.query(query, max_results, mode)
     
     if "error" not in result:
-        logger.info(f"MCP: consulta bem-sucedida com {len(result.get('context', []))} resultados")
+        logger.info(f"Model Context Protocol: consulta bem-sucedida com {len(result.get('context', []))} resultados")
     else:
-        logger.error(f"MCP: erro na consulta - {result.get('error')}")
+        logger.error(f"Model Context Protocol: erro na consulta - {result.get('error')}")
         
     return result
 
-# Função para MCP do Claude
+# Função para Model Context Protocol (MCP) do Claude
 def rag_insert_text(text, source="mcp", summary=None, metadata=None):
     """
-    Função de inserção para uso via MCP
+    Função de inserção para uso via Model Context Protocol (MCP)
     
     Args:
         text: Texto a ser inserido
@@ -63,7 +63,7 @@ def rag_insert_text(text, source="mcp", summary=None, metadata=None):
     Retorna:
         Dict: Resultado da operação
     """
-    logger.info(f"MCP: rag_insert_text chamado (fonte={source}, tamanho={len(text)})")
+    logger.info(f"Model Context Protocol: rag_insert_text chamado (fonte={source}, tamanho={len(text)})")
     
     # Garantir que o servidor esteja rodando
     if not ensure_server_running():
@@ -84,16 +84,16 @@ def rag_insert_text(text, source="mcp", summary=None, metadata=None):
     result = client.insert(text, summary, source, metadata)
     
     if result.get("success", False):
-        logger.info(f"MCP: texto inserido com ID {result.get('documentId')}")
+        logger.info(f"Model Context Protocol: texto inserido com ID {result.get('documentId')}")
     else:
-        logger.error(f"MCP: erro ao inserir texto - {result.get('error')}")
+        logger.error(f"Model Context Protocol: erro ao inserir texto - {result.get('error')}")
         
     return result
 
-# Função para MCP do Claude para inserção de arquivo
+# Função para Model Context Protocol (MCP) do Claude para inserção de arquivo
 def rag_insert_file(file_path, source="file", force=False, max_lines=500):
     """
-    Função de inserção de arquivo para uso via MCP
+    Função de inserção de arquivo para uso via Model Context Protocol (MCP)
     
     Args:
         file_path: Caminho do arquivo a ser inserido
@@ -104,7 +104,7 @@ def rag_insert_file(file_path, source="file", force=False, max_lines=500):
     Retorna:
         Dict: Resultado da operação
     """
-    logger.info(f"MCP: rag_insert_file chamado (arquivo={file_path})")
+    logger.info(f"Model Context Protocol: rag_insert_file chamado (arquivo={file_path})")
     
     # Verificar se o arquivo existe
     if not os.path.exists(file_path):
@@ -176,9 +176,9 @@ def rag_insert_file(file_path, source="file", force=False, max_lines=500):
         result = rag_insert_text(content, f"{source}:{file_name}", summary, metadata)
         
         if result.get("success", False):
-            logger.info(f"MCP: arquivo inserido com ID {result.get('documentId')}")
+            logger.info(f"Model Context Protocol: arquivo inserido com ID {result.get('documentId')}")
         else:
-            logger.error(f"MCP: erro ao inserir arquivo - {result.get('error')}")
+            logger.error(f"Model Context Protocol: erro ao inserir arquivo - {result.get('error')}")
             
         return result
         
@@ -187,30 +187,30 @@ def rag_insert_file(file_path, source="file", force=False, max_lines=500):
         logger.error(error_msg, exc_info=True)
         return {"success": False, "error": error_msg}
 
-# Função para MCP do Claude
+# Função para Model Context Protocol (MCP) do Claude
 def rag_status():
     """
-    Função de status para uso via MCP
+    Função de status para uso via Model Context Protocol (MCP)
     
     Retorna:
         Dict: Informações de status
     """
-    logger.info("MCP: rag_status chamado")
+    logger.info("Model Context Protocol: rag_status chamado")
     
     client = LightRAGClient()
     result = client.status()
     
     if result.get("status") == "online":
-        logger.info(f"MCP: status verificado - {result.get('documents', 0)} documentos")
+        logger.info(f"Model Context Protocol: status verificado - {result.get('documents', 0)} documentos")
     else:
-        logger.warning(f"MCP: servidor offline - {result.get('error', 'erro desconhecido')}")
+        logger.warning(f"Model Context Protocol: servidor offline - {result.get('error', 'erro desconhecido')}")
         
     return result
 
-# Função para MCP do Claude
+# Função para Model Context Protocol (MCP) do Claude
 def rag_clear(confirm=True):
     """
-    Função para limpar base para uso via MCP
+    Função para limpar base para uso via Model Context Protocol (MCP)
     
     Args:
         confirm: Confirmação explícita
@@ -218,7 +218,7 @@ def rag_clear(confirm=True):
     Retorna:
         Dict: Resultado da operação
     """
-    logger.info(f"MCP: rag_clear chamado (confirm={confirm})")
+    logger.info(f"Model Context Protocol: rag_clear chamado (confirm={confirm})")
     
     # Garantir que o servidor esteja rodando
     if not ensure_server_running():
@@ -227,18 +227,18 @@ def rag_clear(confirm=True):
         return {"success": False, "error": error_msg}
     
     if not confirm:
-        logger.warning("MCP: tentativa de limpeza sem confirmação")
+        logger.warning("Model Context Protocol: tentativa de limpeza sem confirmação")
         return {"success": False, "error": "Confirmação necessária para limpar a base"}
     
     client = LightRAGClient()
     result = client.clear(confirm)
     
     if result.get("success", False):
-        logger.info("MCP: base limpa com sucesso")
+        logger.info("Model Context Protocol: base limpa com sucesso")
         if "backup" in result:
-            logger.info(f"MCP: backup criado em {result['backup']}")
+            logger.info(f"Model Context Protocol: backup criado em {result['backup']}")
     else:
-        logger.error(f"MCP: erro ao limpar base - {result.get('error')}")
+        logger.error(f"Model Context Protocol: erro ao limpar base - {result.get('error')}")
         
     return result
 

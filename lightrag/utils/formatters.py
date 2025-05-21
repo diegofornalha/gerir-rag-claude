@@ -8,6 +8,12 @@ Módulo contendo formatadores de saída para diferentes interfaces
 
 from typing import Dict, List, Any, Optional, Union
 import textwrap
+import os
+
+# Importar o gerador de IDs consistentes
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from fixed_id_generator import get_document_name
 
 # Cores ANSI para formatação do terminal
 class Colors:
@@ -67,6 +73,9 @@ class CLIFormatter:
                 doc_id = ctx.get('document_id', 'doc_unknown')
                 content = ctx.get('content', '')
                 
+                # Obter nome amigável do documento
+                display_name = get_document_name(doc_id) or source
+                
                 # Determinar cor com base na relevância
                 if relevance >= 70:
                     rel_color = Colors.GREEN
@@ -76,7 +85,7 @@ class CLIFormatter:
                     rel_color = Colors.RED
                 
                 # Formatar cabeçalho do contexto
-                output.append(f"{Colors.BOLD}{i+1}. [{source}]{Colors.ENDC} " +
+                output.append(f"{Colors.BOLD}{i+1}. [{display_name}]{Colors.ENDC} " +
                              f"({rel_color}Relevância: {relevance:.0f}%{Colors.ENDC})")
                 
                 # Formatar conteúdo
@@ -102,10 +111,14 @@ class CLIFormatter:
     def format_insert_result(result: Dict) -> str:
         """Formata o resultado de uma inserção"""
         if result.get("success", False):
+            doc_id = result.get('documentId', 'desconhecido')
+            display_name = get_document_name(doc_id) or doc_id
+            
             output = [
                 f"{Colors.GREEN}=== Documento Inserido ===",
                 f"✓ Documento inserido com sucesso!",
-                f"✓ ID: {result.get('documentId', 'desconhecido')}{Colors.ENDC}"
+                f"✓ ID: {doc_id}",
+                f"✓ Nome: {display_name}{Colors.ENDC}"
             ]
         else:
             output = [
@@ -157,7 +170,7 @@ class CLIFormatter:
         banner = f"""
 {Colors.CYAN}╭───────────────────────────────────────────────╮
 │  {Colors.BOLD}LightRAG CLI{Colors.ENDC}{Colors.CYAN} - Retrieval Augmented Generation  │
-│  Versão 1.0.0                                 │
+│  Versão 1.1.0                                 │
 ╰───────────────────────────────────────────────╯{Colors.ENDC}
 """
         return banner
@@ -238,6 +251,13 @@ class APIFormatter:
         }
         
         if data:
+            # Se o documento tiver um ID, incluir também o nome amigável
+            if "documentId" in data:
+                doc_id = data["documentId"]
+                display_name = get_document_name(doc_id)
+                if display_name:
+                    data["displayName"] = display_name
+            
             response.update(data)
             
         return response
@@ -254,6 +274,14 @@ class APIFormatter:
         Retorna:
             Dict: Resposta formatada
         """
+        # Adicionar nomes amigáveis aos contextos
+        for ctx in contexts:
+            if "document_id" in ctx:
+                doc_id = ctx["document_id"]
+                display_name = get_document_name(doc_id)
+                if display_name:
+                    ctx["display_name"] = display_name
+        
         if contexts:
             response_message = f'Com base no conhecimento disponível, aqui está a resposta para: "{query}"'
         else:

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Código melhorado para executar rag_insert_file via MCP
+# Código melhorado para executar rag_insert_file via Model Context Protocol (MCP)
 # Inclui verificação avançada de documentos duplicados
 
 import json
 import argparse
 import sys
-from claude import MCP
+from claude import MCP  # Model Context Protocol
 
 def insert_file_to_lightrag(file_path, force=False, max_lines=100):
     """
