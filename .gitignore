@@ -4,3 +4,4 @@ logs/lightrag_flask_error.log
 logs/**/*.log
 lightrag/logs/**/*.log
 lightrag/logs/lightrag.log
+lightrag/lightrag_db.json.bak.*
