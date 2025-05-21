@@ -4,8 +4,7 @@
   Local URL: http://localhost:8501
   Network URL: http://192.168.1.21:8501
 
-  For better performance, install the Watchdog module:
-
-  $ xcode-select --install
-  $ pip install watchdog
-            
+2025-05-20 22:30:10 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting ',' delimiter: line 103 column 917198 (char 43077696)
+2025-05-20 22:33:27 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting ',' delimiter: line 313 column 4742016 (char 130840239)
+2025-05-20 22:33:28 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting value: line 236 column 18 (char 92650138)
+  Stopping...

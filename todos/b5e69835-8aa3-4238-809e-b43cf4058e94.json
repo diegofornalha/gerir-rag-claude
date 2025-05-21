@@ -1,26 +1,44 @@
 [
   {
-    "content": "Analisar o código do LightRAG para identificar código morto",
+    "content": "Elaborar plano para resolver definitivamente problema de duplicação",
     "status": "completed",
     "priority": "high",
     "id": "1"
   },
   {
-    "content": "Verificar a pasta bkp que parece conter versões anteriores",
+    "content": "Limpar completamente o sistema",
     "status": "completed",
-    "priority": "medium",
+    "priority": "high",
     "id": "2"
   },
   {
-    "content": "Verificar referências ao micro_lightrag.py vs nova arquitetura",
+    "content": "Criar novo sistema de gerenciamento com SQLite",
     "status": "completed",
-    "priority": "medium",
+    "priority": "high",
     "id": "3"
   },
   {
-    "content": "Compilar lista de código morto e arquivos obsoletos",
+    "content": "Implementar mecanismo de hash para identificar arquivos",
     "status": "completed",
     "priority": "high",
     "id": "4"
+  },
+  {
+    "content": "Criar canal de comunicação entre monitor e Streamlit",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Testar o novo sistema",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Criar documentação para o novo sistema",
+    "status": "pending",
+    "priority": "medium",
+    "id": "7"
   }
 ]

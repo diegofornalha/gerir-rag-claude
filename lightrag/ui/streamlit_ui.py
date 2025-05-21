@@ -18,6 +18,7 @@ from typing import Dict, List, Any, Optional
 from core.client import LightRAGClient, ensure_server_running
 from core.settings import DB_FILE, MEMORY_SUMMARY_FILE
 from utils.logger import get_ui_logger
+from ui.streamlit_integration import render_projects_tab
 
 # Configurar logger
 logger = get_ui_logger()
@@ -528,9 +529,10 @@ class LightRAGUI:
         st.caption("Retrieval Augmented Generation integrado com Memory MCP")
         
         # Layout principal com abas
-        tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
             "Documentos", 
             "Consulta", 
+            "Projetos Claude",
             "Inserir", 
             "Estatísticas", 
             "Integração MCP"
@@ -544,12 +546,15 @@ class LightRAGUI:
             self.render_query_tab()
             
         with tab3:
-            self.render_insert_tab()
+            render_projects_tab()
             
         with tab4:
-            self.render_stats_tab()
+            self.render_insert_tab()
             
         with tab5:
+            self.render_stats_tab()
+            
+        with tab6:
             self.render_memory_tab()
         
         # Rodapé
