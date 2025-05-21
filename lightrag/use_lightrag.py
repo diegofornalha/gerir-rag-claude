@@ -5,105 +5,11 @@
 Use LightRAG - Interface simples para usar o LightRAG
 """
 
-import json
-import urllib.request
-import urllib.parse
-import sys
-import os
 import argparse
+import sys
 
-class LightRAGClient:
-    def __init__(self, host="127.0.0.1", port=5000):
-        self.base_url = f"http://{host}:{port}"
-    
-    def status(self):
-        """Verificar status do servidor"""
-        try:
-            with urllib.request.urlopen(f"{self.base_url}/status") as response:
-                return json.loads(response.read().decode('utf-8'))
-        except Exception as e:
-            return {"status": "offline", "error": str(e)}
-    
-    def query(self, query_text, max_results=5):
-        """Consultar a base de conhecimento"""
-        data = {
-            "query": query_text,
-            "max_results": max_results
-        }
-        
-        try:
-            encoded_data = json.dumps(data).encode('utf-8')
-            req = urllib.request.Request(
-                f"{self.base_url}/query",
-                data=encoded_data,
-                headers={"Content-Type": "application/json"},
-                method="POST"
-            )
-            
-            with urllib.request.urlopen(req) as response:
-                return json.loads(response.read().decode('utf-8'))
-        except Exception as e:
-            return {"error": str(e), "context": [], "response": f"Erro: {str(e)}"}
-    
-    def insert(self, text, summary=None, source="command_line"):
-        """Inserir documento na base de conhecimento"""
-        data = {
-            "text": text,
-            "source": source
-        }
-        
-        if summary:
-            data["summary"] = summary
-        
-        try:
-            encoded_data = json.dumps(data).encode('utf-8')
-            req = urllib.request.Request(
-                f"{self.base_url}/insert",
-                data=encoded_data,
-                headers={"Content-Type": "application/json"},
-                method="POST"
-            )
-            
-            with urllib.request.urlopen(req) as response:
-                return json.loads(response.read().decode('utf-8'))
-        except Exception as e:
-            return {"success": False, "error": str(e)}
-    
-    def delete(self, doc_id):
-        """Remover documento da base de conhecimento"""
-        data = {"id": doc_id}
-        
-        try:
-            encoded_data = json.dumps(data).encode('utf-8')
-            req = urllib.request.Request(
-                f"{self.base_url}/delete",
-                data=encoded_data,
-                headers={"Content-Type": "application/json"},
-                method="POST"
-            )
-            
-            with urllib.request.urlopen(req) as response:
-                return json.loads(response.read().decode('utf-8'))
-        except Exception as e:
-            return {"success": False, "error": str(e)}
-    
-    def clear(self, confirm=True):
-        """Limpar toda a base de conhecimento"""
-        data = {"confirm": confirm}
-        
-        try:
-            encoded_data = json.dumps(data).encode('utf-8')
-            req = urllib.request.Request(
-                f"{self.base_url}/clear",
-                data=encoded_data,
-                headers={"Content-Type": "application/json"},
-                method="POST"
-            )
-            
-            with urllib.request.urlopen(req) as response:
-                return json.loads(response.read().decode('utf-8'))
-        except Exception as e:
-            return {"success": False, "error": str(e)}
+# Importar implementação do LightRAG na nova arquitetura
+from core.client import LightRAGClient, ensure_server_running
 
 # Funções de utilidade para exibir resultados no terminal
 def print_status(status):
@@ -132,7 +38,7 @@ def print_query_result(result):
             content = ctx.get('content', '')
             
             print(f"{i+1}. [{source}] (Relevância: {relevance:.2f})")
-            print(f"   {content}")
+            print(f"   {content[:150]}{'...' if len(content) > 150 else ''}")
             print()
     else:
         print("\nNenhum contexto relevante encontrado.")
@@ -162,6 +68,11 @@ def print_clear_result(result):
         print(f"✗ Falha ao limpar base de conhecimento: {result.get('error', 'Erro desconhecido')}")
 
 def main():
+    # Garantir que o servidor está rodando
+    if not ensure_server_running():
+        print("✗ Não foi possível garantir que o servidor LightRAG esteja rodando.")
+        sys.exit(1)
+    
     # Configurar argumentos da linha de comando
     parser = argparse.ArgumentParser(description="Interface para o LightRAG")
     subparsers = parser.add_subparsers(dest="command", help="Comandos disponíveis")
@@ -173,6 +84,8 @@ def main():
     query_parser = subparsers.add_parser("query", help="Consultar a base de conhecimento")
     query_parser.add_argument("text", help="Texto da consulta")
     query_parser.add_argument("--max", type=int, default=5, help="Número máximo de resultados")
+    query_parser.add_argument("--mode", choices=["hybrid", "semantic", "keyword"], 
+                              default="hybrid", help="Modo de busca")
     
     # Comando INSERT
     insert_parser = subparsers.add_parser("insert", help="Inserir documento na base de conhecimento")
@@ -188,6 +101,9 @@ def main():
     clear_parser = subparsers.add_parser("clear", help="Limpar toda a base de conhecimento")
     clear_parser.add_argument("--no-confirm", action="store_true", help="Não pedir confirmação")
     
+    # Comando DEMO
+    demo_parser = subparsers.add_parser("demo", help="Executa uma demonstração interativa")
+    
     # Analisar argumentos
     args = parser.parse_args()
     
@@ -200,7 +116,7 @@ def main():
         print_status(status)
     
     elif args.command == "query":
-        result = client.query(args.text, args.max)
+        result = client.query(args.text, args.max, args.mode)
         print_query_result(result)
     
     elif args.command == "insert":
@@ -223,8 +139,50 @@ def main():
             else:
                 print("Operação cancelada pelo usuário.")
     
+    elif args.command == "demo":
+        run_demo(client)
+    
     else:
         parser.print_help()
+
+def run_demo(client):
+    """Executa uma demonstração interativa do LightRAG"""
+    print("\n=== Demonstração do LightRAG ===")
+    
+    # Verificar status
+    print("\n1. Verificando status do servidor...")
+    status = client.status()
+    print_status(status)
+    
+    # Consultar algo existente
+    print("\n2. Realizando consulta de exemplo...")
+    result = client.query("O que é LightRAG?", 2)
+    print_query_result(result)
+    
+    # Inserir novo documento
+    print("\n3. Inserindo documento de exemplo...")
+    insert_text = (
+        "LightRAG é um sistema modular de RAG (Retrieval Augmented Generation) "
+        "que permite armazenar e recuperar conhecimento para uso com Claude."
+    )
+    insert_result = client.insert(
+        insert_text,
+        summary="Descrição do LightRAG",
+        source="demo"
+    )
+    print_insert_result(insert_result)
+    
+    # Consulta novamente
+    print("\n4. Consultando novamente...")
+    result = client.query("O que é LightRAG?", 2)
+    print_query_result(result)
+    
+    # Mostrar documentos na base
+    print("\n5. Estado atual da base de conhecimento:")
+    status = client.status()
+    print_status(status)
+    
+    print("\nDemonstração concluída!")
 
 if __name__ == "__main__":
     try:

@@ -1,0 +1,2 @@
+2025-05-20 21:52:58 [INFO] lightrag_api: Iniciando servidor LightRAG em http://127.0.0.1:5000
+2025-05-20 21:52:58 [INFO] lightrag_api: Base de conhecimento: /Users/agents/.claude/lightrag/lightrag_db.json (15 documentos)

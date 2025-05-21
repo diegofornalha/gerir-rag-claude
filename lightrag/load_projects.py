@@ -17,7 +17,41 @@ import re
 
 # Configuração
 LIGHTRAG_URL = "http://127.0.0.1:5000"
-PROJECTS_DIR = "/Users/agents/.claude/projects/-Users-agents--claude"
+BASE_PROJECTS_DIR = "/Users/agents/.claude/projects"
+
+# Função para encontrar todos os diretórios de projetos automaticamente
+def find_project_dirs():
+    """Encontra automaticamente todos os diretórios de projetos"""
+    project_dirs = []
+    
+    # Verificar se o diretório base existe
+    if not os.path.exists(BASE_PROJECTS_DIR):
+        return project_dirs
+    
+    # Adicionar diretórios específicos que sabemos que existem
+    known_dirs = [
+        "/Users/agents/.claude/projects/-Users-agents--claude",
+        "/Users/agents/.claude/projects/-Users-agents--claude-projects"
+    ]
+    
+    for dir_path in known_dirs:
+        if os.path.exists(dir_path):
+            project_dirs.append(dir_path)
+    
+    # Procurar por outros diretórios potenciais
+    try:
+        # Listar todos os itens no diretório base
+        for item in os.listdir(BASE_PROJECTS_DIR):
+            full_path = os.path.join(BASE_PROJECTS_DIR, item)
+            # Verificar se é um diretório e não está na lista de diretórios conhecidos
+            if os.path.isdir(full_path) and full_path not in project_dirs:
+                # Verificar se tem arquivos JSONL
+                if glob.glob(f"{full_path}/*.jsonl"):
+                    project_dirs.append(full_path)
+    except Exception as e:
+        print(f"Erro ao procurar diretórios de projetos: {e}")
+    
+    return project_dirs
 
 def check_server():
     """Verifica se o servidor LightRAG está ativo"""
@@ -135,26 +169,43 @@ def main():
         print("Servidor LightRAG não está disponível. Execute ./start_lightrag.sh primeiro.")
         sys.exit(1)
     
-    # Verificar se o diretório de projetos existe
-    if not os.path.exists(PROJECTS_DIR):
-        print(f"Diretório de projetos não encontrado: {PROJECTS_DIR}")
-        sys.exit(1)
-    
     # Recuperar documentos existentes
     existing_docs = get_existing_documents()
     print(f"Documentos existentes: {len(existing_docs)}")
     
-    # Encontrar todos os arquivos JSONL
-    jsonl_files = glob.glob(f"{PROJECTS_DIR}/*.jsonl")
-    print(f"Arquivos JSONL encontrados: {len(jsonl_files)}")
+    # Descobrir diretórios de projetos
+    project_dirs = find_project_dirs()
+    print(f"Encontrados {len(project_dirs)} diretórios de projetos")
     
-    if not jsonl_files:
-        print(f"Nenhum arquivo JSONL encontrado em {PROJECTS_DIR}")
+    # Lista para armazenar todos os arquivos JSONL encontrados
+    all_jsonl_files = []
+    
+    # Verificar cada diretório de projetos
+    for projects_dir in project_dirs:
+        if os.path.exists(projects_dir):
+            # Encontrar arquivos JSONL neste diretório
+            jsonl_files = glob.glob(f"{projects_dir}/*.jsonl")
+            
+            # Procurar também em subdiretórios (um nível abaixo)
+            for subdir in glob.glob(f"{projects_dir}/*/"):
+                jsonl_files.extend(glob.glob(f"{subdir}/*.jsonl"))
+            
+            print(f"Diretório: {projects_dir}")
+            print(f"  Arquivos JSONL encontrados: {len(jsonl_files)}")
+            all_jsonl_files.extend(jsonl_files)
+        else:
+            print(f"Diretório não encontrado: {projects_dir}")
+    
+    # Verificar se algum arquivo foi encontrado
+    if not all_jsonl_files:
+        print("Nenhum arquivo JSONL encontrado em qualquer diretório de projetos.")
         sys.exit(0)
+    
+    print(f"Total de arquivos JSONL encontrados: {len(all_jsonl_files)}")
     
     # Processar cada arquivo
     new_count = 0
-    for file_path in jsonl_files:
+    for file_path in all_jsonl_files:
         file_id = extract_short_id(file_path)
         doc_id = f"doc_{file_id}"
         
@@ -179,9 +230,9 @@ def main():
     
     # Resumo
     print(f"\n=== Resumo da Indexação ===")
-    print(f"✅ Arquivos processados: {len(jsonl_files)}")
+    print(f"✅ Arquivos processados: {len(all_jsonl_files)}")
     print(f"✅ Novos documentos adicionados: {new_count}")
-    print(f"✅ Documentos ignorados: {len(jsonl_files) - new_count}")
+    print(f"✅ Documentos ignorados: {len(all_jsonl_files) - new_count}")
     print(f"✅ Total de documentos na base: {len(existing_docs) + new_count}")
 
 if __name__ == "__main__":

@@ -20,7 +20,91 @@
       "source": "doc_b5e69835",
       "summary": "LightRAG Setup - Configuração e Limpeza do Projeto",
       "created": "2025-05-20T03:27:21.538157"
+    },
+    {
+      "id": "doc_1747786456856",
+      "content": "Arquivo JSONL: afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "source": "doc_afa4d560",
+      "summary": "LightRAG Optimization - Melhorias e Otimização",
+      "created": "2025-05-20T21:14:16.856451"
+    },
+    {
+      "id": "doc_1747786456857",
+      "content": "Arquivo JSONL: cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "source": "doc_cb2ac1cc",
+      "summary": "MCP Memory - Integração com Grafo de Conhecimento",
+      "created": "2025-05-20T21:14:16.857190"
+    },
+    {
+      "id": "doc_1747786456857",
+      "content": "Arquivo JSONL: b5e69835-8aa3-4238-809e-b43cf4058e94.jsonl",
+      "source": "doc_b5e69835",
+      "summary": "LightRAG Setup - Configuração e Limpeza do Projeto",
+      "created": "2025-05-20T21:14:16.857709"
+    },
+    {
+      "id": "doc_1747786456858",
+      "content": "Arquivo JSONL: fed1acd7-4438-4843-804a-72b493c94238.jsonl",
+      "source": "doc_fed1acd7",
+      "summary": "Arquivo de histórico de conversação com Claude.",
+      "created": "2025-05-20T21:14:16.858518"
+    },
+    {
+      "id": "doc_1747786468217",
+      "content": "Arquivo JSONL: afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "source": "doc_afa4d560",
+      "summary": "LightRAG Optimization - Melhorias e Otimização",
+      "created": "2025-05-20T21:14:28.217180"
+    },
+    {
+      "id": "doc_1747786468217",
+      "content": "Arquivo JSONL: cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "source": "doc_cb2ac1cc",
+      "summary": "MCP Memory - Integração com Grafo de Conhecimento",
+      "created": "2025-05-20T21:14:28.217844"
+    },
+    {
+      "id": "doc_1747786468218",
+      "content": "Arquivo JSONL: b5e69835-8aa3-4238-809e-b43cf4058e94.jsonl",
+      "source": "doc_b5e69835",
+      "summary": "LightRAG Setup - Configuração e Limpeza do Projeto",
+      "created": "2025-05-20T21:14:28.218426"
+    },
+    {
+      "id": "doc_1747786468218",
+      "content": "Arquivo JSONL: fed1acd7-4438-4843-804a-72b493c94238.jsonl",
+      "source": "doc_fed1acd7",
+      "summary": "Arquivo de histórico de conversação com Claude.",
+      "created": "2025-05-20T21:14:28.218978"
+    },
+    {
+      "id": "doc_1747787077002",
+      "content": "Arquivo JSONL: afa4d560-57d5-4a29-8598-586978109939.jsonl",
+      "source": "doc_afa4d560",
+      "summary": "LightRAG Optimization - Melhorias e Otimização",
+      "created": "2025-05-20T21:24:37.002294"
+    },
+    {
+      "id": "doc_1747787077003",
+      "content": "Arquivo JSONL: cb2ac1cc-c8c4-40e0-9098-321118163357.jsonl",
+      "source": "doc_cb2ac1cc",
+      "summary": "MCP Memory - Integração com Grafo de Conhecimento",
+      "created": "2025-05-20T21:24:37.003129"
+    },
+    {
+      "id": "doc_1747787077003",
+      "content": "Arquivo JSONL: b5e69835-8aa3-4238-809e-b43cf4058e94.jsonl",
+      "source": "doc_b5e69835",
+      "summary": "LightRAG Setup - Configuração e Limpeza do Projeto",
+      "created": "2025-05-20T21:24:37.003916"
+    },
+    {
+      "id": "doc_1747787077005",
+      "content": "Arquivo JSONL: fed1acd7-4438-4843-804a-72b493c94238.jsonl",
+      "source": "doc_fed1acd7",
+      "summary": "Arquivo de histórico de conversação com Claude.",
+      "created": "2025-05-20T21:24:37.005311"
     }
   ],
-  "lastUpdated": "2025-05-20T13:36:25.074679"
+  "lastUpdated": "2025-05-20T21:24:37.005313"
 }

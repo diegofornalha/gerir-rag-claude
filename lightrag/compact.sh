@@ -61,6 +61,7 @@ show_help() {
     echo "  stop      - Encerra o servidor LightRAG"
     echo "  restart   - Reinicia o servidor LightRAG"
     echo "  status    - Verifica o status do servidor"
+    echo "  ui        - Inicia a interface web (Streamlit)"
     echo "  help      - Exibe esta ajuda"
     echo
     echo "Sem comando, a operação padrão é iniciar o servidor."
@@ -138,6 +139,21 @@ start_lightrag() {
     fi
 }
 
+# Comando para iniciar a interface web
+start_ui() {
+    LIGHTRAG_DIR="$1"
+    echo "Iniciando interface web do LightRAG..."
+    
+    # Verificar se o script start_ui.sh existe
+    if [ -f "$LIGHTRAG_DIR/start_ui.sh" ]; then
+        cd "$LIGHTRAG_DIR"
+        ./start_ui.sh restart
+    else
+        echo "✗ Script de interface não encontrado: $LIGHTRAG_DIR/start_ui.sh"
+        exit 1
+    fi
+}
+
 # Comando principal
 case "${1:-start}" in
     start)
@@ -192,6 +208,15 @@ case "${1:-start}" in
         fi
         
         check_status "$LIGHTRAG_DIR"
+        ;;
+    ui)
+        LIGHTRAG_DIR=$(find_lightrag_dir)
+        if [ $? -ne 0 ]; then
+            echo "✗ Diretório LightRAG não encontrado"
+            exit 1
+        fi
+        
+        start_ui "$LIGHTRAG_DIR"
         ;;
     help)
         show_help

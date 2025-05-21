@@ -1,26 +1,26 @@
 [
   {
-    "content": "Criar script unificado de inicialização",
+    "content": "Analisar o código do LightRAG para identificar código morto",
     "status": "completed",
     "priority": "high",
     "id": "1"
   },
   {
-    "content": "Compactar implementação em um único arquivo JavaScript",
+    "content": "Verificar a pasta bkp que parece conter versões anteriores",
     "status": "completed",
-    "priority": "high",
+    "priority": "medium",
     "id": "2"
   },
   {
-    "content": "Atualizar caminhos dos arquivos para localizações corretas",
+    "content": "Verificar referências ao micro_lightrag.py vs nova arquitetura",
     "status": "completed",
     "priority": "medium",
     "id": "3"
   },
   {
-    "content": "Criar script de instalação do serviço",
+    "content": "Compilar lista de código morto e arquivos obsoletos",
     "status": "completed",
-    "priority": "medium",
+    "priority": "high",
     "id": "4"
   }
 ]

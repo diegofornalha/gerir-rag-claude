@@ -46,3 +46,17 @@ O serviço Memory MCP permite armazenar e gerenciar conhecimento estruturado em 
 - `read_graph` - Recupera todo o grafo de conhecimento com entidades e relações
 - `search_nodes` - Pesquisa entidades por nome, tipo ou conteúdo das observações
 - `open_nodes` - Recupera entidades específicas pelo nome, mostrando detalhes completos
+
+## Limpeza Automática de Todos
+
+O sistema agora realiza limpeza automática semanal dos arquivos de tarefas (todos), removendo:
+- Arquivos vazios
+- Arquivos contendo apenas um array vazio "[]"
+- Arquivos sem tarefas válidas
+
+Para limpar manualmente a qualquer momento:
+```bash
+~/.claude/clean_todos.sh
+```
+
+A limpeza preserva todos os arquivos com tarefas válidas e o arquivo de documentação todos.md.
