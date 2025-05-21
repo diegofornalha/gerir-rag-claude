@@ -7,3 +7,9 @@ lightrag/logs/lightrag.log
 lightrag/lightrag_db.json.bak.*
 lightrag/.sync_timestamp
 lightrag/documents.db
+
+lightrag/*.json.bak.*
+lightrag/backups/*.bak.*
+lightrag/logs/*.log
+lightrag/ui/__pycache__/
+*.pyc
