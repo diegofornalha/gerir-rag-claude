@@ -542,7 +542,7 @@ class LightRAGUI:
                     st.markdown(f"### {entity}")
                     if entity == "LightRAG":
                         st.markdown("""
-                        **Tipo:** ServicoMCP
+                        **Tipo:** ServicoModelContextProtocol
                         
                         **Observações:**
                         - Sistema RAG simplificado
@@ -557,7 +557,7 @@ class LightRAGUI:
                         **Relações:**
                         - Utiliza LightRAG
                         """)
-                    elif entity == "IntegradorMCP":
+                    elif entity == "IntegradorModelContextProtocol":
                         st.markdown("""
                         **Tipo:** ServicoIntegrador
                         
@@ -582,13 +582,14 @@ class LightRAGUI:
         ```mermaid
         graph LR
             EcossistemaAgentes -- utiliza --> LightRAG
-            IntegradorMCP -- conectaCom --> LightRAG
+            IntegradorModelContextProtocol -- conectaCom --> LightRAG
             GerenciadorDeConhecimento -- utilizaRAG --> LightRAG
-            LightRAG -- complementa --> MemoryMCP
+            LightRAG -- complementa --> Memory
+            LightRAG -- utiliza --> ModelContextProtocol
             
             classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
             classDef principal fill:#d4f1f9,stroke:#0077b6,stroke-width:2px;
-            class LightRAG,MemoryMCP principal;
+            class LightRAG,Memory,ModelContextProtocol principal;
         ```
         """)
     
@@ -596,7 +597,7 @@ class LightRAGUI:
         """Executa a aplicação Streamlit"""
         # Cabeçalho com logo e título
         st.title("🔍 LightRAG - Sistema de RAG")
-        st.caption("Retrieval Augmented Generation integrado com Memory Model Context Protocol (MCP)")
+        st.caption("Retrieval Augmented Generation integrado com Memory e Model Context Protocol (MCP)")
         
         # Layout principal com abas
         tab1, tab2, tab3, tab4, tab5 = st.tabs([
@@ -604,7 +605,7 @@ class LightRAGUI:
             "Consulta", 
             "Inserir", 
             "Estatísticas", 
-            "Integração Model Context Protocol"
+            "Integração com Model Context Protocol"
         ])
         
         # Renderizar conteúdo de cada aba
@@ -626,4 +627,4 @@ class LightRAGUI:
         # Rodapé
         st.markdown("---")
         st.caption("LightRAG - Sistema simplificado de RAG © 2025")
-        st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory Model Context Protocol (MCP)")
+        st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory e Model Context Protocol (MCP)")

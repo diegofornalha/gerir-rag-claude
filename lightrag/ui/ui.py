@@ -82,12 +82,12 @@ class LightRAGUI:
     
     def load_memory_summary(self):
         """
-        Carrega o arquivo de resumo da integração com Memory Model Context Protocol (MCP)
+        Carrega o arquivo de resumo da integração com Memory e Model Context Protocol (MCP)
         
         Retorna:
             str: Conteúdo do arquivo de resumo
         """
-        logger.debug("Carregando resumo da integração com Memory Model Context Protocol (MCP)")
+        logger.debug("Carregando resumo da integração com Memory e Model Context Protocol (MCP)")
         if os.path.exists(MEMORY_SUMMARY_FILE):
             try:
                 with open(MEMORY_SUMMARY_FILE, 'r', encoding='utf-8') as f:
@@ -95,7 +95,7 @@ class LightRAGUI:
             except Exception as e:
                 logger.error(f"Erro ao carregar resumo da integração: {str(e)}")
                 return f"Erro ao carregar resumo da integração Memory: {str(e)}"
-        return "Resumo da integração com Memory Model Context Protocol (MCP) não encontrado."
+        return "Resumo da integração com Memory e Model Context Protocol (MCP) não encontrado."
     
     def delete_document(self, doc_id):
         """
@@ -126,7 +126,7 @@ class LightRAGUI:
     
     def extract_entities(self, text):
         """
-        Extrai entidades mencionadas em um texto (menções a Memory Model Context Protocol (MCP))
+        Extrai entidades mencionadas em um texto (menções a Memory e Model Context Protocol (MCP))
         
         Args:
             text: Texto para análise
@@ -453,8 +453,8 @@ class LightRAGUI:
             st.info("Nenhum documento encontrado para gerar estatísticas.")
     
     def render_memory_tab(self):
-        """Renderiza a aba de integração com Memory Model Context Protocol (MCP)"""
-        st.markdown("## Integração com Memory Model Context Protocol (MCP)")
+        """Renderiza a aba de integração com Memory e Model Context Protocol (MCP)"""
+        st.markdown("## Integração com Memory e Model Context Protocol (MCP)")
         
         # Carregar resumo da integração
         memory_summary = self.load_memory_summary()
@@ -520,11 +520,12 @@ class LightRAGUI:
             EcossistemaAgentes -- utiliza --> LightRAG
             IntegradorModelContextProtocol -- conectaCom --> LightRAG
             GerenciadorDeConhecimento -- utilizaRAG --> LightRAG
-            LightRAG -- complementa --> MemoryModelContextProtocol
+            LightRAG -- complementa --> Memory
+            LightRAG -- utiliza --> ModelContextProtocol
             
             classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
             classDef principal fill:#d4f1f9,stroke:#0077b6,stroke-width:2px;
-            class LightRAG,MemoryModelContextProtocol principal;
+            class LightRAG,Memory,ModelContextProtocol principal;
         ```
         """)
     
@@ -532,7 +533,7 @@ class LightRAGUI:
         """Executa a aplicação Streamlit"""
         # Cabeçalho com logo e título
         st.title("🔍 LightRAG - Sistema de RAG")
-        st.caption("Retrieval Augmented Generation integrado com Memory Model Context Protocol (MCP)")
+        st.caption("Retrieval Augmented Generation integrado com Memory e Model Context Protocol (MCP)")
         
         # Layout principal com abas
         tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
@@ -566,4 +567,4 @@ class LightRAGUI:
         # Rodapé
         st.markdown("---")
         st.caption("LightRAG - Sistema simplificado de RAG © 2025")
-        st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory Model Context Protocol (MCP)")
+        st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory e Model Context Protocol (MCP)")

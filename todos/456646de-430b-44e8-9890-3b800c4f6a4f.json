@@ -1,0 +1,50 @@
+[
+  {
+    "content": "Remover duplicação entre start_lightrag.sh e start_lightrag_service.sh",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Consolidar scripts de inserção RAG (improved_rag_insert_file.py e insert_to_rag.py)",
+    "status": "pending",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Limpar completamente diretório obsolete após verificar arquivos críticos",
+    "status": "pending",
+    "priority": "low",
+    "id": "3"
+  },
+  {
+    "content": "Consolidar scripts de migração de banco de dados (migrate_database.py, migrate_db.py)",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Centralizar gerenciamento de arquivos PID no diretório .pids",
+    "status": "pending",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Verificar conflitos entre versões legadas e novas de scripts de monitoramento",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Atualizar requirements.txt com dependências completas",
+    "status": "pending",
+    "priority": "low",
+    "id": "7"
+  },
+  {
+    "content": "Documentar processo de manutenção e operação no README",
+    "status": "pending",
+    "priority": "medium",
+    "id": "8"
+  }
+]

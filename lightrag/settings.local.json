@@ -12,6 +12,8 @@
       "Bash(ls:*)",
       "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:modelcontextprotocol.io)",
+      "WebFetch(domain:docs.crewai.com)",
+      "WebFetch(domain:docs.streamlit.io)",
       "Bash(python:*)",
       "Bash(bash:*)",
       "Bash(mkdir:*)",

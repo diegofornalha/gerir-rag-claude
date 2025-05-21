@@ -150,7 +150,7 @@ def generate_file_description(file_path):
     # Verificar se temos uma descrição específica para este arquivo
     descriptions = {
         "afa4d560": "LightRAG Optimization - Melhorias e Otimização",
-        "cb2ac1cc": "MCP Memory - Integração com Grafo de Conhecimento", 
+        "cb2ac1cc": "Model Context Protocol (MCP) Memory - Integração com Grafo de Conhecimento", 
         "b5e69835": "LightRAG Setup - Configuração e Limpeza do Projeto"
     }
     

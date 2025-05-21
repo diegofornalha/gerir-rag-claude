@@ -1,44 +1,44 @@
 [
   {
-    "content": "Corrigir referências ao MCP em core/mcp.py para Model Context Protocol",
-    "status": "completed",
+    "content": "Reorganizar estrutura de arquivos conforme padrões Streamlit",
+    "status": "pending",
     "priority": "high",
     "id": "1"
   },
   {
-    "content": "Atualizar referências ao MCP em ui/lightrag_ui.py",
-    "status": "completed",
-    "priority": "medium",
+    "content": "Implementar caching para funções de carregamento de dados",
+    "status": "pending",
+    "priority": "high",
     "id": "2"
   },
   {
-    "content": "Atualizar referências ao MCP em ui/ui.py",
-    "status": "completed",
+    "content": "Refatorar interface para seguir padrões visuais recomendados",
+    "status": "pending",
     "priority": "medium",
     "id": "3"
   },
   {
-    "content": "Corrigir referências ao MCP em insert_to_rag_improved.py",
-    "status": "completed",
+    "content": "Criar componentes reutilizáveis para UI",
+    "status": "pending",
     "priority": "medium",
     "id": "4"
   },
   {
-    "content": "Corrigir referências ao MCP em insert_to_rag.py",
-    "status": "completed",
-    "priority": "medium",
+    "content": "Configurar diretório .streamlit com tema personalizado",
+    "status": "pending",
+    "priority": "low",
     "id": "5"
   },
   {
-    "content": "Atualizar referências ao MCP em query_claude_docs.py",
-    "status": "in_progress",
-    "priority": "medium",
+    "content": "Implementar estrutura para suporte a múltiplas páginas",
+    "status": "pending",
+    "priority": "high",
     "id": "6"
   },
   {
-    "content": "Verificar e atualizar referência ao MCP em load_projects.py",
+    "content": "Otimizar carregamento e exibição de documentos",
     "status": "pending",
-    "priority": "low",
+    "priority": "medium",
     "id": "7"
   }
 ]
