@@ -9,11 +9,12 @@ Ponto de entrada para a aplicação Streamlit
 import sys
 import os
 
-# Adicionar o diretório raiz ao PYTHONPATH
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Adicionar o diretório raiz ao PYTHONPATH (diretório pai da pasta ui)
+lightrag_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, lightrag_root)
 
-# Agora importar da UI
-from ui.streamlit_ui import LightRAGUI
+# Importar diretamente do módulo streamlit_ui (no mesmo diretório)
+from streamlit_ui import LightRAGUI
 
 def main():
     """Função principal para iniciar a UI Streamlit"""

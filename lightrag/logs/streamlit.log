@@ -4,3 +4,7 @@
   Local URL: http://localhost:8501
   Network URL: http://192.168.1.21:8501
 
+2025-05-20 22:58:17 [INFO] lightrag_ui: Solicitada exclusão do documento: doc_1747792109023
+2025-05-20 22:58:17 [INFO] lightrag_core: Excluindo documento: ID='doc_1747792109023'
+2025-05-20 22:58:17 [INFO] lightrag_core: Documento excluído: doc_1747792109023
+2025-05-20 22:58:17 [INFO] lightrag_ui: Documento doc_1747792109023 excluído com sucesso!
