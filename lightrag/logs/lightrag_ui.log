@@ -5,3 +5,5 @@
 2025-05-20 22:45:35 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting value: line 68 column 18 (char 27769016)
 2025-05-20 22:58:17 [INFO] lightrag_ui: Solicitada exclusão do documento: doc_1747792109023
 2025-05-20 22:58:17 [INFO] lightrag_ui: Documento doc_1747792109023 excluído com sucesso!
+2025-05-20 23:32:34 [INFO] lightrag_ui: Solicitada exclusão do documento: doc_1747794086494
+2025-05-20 23:32:34 [INFO] lightrag_ui: Documento doc_1747794086494 excluído com sucesso!
