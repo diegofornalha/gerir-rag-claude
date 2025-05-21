@@ -248,15 +248,36 @@ class LightRAGUI:
                             st.markdown("### Nome Personalizado")
                             doc_id = doc.get('id', '')
                             custom_name = custom_names.get(doc_id, "")
+                            
+                            # Mostrar o ID do documento (útil para depuração)
+                            st.code(f"ID: {doc_id}")
+                            
                             new_custom_name = st.text_input("Nome de identificação:", 
                                                           value=custom_name, 
                                                           key=f"custom_name_{doc_id}",
                                                           placeholder="Digite um nome amigável...")
                             
                             if st.button("💾 Salvar Nome", key=f"save_name_{doc_id}"):
-                                save_custom_name(doc_id, new_custom_name)
-                                st.success("Nome personalizado salvo!")
-                                st.rerun()  # Recarregar a página para atualizar
+                                # Salvar o nome personalizado
+                                success = save_custom_name(doc_id, new_custom_name)
+                                
+                                if success:
+                                    st.success(f"Nome personalizado salvo com sucesso!")
+                                    # Limpar o cache para garantir que os dados sejam recarregados
+                                    st.cache_data.clear()
+                                    # Recarregar a página após um breve atraso
+                                    time.sleep(0.5)
+                                    st.rerun()
+                                else:
+                                    st.error("Falha ao salvar o nome personalizado.")
+                            
+                            # Mostrar o botão para limpar o nome
+                            if custom_name and st.button("🗑️ Limpar Nome", key=f"clear_name_{doc_id}"):
+                                save_custom_name(doc_id, "")
+                                st.success("Nome personalizado removido!")
+                                st.cache_data.clear()
+                                time.sleep(0.5)
+                                st.rerun()
                             
                             st.markdown("### Ações")
                             if st.button("🗑️ Excluir documento", type="primary", key=f"delete_{selected_doc_id}"):
