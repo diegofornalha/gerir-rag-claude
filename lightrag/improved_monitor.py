@@ -28,6 +28,9 @@ LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs/improv
 DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "documents.db")
 SYNC_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".sync_timestamp")
 
+# Variáveis globais
+sync_in_progress = False  # Flag para evitar sincronizações em cascata
+
 # Configurar logging
 logging.basicConfig(
     level=logging.INFO,
@@ -159,7 +162,7 @@ def delete_document(doc_id):
         return False
 
 def insert_document(file_path, content=None):
-    """Insere um documento no LightRAG se ele ainda não existir"""
+    """Insere ou atualiza um documento no LightRAG"""
     try:
         conn = sqlite3.connect(DB_FILE)
         cursor = conn.cursor()
@@ -181,28 +184,27 @@ def insert_document(file_path, content=None):
             return False
         
         # Verificar se já temos um documento com este arquivo
-        cursor.execute("SELECT doc_id FROM documents WHERE file_path = ?", (file_path,))
+        cursor.execute("SELECT doc_id, content_hash FROM documents WHERE file_path = ?", (file_path,))
         path_match = cursor.fetchone()
         
-        if path_match:
-            # Excluir o documento antigo do LightRAG e do banco
-            delete_document(path_match[0])
-            cursor.execute("DELETE FROM documents WHERE doc_id = ?", (path_match[0],))
-            logger.info(f"Documento existente removido para atualização: {path_match[0]}")
+        # Se o arquivo já existe e o hash é o mesmo, não fazer nada (conteúdo não mudou)
+        if path_match and path_match[1] == content_hash:
+            logger.info(f"Documento já existe e não mudou: {os.path.basename(file_path)} (ID: {path_match[0]})")
             
-        # Verificar se temos um documento com este hash
+            # Atualizar timestamp de verificação
+            cursor.execute(
+                "UPDATE documents SET last_checked = ? WHERE doc_id = ?", 
+                (time.time(), path_match[0])
+            )
+            conn.commit()
+            return True
+        
+        # Verificar se temos um documento com este hash exato mas caminho diferente (duplicata)
         cursor.execute("SELECT doc_id FROM documents WHERE content_hash = ? AND file_path != ?", (content_hash, file_path))
         hash_match = cursor.fetchone()
         
         if hash_match:
-            doc_id = hash_match[0]
-            logger.info(f"Documento com hash idêntico já existe: {doc_id}")
-            
-            # Atualizar registro com este arquivo
-            cursor.execute("DELETE FROM documents WHERE doc_id = ?", (doc_id,))
-            logger.info(f"Removido documento duplicado: {doc_id}")
-            
-            # Continuar para criar um novo
+            logger.info(f"Documento com hash idêntico já existe: {hash_match[0]} (possível duplicata)")
         
         # Ler o conteúdo do arquivo se não foi fornecido
         if not content:
@@ -218,7 +220,8 @@ def insert_document(file_path, content=None):
             "file_path": file_path,
             "file_name": file_name,
             "content_hash": content_hash,
-            "imported_at": datetime.now().isoformat()
+            "imported_at": datetime.now().isoformat(),
+            "last_updated": datetime.now().isoformat()
         }
         
         # Preparar dados para inserção no LightRAG
@@ -232,6 +235,16 @@ def insert_document(file_path, content=None):
         
         # Enviar para o LightRAG
         encoded_data = json.dumps(data).encode('utf-8')
+        
+        # Verificar se precisa atualizar documento existente ou criar um novo
+        if path_match:
+            # Se o documento já existe mas o conteúdo mudou, atualizamos excluindo o antigo
+            # e criando um novo (pois o LightRAG não tem API de atualização direta)
+            delete_document(path_match[0])
+            cursor.execute("DELETE FROM documents WHERE doc_id = ?", (path_match[0],))
+            logger.info(f"Documento atualizado (conteúdo mudou): {path_match[0]}")
+        
+        # Inserir o novo documento (ou o atualizado)
         req = urllib.request.Request(
             f"{LIGHTRAG_URL}/insert",
             data=encoded_data,
@@ -245,14 +258,18 @@ def insert_document(file_path, content=None):
         if result.get("success", False):
             doc_id = result.get("documentId", "")
             
-            # Salvar no banco de dados
+            # Salvar ou atualizar no banco de dados
             cursor.execute(
-                "INSERT INTO documents (file_path, doc_id, content_hash, file_size, last_modified, last_checked, metadata) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                "INSERT OR REPLACE INTO documents (file_path, doc_id, content_hash, file_size, last_modified, last_checked, metadata) VALUES (?, ?, ?, ?, ?, ?, ?)",
                 (file_path, doc_id, content_hash, file_size, os.path.getmtime(file_path), time.time(), json.dumps(metadata))
             )
             conn.commit()
             
-            logger.info(f"✅ Documento inserido com sucesso: {file_name} (ID: {doc_id})")
+            if path_match:
+                logger.info(f"✅ Documento atualizado com sucesso: {file_name} (ID: {doc_id})")
+            else:
+                logger.info(f"✅ Documento inserido com sucesso: {file_name} (ID: {doc_id})")
+                
             update_sync_timestamp()
             return True
         else:
@@ -329,7 +346,14 @@ def find_project_dirs():
     return project_dirs
 
 def sync_database_with_server():
-    """Sincroniza o banco de dados local com o servidor LightRAG"""
+    """Sincroniza o banco de dados local com o servidor LightRAG - versão otimizada para evitar ciclos"""
+    # Definir uma flag global para evitar sincronizações em cascata
+    global sync_in_progress
+    if 'sync_in_progress' in globals() and sync_in_progress:
+        logger.debug("Sincronização já em andamento, pulando ciclo")
+        return
+    
+    sync_in_progress = True
     try:
         conn = sqlite3.connect(DB_FILE)
         cursor = conn.cursor()
@@ -339,42 +363,76 @@ def sync_database_with_server():
         if not server_docs:
             logger.info("Nenhum documento no servidor para sincronizar")
             conn.close()
+            sync_in_progress = False
             return
         
         # Mapear documentos do servidor por ID
         server_doc_ids = {doc.get('document_id', ''): doc for doc in server_docs}
         
+        # Verificar status do servidor
+        status_data = None
+        try:
+            with urllib.request.urlopen(f"{LIGHTRAG_URL}/status") as response:
+                status_data = json.loads(response.read().decode('utf-8'))
+        except:
+            pass
+        
+        # Verificar discrepância grande entre contagem real e reportada
+        if status_data and len(server_docs) < status_data.get('documents', 0) * 0.5:
+            logger.warning(f"Grande discrepância detectada: {len(server_docs)} documentos encontrados vs {status_data.get('documents', 0)} reportados")
+            logger.warning("Isso pode indicar corrupção da base. Considere executar ./resync.sh")
+        
         # Buscar documentos do banco de dados local
-        cursor.execute("SELECT doc_id, file_path FROM documents")
+        cursor.execute("SELECT doc_id, file_path, content_hash FROM documents")
         local_docs = cursor.fetchall()
+        local_doc_map = {ld[0]: (ld[1], ld[2]) for ld in local_docs}
         
         # Documentos que estão no servidor mas não no banco local
         orphaned_docs = []
         for doc_id in server_doc_ids:
-            if doc_id and not any(ld[0] == doc_id for ld in local_docs):
+            if doc_id and doc_id not in local_doc_map:
                 orphaned_docs.append(doc_id)
         
-        # Excluir documentos órfãos do servidor
+        # Limitar número de documentos a excluir por vez para evitar problemas
+        max_orphaned_to_delete = 5
+        if len(orphaned_docs) > max_orphaned_to_delete:
+            logger.warning(f"Muitos documentos órfãos ({len(orphaned_docs)}). Limitando a {max_orphaned_to_delete} por ciclo.")
+            orphaned_docs = orphaned_docs[:max_orphaned_to_delete]
+        
+        # Excluir documentos órfãos do servidor (apenas se não forem documentos válidos)
+        deleted_orphans = 0
         for doc_id in orphaned_docs:
+            # Verificar se o documento é um arquivo conhecido com outro ID 
+            server_doc = server_doc_ids[doc_id]
+            server_metadata = server_doc.get('metadata', {})
+            server_file_path = server_metadata.get('file_path', '')
+            
+            # Se for um arquivo conhecido, não remover
+            if server_file_path and any(server_file_path == ld[1] for ld in local_docs):
+                logger.debug(f"Documento no servidor pertence a um arquivo conhecido: {server_file_path}")
+                continue
+            
             logger.info(f"Excluindo documento órfão do servidor: {doc_id}")
-            delete_document(doc_id)
+            if delete_document(doc_id):
+                deleted_orphans += 1
         
         # Documentos que estão no banco local mas não existem no servidor
+        # Apenas registramos, não removemos para evitar problemas de ciclo
         missing_docs = []
-        for doc_id, file_path in local_docs:
+        for doc_id, file_path, _ in local_docs:
             if doc_id and doc_id not in server_doc_ids:
                 missing_docs.append((doc_id, file_path))
-        
-        # Remover documentos inexistentes do banco local
-        for doc_id, file_path in missing_docs:
-            cursor.execute("DELETE FROM documents WHERE doc_id = ?", (doc_id,))
-            logger.info(f"Removido do banco local: {doc_id} (arquivo: {file_path})")
+                logger.debug(f"Documento local não encontrado no servidor: {doc_id} (arquivo: {file_path})")
+                # NÃO VAMOS REMOVER para evitar ciclos de inserção/remoção
         
         conn.commit()
         
-        if orphaned_docs or missing_docs:
-            logger.info(f"Sincronização concluída: {len(orphaned_docs)} excluídos do servidor, {len(missing_docs)} removidos do banco local")
-            update_sync_timestamp()
+        if deleted_orphans or missing_docs:
+            logger.info(f"Sincronização concluída: {deleted_orphans} excluídos do servidor, {len(missing_docs)} inconsistências detectadas")
+            if missing_docs:
+                logger.debug("As inconsistências serão corrigidas na próxima verificação de arquivos")
+            if deleted_orphans:
+                update_sync_timestamp()
     
     except Exception as e:
         logger.error(f"Erro durante sincronização: {e}")
@@ -382,6 +440,7 @@ def sync_database_with_server():
     finally:
         if 'conn' in locals() and conn:
             conn.close()
+        sync_in_progress = False
 
 def sync_files_with_database():
     """Sincroniza os arquivos do sistema com o banco de dados"""
@@ -405,8 +464,9 @@ def sync_files_with_database():
         cursor = conn.cursor()
         
         # Buscar arquivos registrados no banco
-        cursor.execute("SELECT file_path FROM documents")
-        db_files = [row[0] for row in cursor.fetchall()]
+        cursor.execute("SELECT file_path, content_hash, last_modified FROM documents")
+        db_files_info = {row[0]: (row[1], row[2]) for row in cursor.fetchall()}
+        db_files = list(db_files_info.keys())
         
         # Arquivos no sistema que não estão no banco
         new_files = [f for f in existing_files if f not in db_files]
@@ -414,18 +474,38 @@ def sync_files_with_database():
         # Arquivos no banco que não existem mais no sistema
         deleted_files = [f for f in db_files if f not in existing_files]
         
+        # Verificar arquivos que podem ter sido modificados
+        modified_files = []
+        for file_path in existing_files:
+            if file_path in db_files:
+                # Verificar se o arquivo foi modificado desde a última verificação
+                current_mtime = os.path.getmtime(file_path)
+                db_hash, db_mtime = db_files_info[file_path]
+                
+                # Se a data de modificação do arquivo for diferente da que está no banco,
+                # verificamos o hash para ter certeza que o conteúdo realmente mudou
+                if abs(current_mtime - db_mtime) > 1:  # tolerância de 1 segundo para modificações
+                    current_hash = calculate_file_hash(file_path)
+                    if current_hash != db_hash:
+                        modified_files.append(file_path)
+        
         # Processar novos arquivos
         for file_path in new_files:
             logger.info(f"Processando novo arquivo: {os.path.basename(file_path)}")
             insert_document(file_path)
+        
+        # Processar arquivos modificados
+        for file_path in modified_files:
+            logger.debug(f"Verificando arquivo modificado: {os.path.basename(file_path)}")
+            insert_document(file_path)  # Função atualizada vai verificar se realmente mudou
         
         # Processar arquivos excluídos
         for file_path in deleted_files:
             logger.info(f"Processando arquivo removido: {os.path.basename(file_path)}")
             handle_deleted_file(file_path)
         
-        if new_files or deleted_files:
-            logger.info(f"Sincronização de arquivos concluída: {len(new_files)} novos, {len(deleted_files)} removidos")
+        if new_files or deleted_files or modified_files:
+            logger.info(f"Sincronização de arquivos concluída: {len(new_files)} novos, {len(modified_files)} modificados, {len(deleted_files)} removidos")
             update_sync_timestamp()
         
     except Exception as e:
@@ -436,32 +516,79 @@ def sync_files_with_database():
             conn.close()
 
 class ProjectFileHandler(FileSystemEventHandler):
-    """Manipulador de eventos do sistema de arquivos"""
+    """Manipulador de eventos do sistema de arquivos com proteção contra eventos duplicados"""
+    
+    def __init__(self):
+        self.last_events = {}  # Para rastreamento de eventos recentes
+        self.debounce_time = 2  # Tempo de debounce em segundos
+    
+    def _is_duplicate_event(self, event_type, path):
+        """Verifica se um evento é duplicado (ocorreu recentemente)"""
+        event_key = f"{event_type}:{path}"
+        current_time = time.time()
+        
+        # Se o evento ocorreu recentemente, é um duplicado
+        if event_key in self.last_events:
+            last_time = self.last_events[event_key]
+            if current_time - last_time < self.debounce_time:
+                return True
+        
+        # Registrar o evento atual
+        self.last_events[event_key] = current_time
+        
+        # Limpar eventos antigos
+        keys_to_remove = []
+        for key, timestamp in self.last_events.items():
+            if current_time - timestamp > 60:  # Limpar eventos mais antigos que 60 segundos
+                keys_to_remove.append(key)
+        
+        for key in keys_to_remove:
+            del self.last_events[key]
+            
+        return False
     
     def on_created(self, event):
         """Quando um novo arquivo é criado"""
         if not event.is_directory and event.src_path.endswith('.jsonl'):
+            # Verificar se é um evento duplicado
+            if self._is_duplicate_event("created", event.src_path):
+                logger.debug(f"Ignorando evento duplicado de criação: {event.src_path}")
+                return
+                
             # Esperar um pouco para garantir que o arquivo está completo
-            time.sleep(1)
+            time.sleep(1.5)
             logger.info(f"Arquivo criado: {event.src_path}")
             insert_document(event.src_path)
     
     def on_modified(self, event):
         """Quando um arquivo é modificado"""
         if not event.is_directory and event.src_path.endswith('.jsonl'):
+            # Verificar se é um evento duplicado
+            if self._is_duplicate_event("modified", event.src_path):
+                logger.debug(f"Ignorando evento duplicado de modificação: {event.src_path}")
+                return
+                
             # Esperar um pouco para garantir que o arquivo está completo
-            time.sleep(1)
+            time.sleep(1.5)
             logger.info(f"Arquivo modificado: {event.src_path}")
             insert_document(event.src_path)
     
     def on_deleted(self, event):
         """Quando um arquivo é excluído"""
         if not event.is_directory and event.src_path.endswith('.jsonl'):
+            # Verificar se é um evento duplicado
+            if self._is_duplicate_event("deleted", event.src_path):
+                logger.debug(f"Ignorando evento duplicado de exclusão: {event.src_path}")
+                return
+                
             logger.info(f"Arquivo excluído: {event.src_path}")
             handle_deleted_file(event.src_path)
 
 def main():
     """Função principal"""
+    global sync_in_progress
+    sync_in_progress = False
+    
     logger.info("=== Monitor Aprimorado para LightRAG ===")
     
     # Verificar se o servidor está disponível
@@ -490,6 +617,7 @@ def main():
     logger.info(f"Iniciando monitoramento em {len(project_dirs)} diretórios")
     
     observer = Observer()
+    # Criar event handler com proteção contra eventos duplicados
     event_handler = ProjectFileHandler()
     
     # Adicionar cada diretório para monitoramento
@@ -503,12 +631,19 @@ def main():
     logger.info(f"Monitoramento ativo. Verificando a cada {POLL_INTERVAL} segundos")
     
     try:
+        # Iniciar loop principal com intervalo maior para evitar sincronizações frequentes
         while True:
+            # Esperar o intervalo definido
             time.sleep(POLL_INTERVAL)
-            # Verificar por atualizações no servidor
-            sync_database_with_server()
-            # Verificar por atualizações no sistema de arquivos
-            sync_files_with_database()
+            
+            # Limitar frequência de sincronização para evitar ciclos
+            if not sync_in_progress:
+                # Verificar por atualizações no servidor
+                sync_database_with_server()
+                # Verificar por atualizações no sistema de arquivos
+                sync_files_with_database()
+            else:
+                logger.debug("Sincronização em andamento, aguardando próximo ciclo")
     except KeyboardInterrupt:
         logger.info("Monitoramento interrompido pelo usuário")
         observer.stop()

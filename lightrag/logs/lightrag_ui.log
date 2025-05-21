@@ -1,3 +1,5 @@
 2025-05-20 22:30:10 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting ',' delimiter: line 103 column 917198 (char 43077696)
 2025-05-20 22:33:27 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting ',' delimiter: line 313 column 4742016 (char 130840239)
 2025-05-20 22:33:28 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting value: line 236 column 18 (char 92650138)
+2025-05-20 22:43:48 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting ',' delimiter: line 54 column 4823930 (char 25061492)
+2025-05-20 22:45:35 [ERROR] lightrag_ui: Erro ao carregar base de conhecimento: Expecting value: line 68 column 18 (char 27769016)
