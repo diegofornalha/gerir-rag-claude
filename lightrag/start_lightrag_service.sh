@@ -43,6 +43,10 @@ start_server() {
         return
     fi
     
+    # Matar qualquer processo na porta 8020
+    lsof -ti:8020 | xargs kill -9 2>/dev/null || true
+    sleep 1
+    
     # Iniciar servidor em background
     nohup python3 -m core.server > "$LOG_DIR/lightrag_server.log" 2>&1 &
     echo $! > "$SERVER_PID"

@@ -243,6 +243,92 @@ def render_insert_tab():
             except Exception as e:
                 st.error(f"Erro ao conectar ao servidor: {str(e)}")
 
+def render_statistics_tab():
+    """Renderiza a aba de estatísticas do sistema"""
+    st.markdown("## Estatísticas do Sistema LightRAG")
+    
+    try:
+        # Carregar dados da base de conhecimento
+        kb = load_knowledge_base()
+        documents = kb.get("documents", [])
+        
+        # Métricas principais
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric("Total de Documentos", len(documents))
+        
+        with col2:
+            total_chars = sum(len(doc.get("content", "")) for doc in documents)
+            st.metric("Total de Caracteres", f"{total_chars:,}")
+        
+        with col3:
+            avg_chars = total_chars / len(documents) if documents else 0
+            st.metric("Média de Caracteres/Doc", f"{avg_chars:.0f}")
+        
+        with col4:
+            sources = set(doc.get("source", "unknown") for doc in documents)
+            st.metric("Fontes Diferentes", len(sources))
+        
+        # Gráfico de distribuição por fonte
+        if documents:
+            st.markdown("### Distribuição por Fonte")
+            source_counts = {}
+            for doc in documents:
+                source = doc.get("source", "unknown")
+                source_counts[source] = source_counts.get(source, 0) + 1
+            
+            if source_counts:
+                import pandas as pd
+                df_sources = pd.DataFrame(list(source_counts.items()), columns=["Fonte", "Quantidade"])
+                st.bar_chart(df_sources.set_index("Fonte"))
+        
+        # Estatísticas de tamanho dos documentos
+        if documents:
+            st.markdown("### Distribuição de Tamanho dos Documentos")
+            doc_sizes = [len(doc.get("content", "")) for doc in documents]
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**Estatísticas de Tamanho:**")
+                st.write(f"- Menor documento: {min(doc_sizes):,} caracteres")
+                st.write(f"- Maior documento: {max(doc_sizes):,} caracteres")
+                st.write(f"- Mediana: {sorted(doc_sizes)[len(doc_sizes)//2]:,} caracteres")
+            
+            with col2:
+                # Histograma simplificado
+                import pandas as pd
+                df_sizes = pd.DataFrame({"Tamanho": doc_sizes})
+                st.bar_chart(df_sizes["Tamanho"])
+        
+        # Estatísticas de tempo (se disponível)
+        st.markdown("### Informações do Sistema")
+        
+        # Verificar status do servidor
+        server_status = check_server()
+        status_color = "🟢" if server_status else "🔴"
+        st.write(f"Status do Servidor: {status_color} {'Online' if server_status else 'Offline'}")
+        
+        # Informações de arquivo
+        db_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lightrag_db.json")
+        if os.path.exists(db_file):
+            file_size = os.path.getsize(db_file)
+            file_size_mb = file_size / (1024 * 1024)
+            st.write(f"Tamanho da Base de Dados: {file_size_mb:.2f} MB")
+            
+            # Data de última modificação
+            import datetime
+            mod_time = os.path.getmtime(db_file)
+            mod_date = datetime.datetime.fromtimestamp(mod_time)
+            st.write(f"Última Modificação: {mod_date.strftime('%d/%m/%Y %H:%M:%S')}")
+        
+        # Nomes personalizados
+        custom_names = load_custom_names()
+        st.write(f"Documentos com Nomes Personalizados: {len(custom_names)}")
+        
+    except Exception as e:
+        st.error(f"Erro ao carregar estatísticas: {str(e)}")
+
 def render_memory_tab():
     """Renderiza a aba de integração com Memory e Model Context Protocol (MCP)"""
     st.markdown("## Integração com Memory e Model Context Protocol (MCP)")
@@ -286,10 +372,11 @@ def main():
         return
     
     # Navegação principal
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "Documentos", 
         "Consulta", 
         "Inserir", 
+        "Estatísticas",
         "Integração MCP"
     ])
     
@@ -300,6 +387,8 @@ def main():
     elif tab3.selected:
         active_tab = "Inserir"
     elif tab4.selected:
+        active_tab = "Estatísticas"
+    elif tab5.selected:
         active_tab = "Integração MCP"
     
     # Renderizar a barra lateral e armazenar os filtros na session_state
@@ -318,6 +407,9 @@ def main():
         render_insert_tab()
         
     with tab4:
+        render_statistics_tab()
+        
+    with tab5:
         render_memory_tab()
     
     # Rodapé
