@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { IssuesListLocal } from './pages/IssuesListLocal'
-import { CreateIssue } from './pages/CreateIssue'
-import { IssueDetail } from './pages/IssueDetail'
+import { CreateIssueLocal } from './pages/CreateIssueLocal'
+import { IssueDetailLocal } from './pages/IssueDetailLocal'
 import { ClaudeSessions } from './pages/ClaudeSessions'
 import { ClaudeSessionDetailSimple } from './pages/ClaudeSessionDetailSimple'
 import { CurrentSession } from './pages/CurrentSession'
+import { EditIssueLocal } from './pages/EditIssueLocal'
 
 const queryClient = new QueryClient()
 
@@ -18,7 +19,7 @@ export function App() {
             <div className="container mx-auto px-4 py-3">
               <div className="flex space-x-6">
                 <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium">
-                  Issues
+                  Missões
                 </Link>
                 <Link to="/claude-sessions" className="text-blue-600 hover:text-blue-800 font-medium">
                   Claude Sessions
@@ -32,8 +33,9 @@ export function App() {
           
           <Routes>
             <Route path="/" element={<IssuesListLocal />} />
-            <Route path="/issues/new" element={<CreateIssue />} />
-            <Route path="/issues/:id" element={<IssueDetail />} />
+            <Route path="/issues/new" element={<CreateIssueLocal />} />
+            <Route path="/issues/:id" element={<IssueDetailLocal />} />
+            <Route path="/issues/:id/edit" element={<EditIssueLocal />} />
             <Route path="/claude-sessions" element={<ClaudeSessions />} />
             <Route path="/claude-sessions/:sessionId" element={<ClaudeSessionDetailSimple />} />
             <Route path="/current-session" element={<CurrentSession />} />

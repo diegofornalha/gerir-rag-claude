@@ -1,56 +1,32 @@
 [
   {
-    "content": "Diagnosticar problema do frontend não carregando no navegador",
+    "content": "Atualizar nomenclatura de Issues para Missões em todo o sistema",
     "status": "completed",
     "priority": "high",
     "id": "1"
   },
   {
-    "content": "Verificar logs de erro do frontend",
+    "content": "Padronizar tema claro em todas as páginas do sistema",
     "status": "completed",
     "priority": "high",
     "id": "2"
   },
   {
-    "content": "Verificar configuração do Vite",
+    "content": "Investigar e padronizar estilo em todas as páginas (issues/new, issues/:id, etc)",
     "status": "completed",
     "priority": "high",
     "id": "3"
   },
   {
-    "content": "Testar build de produção",
-    "status": "pending",
-    "priority": "medium",
+    "content": "Atualizar nomenclatura de Issue para Missão nas páginas de formulário",
+    "status": "completed",
+    "priority": "high",
     "id": "4"
   },
   {
-    "content": "Parar todos os serviços e reiniciar limpo",
+    "content": "Criar página de edição de missão com tema claro",
     "status": "completed",
     "priority": "high",
     "id": "5"
-  },
-  {
-    "content": "Corrigir erro de importação createCollection",
-    "status": "completed",
-    "priority": "high",
-    "id": "6"
-  },
-  {
-    "content": "Testar aplicação novamente",
-    "status": "completed",
-    "priority": "high",
-    "id": "7"
-  },
-  {
-    "content": "Comparar páginas CurrentSession e ClaudeSessionDetail",
-    "status": "completed",
-    "priority": "high",
-    "id": "8"
-  },
-  {
-    "content": "Diagnosticar problema de página piscando e ficando branca",
-    "status": "in_progress",
-    "priority": "high",
-    "id": "9"
   }
 ]

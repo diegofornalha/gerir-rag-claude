@@ -66,8 +66,8 @@ class LocalCollection<T extends { id: number }> {
 export const issues = new LocalCollection<Issue>('issues', [
   {
     id: 1,
-    title: 'Exemplo de Issue',
-    description: 'Esta é uma issue de exemplo para demonstrar o funcionamento',
+    title: 'Exemplo de Missão',
+    description: 'Esta é uma missão de exemplo para demonstrar o funcionamento',
     userId: 1,
     createdAt: new Date().toISOString(),
   }

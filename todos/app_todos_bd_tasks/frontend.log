@@ -21,3 +21,14 @@
 8:06:36 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
 8:08:31 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
 8:08:41 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+8:14:07 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+8:14:30 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+8:15:28 AM [vite] (client) hmr update /src/index.css, /src/pages/CreateIssue.tsx, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx, /src/pages/IssuesListLocal.tsx
+8:15:39 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+8:16:23 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+8:16:32 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+8:16:43 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+8:20:19 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+8:22:31 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+8:25:11 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+8:29:45 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
