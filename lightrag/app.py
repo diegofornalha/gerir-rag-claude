@@ -372,12 +372,11 @@ def main():
         return
     
     # Navegação principal
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4 = st.tabs([
         "Documentos", 
         "Consulta", 
         "Inserir", 
-        "Estatísticas",
-        "Integração MCP"
+        "Estatísticas"
     ])
     
     # Renderizar sidebar com informações e filtros
@@ -388,8 +387,6 @@ def main():
         active_tab = "Inserir"
     elif tab4.selected:
         active_tab = "Estatísticas"
-    elif tab5.selected:
-        active_tab = "Integração MCP"
     
     # Renderizar a barra lateral e armazenar os filtros na session_state
     filters = render_sidebar(active_tab)
@@ -408,14 +405,11 @@ def main():
         
     with tab4:
         render_statistics_tab()
-        
-    with tab5:
-        render_memory_tab()
     
     # Rodapé
     st.markdown("---")
     st.caption("LightRAG - Sistema simplificado de RAG © 2025")
-    st.caption("Desenvolvido com Streamlit e Flask | Integração com Memory e Model Context Protocol (MCP)")
+    st.caption("Desenvolvido com Streamlit e Flask")
 
 if __name__ == "__main__":
     main()

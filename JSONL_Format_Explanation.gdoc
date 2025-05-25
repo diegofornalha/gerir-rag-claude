@@ -1,0 +1,473 @@
+# Formato JSONL - Documentação Completa do Claude Code
+
+## O que é JSONL?
+
+JSONL (JSON Lines) é um formato de arquivo de texto onde cada linha contém um objeto JSON válido e completo. É diferente de um arquivo JSON tradicional que contém um único objeto ou array.
+
+### Características do JSONL:
+- **Uma linha = Um objeto JSON**
+- **Sem vírgulas entre objetos**
+- **Cada linha é independente**
+- **Facilita processamento linha por linha**
+- **Ideal para logs e streaming de dados**
+- **Permite append sem reescrever o arquivo inteiro**
+- **Resiliência: erro em uma linha não afeta as outras**
+
+## Estrutura do Arquivo de Projeto Claude Code
+
+Os arquivos JSONL no Claude Code armazenam conversas completas com metadados detalhados. Cada arquivo em `/Users/agents/.claude/projects/` representa uma sessão única de conversa. Vamos analisar todos os tipos de objetos possíveis:
+
+### 1. Summary (Resumo da Conversa)
+```json
+{
+  "type": "summary",
+  "summary": "JSONL File Format Documentation and Explanation",
+  "leafUuid": "8fbc0471-6da3-4506-af2d-57d0881b4828"
+}
+```
+
+**Propósito**: Aparece no início do arquivo para fornecer contexto rápido sobre o conteúdo da conversa.
+
+**Campos**:
+- **type**: Sempre "summary" para este tipo
+- **summary**: Descrição breve e significativa da conversa ou tarefa principal
+- **leafUuid**: UUID único que identifica este resumo específico
+
+### 2. User Message (Mensagem do Usuário)
+```json
+{
+  "parentUuid": "baa7d8fc-184c-4956-b8ba-9b5ffae7b64d",
+  "isSidechain": false,
+  "userType": "external",
+  "cwd": "/Users/agents/.claude",
+  "sessionId": "463cef43-5459-4767-ba08-cc01cd6aa433",
+  "version": "1.0.2",
+  "type": "user",
+  "message": {
+    "role": "user",
+    "content": "'/Users/agents/.claude/JSONL_Format_Explanation.md' melhore essa documentação..."
+  },
+  "uuid": "baa7d8fc-184c-4956-b8ba-9b5ffae7b64d",
+  "timestamp": "2025-05-23T12:49:18.999Z"
+}
+```
+
+**Exemplo Real com Tool Result**:
+```json
+{
+  "parentUuid": "01c38635-b334-4d13-b40c-0b3d2388388c",
+  "type": "user",
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01T1hzeEkzRzggBCvYSCCEGc",
+        "type": "tool_result",
+        "content": "Todos have been modified successfully..."
+      }
+    ]
+  },
+  "toolUseResult": {
+    "oldTodos": [],
+    "newTodos": [
+      {
+        "content": "Ler o arquivo JSONL atual para entender o formato",
+        "status": "pending",
+        "priority": "high",
+        "id": "1"
+      }
+    ]
+  }
+}
+```
+
+**Campos Detalhados**:
+- **parentUuid**: UUID da mensagem anterior na cadeia de conversa
+- **isSidechain**: Indica se é uma conversa paralela (geralmente false)
+- **userType**: "external" para usuário humano, "internal" para sistema
+- **cwd**: Current Working Directory - diretório onde o Claude está operando
+- **sessionId**: UUID da sessão (corresponde ao nome do arquivo JSONL)
+- **version**: Versão do protocolo de mensagens (atualmente "1.0.2")
+- **type**: "user" para mensagens do usuário
+- **message**: Estrutura da mensagem
+  - **role**: "user" para identificar o remetente
+  - **content**: Pode ser string simples ou array de objetos com diferentes tipos
+- **uuid**: Identificador único desta mensagem específica
+- **timestamp**: Data/hora ISO 8601 com precisão de milissegundos
+- **toolUseResult**: (Opcional) Resultado detalhado quando é resposta de ferramenta
+
+### 3. Assistant Message (Resposta do Claude)
+```json
+{
+  "parentUuid": "baa7d8fc-184c-4956-b8ba-9b5ffae7b64d",
+  "isSidechain": false,
+  "userType": "external",
+  "cwd": "/Users/agents/.claude",
+  "sessionId": "463cef43-5459-4767-ba08-cc01cd6aa433",
+  "version": "1.0.2",
+  "message": {
+    "id": "msg_01Hhfm9mkZfXAKHUAapXj7zK",
+    "type": "message",
+    "role": "assistant",
+    "model": "claude-opus-4-20250514",
+    "content": [
+      {
+        "type": "text",
+        "text": "Vou analisar o arquivo JSONL que você está escutando..."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01T1hzeEkzRzggBCvYSCCEGc",
+        "name": "TodoWrite",
+        "input": {
+          "todos": [
+            {
+              "id": "1",
+              "content": "Ler o arquivo JSONL atual para entender o formato",
+              "status": "pending",
+              "priority": "high"
+            }
+          ]
+        }
+      }
+    ],
+    "stop_reason": "tool_use",
+    "stop_sequence": null,
+    "usage": {
+      "input_tokens": 4,
+      "cache_creation_input_tokens": 23107,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 239,
+      "service_tier": "standard"
+    }
+  },
+  "costUSD": 0.45124125000000004,
+  "durationMs": 7186,
+  "type": "assistant",
+  "uuid": "01c38635-b334-4d13-b40c-0b3d2388388c",
+  "timestamp": "2025-05-23T12:49:26.223Z"
+}
+```
+
+**Campos Detalhados do Assistant**:
+- **Campos de contexto**: parentUuid, isSidechain, userType, cwd, sessionId, version (mesmos do user)
+- **message.id**: ID único da mensagem no sistema Anthropic
+- **message.model**: Modelo específico usado (claude-3-5-sonnet, claude-opus-4, etc.)
+- **message.content**: Array que pode conter:
+  - Objetos de texto: `{"type": "text", "text": "..."}`
+  - Objetos de uso de ferramenta: `{"type": "tool_use", ...}`
+- **message.stop_reason**: 
+  - "end_turn": Resposta completa
+  - "tool_use": Parou para usar ferramenta
+  - "max_tokens": Atingiu limite de tokens
+- **message.usage**: Métricas detalhadas de uso:
+  - **input_tokens**: Tokens processados da entrada
+  - **cache_creation_input_tokens**: Tokens usados para criar cache de contexto
+  - **cache_read_input_tokens**: Tokens lidos do cache (economia)
+  - **output_tokens**: Tokens gerados na resposta
+  - **service_tier**: Nível de serviço usado
+- **costUSD**: Custo calculado em dólares americanos
+- **durationMs**: Tempo de processamento em milissegundos
+
+### 4. Tool Use (Uso de Ferramenta)
+
+O uso de ferramentas é incorporado no content das mensagens do assistant:
+
+```json
+{
+  "type": "tool_use",
+  "id": "toolu_01T1hzeEkzRzggBCvYSCCEGc",
+  "name": "TodoWrite",
+  "input": {
+    "todos": [
+      {
+        "id": "1",
+        "content": "Ler o arquivo JSONL atual para entender o formato",
+        "status": "pending",
+        "priority": "high"
+      }
+    ]
+  }
+}
+```
+
+**Ferramentas Comuns no Claude Code**:
+- **Read**: Leitura de arquivos
+- **Write**: Escrita de arquivos
+- **Edit/MultiEdit**: Edição de arquivos
+- **Bash**: Execução de comandos
+- **TodoWrite/TodoRead**: Gerenciamento de tarefas
+- **WebFetch**: Busca de conteúdo web
+- **Glob/Grep**: Busca de arquivos e conteúdo
+- **Task**: Lançamento de agentes para tarefas complexas
+
+### 5. Tool Result (Resultado de Ferramenta)
+
+Resultados de ferramentas aparecem como mensagens do tipo "user" com role "user":
+
+```json
+{
+  "parentUuid": "01c38635-b334-4d13-b40c-0b3d2388388c",
+  "type": "user",
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01T1hzeEkzRzggBCvYSCCEGc",
+        "type": "tool_result",
+        "content": "Todos have been modified successfully..."
+      }
+    ]
+  },
+  "toolUseResult": {
+    "oldTodos": [],
+    "newTodos": [
+      {
+        "content": "Ler o arquivo JSONL atual",
+        "status": "pending",
+        "priority": "high",
+        "id": "1"
+      }
+    ]
+  },
+  "uuid": "57c1d9e8-3a49-4a4a-92f1-791e79d8e425",
+  "timestamp": "2025-05-23T12:49:26.241Z"
+}
+```
+
+**Estrutura do toolUseResult varia por ferramenta**:
+- **TodoWrite**: oldTodos/newTodos com listas de tarefas
+- **Read**: Conteúdo do arquivo lido
+- **Bash**: stdout, stderr, exitCode
+- **WebFetch**: bytes, code, codeText, result, durationMs, url
+
+## Fluxo de Conversa Detalhado
+
+O arquivo JSONL registra cronologicamente toda a interação:
+
+### Fluxo Típico:
+1. **Summary** → Resumos no início do arquivo
+2. **User Message** → Usuário faz uma solicitação
+3. **Assistant Message** → Claude responde e pode incluir tool_use
+4. **User Message (tool_result)** → Sistema retorna resultado da ferramenta
+5. **Assistant Message** → Claude processa o resultado e continua
+
+### Exemplo de Cadeia de UUIDs:
+```
+user (uuid: baa7d8fc...) 
+  └─> assistant (uuid: 01c38635..., parentUuid: baa7d8fc...)
+      └─> user/tool_result (uuid: 57c1d9e8..., parentUuid: 01c38635...)
+          └─> assistant (uuid: próximo..., parentUuid: 57c1d9e8...)
+```
+
+### Rastreamento de Contexto:
+- Cada mensagem tem um **uuid** único
+- O **parentUuid** cria a cadeia de conversa
+- O **sessionId** permanece constante em toda a sessão
+- O **timestamp** permite reconstruir a ordem cronológica
+
+## Vantagens do Formato JSONL para o Claude Code
+
+### 1. **Performance e Escalabilidade**
+- **Streaming**: Processa conversas longas linha por linha
+- **Append-only**: Novas mensagens são adicionadas sem reescrever
+- **Memória eficiente**: Não precisa carregar toda a conversa
+
+### 2. **Confiabilidade**
+- **Recuperação de falhas**: Corrupção afeta apenas linhas específicas
+- **Atomicidade**: Cada linha é uma transação completa
+- **Durabilidade**: Escrita incremental reduz perda de dados
+
+### 3. **Análise e Métricas**
+- **Custo por conversa**: Soma dos campos costUSD
+- **Tempo de resposta**: Análise dos campos durationMs
+- **Uso de tokens**: Estatísticas de cache e consumo
+- **Padrões de uso**: Ferramentas mais utilizadas
+
+### 4. **Depuração e Auditoria**
+- **Rastreamento completo**: Cada ação tem UUID e timestamp
+- **Reprodução**: Pode recriar o estado em qualquer ponto
+- **Diagnóstico**: Identifica onde ocorreram problemas
+
+## Exemplos de Código Prático
+
+### Leitura Básica
+```python
+import json
+from datetime import datetime
+
+# Lendo e processando arquivo JSONL
+with open('session.jsonl', 'r') as f:
+    for line in f:
+        entry = json.loads(line)
+        
+        if entry['type'] == 'summary':
+            print(f"📋 Resumo: {entry['summary']}")
+        
+        elif entry['type'] == 'user':
+            timestamp = datetime.fromisoformat(entry['timestamp'].replace('Z', '+00:00'))
+            print(f"\n👤 [{timestamp.strftime('%H:%M:%S')}] Usuário:")
+            
+            # Tratando diferentes tipos de content
+            content = entry['message'].get('content', '')
+            if isinstance(content, str):
+                print(f"   {content}")
+            elif isinstance(content, list):
+                for item in content:
+                    if item['type'] == 'text':
+                        print(f"   {item['text']}")
+                    elif item['type'] == 'tool_result':
+                        print(f"   [Resultado da ferramenta {item['tool_use_id']}]")
+        
+        elif entry['type'] == 'assistant':
+            print(f"\n🤖 Claude ({entry['message']['model']}):")
+            for item in entry['message']['content']:
+                if item['type'] == 'text':
+                    print(f"   {item['text']}")
+                elif item['type'] == 'tool_use':
+                    print(f"   [Usando ferramenta: {item['name']}]")
+```
+
+### Análise de Custos
+```python
+import json
+from collections import defaultdict
+
+def analyze_costs(jsonl_file):
+    total_cost = 0
+    costs_by_model = defaultdict(float)
+    token_usage = defaultdict(int)
+    
+    with open(jsonl_file, 'r') as f:
+        for line in f:
+            entry = json.loads(line)
+            
+            if entry.get('type') == 'assistant' and 'costUSD' in entry:
+                cost = entry['costUSD']
+                model = entry['message']['model']
+                
+                total_cost += cost
+                costs_by_model[model] += cost
+                
+                usage = entry['message'].get('usage', {})
+                token_usage['input'] += usage.get('input_tokens', 0)
+                token_usage['output'] += usage.get('output_tokens', 0)
+                token_usage['cache_created'] += usage.get('cache_creation_input_tokens', 0)
+                token_usage['cache_read'] += usage.get('cache_read_input_tokens', 0)
+    
+    print(f"💰 Custo Total: ${total_cost:.4f}")
+    print("\n📊 Custo por Modelo:")
+    for model, cost in costs_by_model.items():
+        print(f"   {model}: ${cost:.4f}")
+    
+    print("\n🔢 Uso de Tokens:")
+    print(f"   Entrada: {token_usage['input']:,}")
+    print(f"   Saída: {token_usage['output']:,}")
+    print(f"   Cache Criado: {token_usage['cache_created']:,}")
+    print(f"   Cache Lido: {token_usage['cache_read']:,}")
+    
+    if token_usage['cache_created'] > 0:
+        cache_efficiency = token_usage['cache_read'] / token_usage['cache_created']
+        print(f"\n📈 Eficiência do Cache: {cache_efficiency:.1%}")
+```
+
+### Extração de Ferramentas Usadas
+```python
+import json
+from collections import Counter
+
+def analyze_tool_usage(jsonl_file):
+    tool_usage = Counter()
+    tool_durations = defaultdict(list)
+    
+    with open(jsonl_file, 'r') as f:
+        for line in f:
+            entry = json.loads(line)
+            
+            if entry.get('type') == 'assistant':
+                content = entry.get('message', {}).get('content', [])
+                
+                for item in content:
+                    if item.get('type') == 'tool_use':
+                        tool_name = item.get('name')
+                        tool_usage[tool_name] += 1
+            
+            # Captura duração de ferramentas nos results
+            if 'toolUseResult' in entry and 'durationMs' in entry['toolUseResult']:
+                # Aqui você precisaria correlacionar com a ferramenta específica
+                duration = entry['toolUseResult']['durationMs']
+                # Esta é uma simplificação - na prática, você rastrearia por tool_use_id
+    
+    print("🔧 Uso de Ferramentas:")
+    for tool, count in tool_usage.most_common():
+        print(f"   {tool}: {count} vezes")
+```
+
+## Estrutura de Diretórios do Claude Code
+
+### Organização dos Arquivos
+```
+~/.claude/
+├── projects/
+│   └── -Users-agents--claude/           # Diretório do projeto
+│       ├── 463cef43-5459-4767-ba08-cc01cd6aa433.jsonl  # Sessões
+│       └── eaa82ead-c3be-416b-8d01-5e4a62b83390.jsonl
+├── todos/
+│   └── 463cef43-5459-4767-ba08-cc01cd6aa433.json       # Tarefas por sessão
+├── CLAUDE.md                             # Instruções globais do usuário
+└── clean_todos.sh                        # Script de limpeza automática
+```
+
+### Convenções de Nomenclatura
+- **Sessões**: UUID v4 (exemplo: `463cef43-5459-4767-ba08-cc01cd6aa433`)
+- **Projetos**: Path sanitizado (exemplo: `-Users-agents--claude`)
+- **Formato**: `.jsonl` para conversas, `.json` para todos
+
+### Correlação de Arquivos
+- O `sessionId` no JSONL corresponde ao nome do arquivo
+- Arquivos de todos usam o mesmo UUID da sessão
+- Permite rastrear tarefas específicas de cada conversa
+
+## Casos de Uso Avançados
+
+### 1. **Migração de Conversas**
+```bash
+# Copiar conversa para novo projeto
+cp ~/.claude/projects/projeto1/sessao.jsonl ~/.claude/projects/projeto2/
+```
+
+### 2. **Análise em Lote**
+```bash
+# Analisar todas as conversas de um projeto
+for file in ~/.claude/projects/meu-projeto/*.jsonl; do
+    echo "Analisando: $file"
+    python analyze_costs.py "$file"
+done
+```
+
+### 3. **Backup e Arquivamento**
+```bash
+# Comprimir conversas antigas
+tar -czf conversas_2025_01.tar.gz ~/.claude/projects/*/2025-01*.jsonl
+```
+
+### 4. **Monitoramento em Tempo Real**
+```bash
+# Acompanhar nova conversa
+tail -f ~/.claude/projects/meu-projeto/current.jsonl | \
+    jq -r 'select(.type == "assistant") | .message.content[0].text'
+```
+
+## Melhores Práticas
+
+### Para Desenvolvedores
+1. **Sempre valide JSON**: Use `json.loads()` com try/except
+2. **Processe incrementalmente**: Use geradores para arquivos grandes
+3. **Mantenha índices**: Crie índices por UUID para busca rápida
+4. **Respeite a privacidade**: Conversas podem conter dados sensíveis
+
+### Para Análise
+1. **Cache de resultados**: Evite reprocessar arquivos grandes
+2. **Agregue métricas**: Crie dashboards de uso e custos
+3. **Detecte padrões**: Identifique fluxos comuns de trabalho
+4. **Otimize custos**: Analise uso de cache e modelos

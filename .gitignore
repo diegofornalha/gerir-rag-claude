@@ -16,3 +16,6 @@ lightrag/ui/__pycache__/
 
 lightrag/*.pid
 
+# Node modules directories
+todos/app_todos_bd_tasks/*/node_modules/
+todos/app_todos_bd_tasks/**/node_modules/

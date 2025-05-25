@@ -89,12 +89,19 @@ def extract_short_id(file_path):
     return filename.split('-')[0] if '-' in filename else filename[:8]
 
 def extract_conversation_info(file_path):
-    """Extrai informações básicas da conversa a partir do arquivo JSONL"""
+    """Extrai informações completas da conversa incluindo métricas"""
     try:
+        # Variáveis para métricas
+        total_cost = 0.0
+        message_count = 0
+        tool_uses = []
+        models_used = set()
+        total_tokens = 0
+        
         with open(file_path, 'r', encoding='utf-8') as f:
             # Tentar ler algumas linhas para extrair metadados
             lines = []
-            for _ in range(10):  # Limitar a 10 linhas para performance
+            for _ in range(50):  # Aumentar limite para capturar mais métricas
                 line = f.readline().strip()
                 if not line:
                     break
@@ -109,22 +116,65 @@ def extract_conversation_info(file_path):
                     "first_message": "",
                     "message_count": 0,
                     "last_updated": "",
-                    "file_size": os.path.getsize(file_path)
+                    "file_size": os.path.getsize(file_path),
+                    "total_cost": 0.0,
+                    "models_used": [],
+                    "tool_count": 0,
+                    "total_tokens": 0
                 }
             
             # Analisar a primeira linha para obter timestamp da conversa
             first_msg = {}
+            summary = ""
             try:
                 first_msg = json.loads(lines[0])
+                # Verificar se é um summary
+                if first_msg.get("type") == "summary":
+                    summary = first_msg.get("summary", "")
             except json.JSONDecodeError:
                 pass
             
-            # Extrair conteúdo da primeira mensagem do usuário
+            # Extrair conteúdo da primeira mensagem do usuário e métricas
             first_user_message = ""
+            last_timestamp = ""
+            
             for line in lines:
                 try:
                     msg_obj = json.loads(line)
-                    if (msg_obj.get("type") == "user" or 
+                    
+                    # Contar mensagens
+                    if msg_obj.get("type") in ["user", "assistant"]:
+                        message_count += 1
+                    
+                    # Capturar timestamp mais recente
+                    if msg_obj.get("timestamp"):
+                        last_timestamp = msg_obj.get("timestamp")
+                    
+                    # Métricas do assistente
+                    if msg_obj.get("type") == "assistant":
+                        # Custo
+                        if "costUSD" in msg_obj:
+                            total_cost += msg_obj["costUSD"]
+                        
+                        # Modelo
+                        model = msg_obj.get("message", {}).get("model")
+                        if model:
+                            models_used.add(model)
+                        
+                        # Tokens
+                        usage = msg_obj.get("message", {}).get("usage", {})
+                        total_tokens += usage.get("input_tokens", 0)
+                        total_tokens += usage.get("output_tokens", 0)
+                        
+                        # Ferramentas
+                        content = msg_obj.get("message", {}).get("content", [])
+                        if isinstance(content, list):
+                            for item in content:
+                                if isinstance(item, dict) and item.get("type") == "tool_use":
+                                    tool_uses.append(item.get("name", "unknown"))
+                    
+                    # Primeira mensagem do usuário
+                    if not first_user_message and (msg_obj.get("type") == "user" or 
                         (isinstance(msg_obj.get("message"), dict) and 
                          msg_obj.get("message", {}).get("role") == "user")):
                         
@@ -141,9 +191,6 @@ def extract_conversation_info(file_path):
                             first_user_message = " ".join(text_parts)
                         elif isinstance(content, str):
                             first_user_message = content
-                        
-                        if first_user_message:
-                            break
                 except:
                     continue
             
@@ -151,32 +198,42 @@ def extract_conversation_info(file_path):
             if len(first_user_message) > 100:
                 first_user_message = first_user_message[:97] + "..."
             
-            # Usar base do caminho como título se a mensagem não for informativa
-            parent_dir = os.path.basename(os.path.dirname(file_path))
-            if not first_user_message or first_user_message.lower() in ("hi", "hello", "oi", "olá"):
-                title = parent_dir
-            else:
+            # Determinar título
+            if summary:
+                title = summary
+            elif first_user_message and first_user_message.lower() not in ("hi", "hello", "oi", "olá"):
                 title = first_user_message
+            else:
+                parent_dir = os.path.basename(os.path.dirname(file_path))
+                title = parent_dir
             
             # Extrair timestamp como string ISO
-            timestamp = first_msg.get("timestamp", "")
-            if timestamp and timestamp.endswith("Z"):
+            if last_timestamp and last_timestamp.endswith("Z"):
                 # Simplificar para só a data
                 try:
-                    date_part = timestamp.split("T")[0]
+                    date_part = last_timestamp.split("T")[0]
                 except:
-                    date_part = timestamp
+                    date_part = last_timestamp
             else:
                 date_part = ""
+            
+            # Formatar custo
+            cost_str = f"${total_cost:.4f}" if total_cost > 0 else "$0.00"
             
             return {
                 "id": extract_short_id(file_path),
                 "file_path": file_path,
                 "title": title,
                 "first_message": first_user_message,
-                "message_count": 0,  # Poderíamos contar linhas, mas seria custoso
+                "message_count": message_count,
                 "last_updated": date_part,
-                "file_size": os.path.getsize(file_path)
+                "file_size": os.path.getsize(file_path),
+                "total_cost": total_cost,
+                "cost_str": cost_str,
+                "models_used": list(models_used),
+                "tool_count": len(tool_uses),
+                "tool_names": list(set(tool_uses))[:5],  # Top 5 ferramentas únicas
+                "total_tokens": total_tokens
             }
             
     except Exception as e:
@@ -188,7 +245,13 @@ def extract_conversation_info(file_path):
             "first_message": f"Erro ao ler arquivo: {str(e)}",
             "message_count": 0,
             "last_updated": "",
-            "file_size": os.path.getsize(file_path) if os.path.exists(file_path) else 0
+            "file_size": os.path.getsize(file_path) if os.path.exists(file_path) else 0,
+            "total_cost": 0.0,
+            "cost_str": "$0.00",
+            "models_used": [],
+            "tool_count": 0,
+            "tool_names": [],
+            "total_tokens": 0
         }
 
 def scan_projects():
