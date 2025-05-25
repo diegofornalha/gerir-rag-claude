@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { format } from 'date-fns'
+import { Link } from 'react-router-dom'
 
 interface Todo {
   id: string
@@ -131,15 +132,12 @@ function SessionCard({ session }: { session: Session }) {
         Última atualização: {format(new Date(session.lastModified), 'dd/MM/yyyy HH:mm')}
       </div>
       
-      <button
-        className="mt-3 text-sm text-blue-600 hover:text-blue-800 font-medium"
-        onClick={() => {
-          // Expandir para mostrar todos
-          console.log('Expandir sessão:', session.sessionId)
-        }}
+      <Link
+        to={`/claude-sessions/${session.sessionId}`}
+        className="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 font-medium"
       >
         Ver detalhes →
-      </button>
+      </Link>
     </div>
   )
 }

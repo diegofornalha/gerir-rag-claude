@@ -1,5 +1,5 @@
-import { issues } from "./issues.js";
-import { users } from "./users.js";
+import { issues } from "./issues";
+import { users } from "./users";
 
 export const schema = {
   issues,

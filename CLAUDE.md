@@ -1,8 +1,7 @@
   1. Prefere ser chamado de Diego
   2. Usa sistema operacional MacOS
   3. Prefere comunicação em português do Brasil
-  4. Tem interesse em sistemas de agentes de IA integrados
-  5. Está desenvolvendo um sistema pessoal de agentes
+  4. sempre que contatar que a aplicação funciona tente em seguida tirar um print ou navegar com puppeteer para confirmar.
 
 # Configuração do Desktop Commander
 
@@ -47,6 +46,117 @@ O serviço Memory MCP permite armazenar e gerenciar conhecimento estruturado em 
 - `search_nodes` - Pesquisa entidades por nome, tipo ou conteúdo das observações
 - `open_nodes` - Recupera entidades específicas pelo nome, mostrando detalhes completos
 
+# Configuração do Puppeteer
+
+O serviço Puppeteer MCP permite automação e controle de navegador web. Abaixo estão exemplos de uso e comandos disponíveis:
+
+## Comandos Principais
+
+### Navegação
+- `puppeteer_navigate(url: string, launchOptions?: object)` - Navega para uma URL
+  ```javascript
+  puppeteer_navigate({ url: "https://example.com" })
+  ```
+
+### Captura de Tela
+- `puppeteer_screenshot(name: string, width?: number, height?: number, selector?: string)` - Tira screenshot
+  ```javascript
+  puppeteer_screenshot({ 
+    name: "dashboard", 
+    width: 1280, 
+    height: 720,
+    selector: "#main-content"  // opcional: captura elemento específico
+  })
+  ```
+
+### Interação com Elementos
+- `puppeteer_click(selector: string)` - Clica em um elemento
+  ```javascript
+  puppeteer_click({ selector: "button.submit" })
+  ```
+
+- `puppeteer_fill(selector: string, value: string)` - Preenche campo de formulário
+  ```javascript
+  puppeteer_fill({ selector: "#email", value: "user@example.com" })
+  ```
+
+- `puppeteer_select(selector: string, value: string)` - Seleciona opção em dropdown
+  ```javascript
+  puppeteer_select({ selector: "#country", value: "BR" })
+  ```
+
+- `puppeteer_hover(selector: string)` - Passa mouse sobre elemento
+  ```javascript
+  puppeteer_hover({ selector: ".menu-item" })
+  ```
+
+### Execução de JavaScript
+- `puppeteer_evaluate(script: string)` - Executa JavaScript no contexto da página
+  ```javascript
+  puppeteer_evaluate({ script: "document.title" })
+  puppeteer_evaluate({ script: "document.querySelectorAll('a').length" })
+  ```
+
+## Casos de Uso
+
+1. **Testes Automatizados**: Verificar funcionalidade de aplicações web
+2. **Screenshots para Documentação**: Capturar telas de sistemas
+3. **Automação de Tarefas**: Login automático, preenchimento de formulários
+4. **Extração de Dados**: Coletar informações de páginas (com permissão)
+5. **Monitoramento**: Verificar disponibilidade de serviços
+
+# Configuração do Terminal
+
+O serviço Terminal MCP permite execução de comandos no sistema. Abaixo estão exemplos de uso:
+
+## Comando Principal
+
+- `terminal.run_command(command: string, workdir?: string, stdin?: string)` - Executa comandos
+  ```bash
+  terminal.run_command({ command: "ls -la" })
+  terminal.run_command({ 
+    command: "python3 script.py",
+    workdir: "/path/to/project" 
+  })
+  ```
+
+## Casos de Uso
+
+1. **Executar scripts**: Python, Node.js, Shell scripts
+2. **Operações git**: commit, push, pull
+3. **Gerenciar processos**: iniciar/parar serviços
+4. **Análise de logs**: grep, tail, awk
+5. **Operações de sistema**: verificar espaço, processos
+
+# Configuração do LightRAG
+
+O serviço LightRAG MCP permite indexação e busca em documentos. Abaixo estão exemplos de uso:
+
+## Comandos Principais
+
+### Consultas
+- `rag_query(query: string, mode?: string)` - Busca informações na base de conhecimento
+  ```python
+  rag_query({ query: "como configurar docker", mode: "hybrid" })
+  ```
+
+### Inserção de Dados
+- `rag_insert_text(text: string)` - Insere texto na base
+  ```python
+  rag_insert_text({ text: "Conteúdo do documento..." })
+  ```
+
+- `rag_insert_file(file_path: string)` - Insere arquivo na base
+  ```python
+  rag_insert_file({ file_path: "/path/to/document.txt" })
+  ```
+
+## Modos de Busca
+- `naive`: Busca simples por palavras-chave
+- `local`: Busca em contexto local
+- `global`: Busca em todo o conhecimento
+- `hybrid`: Combinação de local e global (padrão)
+
 ## Limpeza Automática de Todos
 
 O sistema agora realiza limpeza automática semanal dos arquivos de tarefas (todos), removendo:
@@ -60,3 +170,9 @@ Para limpar manualmente a qualquer momento:
 ```
 
 A limpeza preserva todos os arquivos com tarefas válidas e o arquivo de documentação todos.md.
+
+# important-instruction-reminders
+Do what has been asked; nothing more, nothing less.
+NEVER create files unless they're absolutely necessary for achieving your goal.
+ALWAYS prefer editing an existing file to creating a new one.
+NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.

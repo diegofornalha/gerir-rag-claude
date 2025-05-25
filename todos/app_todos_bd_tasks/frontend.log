@@ -1,0 +1,11 @@
+
+> frontend@0.0.0 dev /Users/agents/.claude/todos/app_todos_bd_tasks/frontend
+> vite
+
+
+  VITE v6.3.5  ready in 312 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+7:48:18 AM [vite] (client) hmr update /src/index.css, /src/pages/CreateIssue.tsx, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx
+7:48:30 AM [vite] (client) hmr update /src/index.css, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx

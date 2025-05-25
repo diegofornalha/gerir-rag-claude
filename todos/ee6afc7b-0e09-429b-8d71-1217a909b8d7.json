@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Diagnosticar problema do frontend não carregando no navegador",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Verificar logs de erro do frontend",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Verificar configuração do Vite",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Testar build de produção",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Parar todos os serviços e reiniciar limpo",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Corrigir erro de importação createCollection",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "6"
+  }
+]

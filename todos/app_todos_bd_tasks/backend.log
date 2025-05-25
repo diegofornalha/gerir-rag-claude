@@ -1,0 +1,7 @@
+
+> backend@1.0.0 dev /Users/agents/.claude/todos/app_todos_bd_tasks/backend
+> tsx watch --env-file .env src/http/server.ts
+
+[10:46:30 UTC] INFO: Server listening at http://127.0.0.1:3333
+[10:46:30 UTC] INFO: Server listening at http://192.168.1.21:3333
+[10:46:30 UTC] INFO: 🚀 HTTP server running on http://localhost:3333

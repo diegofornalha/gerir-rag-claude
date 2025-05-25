@@ -1,0 +1,7 @@
+{"level":30,"time":1748167155782,"pid":80152,"hostname":"AI","msg":"Server listening at http://127.0.0.1:3333"}
+Servidor rodando em http://localhost:3333
+{"level":30,"time":1748167155782,"pid":80152,"hostname":"AI","msg":"Server listening at http://192.168.1.21:3333"}
+{"level":30,"time":1748167163852,"pid":80152,"hostname":"AI","reqId":"req-1","req":{"method":"GET","url":"/api/health","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":61216},"msg":"incoming request"}
+{"level":30,"time":1748167163857,"pid":80152,"hostname":"AI","reqId":"req-1","res":{"statusCode":200},"responseTime":5.295459002256393,"msg":"request completed"}
+{"level":30,"time":1748167172902,"pid":80152,"hostname":"AI","reqId":"req-2","req":{"method":"GET","url":"/api/claude-sessions/320197f4-9f03-475e-9703-7b9ce2c918e8/todos","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":61221},"msg":"incoming request"}
+{"level":30,"time":1748167172904,"pid":80152,"hostname":"AI","reqId":"req-2","res":{"statusCode":200},"responseTime":2.029124990105629,"msg":"request completed"}

@@ -4,8 +4,8 @@
  */
 
 import { z } from 'zod'
-import { db } from '../db/client'
-import { eq } from 'drizzle-orm'
+// import { db } from '../db/client' // Removido pois não está sendo usado
+// import { eq } from 'drizzle-orm' // Removido pois não está sendo usado
 import fs from 'fs/promises'
 import path from 'path'
 import { watch } from 'chokidar'

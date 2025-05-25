@@ -5,11 +5,11 @@ import { fastifyHelmet } from "@fastify/helmet";
 import { serializerCompiler, validatorCompiler, type ZodTypeProvider } from 'fastify-type-provider-zod'
 import { fastify } from "fastify";
 import { z } from "zod";
-import { db } from "../db/client.js";
-import { schema } from "../db/schema/index.js";
+import { db } from "../db/client";
+import { schema } from "../db/schema/index";
 import { eq, desc, sql } from "drizzle-orm";
-import { issuesToTasks } from "../utils/issue-to-task-transformer.js";
-import { claudeRoutes } from "./claude-routes.js";
+import { issuesToTasks } from "../utils/issue-to-task-transformer";
+import { claudeRoutes } from "./claude-routes";
 
 const app = fastify({ 
   logger: {

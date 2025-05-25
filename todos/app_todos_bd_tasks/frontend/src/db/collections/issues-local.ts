@@ -1,4 +1,4 @@
-import { createCollection } from '@tanstack/db-collections'
+import { createQueryCollection } from '@tanstack/db-collections'
 import { z } from 'zod'
 
 export const issueSchema = z.object({
@@ -11,7 +11,7 @@ export const issueSchema = z.object({
 
 export type Issue = z.infer<typeof issueSchema>
 
-export const issues = createCollection({
+export const issues = createQueryCollection({
   id: 'issues',
   primaryKey: ['id'],
   schema: issueSchema,

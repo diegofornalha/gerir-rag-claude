@@ -4,6 +4,7 @@
   ----default-font-family: Inter, sans-serif;
 }
 
+/* Comentando configurações de tema escuro para usar o tema claro do app.tsx
 html {
   color-scheme: dark;
 }
@@ -13,3 +14,4 @@ body {
   min-height: 100vh;
   background-color: rgb(9 9 11);
 }
+*/
