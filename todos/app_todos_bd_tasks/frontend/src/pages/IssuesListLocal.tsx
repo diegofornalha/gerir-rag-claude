@@ -39,35 +39,55 @@ export function IssuesListLocal() {
 
       <div className="space-y-4">
         {issuesList.map((issue) => (
-          <Link
+          <div
             key={issue.id}
-            to={`/issues/${issue.id}`}
-            className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6"
+            className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 relative"
           >
-            <div className="flex items-start justify-between">
-              <div className="flex-1">
-                <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                  {issue.title}
-                </h2>
-                {issue.sessionId && (
-                  <div className="text-sm text-blue-600 mb-1">
-                    Vinculada à sessão: {issue.sessionId.slice(0, 8)}...
+            <Link
+              to={`/issues/${issue.id}`}
+              className="block"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                    {issue.title}
+                  </h2>
+                  {issue.sessionId && (
+                    <div className="text-sm text-blue-600 mb-1">
+                      Vinculada à sessão: {issue.sessionId.slice(0, 8)}...
+                    </div>
+                  )}
+                  {issue.description && (
+                    <p className="text-gray-600 mb-3">
+                      {issue.description}
+                    </p>
+                  )}
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <span>Por {issue.userName}</span>
+                    <span>
+                      {new Date(issue.createdAt).toLocaleDateString('pt-BR')}
+                    </span>
                   </div>
-                )}
-                {issue.description && (
-                  <p className="text-gray-600 mb-3">
-                    {issue.description}
-                  </p>
-                )}
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>Por {issue.userName}</span>
-                  <span>
-                    {new Date(issue.createdAt).toLocaleDateString('pt-BR')}
-                  </span>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+            <button
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                if (confirm('Tem certeza que deseja deletar esta missão?')) {
+                  issues.delete(issue.id)
+                  setIssuesList(prev => prev.filter(i => i.id !== issue.id))
+                }
+              }}
+              className="absolute top-4 right-4 text-red-500 hover:text-red-700 p-2 hover:bg-red-50 rounded-lg transition-colors"
+              title="Deletar missão"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </button>
+          </div>
         ))}
       </div>
 
