@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { format } from 'date-fns'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -21,7 +21,8 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333'
 
 export function ClaudeSessions() {
   const [showHidden, setShowHidden] = useState(false)
-  const { hideSession, unhideSession, isHidden, hiddenCount } = useHiddenSessions()
+  const { hideSession, unhideSession, isHidden, hiddenCount, clearHidden } = useHiddenSessions()
+  const queryClient = useQueryClient()
   
   const { data: sessions, isLoading, error } = useQuery({
     queryKey: ['claude-sessions'],
@@ -34,9 +35,21 @@ export function ClaudeSessions() {
     refetchInterval: 5000, // Atualiza a cada 5 segundos
   })
 
-  const visibleSessions = sessions?.filter(session => 
-    showHidden ? isHidden(session.sessionId) : !isHidden(session.sessionId)
-  ) || []
+  const visibleSessions = sessions?.filter(session => {
+    const hidden = isHidden(session.sessionId)
+    const empty = session.todoCount === 0
+    
+    if (showHidden) {
+      return hidden
+    } else {
+      // Sempre ocultar sessões vazias
+      if (empty) return false
+      return !hidden
+    }
+  }) || []
+  
+  // Contar apenas sessões ocultas que realmente existem
+  const actualHiddenCount = sessions?.filter(session => isHidden(session.sessionId)).length || 0
 
   if (isLoading) {
     return (
@@ -78,8 +91,43 @@ export function ClaudeSessions() {
               : 'text-gray-600 hover:text-gray-800'
           }`}
         >
-          Sessões Ocultas {hiddenCount > 0 && `(${hiddenCount})`}
+          Sessões Ocultas {actualHiddenCount > 0 && `(${actualHiddenCount})`}
         </button>
+        
+        {/* Botão de limpar sessões ocultas */}
+        {showHidden && actualHiddenCount > 0 && (
+          <button
+            onClick={async () => {
+              try {
+                // Primeiro executa o script de limpeza
+                const response = await fetch(`${API_URL}/api/cleanup/empty-todos`, {
+                  method: 'POST'
+                })
+                
+                if (response.ok) {
+                  const result = await response.json()
+                  console.log(`Removidos: ${result.removed} arquivos vazios`)
+                  
+                  // Limpa a lista de ocultos do localStorage
+                  clearHidden()
+                  
+                  // Força atualização das sessões
+                  queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
+                  
+                  // Volta para aba ativa
+                  setShowHidden(false)
+                }
+              } catch (error) {
+                console.error('Erro ao limpar sessões:', error)
+              }
+            }}
+            className="ml-auto px-3 py-1 text-sm text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors flex items-center gap-1"
+            title="Limpar todas as sessões vazias (remove arquivos)"
+          >
+            <span>🗑️</span>
+            <span>Limpar vazias</span>
+          </button>
+        )}
       </div>
       
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -179,10 +227,10 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
         {/* Botão de ocultar/desocultar */}
         <button
           onClick={isHidden ? onUnhide : onHide}
-          className="p-1 text-gray-400 hover:text-gray-600 transition-colors"
+          className="p-1 text-gray-400 hover:text-gray-600 transition-colors text-lg"
           title={isHidden ? 'Desocultar sessão' : 'Ocultar sessão'}
         >
-          {isHidden ? '👁️' : '👁️‍🗨️'}
+          {isHidden ? '👁️' : '🙈'}
         </button>
       </div>
     </div>

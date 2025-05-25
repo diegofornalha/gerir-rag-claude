@@ -25,12 +25,17 @@ export function useHiddenSessions() {
   }
 
   const isHidden = (sessionId: string) => hiddenSessions.has(sessionId)
+  
+  const clearHidden = () => {
+    setHiddenSessions(new Set())
+  }
 
   return {
     hiddenSessions,
     hideSession,
     unhideSession,
     isHidden,
-    hiddenCount: hiddenSessions.size
+    hiddenCount: hiddenSessions.size,
+    clearHidden
   }
 }

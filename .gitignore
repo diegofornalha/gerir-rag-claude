@@ -21,3 +21,4 @@ todos/app_todos_bd_tasks/*/node_modules/
 todos/app_todos_bd_tasks/**/node_modules/
 todos/app_todos_bd_tasks/backend.log
 todos/app_todos_bd_tasks/backend.log
+todos/app_todos_bd_tasks/backend/backend.log

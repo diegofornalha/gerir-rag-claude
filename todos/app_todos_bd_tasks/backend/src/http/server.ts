@@ -11,6 +11,7 @@ import { eq, desc, sql } from "drizzle-orm";
 import { issuesToTasks } from "../utils/issue-to-task-transformer";
 import { claudeRoutes } from "./claude-routes";
 import { missionsRoutes } from "./missions-routes";
+import { cleanupRoutes } from "./cleanup-routes";
 
 const app = fastify({ 
   logger: {
@@ -458,6 +459,9 @@ await app.register(claudeRoutes, { prefix: '/api' })
 
 // Registrar rotas de missões
 await app.register(missionsRoutes)
+
+// Registrar rotas de limpeza
+await app.register(cleanupRoutes)
 
 app.setErrorHandler((error, _request, reply) => {
   app.log.error(error)
