@@ -17,7 +17,7 @@ export function IssuesListLocal() {
         ...issue,
         userName: user?.name || 'Unknown'
       }
-    }).sort((a, b) => b.id - a.id)
+    }).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
     
     setIssuesList(issuesWithUsers)
   }, [])
@@ -44,8 +44,13 @@ export function IssuesListLocal() {
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                  Missão #{issue.id} - {issue.title}
+                  {issue.title}
                 </h2>
+                {issue.sessionId && (
+                  <div className="text-sm text-blue-600 mb-1">
+                    Vinculada à sessão: {issue.sessionId.slice(0, 8)}...
+                  </div>
+                )}
                 {issue.description && (
                   <p className="text-gray-600 mb-3">
                     {issue.description}

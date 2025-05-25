@@ -32,3 +32,11 @@
 8:22:31 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
 8:25:11 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
 8:29:45 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+8:41:22 AM [vite] (client) hmr update /src/index.css, /src/pages/CreateIssue.tsx, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx, /src/pages/IssuesListLocal.tsx, /src/pages/CreateIssueLocal.tsx, /src/pages/IssueDetailLocal.tsx, /src/pages/EditIssueLocal.tsx
+11:05:49 AM [vite] (client) hmr update /src/index.css, /src/pages/CreateIssue.tsx, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx, /src/pages/IssuesListLocal.tsx, /src/pages/CreateIssueLocal.tsx, /src/pages/IssueDetailLocal.tsx, /src/pages/EditIssueLocal.tsx
+11:06:04 AM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+11:06:26 AM [vite] (client) hmr update /src/pages/IssueDetailLocal.tsx, /src/index.css
+11:06:42 AM [vite] (client) hmr update /src/pages/CreateIssueLocal.tsx, /src/index.css
+11:06:59 AM [vite] (client) hmr update /src/pages/EditIssueLocal.tsx, /src/index.css
+11:10:54 AM [vite] (client) hmr update /src/pages/IssueDetailLocal.tsx, /src/index.css
+11:23:39 AM [vite] (client) hmr update /src/pages/ClaudeSessionDetailSimple.tsx, /src/index.css

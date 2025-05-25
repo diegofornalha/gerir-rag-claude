@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { format } from 'date-fns'
@@ -45,6 +46,7 @@ const statusLabels = {
 
 export function ClaudeSessionDetailSimple() {
   const { sessionId } = useParams<{ sessionId: string }>()
+  const [filterStatus, setFilterStatus] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('all')
   
   const { data: session, isLoading, error } = useQuery({
     queryKey: ['claude-session-detail', sessionId],
@@ -98,22 +100,50 @@ export function ClaudeSessionDetailSimple() {
         </h1>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          <div className="text-center p-3 bg-gray-50 rounded">
+          <button
+            onClick={() => setFilterStatus('all')}
+            className={`text-center p-3 rounded transition-all ${
+              filterStatus === 'all' 
+                ? 'bg-gray-200 ring-2 ring-gray-400' 
+                : 'bg-gray-50 hover:bg-gray-100'
+            }`}
+          >
             <div className="text-2xl font-bold">{stats.total}</div>
             <div className="text-sm text-gray-600">Total</div>
-          </div>
-          <div className="text-center p-3 bg-yellow-50 rounded">
+          </button>
+          <button
+            onClick={() => setFilterStatus('pending')}
+            className={`text-center p-3 rounded transition-all ${
+              filterStatus === 'pending' 
+                ? 'bg-yellow-200 ring-2 ring-yellow-400' 
+                : 'bg-yellow-50 hover:bg-yellow-100'
+            }`}
+          >
             <div className="text-2xl font-bold text-yellow-600">{stats.pending}</div>
             <div className="text-sm text-gray-600">Pendentes</div>
-          </div>
-          <div className="text-center p-3 bg-blue-50 rounded">
+          </button>
+          <button
+            onClick={() => setFilterStatus('in_progress')}
+            className={`text-center p-3 rounded transition-all ${
+              filterStatus === 'in_progress' 
+                ? 'bg-blue-200 ring-2 ring-blue-400' 
+                : 'bg-blue-50 hover:bg-blue-100'
+            }`}
+          >
             <div className="text-2xl font-bold text-blue-600">{stats.inProgress}</div>
             <div className="text-sm text-gray-600">Em Progresso</div>
-          </div>
-          <div className="text-center p-3 bg-green-50 rounded">
+          </button>
+          <button
+            onClick={() => setFilterStatus('completed')}
+            className={`text-center p-3 rounded transition-all ${
+              filterStatus === 'completed' 
+                ? 'bg-green-200 ring-2 ring-green-400' 
+                : 'bg-green-50 hover:bg-green-100'
+            }`}
+          >
             <div className="text-2xl font-bold text-green-600">{stats.completed}</div>
             <div className="text-sm text-gray-600">Concluídas</div>
-          </div>
+          </button>
         </div>
 
         <div className="mb-4">
@@ -130,9 +160,20 @@ export function ClaudeSessionDetailSimple() {
       </div>
 
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-bold mb-4">📋 Tarefas</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold">📋 Tarefas</h2>
+          {filterStatus !== 'all' && (
+            <span className="text-sm text-gray-500">
+              Mostrando apenas: {filterStatus === 'pending' ? 'Pendentes' : 
+                               filterStatus === 'in_progress' ? 'Em Progresso' : 
+                               'Concluídas'}
+            </span>
+          )}
+        </div>
         <div className="space-y-3">
-          {session.todos.map((todo) => (
+          {session.todos
+            .filter(todo => filterStatus === 'all' || todo.status === filterStatus)
+            .map((todo) => (
             <div
               key={todo.id}
               className={`p-4 rounded-lg border ${
@@ -160,6 +201,13 @@ export function ClaudeSessionDetailSimple() {
             </div>
           ))}
         </div>
+        {session.todos.filter(todo => filterStatus === 'all' || todo.status === filterStatus).length === 0 && (
+          <p className="text-center text-gray-500 py-8">
+            Nenhuma tarefa {filterStatus === 'pending' ? 'pendente' : 
+                           filterStatus === 'in_progress' ? 'em progresso' : 
+                           filterStatus === 'completed' ? 'concluída' : ''} encontrada.
+          </p>
+        )}
       </div>
     </div>
   )

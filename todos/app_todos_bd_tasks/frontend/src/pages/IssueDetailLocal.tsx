@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { issues } from '../db/collections/issues-local'
 import { users } from '../db/collections/users-local'
 
 export function IssueDetailLocal() {
   const { id } = useParams<{ id: string }>()
+  const navigate = useNavigate()
   const [issue, setIssue] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     // Buscar issue por ID
-    const foundIssue = issues.getById(Number(id))
+    const foundIssue = issues.getById(id || '')
     
     if (foundIssue) {
       // Buscar usuário
@@ -23,6 +24,13 @@ export function IssueDetailLocal() {
     
     setLoading(false)
   }, [id])
+
+  const handleDelete = () => {
+    if (window.confirm('Tem certeza que deseja excluir esta missão?')) {
+      issues.delete(id || '')
+      navigate('/')
+    }
+  }
 
   if (loading) {
     return (
@@ -66,7 +74,7 @@ export function IssueDetailLocal() {
           <div className="mb-6">
             <div className="flex items-start justify-between mb-4">
               <h1 className="text-3xl font-bold text-gray-800">
-                Missão #{issue.id}
+                Missão
               </h1>
               <div className="flex gap-2">
                 <Link
@@ -76,6 +84,7 @@ export function IssueDetailLocal() {
                   Editar
                 </Link>
                 <button
+                  onClick={handleDelete}
                   className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   Excluir
@@ -102,6 +111,21 @@ export function IssueDetailLocal() {
           {!issue.description && (
             <div className="border-t pt-6">
               <p className="text-gray-500 italic">Sem descrição</p>
+            </div>
+          )}
+
+          {issue.sessionId && (
+            <div className="border-t pt-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Sessão Vinculada</h3>
+              <Link
+                to={`/claude-sessions/${issue.sessionId}`}
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
+                Ver sessão {issue.sessionId.slice(0, 8)}...
+              </Link>
             </div>
           )}
         </div>

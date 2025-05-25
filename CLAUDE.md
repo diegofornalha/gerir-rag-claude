@@ -2,6 +2,8 @@
   2. Usa sistema operacional MacOS
   3. Prefere comunicação em português do Brasil
   4. sempre que constatar e dizer agora você pode acessar que a aplicação funciona tente em seguida tirar um print ou navegar com puppeteer para confirmar.
+  5.sim não precisa me perguntar apenas execute as tarefas até o fim, a não ser
+│   que seja ao critico que vai precisar de uma decisão estrategica.  
 
 # Configuração do Desktop Commander
 

@@ -1,32 +1,8 @@
 [
   {
-    "content": "Atualizar nomenclatura de Issues para Missões em todo o sistema",
+    "content": "Implementar filtros de status nas sessões do Claude",
     "status": "completed",
     "priority": "high",
     "id": "1"
-  },
-  {
-    "content": "Padronizar tema claro em todas as páginas do sistema",
-    "status": "completed",
-    "priority": "high",
-    "id": "2"
-  },
-  {
-    "content": "Investigar e padronizar estilo em todas as páginas (issues/new, issues/:id, etc)",
-    "status": "completed",
-    "priority": "high",
-    "id": "3"
-  },
-  {
-    "content": "Atualizar nomenclatura de Issue para Missão nas páginas de formulário",
-    "status": "completed",
-    "priority": "high",
-    "id": "4"
-  },
-  {
-    "content": "Criar página de edição de missão com tema claro",
-    "status": "completed",
-    "priority": "high",
-    "id": "5"
   }
 ]

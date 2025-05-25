@@ -11,7 +11,7 @@ export function EditIssueLocal() {
 
   useEffect(() => {
     // Buscar missão existente
-    const issue = issues.getById(Number(id))
+    const issue = issues.getById(id || '')
     if (issue) {
       setTitle(issue.title)
       setDescription(issue.description || '')
@@ -27,7 +27,7 @@ export function EditIssueLocal() {
     }
 
     // Atualizar missão
-    issues.update(Number(id), {
+    issues.update(id || '', {
       title,
       description: description.trim() || null,
     })

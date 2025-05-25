@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Análise profunda da arquitetura atual e requisitos do sistema",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Mapear fluxo de dados entre frontend, backend e integração Claude",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Definir estratégia de sincronização PGlite <-> PostgreSQL",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Planejar migração de dados do LocalStorage para PGlite",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Desenhar schema unificado para PostgreSQL e PGlite",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Definir estratégia de cache e performance",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Planejar tratamento de conflitos na sincronização",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Definir estratégia de backup e recuperação",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  },
+  {
+    "content": "Documentar arquitetura proposta com diagramas",
+    "status": "completed",
+    "priority": "low",
+    "id": "9"
+  }
+]
