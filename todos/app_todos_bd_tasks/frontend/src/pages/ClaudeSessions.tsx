@@ -70,7 +70,7 @@ export function ClaudeSessions() {
 }
 
 function SessionCard({ session }: { session: Session }) {
-  const { data: todos, isLoading } = useQuery({
+  const { data: todos } = useQuery({
     queryKey: ['claude-todos', session.sessionId],
     queryFn: async () => {
       const response = await fetch(`${API_URL}/api/claude-sessions/${session.sessionId}/todos`)

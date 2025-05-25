@@ -14,7 +14,7 @@ export function IssuesList() {
       })
       .select('@issues.id', '@issues.title', '@issues.createdAt', '@users.name', '@issues.description')
       .orderBy({ '@issues.id': 'desc' })
-      .keyBy('@id')
+      .keyBy('@issues.id')
   })
 
   return (

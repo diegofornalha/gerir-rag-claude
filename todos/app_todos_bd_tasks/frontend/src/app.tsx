@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { IssuesList } from './pages/IssuesList'
+import { IssuesListLocal } from './pages/IssuesListLocal'
 import { CreateIssue } from './pages/CreateIssue'
 import { IssueDetail } from './pages/IssueDetail'
 import { ClaudeSessions } from './pages/ClaudeSessions'
@@ -31,7 +31,7 @@ export function App() {
           </nav>
           
           <Routes>
-            <Route path="/" element={<IssuesList />} />
+            <Route path="/" element={<IssuesListLocal />} />
             <Route path="/issues/new" element={<CreateIssue />} />
             <Route path="/issues/:id" element={<IssueDetail />} />
             <Route path="/claude-sessions" element={<ClaudeSessions />} />

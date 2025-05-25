@@ -1,7 +1,7 @@
   1. Prefere ser chamado de Diego
   2. Usa sistema operacional MacOS
   3. Prefere comunicação em português do Brasil
-  4. sempre que contatar que a aplicação funciona tente em seguida tirar um print ou navegar com puppeteer para confirmar.
+  4. sempre que constatar e dizer agora você pode acessar que a aplicação funciona tente em seguida tirar um print ou navegar com puppeteer para confirmar.
 
 # Configuração do Desktop Commander
 

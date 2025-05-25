@@ -31,8 +31,20 @@
   },
   {
     "content": "Corrigir erro de importação createCollection",
-    "status": "in_progress",
+    "status": "completed",
     "priority": "high",
     "id": "6"
+  },
+  {
+    "content": "Testar aplicação novamente",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Comparar páginas CurrentSession e ClaudeSessionDetail",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "8"
   }
 ]

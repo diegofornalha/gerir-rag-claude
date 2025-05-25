@@ -9,3 +9,12 @@
   ➜  Network: use --host to expose
 7:48:18 AM [vite] (client) hmr update /src/index.css, /src/pages/CreateIssue.tsx, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx
 7:48:30 AM [vite] (client) hmr update /src/index.css, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx
+7:50:50 AM [vite] (client) hmr update /src/index.css, /src/pages/CreateIssue.tsx, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx
+7:51:05 AM [vite] (client) hmr update /src/index.css, /src/pages/IssuesList.tsx, /src/pages/IssueDetail.tsx
+7:51:16 AM [vite] (client) hmr update /src/pages/IssuesList.tsx, /src/index.css
+7:51:29 AM [vite] (client) hmr update /src/pages/ClaudeSessionDetail.tsx, /src/index.css
+7:51:40 AM [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
+7:51:52 AM [vite] (client) page reload src/hooks/useLocalStorage.ts
+7:54:53 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+7:54:58 AM [vite] (client) hmr update /src/app.tsx, /src/index.css
+7:56:56 AM [vite] (client) page reload index.html
