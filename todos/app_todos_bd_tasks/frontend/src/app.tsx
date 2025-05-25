@@ -4,7 +4,7 @@ import { IssuesListLocal } from './pages/IssuesListLocal'
 import { CreateIssue } from './pages/CreateIssue'
 import { IssueDetail } from './pages/IssueDetail'
 import { ClaudeSessions } from './pages/ClaudeSessions'
-import { ClaudeSessionDetail } from './pages/ClaudeSessionDetail'
+import { ClaudeSessionDetailSimple } from './pages/ClaudeSessionDetailSimple'
 import { CurrentSession } from './pages/CurrentSession'
 
 const queryClient = new QueryClient()
@@ -35,7 +35,7 @@ export function App() {
             <Route path="/issues/new" element={<CreateIssue />} />
             <Route path="/issues/:id" element={<IssueDetail />} />
             <Route path="/claude-sessions" element={<ClaudeSessions />} />
-            <Route path="/claude-sessions/:sessionId" element={<ClaudeSessionDetail />} />
+            <Route path="/claude-sessions/:sessionId" element={<ClaudeSessionDetailSimple />} />
             <Route path="/current-session" element={<CurrentSession />} />
           </Routes>
         </div>

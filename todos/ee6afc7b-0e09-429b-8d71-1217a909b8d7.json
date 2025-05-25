@@ -43,8 +43,14 @@
   },
   {
     "content": "Comparar páginas CurrentSession e ClaudeSessionDetail",
-    "status": "in_progress",
+    "status": "completed",
     "priority": "high",
     "id": "8"
+  },
+  {
+    "content": "Diagnosticar problema de página piscando e ficando branca",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "9"
   }
 ]
