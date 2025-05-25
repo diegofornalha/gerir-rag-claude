@@ -10,6 +10,7 @@ import { schema } from "../db/schema/index";
 import { eq, desc, sql } from "drizzle-orm";
 import { issuesToTasks } from "../utils/issue-to-task-transformer";
 import { claudeRoutes } from "./claude-routes";
+import { missionsRoutes } from "./missions-routes";
 
 const app = fastify({ 
   logger: {
@@ -33,6 +34,7 @@ await app.register(fastifyEtag)
 await app.register(fastifyCors, {
   origin: process.env.NODE_ENV === 'production' ? 'https://yourdomain.com' : true,
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH']
 })
 
 const issuesCache = new Map<string, { data: any; timestamp: number }>()
@@ -449,8 +451,13 @@ app.get('/tasks', {
   return tasks
 })
 
+// Rotas de missões removidas - usando missions-routes.ts
+
 // Registrar rotas do Claude
 await app.register(claudeRoutes, { prefix: '/api' })
+
+// Registrar rotas de missões
+await app.register(missionsRoutes)
 
 app.setErrorHandler((error, _request, reply) => {
   app.log.error(error)

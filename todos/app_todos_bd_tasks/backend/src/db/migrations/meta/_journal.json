@@ -15,6 +15,13 @@
       "when": 1747752824102,
       "tag": "0001_tiny_flatman",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1748185861134,
+      "tag": "0002_fine_kate_bishop",
+      "breakpoints": true
     }
   ]
 }

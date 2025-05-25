@@ -1,0 +1,17 @@
+
+> frontend@0.0.0 dev
+> vite
+
+
+  VITE v6.3.5  ready in 327 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+2:20:59 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+2:56:57 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+2:57:08 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+3:05:54 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+3:06:05 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+3:06:17 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+3:06:32 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css
+3:06:43 PM [vite] (client) hmr update /src/pages/Missions.tsx, /src/index.css

@@ -25,12 +25,15 @@ export function IssuesListLocal() {
   return (
     <div className="container mx-auto p-4">
       <div className="mb-8 flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-800">Missões</h1>
+        <h1 className="text-3xl font-bold text-gray-800">
+          <span className="mr-2">⚠️</span>
+          Potenciais Problemas
+        </h1>
         <Link
           to="/issues/new"
-          className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition-colors"
+          className="rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700 transition-colors"
         >
-          Nova Missão
+          Reportar Problema
         </Link>
       </div>
 

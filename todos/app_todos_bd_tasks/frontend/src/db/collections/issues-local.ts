@@ -46,7 +46,7 @@ class LocalCollection<T extends { id: string }> {
   update(id: string, updates: Partial<T>): T | undefined {
     const index = this.data.findIndex(item => item.id === id)
     if (index !== -1) {
-      this.data[index] = { ...this.data[index], ...updates }
+      this.data[index] = { ...this.data[index], ...updates } as T
       this.save()
       return this.data[index]
     }

@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Adicionar funcionalidade de deletar missões em /missions",
+    "status": "completed",
+    "priority": "high",
+    "id": "0"
+  },
+  {
+    "content": "Adicionar funcionalidade de ocultar/desocultar sessões do Claude",
+    "status": "completed",
+    "priority": "high",
+    "id": "0.1"
+  }
+]

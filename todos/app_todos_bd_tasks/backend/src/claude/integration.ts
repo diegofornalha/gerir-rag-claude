@@ -58,6 +58,32 @@ export class ClaudeIntegration {
         // Buscar conversa correspondente
         const conversationPath = await this.findConversationFile(sessionId)
         
+        // Verificar se é continuação lendo o arquivo de conversa
+        let isContinuation = false
+        let originalSessionId = null
+        
+        if (conversationPath) {
+          try {
+            const conversationContent = await fs.readFile(conversationPath, 'utf-8')
+            const firstLines = conversationContent.split('\n').slice(0, 10).filter(l => l.trim())
+            
+            for (const line of firstLines) {
+              try {
+                const entry = JSON.parse(line)
+                if (entry.sessionId && entry.sessionId !== sessionId) {
+                  isContinuation = true
+                  originalSessionId = entry.sessionId
+                  break
+                }
+              } catch {
+                // Linha inválida
+              }
+            }
+          } catch {
+            // Erro ao ler conversa
+          }
+        }
+        
         sessions.push({
           sessionId,
           todos: todoPath,
@@ -66,7 +92,9 @@ export class ClaudeIntegration {
           lastModified: stats.mtime.toISOString(),
           todoCount: todos.length,
           pendingCount: todos.filter((t: any) => t.status === 'pending').length,
-          completedCount: todos.filter((t: any) => t.status === 'completed').length
+          completedCount: todos.filter((t: any) => t.status === 'completed').length,
+          isContinuation,
+          originalSessionId
         })
       } catch (error) {
         console.error(`Erro ao processar sessão ${sessionId}:`, error)
@@ -116,7 +144,10 @@ export class ClaudeIntegration {
         sessionId,
         todos,
         conversation: null as any,
-        metadata: {} as any
+        metadata: {
+          isContinuation: false,
+          originalSessionId: null as string | null
+        } as any
       }
 
       // Ler conversa se existir
@@ -124,13 +155,20 @@ export class ClaudeIntegration {
         const conversationContent = await fs.readFile(conversationPath, 'utf-8')
         const lines = conversationContent.split('\n').filter(l => l.trim())
         
-        // Buscar summary
-        for (const line of lines.slice(0, 10)) {
+        // Buscar summary e verificar se é continuação
+        for (const line of lines.slice(0, 20)) {
           try {
             const entry = JSON.parse(line)
+            
+            // Buscar summary
             if (entry.type === 'summary') {
               result.metadata.summary = entry.summary
-              break
+            }
+            
+            // Verificar se é continuação (sessionId diferente do arquivo)
+            if (entry.sessionId && entry.sessionId !== sessionId) {
+              result.metadata.isContinuation = true
+              result.metadata.originalSessionId = entry.sessionId
             }
           } catch {
             // Linha inválida

@@ -5,6 +5,7 @@
 import { FastifyInstance } from 'fastify'
 import { z } from 'zod'
 import { ClaudeIntegration } from '../claude/integration'
+import { claudeChatIntegration } from '../claude/claudechat-integration'
 
 const claude = new ClaudeIntegration()
 
@@ -155,6 +156,47 @@ export async function claudeRoutes(app: FastifyInstance) {
       return reply.status(500).send({
         success: false,
         error: 'Erro ao sincronizar todos'
+      })
+    }
+  })
+
+  // Enviar missão para o ClaudeChat
+  app.post('/claude-sessions/send-mission', {
+    schema: {
+      body: z.object({
+        id: z.string(),
+        title: z.string(),
+        description: z.string().optional()
+      })
+    }
+  }, async (request, reply) => {
+    const mission = request.body
+
+    try {
+      // Enviar missão para o Claude
+      const result = await claudeChatIntegration.sendMissionToClaudeChat(mission)
+      
+      // Se gerou todos, buscar eles
+      let todos = []
+      if (result.todosPath) {
+        todos = await claudeChatIntegration.getTodosFromSession(result.sessionId)
+      }
+
+      return reply.send({
+        success: true,
+        sessionId: result.sessionId,
+        response: result.response,
+        todos,
+        paths: {
+          jsonl: result.jsonlPath,
+          todos: result.todosPath
+        }
+      })
+    } catch (error) {
+      console.error('Erro ao enviar missão para Claude:', error)
+      return reply.status(500).send({
+        success: false,
+        error: 'Erro ao processar missão com Claude'
       })
     }
   })
