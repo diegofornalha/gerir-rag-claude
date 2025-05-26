@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "content": "Analisar requisitos da missão",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": "2",
+    "content": "Criar plano de implementação",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": "3",
+    "content": "Desenvolver funcionalidade principal",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": "4",
+    "content": "Escrever testes unitários",
+    "status": "pending",
+    "priority": "medium"
+  },
+  {
+    "id": "5",
+    "content": "Documentar implementação",
+    "status": "pending",
+    "priority": "low"
+  }
+]

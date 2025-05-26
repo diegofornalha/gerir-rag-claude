@@ -216,6 +216,16 @@ export async function documentsRoutes(app: FastifyInstance) {
         await saveCustomNames(customNames);
       }
       
+      // Excluir arquivo de todos associado se existir
+      const todosPath = `/Users/agents/.claude/todos/${sessionId}.json`;
+      try {
+        await stat(todosPath);
+        await unlink(todosPath);
+        app.log.info(`Arquivo de todos também foi excluído: ${todosPath}`);
+      } catch {
+        // Arquivo de todos não existe, não faz nada
+      }
+      
       return reply.send({ success: true });
     } catch (error) {
       app.log.error('Erro ao excluir documento:', error);
