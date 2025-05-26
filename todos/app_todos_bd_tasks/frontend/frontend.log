@@ -37,3 +37,703 @@
 3:47:33 PM [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
 3:48:52 PM [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
 4:17:05 PM [vite] (client) hmr update /src/pages/IssuesListLocal.tsx, /src/index.css
+4:26:17 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+4:26:17 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+4:26:26 PM [vite] (client) hmr update /src/pages/ClaudeSessionDetailSimple.tsx, /src/index.css
+4:26:26 PM [vite] (client) hmr update /src/pages/ClaudeSessionDetailSimple.tsx, /src/index.css
+4:26:37 PM [vite] (client) hmr update /src/pages/ClaudeSessionDetailSimple.tsx, /src/index.css
+4:27:02 PM [vite] (client) hmr update /src/pages/ClaudeSessionDetailSimple.tsx, /src/index.css
+4:32:38 PM [vite] (client) page reload package.json
+5:28:33 PM [vite] (client) page reload public/offline.html
+5:28:33 PM [vite] (client) page reload public/offline.html
+5:36:03 PM [vite] vite.config.ts changed, restarting server...
+(!) the `splitVendorChunk` plugin doesn't have any effect when using the object form of `build.rollupOptions.output.manualChunks`. Consider using the function form instead.
+5:36:03 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+5:36:04 PM [vite] server restarted.
+5:36:48 PM [vite] vite.config.ts changed, restarting server...
+5:36:48 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+5:36:48 PM [vite] server restarted.
+5:40:00 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+5:40:00 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:40:00 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:40:00 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:40:01 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:40:01 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:40:01 PM [vite] (client) ✨ new dependencies optimized: drizzle-orm/pglite, drizzle-orm/pg-core
+5:40:01 PM [vite] (client) ✨ optimized dependencies changed. reloading
+5:40:01 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:40:01 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:40:02 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:40:02 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:40:29 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+5:40:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:40:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:40:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:40:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:02 PM [vite] (client) hmr update /src/index.css, /src/monitoring/monitoring-widget.tsx
+5:41:03 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:41:03 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:03 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:03 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:44 PM [vite] (client) hmr update /src/index.css, /src/monitoring/monitoring-widget.tsx
+5:41:44 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:41:44 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:44 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:44 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:41:44 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:42:36 PM [vite] (client) page reload index.html
+5:42:36 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:42:36 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:42:36 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:43:56 PM [vite] (client) hmr update /src/index.css, /src/monitoring/monitoring-widget.tsx
+5:43:56 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:43:56 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:43:56 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:43:56 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:45:30 PM [vite] (client) hmr update /src/index.css, /src/monitoring/monitoring-widget.tsx
+5:45:30 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:45:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:45:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:45:30 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:46:59 PM [vite] (client) hmr update /src/index.css, /src/monitoring/monitoring-widget.tsx
+5:46:59 PM [vite] (client) Pre-transform error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+5:46:59 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:46:59 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+5:46:59 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:46:59 PM [vite] Internal server error: Failed to resolve import "../utils/metrics-collector" from "src/monitoring/monitoring-hooks.ts". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/monitoring/monitoring-hooks.ts:3:33
+  1  |  import { useState, useEffect, useRef } from "react";
+  2  |  import { HealthChecker, SystemHealth } from "./health-checker";
+  3  |  import { MetricsCollector } from "../utils/metrics-collector";
+     |                                    ^
+  4  |  import { WebSocketManager } from "../sync/websocket-manager";
+  5  |  import { SyncEngine } from "../sync/sync-engine";
+      at TransformPluginContext._formatLog (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/vite@6.3.5_@types+node@22.15.20_jiti@2.4.2_lightningcss@1.30.1/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+5:47:38 PM [vite] (client) hmr update /src/index.css, /src/monitoring/monitoring-widget.tsx
+5:50:00 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+5:50:09 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+5:50:18 PM [vite] (client) hmr update /src/app.tsx, /src/index.css
+5:51:42 PM [vite] (client) page reload src/main.tsx
+5:52:18 PM [vite] (client) page reload src/main.tsx
+5:52:49 PM [vite] (client) page reload src/main.tsx
+5:55:51 PM [vite] (client) page reload src/alerts/alert-ui.tsx
+5:56:01 PM [vite] (client) page reload src/alerts/alert-ui.tsx
+5:56:38 PM [vite] (client) page reload src/main.tsx
+5:58:32 PM [vite] (client) hmr update /src/main.tsx, /src/index.css
+5:58:32 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:32 PM [vite] (client) hmr update /src/index.css
+5:58:32 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:32 PM [vite] (client) hmr update /src/index.css
+5:58:32 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:32 PM [vite] (client) hmr update /src/index.css
+5:58:41 PM [vite] (client) hmr update /src/main.tsx, /src/index.css
+5:58:41 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:41 PM [vite] (client) hmr update /src/index.css
+5:58:41 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:41 PM [vite] (client) hmr update /src/index.css
+5:58:41 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:41 PM [vite] (client) hmr update /src/index.css
+5:58:53 PM [vite] (client) hmr update /src/main.tsx, /src/index.css
+5:58:53 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:53 PM [vite] (client) hmr update /src/index.css
+5:58:53 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:53 PM [vite] (client) hmr update /src/index.css
+5:58:53 PM [vite] (client) hmr invalidate /src/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+5:58:53 PM [vite] (client) hmr update /src/index.css

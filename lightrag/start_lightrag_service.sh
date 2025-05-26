@@ -8,6 +8,14 @@
 BASE_DIR="$(dirname "$(readlink -f "$0")")"
 cd "$BASE_DIR" || { echo "Erro ao acessar diretório base"; exit 1; }
 
+# Ativar ambiente virtual Python
+if [ -f "$BASE_DIR/../venv/bin/activate" ]; then
+    source "$BASE_DIR/../venv/bin/activate"
+else
+    echo "Ambiente virtual não encontrado em $BASE_DIR/../venv/bin/activate"
+    exit 1
+fi
+
 # Diretório de logs
 LOG_DIR="$BASE_DIR/logs"
 mkdir -p "$LOG_DIR"

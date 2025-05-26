@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "compile-migrations": "node --experimental-strip-types --no-warnings src/db/compile-migrations.ts"
+    "compile-migrations": "node --experimental-strip-types --no-warnings src/db/compile-migrations.ts",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.3.1",

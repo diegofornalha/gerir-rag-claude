@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { format } from 'date-fns'
-import { ptBR } from 'date-fns/locale'
 
 interface Todo {
   id: string
@@ -45,8 +43,22 @@ const statusLabels = {
 }
 
 export function ClaudeSessionDetailSimple() {
-  const { sessionId } = useParams<{ sessionId: string }>()
+  const { sessionId, filter } = useParams<{ sessionId: string; filter?: string }>()
+  const navigate = useNavigate()
   const [filterStatus, setFilterStatus] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('all')
+  
+  // Sincronizar filter da URL com o estado
+  useEffect(() => {
+    if (filter === 'pendentes') {
+      setFilterStatus('pending')
+    } else if (filter === 'em-progresso') {
+      setFilterStatus('in_progress')
+    } else if (filter === 'concluidas') {
+      setFilterStatus('completed')
+    } else {
+      setFilterStatus('all')
+    }
+  }, [filter])
   
   const { data: session, isLoading, error } = useQuery({
     queryKey: ['claude-session-detail', sessionId],
@@ -101,7 +113,7 @@ export function ClaudeSessionDetailSimple() {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <button
-            onClick={() => setFilterStatus('all')}
+            onClick={() => navigate(`/claude-sessions/${sessionId}`)}
             className={`text-center p-3 rounded transition-all ${
               filterStatus === 'all' 
                 ? 'bg-gray-200 ring-2 ring-gray-400' 
@@ -112,7 +124,7 @@ export function ClaudeSessionDetailSimple() {
             <div className="text-sm text-gray-600">Total</div>
           </button>
           <button
-            onClick={() => setFilterStatus('pending')}
+            onClick={() => navigate(`/claude-sessions/${sessionId}/pendentes`)}
             className={`text-center p-3 rounded transition-all ${
               filterStatus === 'pending' 
                 ? 'bg-yellow-200 ring-2 ring-yellow-400' 
@@ -123,7 +135,7 @@ export function ClaudeSessionDetailSimple() {
             <div className="text-sm text-gray-600">Pendentes</div>
           </button>
           <button
-            onClick={() => setFilterStatus('in_progress')}
+            onClick={() => navigate(`/claude-sessions/${sessionId}/em-progresso`)}
             className={`text-center p-3 rounded transition-all ${
               filterStatus === 'in_progress' 
                 ? 'bg-blue-200 ring-2 ring-blue-400' 
@@ -134,7 +146,7 @@ export function ClaudeSessionDetailSimple() {
             <div className="text-sm text-gray-600">Em Progresso</div>
           </button>
           <button
-            onClick={() => setFilterStatus('completed')}
+            onClick={() => navigate(`/claude-sessions/${sessionId}/concluidas`)}
             className={`text-center p-3 rounded transition-all ${
               filterStatus === 'completed' 
                 ? 'bg-green-200 ring-2 ring-green-400' 
