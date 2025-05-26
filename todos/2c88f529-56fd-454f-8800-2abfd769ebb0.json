@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Investigar estrutura do diretório frontend em /Users/agents/.claude/todos/app_todos_bd_tasks/frontend",
+    "status": "completed",
+    "priority": "high",
+    "id": "investigate-frontend-1"
+  },
+  {
+    "content": "Analisar arquivos principais e configuração do projeto frontend",
+    "status": "completed",
+    "priority": "high",
+    "id": "investigate-frontend-2"
+  },
+  {
+    "content": "Identificar tecnologias e frameworks utilizados",
+    "status": "completed",
+    "priority": "medium",
+    "id": "investigate-frontend-3"
+  },
+  {
+    "content": "Mapear componentes e estrutura de páginas",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "investigate-frontend-4"
+  },
+  {
+    "content": "Documentar descobertas e possíveis melhorias",
+    "status": "pending",
+    "priority": "low",
+    "id": "investigate-frontend-5"
+  }
+]
