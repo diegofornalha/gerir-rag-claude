@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 
 interface Todo {
   id: string
@@ -45,8 +45,11 @@ const statusLabels = {
 export function ClaudeSessionDetailSimple() {
   const { sessionId, filter } = useParams<{ sessionId: string; filter?: string }>()
   const navigate = useNavigate()
+  const queryClient = useQueryClient()
   const [filterStatus, setFilterStatus] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('all')
   const [customName, setCustomName] = useState<string | null>(null)
+  const [isEditingName, setIsEditingName] = useState(false)
+  const [editingName, setEditingName] = useState('')
   
   // Sincronizar filter da URL com o estado
   useEffect(() => {
