@@ -1,1 +1,0 @@
-/Users/agents/.claude/lightrag/api/query_claude_docs.py

@@ -196,6 +196,9 @@ function MissionCard({ mission }: { mission: Mission }) {
           <h3 className="font-semibold text-lg text-gray-800">
             {mission.title}
           </h3>
+          {mission.sessionId && (
+            <p className="text-xs text-gray-500 mt-1">Session: {mission.sessionId}</p>
+          )}
           {mission.description && (
             <p className="text-gray-600 mt-1">{mission.description}</p>
           )}

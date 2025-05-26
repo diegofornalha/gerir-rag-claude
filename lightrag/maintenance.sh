@@ -1,1 +1,0 @@
-/Users/agents/.claude/lightrag/tools/maintenance.sh
