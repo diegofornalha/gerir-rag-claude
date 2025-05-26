@@ -234,7 +234,7 @@ function MissionCard({ mission }: { mission: Mission }) {
         <div className="mt-4 border-t pt-4">
           {mission.sessionId && (
             <div className="mb-3">
-              <span className="text-sm text-gray-600">ID da Sessão: </span>
+              <span className="text-sm text-gray-600">ID da </span>
               <Link
                 to={`/claude-sessions/${mission.sessionId}`}
                 className="text-sm text-blue-600 hover:text-blue-800"

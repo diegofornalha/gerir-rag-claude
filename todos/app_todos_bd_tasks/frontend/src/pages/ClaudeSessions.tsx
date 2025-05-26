@@ -13,6 +13,11 @@ interface Session {
   todoCount: number
   pendingCount: number
   completedCount: number
+  inProgressCount: number
+  currentTaskName: string | null
+  firstPendingTask: string | null
+  lastCompletedTask: string | null
+  customName: string | null
   isContinuation?: boolean
   originalSessionId?: string | null
 }
@@ -181,22 +186,57 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
               claude -c:{session.originalSessionId?.slice(0, 6)}
             </span>
           )}
-          <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded font-mono" title="ID da sessão">
-            {session.sessionId.slice(0, 6)}
+          <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded font-mono" title={session.customName ? `ID: ${session.sessionId}` : "ID da sessão"}>
+            {session.customName || session.sessionId.slice(0, 6)}
           </span>
         </div>
       </div>
       
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm">
-          <span className="text-gray-600">Pendentes:</span>
-          <span className="font-medium text-orange-600">{session.pendingCount}</span>
-        </div>
+      <div className="space-y-3 mt-3">
+        {/* Pendentes */}
+        {session.pendingCount > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center text-sm">
+              <span className="text-gray-600">Pendentes:</span>
+              <span className="ml-auto font-medium text-orange-600">{session.pendingCount}</span>
+            </div>
+            {session.firstPendingTask && (
+              <div className="text-xs text-gray-500 pl-4 truncate">
+                • {session.firstPendingTask}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Em progresso */}
+        {session.inProgressCount > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center text-sm">
+              <span className="text-gray-600">Em progresso:</span>
+              <span className="ml-auto font-medium text-blue-600">{session.inProgressCount}</span>
+            </div>
+            {session.currentTaskName && (
+              <div className="text-xs text-blue-600 pl-4 truncate">
+                • {session.currentTaskName}
+              </div>
+            )}
+          </div>
+        )}
         
-        <div className="flex justify-between text-sm">
-          <span className="text-gray-600">Concluídas:</span>
-          <span className="font-medium text-green-600">{session.completedCount}</span>
-        </div>
+        {/* Concluídas */}
+        {session.completedCount > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center text-sm">
+              <span className="text-gray-600">Concluídas:</span>
+              <span className="ml-auto font-medium text-green-600">{session.completedCount}</span>
+            </div>
+            {session.lastCompletedTask && (
+              <div className="text-xs text-gray-500 pl-4 truncate">
+                • {session.lastCompletedTask}
+              </div>
+            )}
+          </div>
+        )}
       </div>
       
       <div className="mt-4">

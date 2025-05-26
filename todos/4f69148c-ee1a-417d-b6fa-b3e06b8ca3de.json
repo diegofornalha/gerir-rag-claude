@@ -1,14 +1,20 @@
 [
   {
-    "content": "Remover 'Potenciais Problemas' do menu principal",
-    "status": "completed",
-    "priority": "high",
-    "id": "1"
+    "id": "1748250670681",
+    "content": "criar um .md explicando como fez isso",
+    "status": "in_progress",
+    "priority": "high"
   },
   {
-    "content": "Adicionar 'Potenciais Problemas' ao dropdown 'Em desenvolvimento'",
+    "id": "1748250886897",
+    "content": "tarefa pendente fazer depois",
+    "status": "pending",
+    "priority": "medium"
+  },
+  {
+    "id": "1748250915663",
+    "content": "tarefa concluida",
     "status": "completed",
-    "priority": "high",
-    "id": "2"
+    "priority": "low"
   }
 ]

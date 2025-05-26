@@ -54,7 +54,7 @@ export function IssuesListLocal() {
                   </h2>
                   {issue.sessionId && (
                     <div className="text-sm text-blue-600 mb-1">
-                      Vinculada à sessão: {issue.sessionId.slice(0, 8)}...
+                      Vinculada à {issue.sessionId.slice(0, 8)}...
                     </div>
                   )}
                   {issue.description && (

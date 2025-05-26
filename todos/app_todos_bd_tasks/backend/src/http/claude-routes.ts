@@ -200,4 +200,120 @@ export async function claudeRoutes(app: FastifyInstance) {
       })
     }
   })
+  
+  // PUT - Atualizar tarefa
+  app.put('/claude-sessions/:sessionId/todos/:todoId', {
+    schema: {
+      params: z.object({
+        sessionId: z.string(),
+        todoId: z.string()
+      }),
+      body: z.object({
+        content: z.string().optional(),
+        status: z.string().optional(),
+        priority: z.string().optional()
+      })
+    }
+  }, async (request, reply) => {
+    const { sessionId, todoId } = request.params
+    const { content, status, priority } = request.body
+    
+    try {
+      const updates: any = {}
+      if (content !== undefined) updates.content = content
+      if (status !== undefined) updates.status = status
+      if (priority !== undefined) updates.priority = priority
+      
+      const updated = await claude.updateTodo(sessionId, todoId, updates)
+      
+      if (!updated) {
+        return reply.status(404).send({
+          success: false,
+          error: 'Tarefa não encontrada'
+        })
+      }
+
+      return reply.send({
+        success: true,
+        message: 'Tarefa atualizada com sucesso'
+      })
+    } catch (error) {
+      console.error('Erro ao atualizar tarefa:', error)
+      return reply.status(500).send({
+        success: false,
+        error: 'Erro ao atualizar tarefa'
+      })
+    }
+  })
+
+  // DELETE - Excluir tarefa
+  app.delete('/claude-sessions/:sessionId/todos/:todoId', {
+    schema: {
+      params: z.object({
+        sessionId: z.string(),
+        todoId: z.string()
+      })
+    }
+  }, async (request, reply) => {
+    const { sessionId, todoId } = request.params
+    
+    try {
+      const deleted = await claude.deleteTodo(sessionId, todoId)
+      
+      if (!deleted) {
+        return reply.status(404).send({
+          success: false,
+          error: 'Tarefa não encontrada'
+        })
+      }
+
+      return reply.send({
+        success: true,
+        message: 'Tarefa excluída com sucesso'
+      })
+    } catch (error) {
+      console.error('Erro ao excluir tarefa:', error)
+      return reply.status(500).send({
+        success: false,
+        error: 'Erro ao excluir tarefa'
+      })
+    }
+  })
+
+  // PUT - Reordenar tarefas
+  app.put('/claude-sessions/:sessionId/todos/reorder', {
+    schema: {
+      params: z.object({
+        sessionId: z.string()
+      }),
+      body: z.object({
+        todos: z.array(z.any())
+      })
+    }
+  }, async (request, reply) => {
+    const { sessionId } = request.params
+    const { todos } = request.body
+    
+    try {
+      const reordered = await claude.reorderTodos(sessionId, todos)
+      
+      if (!reordered) {
+        return reply.status(404).send({
+          success: false,
+          error: 'Sessão não encontrada'
+        })
+      }
+
+      return reply.send({
+        success: true,
+        message: 'Tarefas reordenadas com sucesso'
+      })
+    } catch (error) {
+      console.error('Erro ao reordenar tarefas:', error)
+      return reply.status(500).send({
+        success: false,
+        error: 'Erro ao reordenar tarefas'
+      })
+    }
+  })
 }

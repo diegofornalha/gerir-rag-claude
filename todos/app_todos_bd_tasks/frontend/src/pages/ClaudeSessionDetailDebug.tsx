@@ -109,7 +109,7 @@ export function ClaudeSessionDetailDebug() {
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h1 className="text-2xl font-bold mb-4">
-              Sessão: {sessionId?.slice(0, 8)}...
+              {sessionId?.slice(0, 8)}...
             </h1>
             <p className="text-gray-600">
               Total de tarefas: {session.todos.length}

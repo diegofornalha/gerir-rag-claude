@@ -185,44 +185,50 @@ export default function Documents() {
 
       {/* Lista de documentos */}
       <div className="bg-white rounded-lg shadow overflow-hidden">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Documento
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Tamanho
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Linhas
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Modificado
-              </th>
-              <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Tem Todos
-              </th>
-              <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Total Tarefas
-              </th>
-              <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Ações
-              </th>
-            </tr>
-          </thead>
+        {/* Indicador de scroll mobile */}
+        <div className="md:hidden bg-blue-50 text-blue-600 text-xs px-4 py-2 text-center">
+          ← Deslize para ver mais →
+        </div>
+        {/* Wrapper com scroll horizontal para mobile */}
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
+                  Documento
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
+                  Tamanho
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap hidden sm:table-cell">
+                  Linhas
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap hidden md:table-cell">
+                  Modificado
+                </th>
+                <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap hidden lg:table-cell">
+                  Tem Todos
+                </th>
+                <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
+                  Total Tarefas
+                </th>
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
+                  Ações
+                </th>
+              </tr>
+            </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {filteredDocuments?.map((doc) => (
               <tr key={doc.sessionId} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
-                    <span className="text-gray-400 mr-3">📄</span>
-                    <div>
-                      <div className="text-sm font-medium text-gray-900">
+                    <span className="text-gray-400 mr-3 hidden sm:inline">📄</span>
+                    <div className="max-w-xs">
+                      <div className="text-sm font-medium text-gray-900 truncate">
                         {doc.customName || doc.sessionId}
                       </div>
                       {doc.customName && (
-                        <div className="text-xs text-gray-500">{doc.sessionId}</div>
+                        <div className="text-xs text-gray-500 truncate hidden sm:block">{doc.sessionId}</div>
                       )}
                     </div>
                   </div>
@@ -233,16 +239,16 @@ export default function Documents() {
                     {formatFileSize(doc.size)}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 hidden sm:table-cell">
                   {doc.lines.toLocaleString()}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap hidden md:table-cell">
                   <div className="flex items-center text-sm text-gray-900">
                     <span className="text-gray-400 mr-2">📅</span>
                     {format(new Date(doc.modifiedAt), 'dd/MM/yyyy HH:mm', { locale: ptBR })}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-center">
+                <td className="px-6 py-4 whitespace-nowrap text-center hidden lg:table-cell">
                   {doc.hasTodos ? (
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                       ✅ Sim
@@ -266,39 +272,42 @@ export default function Documents() {
                   )}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <button
-                    onClick={() => handleView(doc)}
-                    className="text-blue-600 hover:text-blue-900 mr-3"
-                    title="Visualizar"
-                  >
-                    <span>👁️</span>
-                  </button>
-                  <button
-                    onClick={() => handleEdit(doc)}
-                    className="text-green-600 hover:text-green-900 mr-3"
-                    title="Editar nome"
-                  >
-                    <span>✏️</span>
-                  </button>
-                  <button
-                    onClick={() => handleDownload(doc)}
-                    className="text-gray-600 hover:text-gray-900 mr-3"
-                    title="Download"
-                  >
-                    <span>⬇️</span>
-                  </button>
-                  <button
-                    onClick={() => handleDelete(doc)}
-                    className="text-red-600 hover:text-red-900"
-                    title="Excluir"
-                  >
-                    <span>🗑️</span>
-                  </button>
+                  <div className="flex items-center justify-end space-x-1">
+                    <button
+                      onClick={() => handleView(doc)}
+                      className="text-blue-600 hover:text-blue-900 p-1"
+                      title="Visualizar"
+                    >
+                      <span>👁️</span>
+                    </button>
+                    <button
+                      onClick={() => handleEdit(doc)}
+                      className="text-green-600 hover:text-green-900 p-1 hidden sm:inline-block"
+                      title="Editar nome"
+                    >
+                      <span>✏️</span>
+                    </button>
+                    <button
+                      onClick={() => handleDownload(doc)}
+                      className="text-gray-600 hover:text-gray-900 p-1"
+                      title="Download"
+                    >
+                      <span>⬇️</span>
+                    </button>
+                    <button
+                      onClick={() => handleDelete(doc)}
+                      className="text-red-600 hover:text-red-900 p-1"
+                      title="Excluir"
+                    >
+                      <span>🗑️</span>
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+        </div>
 
         {filteredDocuments?.length === 0 && (
           <div className="text-center py-8 text-gray-500">

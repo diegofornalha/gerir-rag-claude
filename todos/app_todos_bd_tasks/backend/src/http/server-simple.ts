@@ -99,6 +99,94 @@ app.get('/api/claude-sessions/:sessionId/todos', async (request, reply) => {
   }
 })
 
+// PUT - Atualizar tarefa
+app.put('/api/claude-sessions/:sessionId/todos/:todoId', async (request, reply) => {
+  const { sessionId, todoId } = request.params as { sessionId: string; todoId: string }
+  const { content, status, priority } = request.body as { content?: string; status?: string; priority?: string }
+  
+  try {
+    const updates: any = {}
+    if (content !== undefined) updates.content = content
+    if (status !== undefined) updates.status = status
+    if (priority !== undefined) updates.priority = priority
+    
+    const updated = await claude.updateTodo(sessionId, todoId, updates)
+    
+    if (!updated) {
+      return reply.status(404).send({
+        success: false,
+        error: 'Tarefa não encontrada'
+      })
+    }
+
+    return {
+      success: true,
+      message: 'Tarefa atualizada com sucesso'
+    }
+  } catch (error) {
+    console.error('Erro ao atualizar tarefa:', error)
+    return reply.status(500).send({
+      success: false,
+      error: 'Erro ao atualizar tarefa'
+    })
+  }
+})
+
+// DELETE - Excluir tarefa
+app.delete('/api/claude-sessions/:sessionId/todos/:todoId', async (request, reply) => {
+  const { sessionId, todoId } = request.params as { sessionId: string; todoId: string }
+  
+  try {
+    const deleted = await claude.deleteTodo(sessionId, todoId)
+    
+    if (!deleted) {
+      return reply.status(404).send({
+        success: false,
+        error: 'Tarefa não encontrada'
+      })
+    }
+
+    return {
+      success: true,
+      message: 'Tarefa excluída com sucesso'
+    }
+  } catch (error) {
+    console.error('Erro ao excluir tarefa:', error)
+    return reply.status(500).send({
+      success: false,
+      error: 'Erro ao excluir tarefa'
+    })
+  }
+})
+
+// PUT - Reordenar tarefas
+app.put('/api/claude-sessions/:sessionId/todos/reorder', async (request, reply) => {
+  const { sessionId } = request.params as { sessionId: string }
+  const { todos } = request.body as { todos: any[] }
+  
+  try {
+    const reordered = await claude.reorderTodos(sessionId, todos)
+    
+    if (!reordered) {
+      return reply.status(404).send({
+        success: false,
+        error: 'Sessão não encontrada'
+      })
+    }
+
+    return {
+      success: true,
+      message: 'Tarefas reordenadas com sucesso'
+    }
+  } catch (error) {
+    console.error('Erro ao reordenar tarefas:', error)
+    return reply.status(500).send({
+      success: false,
+      error: 'Erro ao reordenar tarefas'
+    })
+  }
+})
+
 // Iniciar servidor
 const start = async () => {
   try {
