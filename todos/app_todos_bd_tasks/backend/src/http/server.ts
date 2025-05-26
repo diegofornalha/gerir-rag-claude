@@ -12,6 +12,7 @@ import { issuesToTasks } from "../utils/issue-to-task-transformer";
 import { claudeRoutes } from "./claude-routes";
 import { missionsRoutes } from "./missions-routes";
 import { cleanupRoutes } from "./cleanup-routes";
+import { documentsRoutes } from "./documents-routes";
 
 const app = fastify({ 
   logger: {
@@ -462,6 +463,9 @@ await app.register(missionsRoutes)
 
 // Registrar rotas de limpeza
 await app.register(cleanupRoutes)
+
+// Registrar rotas de documentos
+await app.register(documentsRoutes)
 
 app.setErrorHandler((error, _request, reply) => {
   app.log.error(error)

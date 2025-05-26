@@ -46,6 +46,7 @@ export function ClaudeSessionDetailSimple() {
   const { sessionId, filter } = useParams<{ sessionId: string; filter?: string }>()
   const navigate = useNavigate()
   const [filterStatus, setFilterStatus] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('all')
+  const [customName, setCustomName] = useState<string | null>(null)
   
   // Sincronizar filter da URL com o estado
   useEffect(() => {
@@ -59,6 +60,19 @@ export function ClaudeSessionDetailSimple() {
       setFilterStatus('all')
     }
   }, [filter])
+  
+  // Buscar nome customizado do documento
+  useEffect(() => {
+    fetch(`${API_URL}/api/documents`)
+      .then(res => res.json())
+      .then(documents => {
+        const doc = documents.find((d: any) => d.sessionId === sessionId)
+        if (doc?.customName) {
+          setCustomName(doc.customName)
+        }
+      })
+      .catch(() => {})
+  }, [sessionId])
   
   const { data: session, isLoading, error } = useQuery({
     queryKey: ['claude-session-detail', sessionId],
@@ -108,7 +122,7 @@ export function ClaudeSessionDetailSimple() {
 
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <h1 className="text-2xl font-bold mb-4">
-          Sessão: {sessionId?.slice(0, 8)}...
+          Sessão: {customName || `${sessionId?.slice(0, 8)}...`}
         </h1>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">

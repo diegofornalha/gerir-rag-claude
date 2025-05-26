@@ -6,6 +6,7 @@ import { PotentialIssues } from './pages/PotentialIssues'
 import { Missions } from './pages/Missions'
 import { ClaudeSessions } from './pages/ClaudeSessions'
 import { Chat } from './pages/Chat'
+import Documents from './pages/Documents'
 import { ClaudeSessionDetailSimple } from './pages/ClaudeSessionDetailSimple'
 
 // Criar QueryClient
@@ -65,6 +66,15 @@ function Navigation() {
             }`}
           >
             Chat
+          </Link>
+          
+          <Link 
+            to="/documents" 
+            className={`font-medium transition-colors ${
+              isActive('/documents') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
+            }`}
+          >
+            Documentos
           </Link>
           
           {/* Separador */}
@@ -600,6 +610,7 @@ function AppContent() {
         <Route path="/claude-sessions/:sessionId" element={<ClaudeSessionDetailSimple />} />
         <Route path="/claude-sessions/:sessionId/:filter" element={<ClaudeSessionDetailSimple />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/documents" element={<Documents />} />
         
         {/* Dashboard Principal - Sistema de Migração */}
         <Route path="/" element={<MigrationDashboard />} />
