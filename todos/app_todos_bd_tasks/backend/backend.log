@@ -246,3 +246,376 @@ Erro ao listar missões: error: database "electric" does not exist
       "statusCode": 200
     }
     responseTime: 24.596458000014536
+Erro ao listar missões: error: database "electric" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
+  length: 94,
+  severity: 'FATAL',
+  code: '3D000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postinit.c',
+  line: '1023',
+  routine: 'InitPostgres'
+}
+[06:42:21 UTC] INFO: incoming request
+    reqId: "req-e"
+    req: {
+      "method": "GET",
+      "url": "/missions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50109
+    }
+[06:42:21 UTC] INFO: request completed
+    reqId: "req-e"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 36.726167000015266
+[06:42:22 UTC] INFO: incoming request
+    reqId: "req-f"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50109
+    }
+[06:42:22 UTC] INFO: request completed
+    reqId: "req-f"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 50.532083000056446
+[06:42:23 UTC] INFO: incoming request
+    reqId: "req-g"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50109
+    }
+[06:42:23 UTC] INFO: request completed
+    reqId: "req-g"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 35.30716699990444
+Erro ao listar missões: error: database "electric" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
+  length: 94,
+  severity: 'FATAL',
+  code: '3D000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postinit.c',
+  line: '1023',
+  routine: 'InitPostgres'
+}
+[06:42:37 UTC] INFO: incoming request
+    reqId: "req-h"
+    req: {
+      "method": "GET",
+      "url": "/missions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50109
+    }
+[06:42:37 UTC] INFO: request completed
+    reqId: "req-h"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 7.310291000059806
+Erro ao listar missões: error: database "electric" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
+  length: 94,
+  severity: 'FATAL',
+  code: '3D000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postinit.c',
+  line: '1023',
+  routine: 'InitPostgres'
+}
+[06:42:39 UTC] INFO: incoming request
+    reqId: "req-i"
+    req: {
+      "method": "GET",
+      "url": "/missions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50109
+    }
+[06:42:39 UTC] INFO: request completed
+    reqId: "req-i"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 9.280374999972992
+[06:45:17 UTC] INFO: incoming request
+    reqId: "req-j"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:17 UTC] INFO: request completed
+    reqId: "req-j"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 33.99433399992995
+[06:45:25 UTC] INFO: incoming request
+    reqId: "req-k"
+    req: {
+      "method": "OPTIONS",
+      "url": "/api/documents/437115aa-4ec5-4dae-8131-7a2eda58deeb",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:25 UTC] INFO: request completed
+    reqId: "req-k"
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 1.6286250001285225
+[06:45:25 UTC] INFO: incoming request
+    reqId: "req-l"
+    req: {
+      "method": "DELETE",
+      "url": "/api/documents/437115aa-4ec5-4dae-8131-7a2eda58deeb",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:25 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/437115aa-4ec5-4dae-8131-7a2eda58deeb.json
+[06:45:25 UTC] INFO: request completed
+    reqId: "req-l"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 3.6565839999821037
+[06:45:25 UTC] INFO: incoming request
+    reqId: "req-m"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:25 UTC] INFO: request completed
+    reqId: "req-m"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 26.514333000173792
+[06:45:30 UTC] INFO: incoming request
+    reqId: "req-n"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:30 UTC] INFO: request completed
+    reqId: "req-n"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 33.019208000041544
+[06:45:35 UTC] INFO: incoming request
+    reqId: "req-o"
+    req: {
+      "method": "OPTIONS",
+      "url": "/api/documents/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:35 UTC] INFO: request completed
+    reqId: "req-o"
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 1.2602920001372695
+[06:45:35 UTC] INFO: incoming request
+    reqId: "req-p"
+    req: {
+      "method": "DELETE",
+      "url": "/api/documents/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:35 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628.json
+[06:45:35 UTC] INFO: request completed
+    reqId: "req-p"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 5.10204100003466
+[06:45:35 UTC] INFO: incoming request
+    reqId: "req-q"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:35 UTC] INFO: request completed
+    reqId: "req-q"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 21.672958000097424
+[06:45:37 UTC] INFO: incoming request
+    reqId: "req-r"
+    req: {
+      "method": "OPTIONS",
+      "url": "/api/documents/56a419ce-f3d7-4a42-ba09-99232b5cd561",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:37 UTC] INFO: request completed
+    reqId: "req-r"
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 1.4723330000415444
+[06:45:37 UTC] INFO: incoming request
+    reqId: "req-s"
+    req: {
+      "method": "DELETE",
+      "url": "/api/documents/56a419ce-f3d7-4a42-ba09-99232b5cd561",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:37 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/56a419ce-f3d7-4a42-ba09-99232b5cd561.json
+[06:45:37 UTC] INFO: request completed
+    reqId: "req-s"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 5.897832999937236
+[06:45:37 UTC] INFO: incoming request
+    reqId: "req-t"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:37 UTC] INFO: request completed
+    reqId: "req-t"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 8.965749999973923
+[06:45:40 UTC] INFO: incoming request
+    reqId: "req-u"
+    req: {
+      "method": "OPTIONS",
+      "url": "/api/documents/9529a78e-1ffa-4ff2-bbc4-7b5a7bb0063f",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:40 UTC] INFO: request completed
+    reqId: "req-u"
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.9960829999763519
+[06:45:40 UTC] INFO: incoming request
+    reqId: "req-v"
+    req: {
+      "method": "DELETE",
+      "url": "/api/documents/9529a78e-1ffa-4ff2-bbc4-7b5a7bb0063f",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:40 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/9529a78e-1ffa-4ff2-bbc4-7b5a7bb0063f.json
+[06:45:40 UTC] INFO: request completed
+    reqId: "req-v"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 6.884458000073209
+[06:45:40 UTC] INFO: incoming request
+    reqId: "req-w"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:40 UTC] INFO: request completed
+    reqId: "req-w"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.2751249999273568
+[06:45:45 UTC] INFO: incoming request
+    reqId: "req-x"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50686
+    }
+[06:45:45 UTC] INFO: request completed
+    reqId: "req-x"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.0535000001545995
