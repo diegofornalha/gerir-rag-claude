@@ -275,3 +275,1698 @@
       "statusCode": 304
     }
     responseTime: 13.329333000350744
+[08:14:03 UTC] INFO: incoming request
+    reqId: "req-j"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51135
+    }
+[08:14:03 UTC] INFO: request completed
+    reqId: "req-j"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 6.178166000172496
+[08:14:08 UTC] INFO: incoming request
+    reqId: "req-k"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51140
+    }
+[08:14:08 UTC] INFO: request completed
+    reqId: "req-k"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 11.357792000286281
+[08:14:13 UTC] INFO: incoming request
+    reqId: "req-l"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51148
+    }
+[08:14:13 UTC] INFO: request completed
+    reqId: "req-l"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 6.887250000145286
+[08:14:18 UTC] INFO: incoming request
+    reqId: "req-m"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51150
+    }
+[08:14:18 UTC] INFO: request completed
+    reqId: "req-m"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 8.448084000032395
+[08:14:23 UTC] INFO: incoming request
+    reqId: "req-n"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51154
+    }
+[08:14:23 UTC] INFO: request completed
+    reqId: "req-n"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 7.547458000015467
+[08:14:28 UTC] INFO: incoming request
+    reqId: "req-o"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51161
+    }
+[08:14:28 UTC] INFO: request completed
+    reqId: "req-o"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 5.471958999987692
+[08:14:33 UTC] INFO: incoming request
+    reqId: "req-p"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51163
+    }
+[08:14:33 UTC] INFO: request completed
+    reqId: "req-p"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 8.285583000164479
+[08:14:38 UTC] INFO: incoming request
+    reqId: "req-q"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51168
+    }
+[08:14:38 UTC] INFO: request completed
+    reqId: "req-q"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 8.059082999825478
+[08:14:43 UTC] INFO: incoming request
+    reqId: "req-r"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51170
+    }
+[08:14:43 UTC] INFO: request completed
+    reqId: "req-r"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 5.254083999898285
+[08:14:48 UTC] INFO: incoming request
+    reqId: "req-s"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51176
+    }
+[08:14:48 UTC] INFO: request completed
+    reqId: "req-s"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 6.562249999959022
+[08:14:53 UTC] INFO: incoming request
+    reqId: "req-t"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51180
+    }
+[08:14:53 UTC] INFO: request completed
+    reqId: "req-t"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.046624999959022
+[08:14:58 UTC] INFO: incoming request
+    reqId: "req-u"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51183
+    }
+[08:14:59 UTC] INFO: request completed
+    reqId: "req-u"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 23.53841600008309
+[08:15:04 UTC] INFO: incoming request
+    reqId: "req-v"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51186
+    }
+[08:15:04 UTC] INFO: request completed
+    reqId: "req-v"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 17.512250000145286
+[08:15:09 UTC] INFO: incoming request
+    reqId: "req-w"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51188
+    }
+[08:15:09 UTC] INFO: request completed
+    reqId: "req-w"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 12.851207999978215
+[08:15:14 UTC] INFO: incoming request
+    reqId: "req-x"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51190
+    }
+[08:15:14 UTC] INFO: request completed
+    reqId: "req-x"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 14.903708999976516
+[08:15:19 UTC] INFO: incoming request
+    reqId: "req-y"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51193
+    }
+[08:15:19 UTC] INFO: request completed
+    reqId: "req-y"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 12.507416999898851
+[08:15:24 UTC] INFO: incoming request
+    reqId: "req-z"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51196
+    }
+[08:15:24 UTC] INFO: request completed
+    reqId: "req-z"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 14.417374999728054
+[08:15:29 UTC] INFO: incoming request
+    reqId: "req-10"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51205
+    }
+[08:15:29 UTC] INFO: request completed
+    reqId: "req-10"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.821791999973357
+[08:15:34 UTC] INFO: incoming request
+    reqId: "req-11"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51209
+    }
+[08:15:34 UTC] INFO: request completed
+    reqId: "req-11"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 14.07687500026077
+[08:15:39 UTC] INFO: incoming request
+    reqId: "req-12"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51213
+    }
+[08:15:39 UTC] INFO: request completed
+    reqId: "req-12"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 14.164500000420958
+[08:15:44 UTC] INFO: incoming request
+    reqId: "req-13"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51215
+    }
+[08:15:44 UTC] INFO: request completed
+    reqId: "req-13"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 23.714083000086248
+[08:15:49 UTC] INFO: incoming request
+    reqId: "req-14"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51219
+    }
+[08:15:49 UTC] INFO: request completed
+    reqId: "req-14"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 18.015290999785066
+[08:15:54 UTC] INFO: incoming request
+    reqId: "req-15"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51221
+    }
+[08:15:54 UTC] INFO: request completed
+    reqId: "req-15"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.200875000096858
+[08:15:55 UTC] INFO: incoming request
+    reqId: "req-16"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51221
+    }
+[08:15:55 UTC] INFO: request completed
+    reqId: "req-16"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 12.362749999854714
+[08:15:55 UTC] INFO: incoming request
+    reqId: "req-17"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51221
+    }
+[08:15:55 UTC] INFO: request completed
+    reqId: "req-17"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.94754200009629
+[08:16:00 UTC] INFO: incoming request
+    reqId: "req-18"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51223
+    }
+[08:16:00 UTC] INFO: request completed
+    reqId: "req-18"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 32.31624999968335
+[08:16:05 UTC] INFO: incoming request
+    reqId: "req-19"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51225
+    }
+[08:16:05 UTC] INFO: request completed
+    reqId: "req-19"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.106916999910027
+[08:16:10 UTC] INFO: incoming request
+    reqId: "req-1a"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51227
+    }
+[08:16:10 UTC] INFO: request completed
+    reqId: "req-1a"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.01833299966529
+[08:16:15 UTC] INFO: incoming request
+    reqId: "req-1b"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51229
+    }
+[08:16:15 UTC] INFO: request completed
+    reqId: "req-1b"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.34458399983123
+[08:16:20 UTC] INFO: incoming request
+    reqId: "req-1c"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51243
+    }
+[08:16:20 UTC] INFO: request completed
+    reqId: "req-1c"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.87887499993667
+[08:16:25 UTC] INFO: incoming request
+    reqId: "req-1d"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51245
+    }
+[08:16:25 UTC] INFO: request completed
+    reqId: "req-1d"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.967540999874473
+[08:16:30 UTC] INFO: incoming request
+    reqId: "req-1e"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51247
+    }
+[08:16:30 UTC] INFO: request completed
+    reqId: "req-1e"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.06229200027883
+[08:16:35 UTC] INFO: incoming request
+    reqId: "req-1f"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51252
+    }
+[08:16:35 UTC] INFO: request completed
+    reqId: "req-1f"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.04029199993238
+[08:16:40 UTC] INFO: incoming request
+    reqId: "req-1g"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51254
+    }
+[08:16:40 UTC] INFO: request completed
+    reqId: "req-1g"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.210332999937236
+[08:16:45 UTC] INFO: incoming request
+    reqId: "req-1h"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51258
+    }
+[08:16:45 UTC] INFO: request completed
+    reqId: "req-1h"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.36837500007823
+[08:16:50 UTC] INFO: incoming request
+    reqId: "req-1i"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51261
+    }
+[08:16:50 UTC] INFO: request completed
+    reqId: "req-1i"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.858791999984533
+[08:16:55 UTC] INFO: incoming request
+    reqId: "req-1j"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51281
+    }
+[08:16:55 UTC] INFO: request completed
+    reqId: "req-1j"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.129083999898285
+[08:17:00 UTC] INFO: incoming request
+    reqId: "req-1k"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51368
+    }
+[08:17:00 UTC] INFO: request completed
+    reqId: "req-1k"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.443332999944687
+[08:17:05 UTC] INFO: incoming request
+    reqId: "req-1l"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51390
+    }
+[08:17:05 UTC] INFO: request completed
+    reqId: "req-1l"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.155040999874473
+[08:17:10 UTC] INFO: incoming request
+    reqId: "req-1m"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51395
+    }
+[08:17:10 UTC] INFO: request completed
+    reqId: "req-1m"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.660957999993116
+[08:17:15 UTC] INFO: incoming request
+    reqId: "req-1n"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51399
+    }
+[08:17:15 UTC] INFO: request completed
+    reqId: "req-1n"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.69683300005272
+[08:17:20 UTC] INFO: incoming request
+    reqId: "req-1o"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51404
+    }
+[08:17:20 UTC] INFO: request completed
+    reqId: "req-1o"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.233624999877065
+[08:17:25 UTC] INFO: incoming request
+    reqId: "req-1p"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51407
+    }
+[08:17:25 UTC] INFO: request completed
+    reqId: "req-1p"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.592959000263363
+[08:17:30 UTC] INFO: incoming request
+    reqId: "req-1q"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51411
+    }
+[08:17:30 UTC] INFO: request completed
+    reqId: "req-1q"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 38.79537499975413
+[08:17:35 UTC] INFO: incoming request
+    reqId: "req-1r"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51414
+    }
+[08:17:35 UTC] INFO: request completed
+    reqId: "req-1r"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.883458000142127
+[08:17:40 UTC] INFO: incoming request
+    reqId: "req-1s"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51419
+    }
+[08:17:40 UTC] INFO: request completed
+    reqId: "req-1s"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.863624999765307
+[08:17:45 UTC] INFO: incoming request
+    reqId: "req-1t"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51423
+    }
+[08:17:45 UTC] INFO: request completed
+    reqId: "req-1t"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.95133400009945
+[08:17:50 UTC] INFO: incoming request
+    reqId: "req-1u"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51425
+    }
+[08:17:50 UTC] INFO: request completed
+    reqId: "req-1u"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.597207999788225
+[08:17:55 UTC] INFO: incoming request
+    reqId: "req-1v"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51428
+    }
+[08:17:55 UTC] INFO: request completed
+    reqId: "req-1v"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.22787499986589
+[08:18:00 UTC] INFO: incoming request
+    reqId: "req-1w"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51430
+    }
+[08:18:00 UTC] INFO: request completed
+    reqId: "req-1w"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.554291000124067
+[08:18:05 UTC] INFO: incoming request
+    reqId: "req-1x"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51433
+    }
+[08:18:05 UTC] INFO: request completed
+    reqId: "req-1x"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 10.767874999903142
+[08:18:10 UTC] INFO: incoming request
+    reqId: "req-1y"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51438
+    }
+[08:18:10 UTC] INFO: request completed
+    reqId: "req-1y"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.245124999899417
+[08:18:15 UTC] INFO: incoming request
+    reqId: "req-1z"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51440
+    }
+[08:18:15 UTC] INFO: request completed
+    reqId: "req-1z"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.202707999851555
+[08:18:20 UTC] INFO: incoming request
+    reqId: "req-20"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51457
+    }
+[08:18:20 UTC] INFO: request completed
+    reqId: "req-20"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.955457999836653
+[08:18:25 UTC] INFO: incoming request
+    reqId: "req-21"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51460
+    }
+[08:18:25 UTC] INFO: request completed
+    reqId: "req-21"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.733667000196874
+[08:18:30 UTC] INFO: incoming request
+    reqId: "req-22"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51464
+    }
+[08:18:31 UTC] INFO: request completed
+    reqId: "req-22"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 13.208540999796242
+[08:18:36 UTC] INFO: incoming request
+    reqId: "req-23"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51466
+    }
+[08:18:36 UTC] INFO: request completed
+    reqId: "req-23"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 12.074332999996841
+[08:18:41 UTC] INFO: incoming request
+    reqId: "req-24"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51468
+    }
+[08:18:41 UTC] INFO: request completed
+    reqId: "req-24"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.11712499987334
+[08:18:46 UTC] INFO: incoming request
+    reqId: "req-25"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51471
+    }
+[08:18:46 UTC] INFO: request completed
+    reqId: "req-25"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.312791999895126
+[08:18:51 UTC] INFO: incoming request
+    reqId: "req-26"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51473
+    }
+[08:18:51 UTC] INFO: request completed
+    reqId: "req-26"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.21329199988395
+[08:18:56 UTC] INFO: incoming request
+    reqId: "req-27"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51475
+    }
+[08:18:56 UTC] INFO: request completed
+    reqId: "req-27"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.24108300032094
+[08:19:01 UTC] INFO: incoming request
+    reqId: "req-28"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51477
+    }
+[08:19:01 UTC] INFO: request completed
+    reqId: "req-28"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.921916000079364
+[08:19:06 UTC] INFO: incoming request
+    reqId: "req-29"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51486
+    }
+[08:19:06 UTC] INFO: request completed
+    reqId: "req-29"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.3257500003092
+[08:19:11 UTC] INFO: incoming request
+    reqId: "req-2a"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51489
+    }
+[08:19:11 UTC] INFO: request completed
+    reqId: "req-2a"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.444166999775916
+[08:19:16 UTC] INFO: incoming request
+    reqId: "req-2b"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51491
+    }
+[08:19:16 UTC] INFO: request completed
+    reqId: "req-2b"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.035292000044137
+[08:19:21 UTC] INFO: incoming request
+    reqId: "req-2c"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51495
+    }
+[08:19:21 UTC] INFO: request completed
+    reqId: "req-2c"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.37741700001061
+[08:19:26 UTC] INFO: incoming request
+    reqId: "req-2d"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51497
+    }
+[08:19:26 UTC] INFO: request completed
+    reqId: "req-2d"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.26216599997133
+[08:19:31 UTC] INFO: incoming request
+    reqId: "req-2e"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51499
+    }
+[08:19:31 UTC] INFO: request completed
+    reqId: "req-2e"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.186291000340134
+[08:19:36 UTC] INFO: incoming request
+    reqId: "req-2f"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51502
+    }
+[08:19:36 UTC] INFO: request completed
+    reqId: "req-2f"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.427625000011176
+[08:19:41 UTC] INFO: incoming request
+    reqId: "req-2g"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51504
+    }
+[08:19:41 UTC] INFO: request completed
+    reqId: "req-2g"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 10.205707999877632
+[08:19:46 UTC] INFO: incoming request
+    reqId: "req-2h"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51508
+    }
+[08:19:46 UTC] INFO: request completed
+    reqId: "req-2h"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.728457999881357
+[08:19:51 UTC] INFO: incoming request
+    reqId: "req-2i"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51516
+    }
+[08:19:51 UTC] INFO: request completed
+    reqId: "req-2i"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.301250000018626
+[08:19:56 UTC] INFO: incoming request
+    reqId: "req-2j"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51518
+    }
+[08:19:56 UTC] INFO: request completed
+    reqId: "req-2j"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.093125000130385
+[08:20:01 UTC] INFO: incoming request
+    reqId: "req-2k"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51522
+    }
+[08:20:01 UTC] INFO: request completed
+    reqId: "req-2k"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.138957999646664
+[08:20:06 UTC] INFO: incoming request
+    reqId: "req-2l"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51525
+    }
+[08:20:06 UTC] INFO: request completed
+    reqId: "req-2l"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.899375000037253
+[08:20:11 UTC] INFO: incoming request
+    reqId: "req-2m"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51527
+    }
+[08:20:11 UTC] INFO: request completed
+    reqId: "req-2m"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.757790999952704
+[08:20:16 UTC] INFO: incoming request
+    reqId: "req-2n"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51536
+    }
+[08:20:16 UTC] INFO: request completed
+    reqId: "req-2n"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 27.230208000168204
+[08:20:21 UTC] INFO: incoming request
+    reqId: "req-2o"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51540
+    }
+[08:20:21 UTC] INFO: request completed
+    reqId: "req-2o"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.465667000040412
+[08:20:26 UTC] INFO: incoming request
+    reqId: "req-2p"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51542
+    }
+[08:20:26 UTC] INFO: request completed
+    reqId: "req-2p"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.748416000045836
+[08:20:31 UTC] INFO: incoming request
+    reqId: "req-2q"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51547
+    }
+[08:20:31 UTC] INFO: request completed
+    reqId: "req-2q"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 14.158542000222951
+[08:20:36 UTC] INFO: incoming request
+    reqId: "req-2r"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51549
+    }
+[08:20:36 UTC] INFO: request completed
+    reqId: "req-2r"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.618250000290573
+[08:20:41 UTC] INFO: incoming request
+    reqId: "req-2s"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51553
+    }
+[08:20:41 UTC] INFO: request completed
+    reqId: "req-2s"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 30.201000000350177
+[08:20:46 UTC] INFO: incoming request
+    reqId: "req-2t"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51555
+    }
+[08:20:46 UTC] INFO: request completed
+    reqId: "req-2t"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 17.80629099998623
+[08:20:51 UTC] INFO: incoming request
+    reqId: "req-2u"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51558
+    }
+[08:20:51 UTC] INFO: request completed
+    reqId: "req-2u"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.479000000283122
+[08:20:56 UTC] INFO: incoming request
+    reqId: "req-2v"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51560
+    }
+[08:20:56 UTC] INFO: request completed
+    reqId: "req-2v"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.26320799998939
+[08:21:01 UTC] INFO: incoming request
+    reqId: "req-2w"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51566
+    }
+[08:21:01 UTC] INFO: request completed
+    reqId: "req-2w"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.96066700015217
+[08:21:06 UTC] INFO: incoming request
+    reqId: "req-2x"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51568
+    }
+[08:21:06 UTC] INFO: request completed
+    reqId: "req-2x"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 19.496416999958456
+[08:21:11 UTC] INFO: incoming request
+    reqId: "req-2y"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51570
+    }
+[08:21:11 UTC] INFO: request completed
+    reqId: "req-2y"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.11483300011605
+[08:21:16 UTC] INFO: incoming request
+    reqId: "req-2z"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51575
+    }
+[08:21:16 UTC] INFO: request completed
+    reqId: "req-2z"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.35479100001976
+[08:21:21 UTC] INFO: incoming request
+    reqId: "req-30"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51579
+    }
+[08:21:21 UTC] INFO: request completed
+    reqId: "req-30"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 23.33354099979624
+[08:21:26 UTC] INFO: incoming request
+    reqId: "req-31"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51581
+    }
+[08:21:26 UTC] INFO: request completed
+    reqId: "req-31"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.81145799998194
+[08:21:32 UTC] INFO: incoming request
+    reqId: "req-32"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51587
+    }
+[08:21:32 UTC] INFO: request completed
+    reqId: "req-32"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 28.335625000298023
+[08:22:02 UTC] INFO: incoming request
+    reqId: "req-33"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51616
+    }
+[08:22:02 UTC] INFO: request completed
+    reqId: "req-33"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 20.37112500006333
+[08:22:03 UTC] INFO: incoming request
+    reqId: "req-34"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51616
+    }
+[08:22:03 UTC] INFO: request completed
+    reqId: "req-34"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 21.575540999881923
+[08:22:09 UTC] INFO: incoming request
+    reqId: "req-35"
+    req: {
+      "method": "GET",
+      "url": "/missions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51619
+    }
+[08:22:09 UTC] INFO: request completed
+    reqId: "req-35"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 33.49716699961573
+[08:22:11 UTC] INFO: incoming request
+    reqId: "req-36"
+    req: {
+      "method": "GET",
+      "url": "/missions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51619
+    }
+[08:22:11 UTC] INFO: request completed
+    reqId: "req-36"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 5.239666000008583
+[08:22:28 UTC] INFO: incoming request
+    reqId: "req-37"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51626
+    }
+[08:22:28 UTC] INFO: incoming request
+    reqId: "req-38"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51628
+    }
+[08:22:28 UTC] INFO: request completed
+    reqId: "req-38"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.880292000249028
+[08:22:28 UTC] INFO: request completed
+    reqId: "req-37"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 24.67837500013411
+[08:22:28 UTC] INFO: incoming request
+    reqId: "req-39"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51626
+    }
+[08:22:28 UTC] INFO: request completed
+    reqId: "req-39"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 6.719499999657273
+[08:22:33 UTC] INFO: incoming request
+    reqId: "req-3a"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51630
+    }
+[08:22:33 UTC] INFO: request completed
+    reqId: "req-3a"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 25.02095799986273
+[08:22:49 UTC] INFO: incoming request
+    reqId: "req-3b"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51632
+    }
+[08:22:49 UTC] INFO: request completed
+    reqId: "req-3b"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 18.06645799987018
+[08:22:54 UTC] INFO: incoming request
+    reqId: "req-3c"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51634
+    }
+[08:22:54 UTC] INFO: request completed
+    reqId: "req-3c"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 25.56604199996218
+[08:23:11 UTC] INFO: incoming request
+    reqId: "req-3d"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51636
+    }
+[08:23:11 UTC] INFO: request completed
+    reqId: "req-3d"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 23.87387500004843
+[08:23:11 UTC] INFO: incoming request
+    reqId: "req-3e"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51636
+    }
+[08:23:11 UTC] INFO: request completed
+    reqId: "req-3e"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 11.498000000137836
+[08:23:16 UTC] INFO: incoming request
+    reqId: "req-3f"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51639
+    }
+[08:23:16 UTC] INFO: request completed
+    reqId: "req-3f"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 23.4250409998931
+[08:23:21 UTC] INFO: incoming request
+    reqId: "req-3g"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51646
+    }
+[08:23:21 UTC] INFO: request completed
+    reqId: "req-3g"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.82183300005272
+[08:23:26 UTC] INFO: incoming request
+    reqId: "req-3h"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51651
+    }
+[08:23:26 UTC] INFO: request completed
+    reqId: "req-3h"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 24.21375000011176
+[08:23:31 UTC] INFO: incoming request
+    reqId: "req-3i"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51653
+    }
+[08:23:31 UTC] INFO: request completed
+    reqId: "req-3i"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.933583000209183
+[08:23:36 UTC] INFO: incoming request
+    reqId: "req-3j"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51655
+    }
+[08:23:36 UTC] INFO: request completed
+    reqId: "req-3j"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 21.494374999776483
+[08:23:41 UTC] INFO: incoming request
+    reqId: "req-3k"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51659
+    }
+[08:23:41 UTC] INFO: request completed
+    reqId: "req-3k"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.839540999848396
+[08:23:46 UTC] INFO: incoming request
+    reqId: "req-3l"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51662
+    }
+[08:23:46 UTC] INFO: request completed
+    reqId: "req-3l"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 24.498000000137836
+[08:23:51 UTC] INFO: incoming request
+    reqId: "req-3m"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51664
+    }
+[08:23:51 UTC] INFO: request completed
+    reqId: "req-3m"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 7.951249999925494
+[08:23:56 UTC] INFO: incoming request
+    reqId: "req-3n"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/4f69148c-ee1a-417d-b6fa-b3e06b8ca3de",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51666
+    }
+[08:23:56 UTC] INFO: request completed
+    reqId: "req-3n"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.04666700027883

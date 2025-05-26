@@ -49,14 +49,6 @@ function Navigation() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex space-x-6 flex-wrap items-center">
           {/* Páginas Antigas */}
-          <Link 
-            to="/potential-issues" 
-            className={`font-medium transition-colors ${
-              isActive('/potential-issues') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
-            }`}
-          >
-            Potenciais Problemas
-          </Link>
           
           <Link 
             to="/claude-sessions" 
@@ -84,7 +76,7 @@ function Navigation() {
             <button
               onClick={() => setShowDropdown(!showDropdown)}
               className={`font-medium transition-colors flex items-center gap-1 ${
-                isActive('/') || isActive('/missions') || isActive('/chat') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
+                isActive('/') || isActive('/potential-issues') || isActive('/missions') || isActive('/chat') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
               }`}
             >
               Em desenvolvimento
@@ -103,6 +95,15 @@ function Navigation() {
                   }`}
                 >
                   Dashboard Principal
+                </Link>
+                <Link
+                  to="/potential-issues"
+                  onClick={() => setShowDropdown(false)}
+                  className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
+                    isActive('/potential-issues') ? 'bg-gray-100 text-blue-800' : 'text-gray-700'
+                  }`}
+                >
+                  Potenciais Problemas
                 </Link>
                 <Link
                   to="/missions"

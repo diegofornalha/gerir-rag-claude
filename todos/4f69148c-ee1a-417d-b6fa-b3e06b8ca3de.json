@@ -1,20 +1,14 @@
 [
   {
-    "content": "Modificar a aba Dashboard para ter um dropdown",
+    "content": "Remover 'Potenciais Problemas' do menu principal",
     "status": "completed",
     "priority": "high",
     "id": "1"
   },
   {
-    "content": "Adicionar Missões e Chat como opções do dropdown",
+    "content": "Adicionar 'Potenciais Problemas' ao dropdown 'Em desenvolvimento'",
     "status": "completed",
     "priority": "high",
     "id": "2"
-  },
-  {
-    "content": "Implementar a lógica de abrir/fechar o dropdown",
-    "status": "completed",
-    "priority": "medium",
-    "id": "3"
   }
 ]
