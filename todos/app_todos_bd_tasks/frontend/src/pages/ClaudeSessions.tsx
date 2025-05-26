@@ -1,8 +1,13 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query'
 import { format } from 'date-fns'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useHiddenSessions } from '../hooks/useHiddenSessions'
+
+interface TaskInfo {
+  id: string
+  content: string
+}
 
 interface Session {
   sessionId: string
@@ -15,8 +20,9 @@ interface Session {
   completedCount: number
   inProgressCount: number
   currentTaskName: string | null
-  firstPendingTask: string | null
-  lastCompletedTask: string | null
+  currentTask: TaskInfo | null
+  firstPendingTask: TaskInfo | null
+  lastCompletedTask: TaskInfo | null
   customName: string | null
   isContinuation?: boolean
   originalSessionId?: string | null
@@ -164,13 +170,94 @@ interface SessionCardProps {
 }
 
 function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) {
+  const [editingTaskId, setEditingTaskId] = useState<string | null>(null)
+  const [editingContent, setEditingContent] = useState('')
+  const [hoveredTaskId, setHoveredTaskId] = useState<string | null>(null)
+  const [editingSessionName, setEditingSessionName] = useState(false)
+  const [editingNameContent, setEditingNameContent] = useState('')
+  const [hoveredCard, setHoveredCard] = useState(false)
+  const queryClient = useQueryClient()
 
   const progressPercentage = session.todoCount > 0
     ? Math.round((session.completedCount / session.todoCount) * 100)
     : 0
 
+  // Mutation para atualizar tarefa
+  const updateTodoMutation = useMutation({
+    mutationFn: async ({ todoId, content }: { todoId: string; content: string }) => {
+      const response = await fetch(`${API_URL}/api/claude-sessions/${session.sessionId}/todos/${todoId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content })
+      })
+      if (!response.ok) throw new Error('Erro ao atualizar tarefa')
+      return response.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
+      setEditingTaskId(null)
+    }
+  })
+
+  const handleStartEdit = (taskId: string, currentContent: string) => {
+    setEditingTaskId(taskId)
+    setEditingContent(currentContent)
+  }
+
+  const handleSaveEdit = (taskId: string) => {
+    if (editingContent.trim()) {
+      updateTodoMutation.mutate({ todoId: taskId, content: editingContent.trim() })
+    } else {
+      setEditingTaskId(null)
+    }
+  }
+
+  const handleCancelEdit = () => {
+    setEditingTaskId(null)
+    setEditingContent('')
+  }
+
+  // Mutation para atualizar nome da sessão
+  const updateSessionNameMutation = useMutation({
+    mutationFn: async ({ sessionId, customName }: { sessionId: string; customName: string }) => {
+      const response = await fetch(`${API_URL}/api/documents/${sessionId}/name`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ customName })
+      })
+      if (!response.ok) throw new Error('Erro ao atualizar nome')
+      return response.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
+      setEditingSessionName(false)
+    }
+  })
+
+  const handleStartEditName = () => {
+    setEditingSessionName(true)
+    setEditingNameContent(session.customName || session.sessionId)
+  }
+
+  const handleSaveEditName = () => {
+    if (editingNameContent.trim()) {
+      updateSessionNameMutation.mutate({ sessionId: session.sessionId, customName: editingNameContent.trim() })
+    } else {
+      setEditingSessionName(false)
+    }
+  }
+
+  const handleCancelEditName = () => {
+    setEditingSessionName(false)
+    setEditingNameContent('')
+  }
+
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow relative">
+    <div 
+      className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow relative"
+      onMouseEnter={() => setHoveredCard(true)}
+      onMouseLeave={() => setHoveredCard(false)}
+    >
       <div className="flex justify-between items-start mb-3">
         <h3 className="font-semibold text-sm text-gray-800 truncate">
           {session.todoCount} {session.todoCount === 1 ? 'tarefa' : 'tarefas'}
@@ -186,9 +273,40 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
               claude -c:{session.originalSessionId?.slice(0, 6)}
             </span>
           )}
-          <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded font-mono" title={session.customName ? `ID: ${session.sessionId}` : "ID da sessão"}>
-            {session.customName || session.sessionId.slice(0, 6)}
-          </span>
+          <div className="flex items-center group">
+            {editingSessionName ? (
+              <input
+                type="text"
+                value={editingNameContent}
+                onChange={(e) => setEditingNameContent(e.target.value)}
+                onBlur={handleSaveEditName}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') handleSaveEditName()
+                  if (e.key === 'Escape') handleCancelEditName()
+                }}
+                className="text-xs px-2 py-1 border-b-2 border-blue-500 focus:outline-none bg-transparent font-mono min-w-[100px]"
+                autoFocus
+              />
+            ) : (
+              <span 
+                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded font-mono flex items-center gap-1" 
+                title={session.customName ? `ID: ${session.sessionId}` : "ID da sessão"}
+              >
+                {session.customName || session.sessionId.slice(0, 6)}
+                {hoveredCard && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      handleStartEditName()
+                    }}
+                    className="text-gray-400 hover:text-gray-600 ml-1"
+                  >
+                    ✏️
+                  </button>
+                )}
+              </span>
+            )}
+          </div>
         </div>
       </div>
       
@@ -201,8 +319,38 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
               <span className="ml-auto font-medium text-orange-600">{session.pendingCount}</span>
             </div>
             {session.firstPendingTask && (
-              <div className="text-xs text-gray-500 pl-4 truncate">
-                • {session.firstPendingTask}
+              <div 
+                className="text-xs text-gray-500 pl-4 flex items-center group"
+                onMouseEnter={() => setHoveredTaskId(session.firstPendingTask.id)}
+                onMouseLeave={() => setHoveredTaskId(null)}
+              >
+                <span className="mr-1">•</span>
+                {editingTaskId === session.firstPendingTask.id ? (
+                  <input
+                    type="text"
+                    value={editingContent}
+                    onChange={(e) => setEditingContent(e.target.value)}
+                    onBlur={() => handleSaveEdit(session.firstPendingTask.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleSaveEdit(session.firstPendingTask.id)
+                      if (e.key === 'Escape') handleCancelEdit()
+                    }}
+                    className="flex-1 px-1 py-0 text-xs border-b border-gray-300 focus:border-blue-500 outline-none bg-transparent"
+                    autoFocus
+                  />
+                ) : (
+                  <>
+                    <span className="truncate flex-1">{session.firstPendingTask.content}</span>
+                    {hoveredTaskId === session.firstPendingTask.id && (
+                      <button
+                        onClick={() => handleStartEdit(session.firstPendingTask.id, session.firstPendingTask.content)}
+                        className="ml-1 text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        ✏️
+                      </button>
+                    )}
+                  </>
+                )}
               </div>
             )}
           </div>
@@ -215,9 +363,39 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
               <span className="text-gray-600">Em progresso:</span>
               <span className="ml-auto font-medium text-blue-600">{session.inProgressCount}</span>
             </div>
-            {session.currentTaskName && (
-              <div className="text-xs text-blue-600 pl-4 truncate">
-                • {session.currentTaskName}
+            {session.currentTask && (
+              <div 
+                className="text-xs text-blue-600 pl-4 flex items-center group"
+                onMouseEnter={() => setHoveredTaskId(session.currentTask.id)}
+                onMouseLeave={() => setHoveredTaskId(null)}
+              >
+                <span className="mr-1">•</span>
+                {editingTaskId === session.currentTask.id ? (
+                  <input
+                    type="text"
+                    value={editingContent}
+                    onChange={(e) => setEditingContent(e.target.value)}
+                    onBlur={() => handleSaveEdit(session.currentTask.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleSaveEdit(session.currentTask.id)
+                      if (e.key === 'Escape') handleCancelEdit()
+                    }}
+                    className="flex-1 px-1 py-0 text-xs border-b border-blue-300 focus:border-blue-500 outline-none bg-transparent text-blue-600"
+                    autoFocus
+                  />
+                ) : (
+                  <>
+                    <span className="truncate flex-1">{session.currentTask.content}</span>
+                    {hoveredTaskId === session.currentTask.id && (
+                      <button
+                        onClick={() => handleStartEdit(session.currentTask.id, session.currentTask.content)}
+                        className="ml-1 text-blue-400 hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        ✏️
+                      </button>
+                    )}
+                  </>
+                )}
               </div>
             )}
           </div>
@@ -231,8 +409,38 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
               <span className="ml-auto font-medium text-green-600">{session.completedCount}</span>
             </div>
             {session.lastCompletedTask && (
-              <div className="text-xs text-gray-500 pl-4 truncate">
-                • {session.lastCompletedTask}
+              <div 
+                className="text-xs text-gray-500 pl-4 flex items-center group"
+                onMouseEnter={() => setHoveredTaskId(session.lastCompletedTask.id)}
+                onMouseLeave={() => setHoveredTaskId(null)}
+              >
+                <span className="mr-1">•</span>
+                {editingTaskId === session.lastCompletedTask.id ? (
+                  <input
+                    type="text"
+                    value={editingContent}
+                    onChange={(e) => setEditingContent(e.target.value)}
+                    onBlur={() => handleSaveEdit(session.lastCompletedTask.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleSaveEdit(session.lastCompletedTask.id)
+                      if (e.key === 'Escape') handleCancelEdit()
+                    }}
+                    className="flex-1 px-1 py-0 text-xs border-b border-gray-300 focus:border-blue-500 outline-none bg-transparent"
+                    autoFocus
+                  />
+                ) : (
+                  <>
+                    <span className="truncate flex-1">{session.lastCompletedTask.content}</span>
+                    {hoveredTaskId === session.lastCompletedTask.id && (
+                      <button
+                        onClick={() => handleStartEdit(session.lastCompletedTask.id, session.lastCompletedTask.content)}
+                        className="ml-1 text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        ✏️
+                      </button>
+                    )}
+                  </>
+                )}
               </div>
             )}
           </div>

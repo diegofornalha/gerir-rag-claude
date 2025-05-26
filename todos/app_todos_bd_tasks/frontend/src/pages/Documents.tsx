@@ -26,12 +26,14 @@ export default function Documents() {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewModalOpen, setViewModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
-  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
   const [documentContent, setDocumentContent] = useState<DocumentContent | null>(null);
   const [customName, setCustomName] = useState('');
   const [viewPage, setViewPage] = useState(1);
   const linesPerPage = 100;
+  const [editingInlineId, setEditingInlineId] = useState<string | null>(null);
+  const [editingInlineName, setEditingInlineName] = useState('');
+  const [hoveredDocId, setHoveredDocId] = useState<string | null>(null);
 
   // Buscar lista de documentos
   const { data: documents, isLoading, error } = useQuery<Document[]>({
@@ -68,6 +70,7 @@ export default function Documents() {
       queryClient.invalidateQueries({ queryKey: ['documents'] });
       setEditModalOpen(false);
       setSelectedDocument(null);
+      setEditingInlineId(null);
     },
   });
 
@@ -82,8 +85,6 @@ export default function Documents() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['documents'] });
-      setDeleteModalOpen(false);
-      setSelectedDocument(null);
     },
   });
 
@@ -122,10 +123,27 @@ export default function Documents() {
     setEditModalOpen(true);
   };
 
-  // Abrir modal de exclusão
+  // Excluir documento diretamente
   const handleDelete = (doc: Document) => {
-    setSelectedDocument(doc);
-    setDeleteModalOpen(true);
+    deleteMutation.mutate(doc.sessionId);
+  };
+
+  // Funções para edição inline
+  const handleStartInlineEdit = (doc: Document) => {
+    setEditingInlineId(doc.sessionId);
+    setEditingInlineName(doc.customName || doc.sessionId);
+  };
+
+  const handleSaveInlineEdit = (sessionId: string) => {
+    if (editingInlineName.trim()) {
+      updateNameMutation.mutate({ sessionId, customName: editingInlineName.trim() });
+    }
+    setEditingInlineId(null);
+  };
+
+  const handleCancelInlineEdit = () => {
+    setEditingInlineId(null);
+    setEditingInlineName('');
   };
 
   // Formatar tamanho do arquivo
@@ -221,14 +239,46 @@ export default function Documents() {
             {filteredDocuments?.map((doc) => (
               <tr key={doc.sessionId} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="flex items-center">
+                  <div 
+                    className="flex items-center group"
+                    onMouseEnter={() => setHoveredDocId(doc.sessionId)}
+                    onMouseLeave={() => setHoveredDocId(null)}
+                  >
                     <span className="text-gray-400 mr-3 hidden sm:inline">📄</span>
-                    <div className="max-w-xs">
-                      <div className="text-sm font-medium text-gray-900 truncate">
-                        {doc.customName || doc.sessionId}
-                      </div>
-                      {doc.customName && (
-                        <div className="text-xs text-gray-500 truncate hidden sm:block">{doc.sessionId}</div>
+                    <div className="max-w-xs flex-1">
+                      {editingInlineId === doc.sessionId ? (
+                        <input
+                          type="text"
+                          value={editingInlineName}
+                          onChange={(e) => setEditingInlineName(e.target.value)}
+                          onBlur={() => handleSaveInlineEdit(doc.sessionId)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') handleSaveInlineEdit(doc.sessionId);
+                            if (e.key === 'Escape') handleCancelInlineEdit();
+                          }}
+                          className="w-full px-2 py-1 text-sm border-b-2 border-blue-500 focus:outline-none bg-transparent"
+                          autoFocus
+                        />
+                      ) : (
+                        <>
+                          <div className="text-sm font-medium text-gray-900 truncate flex items-center">
+                            <span className="truncate">{doc.customName || doc.sessionId}</span>
+                            {hoveredDocId === doc.sessionId && (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleStartInlineEdit(doc);
+                                }}
+                                className="ml-2 text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity"
+                              >
+                                ✏️
+                              </button>
+                            )}
+                          </div>
+                          {doc.customName && (
+                            <div className="text-xs text-gray-500 truncate hidden sm:block">{doc.sessionId}</div>
+                          )}
+                        </>
                       )}
                     </div>
                   </div>
@@ -438,41 +488,6 @@ export default function Documents() {
         </div>
       )}
 
-      {/* Modal de Confirmação de Exclusão */}
-      {deleteModalOpen && selectedDocument && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
-          <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">
-              Confirmar Exclusão
-            </h3>
-            
-            <p className="text-gray-600 mb-6">
-              Tem certeza que deseja excluir o documento{' '}
-              <strong>{selectedDocument.customName || selectedDocument.sessionId}</strong>?
-              Esta ação não pode ser desfeita.
-            </p>
-
-            <div className="flex justify-end space-x-3">
-              <button
-                onClick={() => {
-                  setDeleteModalOpen(false);
-                  setSelectedDocument(null);
-                }}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
-              >
-                Cancelar
-              </button>
-              <button
-                onClick={() => deleteMutation.mutate(selectedDocument.sessionId)}
-                disabled={deleteMutation.isPending}
-                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 disabled:opacity-50"
-              >
-                {deleteMutation.isPending ? 'Excluindo...' : 'Excluir'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

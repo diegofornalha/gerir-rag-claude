@@ -97,14 +97,14 @@ export class ClaudeIntegration {
 
         // Buscar tarefas por status
         const pendingTodos = todos.filter((t: any) => t.status === 'pending')
-        const firstPendingTask = pendingTodos.length > 0 ? pendingTodos[0].content : null
+        const firstPendingTask = pendingTodos.length > 0 ? { id: pendingTodos[0].id, content: pendingTodos[0].content } : null
         
         const inProgressTodos = todos.filter((t: any) => t.status === 'in_progress')
         const inProgressCount = inProgressTodos.length
-        const currentTaskName = inProgressCount > 0 ? inProgressTodos[0].content : null
+        const currentTask = inProgressCount > 0 ? { id: inProgressTodos[0].id, content: inProgressTodos[0].content } : null
         
         const completedTodos = todos.filter((t: any) => t.status === 'completed')
-        const lastCompletedTask = completedTodos.length > 0 ? completedTodos[completedTodos.length - 1].content : null
+        const lastCompletedTask = completedTodos.length > 0 ? { id: completedTodos[completedTodos.length - 1].id, content: completedTodos[completedTodos.length - 1].content } : null
 
         sessions.push({
           sessionId,
@@ -116,7 +116,8 @@ export class ClaudeIntegration {
           pendingCount: pendingTodos.length,
           completedCount: completedTodos.length,
           inProgressCount,
-          currentTaskName,
+          currentTaskName: currentTask?.content || null,
+          currentTask,
           firstPendingTask,
           lastCompletedTask,
           customName,
