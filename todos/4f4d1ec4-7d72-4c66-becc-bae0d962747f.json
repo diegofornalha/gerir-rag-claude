@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Analisar implementação atual do RAG - verificar arquivos de configuração, APIs e estrutura de dados",
+    "status": "completed",
+    "priority": "high",
+    "id": "analyze-current-rag"
+  },
+  {
+    "content": "Mapear funcionalidades do LightRAG - modos de busca, indexação, API REST e capacidades",
+    "status": "completed",
+    "priority": "high",
+    "id": "map-lightrag-features"
+  },
+  {
+    "content": "Identificar pontos de integração - onde os sistemas podem se complementar ou substituir",
+    "status": "completed",
+    "priority": "high",
+    "id": "identify-integration-points"
+  },
+  {
+    "content": "Desenhar arquitetura unificada - propor estrutura que aproveite o melhor de cada sistema",
+    "status": "completed",
+    "priority": "medium",
+    "id": "design-unified-architecture"
+  },
+  {
+    "content": "Criar plano de migração - etapas para unificar sem perder funcionalidades existentes",
+    "status": "completed",
+    "priority": "medium",
+    "id": "create-migration-plan"
+  },
+  {
+    "content": "Implementar servidor MCP-RAG customizado com indexação e busca funcionais",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "implement-mcp-rag-server"
+  },
+  {
+    "content": "Desenhar fluxo de captura e armazenamento de documentações web via WebFetch + MCP RAG",
+    "status": "pending",
+    "priority": "high",
+    "id": "design-webfetch-integration"
+  },
+  {
+    "content": "Integrar MCP-RAG com sistema Claude Sessions existente",
+    "status": "pending",
+    "priority": "high",
+    "id": "integrate-claude-sessions"
+  },
+  {
+    "content": "Testar sistema unificado - validar busca, indexação e performance",
+    "status": "pending",
+    "priority": "low",
+    "id": "test-unified-system"
+  }
+]
