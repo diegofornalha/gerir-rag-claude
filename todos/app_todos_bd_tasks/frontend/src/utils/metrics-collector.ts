@@ -101,11 +101,11 @@ export class MetricsCollector {
           const rate = this.getRate(category, metric);
 
           result[category][metric] = {
-            count: data.length,
-            average: average.toFixed(2),
-            rate: rate.toFixed(2),
+            current: data[data.length - 1].value,
+            average,
             ...percentiles,
-            lastValue: data[data.length - 1].value
+            rate,
+            dataPoints: data.length
           };
         }
       });
@@ -114,86 +114,45 @@ export class MetricsCollector {
     return result;
   }
 
+  reset(): void {
+    this.metrics.clear();
+  }
+
   private cleanOldMetrics(): void {
     const now = Date.now();
-    const cutoff = now - this.retentionPeriod;
+    const cutoffTime = now - this.retentionPeriod;
 
     this.metrics.forEach((categoryMetrics) => {
       categoryMetrics.forEach((data, metric) => {
-        const filtered = data.filter(d => d.timestamp >= cutoff);
-        if (filtered.length !== data.length) {
-          categoryMetrics.set(metric, filtered);
+        const filteredData = data.filter(d => d.timestamp > cutoffTime);
+        if (filteredData.length !== data.length) {
+          categoryMetrics.set(metric, filteredData);
         }
       });
     });
   }
 
-  reset(category?: string): void {
-    if (category) {
-      this.metrics.delete(category);
-    } else {
-      this.metrics.clear();
-    }
-  }
+  // Métodos adicionais para integração com monitoring hooks
+  startAutoCollection(): void {
+    // Coletar métricas de performance do navegador
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      setInterval(() => {
+        // Memory metrics (se disponível)
+        if ('memory' in performance) {
+          const memory = (performance as any).memory;
+          if (memory) {
+            this.recordMetric('browser', 'heap-used', memory.usedJSHeapSize / 1048576); // MB
+            this.recordMetric('browser', 'heap-total', memory.totalJSHeapSize / 1048576); // MB
+          }
+        }
 
-  // Métodos específicos para métricas comuns
-  recordSyncMetric(metric: string, value: number): void {
-    this.recordMetric('sync', metric, value);
-  }
-
-  recordDatabaseMetric(metric: string, value: number): void {
-    this.recordMetric('database', metric, value);
-  }
-
-  recordCacheMetric(metric: string, value: number): void {
-    this.recordMetric('cache', metric, value);
-  }
-
-  recordPerformanceMetric(metric: string, value: number): void {
-    this.recordMetric('performance', metric, value);
-  }
-
-  // Helpers para timing
-  startTimer(): () => number {
-    const start = performance.now();
-    return () => {
-      return performance.now() - start;
-    };
-  }
-
-  async measureAsync<T>(
-    category: string,
-    metric: string,
-    operation: () => Promise<T>
-  ): Promise<T> {
-    const start = performance.now();
-    try {
-      const result = await operation();
-      const duration = performance.now() - start;
-      this.recordMetric(category, metric, duration);
-      return result;
-    } catch (error) {
-      const duration = performance.now() - start;
-      this.recordMetric(category, `${metric}_error`, duration);
-      throw error;
-    }
-  }
-
-  measure<T>(
-    category: string,
-    metric: string,
-    operation: () => T
-  ): T {
-    const start = performance.now();
-    try {
-      const result = operation();
-      const duration = performance.now() - start;
-      this.recordMetric(category, metric, duration);
-      return result;
-    } catch (error) {
-      const duration = performance.now() - start;
-      this.recordMetric(category, `${metric}_error`, duration);
-      throw error;
+        // Navigation timing
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          this.recordMetric('performance', 'page-load', navigation.loadEventEnd - navigation.fetchStart);
+          this.recordMetric('performance', 'dom-content-loaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
+        }
+      }, 10000); // A cada 10 segundos
     }
   }
 }

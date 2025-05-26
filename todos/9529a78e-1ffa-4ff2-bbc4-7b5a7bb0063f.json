@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Criar documentação detalhada do sistema de monitoramento em arquivo .md",
+    "status": "completed",
+    "priority": "high",
+    "id": "doc-monitoring-system"
+  },
+  {
+    "content": "Documentar HealthChecker: como funciona, checks disponíveis, configurações",
+    "status": "pending",
+    "priority": "high",
+    "id": "doc-health-checker"
+  },
+  {
+    "content": "Documentar MetricsCollector: coleta de métricas, cálculos de percentis, retenção de dados",
+    "status": "pending",
+    "priority": "high",
+    "id": "doc-metrics-collector"
+  },
+  {
+    "content": "Documentar MonitoringDashboard: componentes visuais, auto-refresh, interações",
+    "status": "pending",
+    "priority": "high",
+    "id": "doc-monitoring-dashboard"
+  },
+  {
+    "content": "Explicar diferença entre dados reais e mockados no sistema",
+    "status": "pending",
+    "priority": "medium",
+    "id": "doc-real-vs-mock"
+  },
+  {
+    "content": "Criar diagrama e explicação da arquitetura do sistema de monitoramento",
+    "status": "pending",
+    "priority": "medium",
+    "id": "doc-architecture"
+  },
+  {
+    "content": "Corrigir dependências e criar versão simplificada do sistema de monitoramento",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix-monitoring-deps"
+  }
+]

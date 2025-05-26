@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { HealthChecker, SystemHealth, HealthCheckResult } from './health-checker';
+import { HealthChecker } from './health-checker-simple';
+import { SystemHealth, HealthCheckResult } from './types';
 import { MetricsCollector } from '../utils/metrics-collector';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';

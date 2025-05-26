@@ -323,4 +323,21 @@ class PGliteManager {
   }
 }
 
+// Create a proxy object for db that initializes on first use
+const dbProxy = new Proxy({} as ReturnType<typeof drizzle>, {
+  get(target, prop) {
+    const actualDb = PGliteManager.getDb();
+    return actualDb[prop as keyof typeof actualDb];
+  }
+});
+
+// Export db directly
+export const db = dbProxy;
+
+// Also export PGliteManager
 export { PGliteManager };
+
+// Initialize database on module load
+PGliteManager.initialize().catch(error => {
+  console.error('Failed to initialize database:', error);
+});

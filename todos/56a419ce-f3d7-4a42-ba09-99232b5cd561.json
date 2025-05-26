@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Investigação profunda do erro de export HealthCheckResult",
+    "status": "completed",
+    "priority": "high",
+    "id": "deep-investigation"
+  },
+  {
+    "content": "Verificar configuração do TypeScript e Vite",
+    "status": "completed",
+    "priority": "high",
+    "id": "check-typescript-config"
+  },
+  {
+    "content": "Testar import direto do arquivo problemático",
+    "status": "completed",
+    "priority": "high",
+    "id": "test-direct-import"
+  },
+  {
+    "content": "Verificar dependências circulares",
+    "status": "completed",
+    "priority": "high",
+    "id": "check-circular-deps"
+  },
+  {
+    "content": "Limpar cache e rebuild completo",
+    "status": "completed",
+    "priority": "medium",
+    "id": "rebuild-from-scratch"
+  },
+  {
+    "content": "Criar reprodução mínima do problema",
+    "status": "completed",
+    "priority": "medium",
+    "id": "create-minimal-repro"
+  }
+]

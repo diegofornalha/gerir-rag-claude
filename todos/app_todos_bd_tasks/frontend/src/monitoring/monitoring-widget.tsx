@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useHealthMonitoring, useResourceMonitoring, useSystemAlerts } from './monitoring-hooks';
+import { useHealthMonitoring, useResourceMonitoring, useSystemAlerts } from './monitoring-hooks-simple';
 import { formatDistanceToNow } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
+import { ptBR } from 'date-fns/locale/pt-BR';
 
 interface MonitoringWidgetProps {
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
