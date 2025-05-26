@@ -2,8 +2,9 @@
   2. Usa sistema operacional MacOS
   3. Prefere comunicação em português do Brasil
   4. sempre que constatar e dizer agora você pode acessar que a aplicação funciona tente em seguida tirar um print ou navegar com puppeteer para confirmar.
-  5.sim não precisa me perguntar apenas execute as tarefas até o fim, a não ser
-│   que seja ao critico que vai precisar de uma decisão estrategica.  
+  5. sim não precisa me perguntar apenas execute as tarefas até o fim, a não ser
+│   que seja ao critico que vai precisar de uma decisão estrategica.
+  6. busque sempre manter as tarefas atualizadas   
 
 # Configuração do Desktop Commander
 
@@ -130,46 +131,6 @@ O serviço Terminal MCP permite execução de comandos no sistema. Abaixo estão
 4. **Análise de logs**: grep, tail, awk
 5. **Operações de sistema**: verificar espaço, processos
 
-# Configuração do LightRAG
-
-O serviço LightRAG MCP permite indexação e busca em documentos. Abaixo estão exemplos de uso:
-
-## Comandos Principais
-
-### Consultas
-- `rag_query(query: string, mode?: string)` - Busca informações na base de conhecimento
-  ```python
-  rag_query({ query: "como configurar docker", mode: "hybrid" })
-  ```
-
-### Inserção de Dados
-- `rag_insert_text(text: string)` - Insere texto na base
-  ```python
-  rag_insert_text({ text: "Conteúdo do documento..." })
-  ```
-
-- `rag_insert_file(file_path: string)` - Insere arquivo na base
-  ```python
-  rag_insert_file({ file_path: "/path/to/document.txt" })
-  ```
-
-## Modos de Busca
-- `naive`: Busca simples por palavras-chave
-- `local`: Busca em contexto local
-- `global`: Busca em todo o conhecimento
-- `hybrid`: Combinação de local e global (padrão)
-
-## Limpeza Automática de Todos
-
-O sistema agora realiza limpeza automática semanal dos arquivos de tarefas (todos), removendo:
-- Arquivos vazios
-- Arquivos contendo apenas um array vazio "[]"
-- Arquivos sem tarefas válidas
-
-Para limpar manualmente a qualquer momento:
-```bash
-~/.claude/clean_todos.sh
-```
 
 A limpeza preserva todos os arquivos com tarefas válidas e o arquivo de documentação todos.md.
 

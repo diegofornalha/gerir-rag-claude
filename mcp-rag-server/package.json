@@ -1,0 +1,32 @@
+{
+  "name": "@diego/mcp-rag-server",
+  "version": "1.0.0",
+  "description": "MCP RAG Server com WebFetch integration para Claude Code",
+  "main": "server.py",
+  "type": "module",
+  "scripts": {
+    "start": "python3 server.py"
+  },
+  "bin": {
+    "mcp-rag-server": "./start.sh"
+  },
+  "files": [
+    "server.py",
+    "webfetch_integration.py",
+    "requirements.txt",
+    "start.sh"
+  ],
+  "keywords": [
+    "mcp",
+    "rag",
+    "claude",
+    "webfetch"
+  ],
+  "author": "Diego",
+  "license": "MIT",
+  "mcp": {
+    "type": "stdio",
+    "command": "python3",
+    "args": ["server.py"]
+  }
+}

@@ -2,261 +2,356 @@
 > backend@1.0.0 dev
 > tsx watch --env-file .env src/http/server.ts
 
-[06:38:18 UTC] INFO: Server listening at http://127.0.0.1:3333
-[06:38:18 UTC] INFO: Server listening at http://192.168.1.21:3333
-[06:38:18 UTC] INFO: 🚀 HTTP server running on http://localhost:3333
-[06:38:23 UTC] INFO: incoming request
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:08:37 UTC] INFO: Server listening at http://127.0.0.1:3333
+[17:08:37 UTC] INFO: Server listening at http://192.168.1.13:3333
+[17:08:37 UTC] INFO: 🚀 HTTP server running on http://localhost:3333
+[17:08:46 UTC] INFO: incoming request
     reqId: "req-1"
-    req: {
-      "method": "GET",
-      "url": "/api/claude-sessions",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 49603
-    }
-[06:38:23 UTC] INFO: request completed
-    reqId: "req-1"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 42.44579100003466
-[06:38:26 UTC] INFO: incoming request
-    reqId: "req-2"
-    req: {
-      "method": "GET",
-      "url": "/api/claude-sessions/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 49603
-    }
-[06:38:26 UTC] INFO: incoming request
-    reqId: "req-3"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61153
     }
-[06:38:26 UTC] INFO: request completed
+[17:08:46 UTC] INFO: request completed
+    reqId: "req-1"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 14.250750005245209
+[17:09:05 UTC] INFO: incoming request
+    reqId: "req-2"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61180
+    }
+[17:09:05 UTC] INFO: request completed
     reqId: "req-2"
     res: {
       "statusCode": 200
     }
-    responseTime: 30.811958999955095
-[06:38:26 UTC] INFO: request completed
+    responseTime: 28.0197080001235
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:10:52 UTC] INFO: incoming request
+    reqId: "req-3"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61245
+    }
+[17:10:52 UTC] INFO: request completed
     reqId: "req-3"
     res: {
       "statusCode": 200
     }
-    responseTime: 34.784917000099085
-[06:38:26 UTC] INFO: incoming request
+    responseTime: 40.776458002626896
+[17:10:53 UTC] INFO: incoming request
     reqId: "req-4"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61245
     }
-[06:38:26 UTC] INFO: request completed
+[17:10:53 UTC] INFO: request completed
     reqId: "req-4"
     res: {
-      "statusCode": 304
+      "statusCode": 200
     }
-    responseTime: 15.859041999909095
-[06:38:31 UTC] INFO: incoming request
+    responseTime: 33.63545899838209
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:11:20 UTC] INFO: incoming request
     reqId: "req-5"
     req: {
-      "method": "GET",
-      "url": "/api/claude-sessions/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628",
+      "method": "OPTIONS",
+      "url": "/api/documents/29eaf568-c67e-472f-9b5c-2703424b7775",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61259
     }
-[06:38:31 UTC] INFO: request completed
+[17:11:20 UTC] INFO: request completed
     reqId: "req-5"
     res: {
-      "statusCode": 304
+      "statusCode": 204
     }
-    responseTime: 16.493333999998868
-[06:38:35 UTC] INFO: incoming request
+    responseTime: 1.7885409966111183
+[17:11:20 UTC] INFO: incoming request
     reqId: "req-6"
     req: {
-      "method": "GET",
-      "url": "/api/documents",
+      "method": "DELETE",
+      "url": "/api/documents/29eaf568-c67e-472f-9b5c-2703424b7775",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61259
     }
-[06:38:35 UTC] INFO: request completed
+[17:11:20 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/29eaf568-c67e-472f-9b5c-2703424b7775.json
+[17:11:20 UTC] INFO: request completed
     reqId: "req-6"
     res: {
       "statusCode": 200
     }
-    responseTime: 16.26549999997951
-[06:38:35 UTC] INFO: incoming request
+    responseTime: 5.130083002150059
+[17:11:20 UTC] INFO: incoming request
     reqId: "req-7"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61259
     }
-[06:38:35 UTC] INFO: request completed
+[17:11:20 UTC] INFO: request completed
     reqId: "req-7"
     res: {
-      "statusCode": 304
+      "statusCode": 200
     }
-    responseTime: 15.138749999925494
-[06:38:39 UTC] INFO: incoming request
+    responseTime: 20.906541004776955
+[17:11:21 UTC] INFO: incoming request
     reqId: "req-8"
     req: {
-      "method": "GET",
-      "url": "/api/claude-sessions",
+      "method": "OPTIONS",
+      "url": "/api/documents/e417d5d0-9108-4019-893d-895eacc0403d",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61264
     }
-[06:38:39 UTC] INFO: request completed
+[17:11:21 UTC] INFO: request completed
     reqId: "req-8"
     res: {
-      "statusCode": 304
+      "statusCode": 204
     }
-    responseTime: 18.324334000004455
-Erro ao listar missões: error: database "electric" does not exist
-    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
-    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
-  length: 94,
-  severity: 'FATAL',
-  code: '3D000',
-  detail: undefined,
-  hint: undefined,
-  position: undefined,
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-  schema: undefined,
-  table: undefined,
-  column: undefined,
-  dataType: undefined,
-  constraint: undefined,
-  file: 'postinit.c',
-  line: '1023',
-  routine: 'InitPostgres'
-}
-[06:38:40 UTC] INFO: incoming request
+    responseTime: 0.801875002682209
+[17:11:21 UTC] INFO: incoming request
     reqId: "req-9"
     req: {
-      "method": "GET",
-      "url": "/missions",
+      "method": "DELETE",
+      "url": "/api/documents/e417d5d0-9108-4019-893d-895eacc0403d",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61264
     }
-[06:38:40 UTC] INFO: request completed
+[17:11:21 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/e417d5d0-9108-4019-893d-895eacc0403d.json
+[17:11:21 UTC] INFO: request completed
     reqId: "req-9"
     res: {
-      "statusCode": 500
+      "statusCode": 200
     }
-    responseTime: 45.18387499998789
-[06:38:43 UTC] INFO: incoming request
+    responseTime: 5.16270899772644
+[17:11:21 UTC] INFO: incoming request
     reqId: "req-a"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61264
     }
-[06:38:43 UTC] INFO: request completed
+[17:11:21 UTC] INFO: request completed
     reqId: "req-a"
     res: {
       "statusCode": 200
     }
-    responseTime: 28.036874999990687
-Erro ao listar missões: error: database "electric" does not exist
-    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
-    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
-  length: 94,
-  severity: 'FATAL',
-  code: '3D000',
-  detail: undefined,
-  hint: undefined,
-  position: undefined,
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-  schema: undefined,
-  table: undefined,
-  column: undefined,
-  dataType: undefined,
-  constraint: undefined,
-  file: 'postinit.c',
-  line: '1023',
-  routine: 'InitPostgres'
-}
-[06:38:55 UTC] INFO: incoming request
+    responseTime: 15.982375003397465
+[17:11:28 UTC] INFO: incoming request
     reqId: "req-b"
     req: {
-      "method": "GET",
-      "url": "/missions",
+      "method": "OPTIONS",
+      "url": "/api/documents/64f8abb1-f935-4c9c-ab54-7a10670f5ee5",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61268
     }
-[06:38:55 UTC] INFO: request completed
+[17:11:28 UTC] INFO: request completed
     reqId: "req-b"
     res: {
-      "statusCode": 500
+      "statusCode": 204
     }
-    responseTime: 6.178417000104673
-[06:38:55 UTC] INFO: incoming request
+    responseTime: 1.0034580007195473
+[17:11:28 UTC] INFO: incoming request
     reqId: "req-c"
     req: {
-      "method": "GET",
-      "url": "/api/claude-sessions",
+      "method": "DELETE",
+      "url": "/api/documents/64f8abb1-f935-4c9c-ab54-7a10670f5ee5",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61268
     }
-[06:38:55 UTC] INFO: request completed
+[17:11:28 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/64f8abb1-f935-4c9c-ab54-7a10670f5ee5.json
+[17:11:28 UTC] INFO: request completed
     reqId: "req-c"
     res: {
-      "statusCode": 304
+      "statusCode": 200
     }
-    responseTime: 35.57895799994003
-[06:38:57 UTC] INFO: incoming request
+    responseTime: 4.567832998931408
+[17:11:28 UTC] INFO: incoming request
     reqId: "req-d"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 49605
+      "remotePort": 61268
     }
-[06:38:57 UTC] INFO: request completed
+[17:11:28 UTC] INFO: request completed
     reqId: "req-d"
     res: {
       "statusCode": 200
     }
-    responseTime: 24.596458000014536
-Erro ao listar missões: error: database "electric" does not exist
+    responseTime: 10.637584000825882
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
     at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
-    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
-  length: 94,
-  severity: 'FATAL',
-  code: '3D000',
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
   detail: undefined,
   hint: undefined,
-  position: undefined,
+  position: '316',
   internalPosition: undefined,
   internalQuery: undefined,
   where: undefined,
@@ -265,66 +360,66 @@ Erro ao listar missões: error: database "electric" does not exist
   column: undefined,
   dataType: undefined,
   constraint: undefined,
-  file: 'postinit.c',
-  line: '1023',
-  routine: 'InitPostgres'
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
 }
-[06:42:21 UTC] INFO: incoming request
+[17:11:45 UTC] INFO: incoming request
     reqId: "req-e"
     req: {
-      "method": "GET",
-      "url": "/missions",
+      "method": "OPTIONS",
+      "url": "/api/documents/431f9873-d237-490f-83cc-a3d31c527e98/name",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50109
+      "remotePort": 61272
     }
-[06:42:21 UTC] INFO: request completed
+[17:11:45 UTC] INFO: request completed
     reqId: "req-e"
     res: {
-      "statusCode": 500
+      "statusCode": 204
     }
-    responseTime: 36.726167000015266
-[06:42:22 UTC] INFO: incoming request
+    responseTime: 1.1434589996933937
+[17:11:45 UTC] INFO: incoming request
     reqId: "req-f"
     req: {
-      "method": "GET",
-      "url": "/api/claude-sessions",
+      "method": "PUT",
+      "url": "/api/documents/431f9873-d237-490f-83cc-a3d31c527e98/name",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50109
+      "remotePort": 61272
     }
-[06:42:22 UTC] INFO: request completed
+[17:11:45 UTC] INFO: request completed
     reqId: "req-f"
     res: {
       "statusCode": 200
     }
-    responseTime: 50.532083000056446
-[06:42:23 UTC] INFO: incoming request
+    responseTime: 17.37449999898672
+[17:11:45 UTC] INFO: incoming request
     reqId: "req-g"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50109
+      "remotePort": 61272
     }
-[06:42:23 UTC] INFO: request completed
+[17:11:45 UTC] INFO: request completed
     reqId: "req-g"
     res: {
       "statusCode": 200
     }
-    responseTime: 35.30716699990444
-Erro ao listar missões: error: database "electric" does not exist
+    responseTime: 14.76529199630022
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
     at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
-    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
-  length: 94,
-  severity: 'FATAL',
-  code: '3D000',
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
   detail: undefined,
   hint: undefined,
-  position: undefined,
+  position: '316',
   internalPosition: undefined,
   internalQuery: undefined,
   where: undefined,
@@ -333,36 +428,186 @@ Erro ao listar missões: error: database "electric" does not exist
   column: undefined,
   dataType: undefined,
   constraint: undefined,
-  file: 'postinit.c',
-  line: '1023',
-  routine: 'InitPostgres'
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
 }
-[06:42:37 UTC] INFO: incoming request
+[17:12:06 UTC] INFO: incoming request
     reqId: "req-h"
     req: {
-      "method": "GET",
-      "url": "/missions",
+      "method": "OPTIONS",
+      "url": "/api/documents/53743da6-b140-4d67-9798-7564c43321d4/name",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50109
+      "remotePort": 61275
     }
-[06:42:37 UTC] INFO: request completed
+[17:12:06 UTC] INFO: request completed
     reqId: "req-h"
     res: {
-      "statusCode": 500
+      "statusCode": 204
     }
-    responseTime: 7.310291000059806
-Erro ao listar missões: error: database "electric" does not exist
+    responseTime: 1.1185830011963844
+[17:12:06 UTC] INFO: incoming request
+    reqId: "req-i"
+    req: {
+      "method": "PUT",
+      "url": "/api/documents/53743da6-b140-4d67-9798-7564c43321d4/name",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61275
+    }
+[17:12:06 UTC] INFO: request completed
+    reqId: "req-i"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 6.496500000357628
+[17:12:06 UTC] INFO: incoming request
+    reqId: "req-j"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61275
+    }
+[17:12:06 UTC] INFO: request completed
+    reqId: "req-j"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 21.373166993260384
+[17:12:09 UTC] INFO: incoming request
+    reqId: "req-k"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61275
+    }
+[17:12:09 UTC] INFO: incoming request
+    reqId: "req-l"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61278
+    }
+[17:12:09 UTC] INFO: request completed
+    reqId: "req-l"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 22.52504199743271
+[17:12:09 UTC] INFO: request completed
+    reqId: "req-k"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 26.157207995653152
+[17:12:09 UTC] INFO: incoming request
+    reqId: "req-m"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61278
+    }
+[17:12:09 UTC] INFO: request completed
+    reqId: "req-m"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 7.505667001008987
+[17:12:14 UTC] INFO: incoming request
+    reqId: "req-n"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61284
+    }
+[17:12:14 UTC] INFO: request completed
+    reqId: "req-n"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 11.007958002388477
+[17:12:19 UTC] INFO: incoming request
+    reqId: "req-o"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61288
+    }
+[17:12:19 UTC] INFO: request completed
+    reqId: "req-o"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 11.613083004951477
+[17:12:24 UTC] INFO: incoming request
+    reqId: "req-p"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61290
+    }
+[17:12:24 UTC] INFO: request completed
+    reqId: "req-p"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 13.331833004951477
+[17:12:31 UTC] INFO: incoming request
+    reqId: "req-q"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61299
+    }
+[17:12:31 UTC] INFO: request completed
+    reqId: "req-q"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 22.525249995291233
+[17:12:35 UTC] INFO: incoming request
+    reqId: "req-r"
+    req: {
+      "method": "GET",
+      "url": "/api/documents",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61299
+    }
+[17:12:35 UTC] INFO: request completed
+    reqId: "req-r"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.797375001013279
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
     at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
-    at async Object.<anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/http/missions-routes.ts:89:27) {
-  length: 94,
-  severity: 'FATAL',
-  code: '3D000',
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
   detail: undefined,
   hint: undefined,
-  position: undefined,
+  position: '316',
   internalPosition: undefined,
   internalQuery: undefined,
   where: undefined,
@@ -371,554 +616,913 @@ Erro ao listar missões: error: database "electric" does not exist
   column: undefined,
   dataType: undefined,
   constraint: undefined,
-  file: 'postinit.c',
-  line: '1023',
-  routine: 'InitPostgres'
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
 }
-[06:42:39 UTC] INFO: incoming request
-    reqId: "req-i"
-    req: {
-      "method": "GET",
-      "url": "/missions",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50109
-    }
-[06:42:39 UTC] INFO: request completed
-    reqId: "req-i"
-    res: {
-      "statusCode": 500
-    }
-    responseTime: 9.280374999972992
-[06:45:17 UTC] INFO: incoming request
-    reqId: "req-j"
-    req: {
-      "method": "GET",
-      "url": "/api/documents",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:17 UTC] INFO: request completed
-    reqId: "req-j"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 33.99433399992995
-[06:45:25 UTC] INFO: incoming request
-    reqId: "req-k"
-    req: {
-      "method": "OPTIONS",
-      "url": "/api/documents/437115aa-4ec5-4dae-8131-7a2eda58deeb",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:25 UTC] INFO: request completed
-    reqId: "req-k"
-    res: {
-      "statusCode": 204
-    }
-    responseTime: 1.6286250001285225
-[06:45:25 UTC] INFO: incoming request
-    reqId: "req-l"
-    req: {
-      "method": "DELETE",
-      "url": "/api/documents/437115aa-4ec5-4dae-8131-7a2eda58deeb",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:25 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/437115aa-4ec5-4dae-8131-7a2eda58deeb.json
-[06:45:25 UTC] INFO: request completed
-    reqId: "req-l"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 3.6565839999821037
-[06:45:25 UTC] INFO: incoming request
-    reqId: "req-m"
-    req: {
-      "method": "GET",
-      "url": "/api/documents",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:25 UTC] INFO: request completed
-    reqId: "req-m"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 26.514333000173792
-[06:45:30 UTC] INFO: incoming request
-    reqId: "req-n"
+[17:12:55 UTC] INFO: incoming request
+    reqId: "req-s"
     req: {
       "method": "GET",
       "url": "/api/claude-sessions",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61306
     }
-[06:45:30 UTC] INFO: request completed
-    reqId: "req-n"
+[17:12:55 UTC] INFO: request completed
+    reqId: "req-s"
     res: {
       "statusCode": 304
     }
-    responseTime: 33.019208000041544
-[06:45:35 UTC] INFO: incoming request
-    reqId: "req-o"
-    req: {
-      "method": "OPTIONS",
-      "url": "/api/documents/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:35 UTC] INFO: request completed
-    reqId: "req-o"
-    res: {
-      "statusCode": 204
-    }
-    responseTime: 1.2602920001372695
-[06:45:35 UTC] INFO: incoming request
-    reqId: "req-p"
-    req: {
-      "method": "DELETE",
-      "url": "/api/documents/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:35 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/4dfcd0fd-ec3b-4282-8e8a-52dc84c82628.json
-[06:45:35 UTC] INFO: request completed
-    reqId: "req-p"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 5.10204100003466
-[06:45:35 UTC] INFO: incoming request
-    reqId: "req-q"
-    req: {
-      "method": "GET",
-      "url": "/api/documents",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:35 UTC] INFO: request completed
-    reqId: "req-q"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 21.672958000097424
-[06:45:37 UTC] INFO: incoming request
-    reqId: "req-r"
-    req: {
-      "method": "OPTIONS",
-      "url": "/api/documents/56a419ce-f3d7-4a42-ba09-99232b5cd561",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:37 UTC] INFO: request completed
-    reqId: "req-r"
-    res: {
-      "statusCode": 204
-    }
-    responseTime: 1.4723330000415444
-[06:45:37 UTC] INFO: incoming request
-    reqId: "req-s"
-    req: {
-      "method": "DELETE",
-      "url": "/api/documents/56a419ce-f3d7-4a42-ba09-99232b5cd561",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:37 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/56a419ce-f3d7-4a42-ba09-99232b5cd561.json
-[06:45:37 UTC] INFO: request completed
-    reqId: "req-s"
-    res: {
-      "statusCode": 200
-    }
-    responseTime: 5.897832999937236
-[06:45:37 UTC] INFO: incoming request
+    responseTime: 22.493916995823383
+[17:12:57 UTC] INFO: incoming request
     reqId: "req-t"
     req: {
       "method": "GET",
       "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61308
     }
-[06:45:37 UTC] INFO: request completed
+[17:12:57 UTC] INFO: incoming request
+    reqId: "req-u"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61309
+    }
+[17:12:57 UTC] INFO: request completed
+    reqId: "req-u"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 13.034749999642372
+[17:12:57 UTC] INFO: request completed
     reqId: "req-t"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 8.965749999973923
-[06:45:40 UTC] INFO: incoming request
-    reqId: "req-u"
-    req: {
-      "method": "OPTIONS",
-      "url": "/api/documents/9529a78e-1ffa-4ff2-bbc4-7b5a7bb0063f",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
-    }
-[06:45:40 UTC] INFO: request completed
-    reqId: "req-u"
-    res: {
-      "statusCode": 204
-    }
-    responseTime: 0.9960829999763519
-[06:45:40 UTC] INFO: incoming request
+    responseTime: 14.70516699552536
+[17:12:57 UTC] INFO: incoming request
     reqId: "req-v"
     req: {
-      "method": "DELETE",
-      "url": "/api/documents/9529a78e-1ffa-4ff2-bbc4-7b5a7bb0063f",
+      "method": "GET",
+      "url": "/api/documents",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61308
     }
-[06:45:40 UTC] INFO: Arquivo de todos também foi excluído: /Users/agents/.claude/todos/9529a78e-1ffa-4ff2-bbc4-7b5a7bb0063f.json
-[06:45:40 UTC] INFO: request completed
+[17:12:57 UTC] INFO: request completed
     reqId: "req-v"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 6.884458000073209
-[06:45:40 UTC] INFO: incoming request
+    responseTime: 11.088874995708466
+[17:13:02 UTC] INFO: incoming request
     reqId: "req-w"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61311
     }
-[06:45:40 UTC] INFO: request completed
+[17:13:02 UTC] INFO: request completed
     reqId: "req-w"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 1.2751249999273568
-[06:45:45 UTC] INFO: incoming request
+    responseTime: 6.878249995410442
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:13:07 UTC] INFO: incoming request
     reqId: "req-x"
     req: {
       "method": "GET",
-      "url": "/api/claude-sessions",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61314
     }
-[06:45:45 UTC] INFO: request completed
+[17:13:07 UTC] INFO: request completed
     reqId: "req-x"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 1.0535000001545995
-[06:46:15 UTC] INFO: incoming request
+    responseTime: 8.16566700488329
+[17:13:12 UTC] INFO: incoming request
     reqId: "req-y"
     req: {
       "method": "GET",
-      "url": "/api/claude-sessions",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61318
     }
-[06:46:15 UTC] INFO: request completed
+[17:13:12 UTC] INFO: request completed
     reqId: "req-y"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 4.726374999852851
-[06:46:17 UTC] INFO: incoming request
+    responseTime: 11.523374997079372
+[17:13:17 UTC] INFO: incoming request
     reqId: "req-z"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61320
     }
-[06:46:17 UTC] ERROR: Erro ao listar documentos:
-[06:46:17 UTC] INFO: request completed
+[17:13:17 UTC] INFO: request completed
     reqId: "req-z"
     res: {
-      "statusCode": 500
+      "statusCode": 304
     }
-    responseTime: 2.2428749999962747
-[06:46:18 UTC] INFO: incoming request
+    responseTime: 12.579958997666836
+[17:13:22 UTC] INFO: incoming request
     reqId: "req-10"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61327
     }
-[06:46:18 UTC] ERROR: Erro ao listar documentos:
-[06:46:18 UTC] INFO: request completed
+[17:13:22 UTC] INFO: request completed
     reqId: "req-10"
     res: {
-      "statusCode": 500
+      "statusCode": 304
     }
-    responseTime: 0.7414170000702143
-[06:46:20 UTC] INFO: incoming request
+    responseTime: 8.66058400273323
+[17:13:27 UTC] INFO: incoming request
     reqId: "req-11"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61329
     }
-[06:46:20 UTC] ERROR: Erro ao listar documentos:
-[06:46:20 UTC] INFO: request completed
+[17:13:27 UTC] INFO: request completed
     reqId: "req-11"
     res: {
-      "statusCode": 500
+      "statusCode": 304
     }
-    responseTime: 0.880834000185132
-[06:46:55 UTC] INFO: incoming request
+    responseTime: 12.803166002035141
+[17:13:32 UTC] INFO: incoming request
     reqId: "req-12"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61331
     }
-[06:46:55 UTC] INFO: request completed
+[17:13:32 UTC] INFO: request completed
     reqId: "req-12"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 1.3651250000111759
-[06:47:03 UTC] INFO: incoming request
+    responseTime: 17.84079200029373
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:13:37 UTC] INFO: incoming request
     reqId: "req-13"
     req: {
-      "method": "OPTIONS",
-      "url": "/api/documents/de1f4c08-110b-4212-8e1d-0d0d1713ec09/name",
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61334
     }
-[06:47:03 UTC] INFO: request completed
+[17:13:37 UTC] INFO: request completed
     reqId: "req-13"
     res: {
-      "statusCode": 204
+      "statusCode": 304
     }
-    responseTime: 1.235291999997571
-[06:47:03 UTC] INFO: incoming request
+    responseTime: 13.169207997620106
+[17:13:42 UTC] INFO: incoming request
     reqId: "req-14"
     req: {
-      "method": "PUT",
-      "url": "/api/documents/de1f4c08-110b-4212-8e1d-0d0d1713ec09/name",
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61337
     }
-[06:47:03 UTC] INFO: request completed
+[17:13:42 UTC] INFO: request completed
     reqId: "req-14"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 12.414916999870911
-[06:47:03 UTC] INFO: incoming request
+    responseTime: 14.858249999582767
+[17:13:47 UTC] INFO: incoming request
     reqId: "req-15"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61339
     }
-[06:47:03 UTC] INFO: request completed
+[17:13:47 UTC] INFO: request completed
     reqId: "req-15"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 1.5371669998858124
-[06:48:16 UTC] INFO: incoming request
+    responseTime: 12.354541003704071
+[17:13:52 UTC] INFO: incoming request
     reqId: "req-16"
     req: {
       "method": "GET",
-      "url": "/api/claude-sessions",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61341
     }
-[06:48:16 UTC] INFO: request completed
+[17:13:52 UTC] INFO: request completed
     reqId: "req-16"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 8.140666999854147
-[06:48:26 UTC] INFO: incoming request
+    responseTime: 4.783249996602535
+[17:13:57 UTC] INFO: incoming request
     reqId: "req-17"
     req: {
       "method": "GET",
-      "url": "/api/claude-sessions",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61345
     }
-[06:48:26 UTC] INFO: request completed
+[17:13:57 UTC] INFO: request completed
     reqId: "req-17"
     res: {
-      "statusCode": 200
+      "statusCode": 304
     }
-    responseTime: 7.394999999785796
-[06:48:31 UTC] INFO: incoming request
+    responseTime: 11.95933399349451
+[17:14:02 UTC] INFO: incoming request
     reqId: "req-18"
     req: {
       "method": "GET",
-      "url": "/api/claude-sessions",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61347
     }
-[06:48:31 UTC] INFO: request completed
+[17:14:02 UTC] INFO: request completed
     reqId: "req-18"
     res: {
       "statusCode": 304
     }
-    responseTime: 4.94137499993667
-[06:48:38 UTC] INFO: incoming request
+    responseTime: 13.037125006318092
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:14:07 UTC] INFO: incoming request
     reqId: "req-19"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61350
     }
-[06:48:38 UTC] INFO: request completed
+[17:14:07 UTC] INFO: request completed
     reqId: "req-19"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 5.574957996606827
+[17:14:12 UTC] INFO: incoming request
+    reqId: "req-1a"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61352
+    }
+[17:14:12 UTC] INFO: request completed
+    reqId: "req-1a"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 12.930250003933907
+[17:14:32 UTC] INFO: incoming request
+    reqId: "req-1b"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61359
+    }
+[17:14:32 UTC] INFO: request completed
+    reqId: "req-1b"
     res: {
       "statusCode": 200
     }
-    responseTime: 3.2821250001434237
-[06:48:55 UTC] INFO: incoming request
-    reqId: "req-1a"
+    responseTime: 21.814417004585266
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:14:37 UTC] INFO: incoming request
+    reqId: "req-1c"
     req: {
-      "method": "OPTIONS",
-      "url": "/api/documents/2c88f529-56fd-454f-8800-2abfd769ebb0/name",
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61362
     }
-[06:48:55 UTC] INFO: request completed
-    reqId: "req-1a"
+[17:14:37 UTC] INFO: request completed
+    reqId: "req-1c"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.799042001366615
+[17:14:42 UTC] INFO: incoming request
+    reqId: "req-1d"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61364
+    }
+[17:14:42 UTC] INFO: request completed
+    reqId: "req-1d"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 13.252791002392769
+[17:14:47 UTC] INFO: incoming request
+    reqId: "req-1e"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61366
+    }
+[17:14:47 UTC] INFO: request completed
+    reqId: "req-1e"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 13.445874996483326
+[17:14:52 UTC] INFO: incoming request
+    reqId: "req-1f"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61368
+    }
+[17:14:52 UTC] INFO: request completed
+    reqId: "req-1f"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 13.72766699641943
+[17:14:57 UTC] INFO: incoming request
+    reqId: "req-1g"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61370
+    }
+[17:14:57 UTC] INFO: request completed
+    reqId: "req-1g"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.246374994516373
+[17:15:02 UTC] INFO: incoming request
+    reqId: "req-1h"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61372
+    }
+[17:15:02 UTC] INFO: request completed
+    reqId: "req-1h"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 12.540790997445583
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:15:07 UTC] INFO: incoming request
+    reqId: "req-1i"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61377
+    }
+[17:15:07 UTC] INFO: request completed
+    reqId: "req-1i"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 12.974208004772663
+[17:15:12 UTC] INFO: incoming request
+    reqId: "req-1j"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61379
+    }
+[17:15:12 UTC] INFO: request completed
+    reqId: "req-1j"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.093625001609325
+[17:15:13 UTC] INFO: incoming request
+    reqId: "req-1k"
+    req: {
+      "method": "OPTIONS",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4/todos/1",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61379
+    }
+[17:15:13 UTC] INFO: request completed
+    reqId: "req-1k"
     res: {
       "statusCode": 204
     }
-    responseTime: 1.7868749999906868
-[06:48:55 UTC] INFO: incoming request
-    reqId: "req-1b"
+    responseTime: 2.213375002145767
+[17:15:13 UTC] INFO: incoming request
+    reqId: "req-1l"
     req: {
       "method": "PUT",
-      "url": "/api/documents/2c88f529-56fd-454f-8800-2abfd769ebb0/name",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4/todos/1",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61379
     }
-[06:48:55 UTC] INFO: request completed
-    reqId: "req-1b"
+[17:15:13 UTC] INFO: request completed
+    reqId: "req-1l"
     res: {
       "statusCode": 200
     }
-    responseTime: 7.957707999972627
-[06:48:55 UTC] INFO: incoming request
-    reqId: "req-1c"
+    responseTime: 3.787583999335766
+[17:15:13 UTC] INFO: incoming request
+    reqId: "req-1m"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61379
     }
-[06:48:55 UTC] INFO: request completed
-    reqId: "req-1c"
+[17:15:13 UTC] INFO: request completed
+    reqId: "req-1m"
     res: {
       "statusCode": 200
     }
-    responseTime: 3.880333000095561
-[06:49:00 UTC] INFO: incoming request
-    reqId: "req-1d"
+    responseTime: 13.577541999518871
+[17:15:23 UTC] INFO: incoming request
+    reqId: "req-1n"
     req: {
       "method": "GET",
-      "url": "/api/claude-sessions/2c88f529-56fd-454f-8800-2abfd769ebb0",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50686
+      "remotePort": 61383
     }
-[06:49:00 UTC] INFO: incoming request
-    reqId: "req-1e"
-    req: {
-      "method": "GET",
-      "url": "/api/documents",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50776
-    }
-[06:49:00 UTC] INFO: request completed
-    reqId: "req-1e"
+[17:15:23 UTC] INFO: request completed
+    reqId: "req-1n"
     res: {
       "statusCode": 304
     }
-    responseTime: 18.721417000051588
-[06:49:00 UTC] INFO: incoming request
-    reqId: "req-1f"
+    responseTime: 15.8125
+[17:15:28 UTC] INFO: incoming request
+    reqId: "req-1o"
     req: {
       "method": "GET",
-      "url": "/api/documents",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
       "host": "localhost:3333",
       "remoteAddress": "127.0.0.1",
-      "remotePort": 50776
+      "remotePort": 61385
     }
-[06:49:00 UTC] INFO: request completed
-    reqId: "req-1d"
+[17:15:28 UTC] INFO: request completed
+    reqId: "req-1o"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 15.900707997381687
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:15:43 UTC] INFO: incoming request
+    reqId: "req-1p"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61399
+    }
+[17:15:43 UTC] INFO: request completed
+    reqId: "req-1p"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 11.84400000423193
+[17:15:48 UTC] INFO: incoming request
+    reqId: "req-1q"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61404
+    }
+[17:15:48 UTC] INFO: request completed
+    reqId: "req-1q"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 20.98454200476408
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:16:13 UTC] INFO: incoming request
+    reqId: "req-1r"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61413
+    }
+[17:16:13 UTC] INFO: request completed
+    reqId: "req-1r"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.710999995470047
+[17:16:18 UTC] INFO: incoming request
+    reqId: "req-1s"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61417
+    }
+[17:16:18 UTC] INFO: request completed
+    reqId: "req-1s"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 9.367499999701977
+[17:16:23 UTC] INFO: incoming request
+    reqId: "req-1t"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61420
+    }
+[17:16:23 UTC] INFO: request completed
+    reqId: "req-1t"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 14.994708001613617
+[17:16:28 UTC] INFO: incoming request
+    reqId: "req-1u"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61422
+    }
+[17:16:28 UTC] INFO: request completed
+    reqId: "req-1u"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.51408299803734
+[17:16:33 UTC] INFO: incoming request
+    reqId: "req-1v"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61424
+    }
+[17:16:33 UTC] INFO: request completed
+    reqId: "req-1v"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 12.715542003512383
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:16:38 UTC] INFO: incoming request
+    reqId: "req-1w"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61427
+    }
+[17:16:38 UTC] INFO: request completed
+    reqId: "req-1w"
+    res: {
+      "statusCode": 304
+    }
+    responseTime: 16.830207996070385
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Erro ao processar indexações: error: relation "webfetch_docs" does not exist
+    at /Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/pg-pool@3.10.0_pg@8.16.0/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/node_modules/.pnpm/drizzle-orm@0.43.1_@types+better-sqlite3@7.6.13_@types+pg@8.15.2_better-sqlite3@11.10.0_pg@8.16.0/node_modules/src/node-postgres/session.ts:144:19)
+    at async Timeout.processarIndexacoesPendentes (/Users/agents/.claude/todos/app_todos_bd_tasks/backend/src/claude/mcp-rag-integration.ts:204:25) {
+  length: 113,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '316',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[17:18:53 UTC] INFO: incoming request
+    reqId: "req-1x"
+    req: {
+      "method": "GET",
+      "url": "/api/claude-sessions/53743da6-b140-4d67-9798-7564c43321d4",
+      "host": "localhost:3333",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 61497
+    }
+[17:18:53 UTC] INFO: request completed
+    reqId: "req-1x"
     res: {
       "statusCode": 200
     }
-    responseTime: 26.131124999839813
-[06:49:00 UTC] INFO: request completed
-    reqId: "req-1f"
-    res: {
-      "statusCode": 304
-    }
-    responseTime: 4.228832999942824
-[06:49:05 UTC] INFO: incoming request
-    reqId: "req-1g"
-    req: {
-      "method": "GET",
-      "url": "/api/claude-sessions/2c88f529-56fd-454f-8800-2abfd769ebb0",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50776
-    }
-[06:49:05 UTC] INFO: request completed
-    reqId: "req-1g"
-    res: {
-      "statusCode": 304
-    }
-    responseTime: 2.810750000178814
-[06:49:55 UTC] INFO: incoming request
-    reqId: "req-1h"
-    req: {
-      "method": "GET",
-      "url": "/api/claude-sessions/2c88f529-56fd-454f-8800-2abfd769ebb0",
-      "host": "localhost:3333",
-      "remoteAddress": "127.0.0.1",
-      "remotePort": 50785
-    }
-[06:49:55 UTC] INFO: request completed
-    reqId: "req-1h"
-    res: {
-      "statusCode": 304
-    }
-    responseTime: 5.381834000116214
+    responseTime: 22.784249998629093

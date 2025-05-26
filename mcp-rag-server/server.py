@@ -22,7 +22,8 @@ from webfetch_integration import WebFetchRAGIntegration
 
 # MCP imports
 sys.path.append(str(Path(__file__).parent.parent))
-from mcp.server import Server, stdio_server
+from mcp.server import Server
+from mcp.server.stdio import stdio_server
 from mcp.types import (
     Resource, 
     Tool,
@@ -582,9 +583,7 @@ async def main():
     claude_integration = ClaudeSessionsIntegration(claude_base)
     web_integration = WebFetchRAGIntegration(rag_index)
     
-    print(f"MCP-RAG Server iniciando...", file=sys.stderr)
-    print(f"Cache: {cache_dir}", file=sys.stderr)
-    print(f"Documentos: {len(rag_index.documents)}", file=sys.stderr)
+    # Não imprimir nada no stderr para não confundir o MCP
     
     # Iniciar servidor
     async with stdio_server() as (read_stream, write_stream):

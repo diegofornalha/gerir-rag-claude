@@ -13,6 +13,8 @@ import { claudeRoutes } from "./claude-routes";
 import { missionsRoutes } from "./missions-routes";
 import { cleanupRoutes } from "./cleanup-routes";
 import { documentsRoutes } from "./documents-routes";
+import webfetchRoutes from "./webfetch-routes";
+import ragRoutes from "./rag-routes";
 
 const app = fastify({ 
   logger: {
@@ -466,6 +468,48 @@ await app.register(cleanupRoutes)
 
 // Registrar rotas de documentos
 await app.register(documentsRoutes)
+
+// Registrar rotas de WebFetch (Hono para Fastify)
+await app.register(async function (fastify) {
+  // Adaptador simples para Hono -> Fastify
+  fastify.all('/webfetch/*', async (request, reply) => {
+    const path = request.url.replace('/api/webfetch', '')
+    const method = request.method
+    
+    // Criar request compatível com Hono
+    const honoRequest = new Request(`http://localhost${path}`, {
+      method: method,
+      headers: request.headers as any,
+      body: method !== 'GET' && method !== 'HEAD' ? JSON.stringify(request.body) : undefined
+    })
+    
+    // Executar no Hono
+    const honoResponse = await webfetchRoutes.fetch(honoRequest)
+    
+    // Retornar resposta
+    reply.status(honoResponse.status)
+    return honoResponse.json()
+  })
+})
+
+// Registrar rotas de RAG (Hono para Fastify)
+await app.register(async function (fastify) {
+  fastify.all('/rag/*', async (request, reply) => {
+    const path = request.url.replace('/api/rag', '')
+    const method = request.method
+    
+    const honoRequest = new Request(`http://localhost${path}`, {
+      method: method,
+      headers: request.headers as any,
+      body: method !== 'GET' && method !== 'HEAD' ? JSON.stringify(request.body) : undefined
+    })
+    
+    const honoResponse = await ragRoutes.fetch(honoRequest)
+    
+    reply.status(honoResponse.status)
+    return honoResponse.json()
+  })
+})
 
 app.setErrorHandler((error, _request, reply) => {
   app.log.error(error)

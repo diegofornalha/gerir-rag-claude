@@ -9,6 +9,7 @@ import { ClaudeSessions } from './pages/ClaudeSessions'
 import { Chat } from './pages/Chat'
 import Documents from './pages/Documents'
 import { ClaudeSessionDetailSimple } from './pages/ClaudeSessionDetailSimple'
+import { RAGManagerSimple } from './components/RAGManagerSimple'
 
 // Criar QueryClient
 const queryClient = new QueryClient({
@@ -123,6 +124,15 @@ function Navigation() {
                 >
                   Chat
                 </Link>
+                <Link
+                  to="/rag"
+                  onClick={() => setShowDropdown(false)}
+                  className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
+                    isActive('/rag') ? 'bg-gray-100 text-blue-800' : 'text-gray-700'
+                  }`}
+                >
+                  RAG Manager
+                </Link>
               </div>
             )}
           </div>
@@ -167,6 +177,10 @@ function MigrationDashboard() {
           <li className="flex items-center justify-between p-4 bg-yellow-50 rounded-lg border border-yellow-200">
             <span className="font-medium">Chat</span>
             <span className="text-yellow-600 text-sm">🚧 Em desenvolvimento</span>
+          </li>
+          <li className="flex items-center justify-between p-4 bg-green-50 rounded-lg border border-green-200">
+            <span className="font-medium">RAG Manager</span>
+            <span className="text-green-600 text-sm">✨ Novo</span>
           </li>
         </ul>
       </div>
@@ -385,6 +399,7 @@ function AppContent() {
         <Route path="/claude-sessions/:sessionId/:filter" element={<ClaudeSessionDetailSimple />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/documents" element={<Documents />} />
+        <Route path="/rag" element={<RAGManagerSimple />} />
         
         {/* Dashboard Principal - Sistema de Migração */}
         <Route path="/" element={<MigrationDashboard />} />

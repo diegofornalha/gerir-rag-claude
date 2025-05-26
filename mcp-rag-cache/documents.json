@@ -1,0 +1,45 @@
+[
+  {
+    "id": "8ead605c",
+    "content": "O Claude Code é uma ferramenta de desenvolvimento que permite usar o Claude para programação. Ele suporta múltiplas linguagens e oferece integração com MCP (Model Context Protocol).",
+    "source": "teste_manual",
+    "metadata": {
+      "tipo": "documentação",
+      "categoria": "Claude"
+    },
+    "timestamp": "2025-05-26T07:17:52.176803"
+  },
+  {
+    "id": "4d1fd84c",
+    "content": "\n    # MCP Architecture\n    \n    The Model Context Protocol (MCP) provides a standardized way for AI models to interact with external data sources and tools.\n    \n    ## Key Components\n    - Servers: Expose resources and tools\n    - Clients: Connect to servers and use their capabilities\n    - Transport: Communication layer (stdio, HTTP, etc)\n    \n    ## Resources\n    Resources represent data that can be read by clients.\n    \n    ## Tools\n    Tools are functions that can be called by the AI model.\n    ",
+    "source": "web:modelcontextprotocol.io",
+    "metadata": {
+      "url": "https://modelcontextprotocol.io/docs/concepts/architecture",
+      "domain": "modelcontextprotocol.io",
+      "title": "MCP Architecture"
+    },
+    "timestamp": "2025-05-26T07:17:52.181219"
+  },
+  {
+    "id": "26a1e709",
+    "content": "\n            # Claude Code Documentation\n            \n            Claude Code is an AI-powered coding assistant that helps developers write better code faster.\n            \n            ## Key Features\n            - Multi-language support (Python, JavaScript, TypeScript, Go, etc)\n            - Integrated development environment\n            - MCP (Model Context Protocol) integration\n            - File system access and manipulation\n            - Git integration\n            \n            ## Getting Started\n            To use Claude Code, simply describe what you want to build and Claude will help you implement it.\n            \n            ## MCP Integration\n            Claude Code supports MCP servers for extended functionality:\n            - File operations\n            - Web scraping\n            - Database connections\n            - Custom tools\n            ",
+    "source": "web:docs.anthropic.com",
+    "metadata": {
+      "url": "https://docs.anthropic.com/claude/docs/claude-code",
+      "title": "Claude Code Documentation",
+      "captured_via": "WebFetch simulation"
+    },
+    "timestamp": "2025-05-26T07:18:35.371034"
+  },
+  {
+    "id": "66dbaf2a",
+    "content": "\n            # MCP Tools\n            \n            Tools in MCP allow AI models to perform actions and interact with external systems.\n            \n            ## Creating Tools\n            Tools are defined with:\n            - Name: Unique identifier\n            - Description: What the tool does\n            - Input schema: Parameters required\n            - Handler: Function to execute\n            \n            ## Example Tool\n            ```python\n            @server.tool()\n            async def search_documents(query: str):\n                # Search implementation\n                return results\n            ```\n            ",
+    "source": "web:modelcontextprotocol.io",
+    "metadata": {
+      "url": "https://modelcontextprotocol.io/docs/tools",
+      "title": "MCP Tools Documentation",
+      "captured_via": "WebFetch simulation"
+    },
+    "timestamp": "2025-05-26T07:18:35.374145"
+  }
+]

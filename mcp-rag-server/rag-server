@@ -1,0 +1,65 @@
+#!/opt/homebrew/bin/python3
+"""Direct executable MCP Server"""
+
+import sys
+import json
+
+while True:
+    try:
+        line = sys.stdin.readline()
+        if not line:
+            break
+        
+        request = json.loads(line)
+        
+        if request.get("method") == "initialize":
+            response = {
+                "jsonrpc": "2.0",
+                "id": request["id"],
+                "result": {
+                    "protocolVersion": "1.0.0",
+                    "capabilities": {"tools": {}},
+                    "serverInfo": {
+                        "name": "rag-webfetch",
+                        "version": "0.1.0"
+                    }
+                }
+            }
+            print(json.dumps(response))
+            sys.stdout.flush()
+        
+        elif request.get("method") == "tools/list":
+            response = {
+                "jsonrpc": "2.0",
+                "id": request["id"],
+                "result": {
+                    "tools": [{
+                        "name": "rag_test",
+                        "description": "Test RAG",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {}
+                        }
+                    }]
+                }
+            }
+            print(json.dumps(response))
+            sys.stdout.flush()
+            
+        elif request.get("method") == "tools/call":
+            response = {
+                "jsonrpc": "2.0",
+                "id": request["id"],
+                "result": {
+                    "content": [{
+                        "type": "text",
+                        "text": "RAG Server OK!"
+                    }]
+                }
+            }
+            print(json.dumps(response))
+            sys.stdout.flush()
+            
+    except Exception as e:
+        sys.stderr.write(f"Error: {e}\n")
+        sys.stderr.flush()
