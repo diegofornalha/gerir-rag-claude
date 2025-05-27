@@ -200,7 +200,7 @@ export class MCPClient extends EventEmitter {
 
 // Factory function for RAG MCP client
 export function createRAGClient(): MCPClient {
-  return new MCPClient('python3', [
+  return new MCPClient('/Users/agents/.claude/mcp-rag-server/venv/bin/python', [
     '/Users/agents/.claude/mcp-rag-server/integrated_rag.py'
   ]);
 }
