@@ -23,3 +23,1000 @@
 10:59:56 PM [vite] (client) page reload src/components/RAGManagerSimple.tsx
 11:00:00 PM [vite] (client) hmr update /src/index.css, /src/components/RAGManagerEnhanced.tsx
 11:00:06 PM [vite] (client) page reload src/components/RAGManagerSimple.tsx
+11:09:17 PM [vite] (client) hmr update /src/index.css, /src/components/RAGManagerEnhanced.tsx
+11:13:56 PM [vite] (client) hmr update /src/index.css, /src/components/RAGManagerEnhanced.tsx
+11:14:10 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:17:26 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:17:35 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:17:43 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:17:58 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:18:04 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:18:12 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:18:29 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:18:39 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:39 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:18:40 PM [vite] Internal server error: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (429:6)
+
+  427 |           )}
+  428 |         </div>
+> 429 |       </div>
+      |       ^
+  430 |     </div>
+  431 |   )
+  432 | }
+  Plugin: vite:react-babel
+  File: /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/src/components/RAGManagerEnhanced.tsx:429:6
+  427|            )}
+  428|          </div>
+  429|        </div>
+     |        ^
+  430|      </div>
+  431|    )
+      at constructor (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4748:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10897:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10892:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10858:27)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10864:21)
+      at TypeScriptParserMixin.parseExprOp (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9320:18)
+      at TypeScriptParserMixin.parseExprOps (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10819:17)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseExpression (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4638:31)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4717:36)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/agents/.claude/todos/app_todos_bd_tasks/frontend/node_modules/.pnpm/@babel+parser@7.27.2/node_modules/@babel/parser/lib/index.js:10957:23)
+11:19:22 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:19:38 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:19:45 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:20:34 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:20:41 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:22:31 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:22:40 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:22:47 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:22:53 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:23:01 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:23:01 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:23:07 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:23:15 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:25:53 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:26:00 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:26:06 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:26:13 PM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+11:26:31 PM [vite] (client) page reload src/App.tsx
+11:27:27 PM [vite] (client) page reload src/components/RAGManager.tsx
+11:27:42 PM [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
+11:27:49 PM [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
+11:28:26 PM [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
+11:29:55 PM [vite] (client) page reload src/App.tsx
+11:33:52 PM [vite] (client) page reload src/App.tsx
+11:33:58 PM [vite] (client) page reload src/App.tsx
+11:34:03 PM [vite] (client) page reload src/App.tsx
+12:51:18 AM [vite] (client) page reload src/App.tsx
+12:51:54 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:52:12 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:55:01 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:55:09 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:55:17 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:56:09 AM [vite] (client) page reload src/App.tsx
+12:56:37 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:56:47 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:57:22 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:57:31 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+12:58:10 AM [vite] (client) page reload src/App.tsx
+12:58:17 AM [vite] (client) page reload src/App.tsx
+1:01:29 AM [vite] (client) hmr update /src/pages/Documents.tsx, /src/index.css
+1:09:19 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+1:09:42 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+1:11:33 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+1:16:06 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+1:19:40 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+1:21:56 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css
+1:27:07 AM [vite] (client) hmr update /src/components/RAGManagerEnhanced.tsx, /src/index.css

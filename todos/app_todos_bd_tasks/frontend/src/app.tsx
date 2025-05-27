@@ -54,21 +54,21 @@ function Navigation() {
           {/* Páginas Antigas */}
           
           <Link 
-            to="/claude-sessions" 
+            to="/playbooks" 
             className={`font-medium transition-colors ${
-              isActive('/claude-sessions') || location.pathname.startsWith('/claude-sessions/') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
+              isActive('/playbooks') || location.pathname.startsWith('/playbooks/') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
             }`}
           >
-            Claude Sessions
+            Playbooks
           </Link>
           
           <Link 
-            to="/documents" 
+            to="/conversas" 
             className={`font-medium transition-colors ${
-              isActive('/documents') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
+              isActive('/conversas') ? 'text-blue-800' : 'text-blue-600 hover:text-blue-800'
             }`}
           >
-            Documentos
+            Conversas
           </Link>
           
           {/* Separador */}
@@ -161,7 +161,7 @@ function MigrationDashboard() {
             <span className="text-green-600 text-sm">✓ Funcionando</span>
           </li>
           <li className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-            <span className="font-medium">Claude Sessions</span>
+            <span className="font-medium">Playbooks</span>
             <span className="text-green-600 text-sm">✓ Funcionando</span>
           </li>
           <li className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
@@ -396,11 +396,15 @@ function AppContent() {
         {/* Páginas Antigas */}
         <Route path="/potential-issues" element={<PotentialIssues />} />
         <Route path="/missions" element={<Missions />} />
+        <Route path="/playbooks" element={<ClaudeSessions />} />
+        <Route path="/playbooks/:sessionId" element={<ClaudeSessionDetailSimple />} />
+        <Route path="/playbooks/:sessionId/:filter" element={<ClaudeSessionDetailSimple />} />
         <Route path="/claude-sessions" element={<ClaudeSessions />} />
         <Route path="/claude-sessions/:sessionId" element={<ClaudeSessionDetailSimple />} />
         <Route path="/claude-sessions/:sessionId/:filter" element={<ClaudeSessionDetailSimple />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/documents" element={<Documents />} />
+        <Route path="/conversas" element={<Documents />} />
         <Route path="/rag" element={<RAGManagerEnhanced />} />
         
         {/* Dashboard Principal - Sistema de Migração */}

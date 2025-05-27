@@ -80,7 +80,7 @@ export function ClaudeSessions() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6">Sessões do Claude</h1>
+      <h1 className="text-2xl font-bold mb-6">Produção de Tarefas</h1>
       
       {/* Tabs para alternar entre visíveis e ocultas */}
       <div className="flex gap-4 mb-6 border-b">
@@ -92,7 +92,7 @@ export function ClaudeSessions() {
               : 'text-gray-600 hover:text-gray-800'
           }`}
         >
-          Sessões Ativas
+          Playbooks Ativos
         </button>
         <button
           onClick={() => setShowHidden(true)}
@@ -102,7 +102,7 @@ export function ClaudeSessions() {
               : 'text-gray-600 hover:text-gray-800'
           }`}
         >
-          Sessões Ocultas {actualHiddenCount > 0 && `(${actualHiddenCount})`}
+          Playbooks Inativos {actualHiddenCount > 0 && `(${actualHiddenCount})`}
         </button>
         
         {/* Botão de limpar sessões ocultas */}

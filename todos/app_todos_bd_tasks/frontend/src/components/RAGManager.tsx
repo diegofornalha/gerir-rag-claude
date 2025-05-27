@@ -450,7 +450,7 @@ export function RAGManager() {
                     <span>{documents.filter(d => d.source.includes('manual')).length}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span>Claude Sessions</span>
+                    <span>Playbooks</span>
                     <span>{documents.filter(d => d.source.includes('claude_session')).length}</span>
                   </div>
                 </div>

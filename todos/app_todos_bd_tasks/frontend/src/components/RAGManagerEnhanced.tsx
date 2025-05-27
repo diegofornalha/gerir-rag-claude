@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRAGDocuments, useRAGStats, useRAGRemoveDocument, useRAGAddBatch } from '../hooks/useRAGDocuments'
 import { useRAGRealtimeSearch } from '../hooks/useRAGSearch'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import toast from 'react-hot-toast'
+import { useParams } from 'react-router-dom'
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333'
 
 export function RAGManagerEnhanced() {
   const [activeTab, setActiveTab] = useState<'documents' | 'search' | 'add'>('documents')
   const [selectedDoc, setSelectedDoc] = useState<string | null>(null)
   const [urlsToAdd, setUrlsToAdd] = useState('')
+  const [documentFilter, setDocumentFilter] = useState<'all' | 'webfetch' | 'playbooks'>('all')
   
   // Hooks de dados
   const { data: documents = [], isLoading: loadingDocs, error: docsError } = useRAGDocuments(50)
@@ -23,13 +27,52 @@ export function RAGManagerEnhanced() {
     limit: 20 
   })
   
-  // Estatísticas calculadas
+  // Estatísticas calculadas com agrupamento por domínio
   const totalDocs = documents.length
-  const webDocs = documents.filter(d => d.metadata?.capturedVia === 'WebFetch').length
-  const sessionDocs = documents.filter(d => d.metadata?.type === 'session').length
+  
+  // Contar web pages agrupadas por domínio
+  const webDocsGrouped = documents
+    .filter(d => d.metadata?.capturedVia === 'WebFetch' || d.metadata?.type === 'webpage' || d.source?.startsWith('http'))
+    .reduce((acc, doc) => {
+      const url = doc.metadata?.url || doc.source
+      if (url && url.startsWith('http')) {
+        const domain = new URL(url).hostname
+        if (!acc[domain]) acc[domain] = 0
+        acc[domain]++
+      }
+      return acc
+    }, {} as Record<string, number>)
+  
+  // Contar domínios únicos (não o total de documentos)
+  const webDocsCount = Object.keys(webDocsGrouped).length
+  
+  // Contar playbooks (arquivos de todos)
+  const playbookDocs = documents.filter(d => d.metadata?.type === 'playbook' || d.metadata?.capturedVia === 'TodoSync').length
+  
+  // Filtrar documentos baseado no filtro ativo
+  const filteredDocuments = documents.filter(doc => {
+    switch (documentFilter) {
+      case 'webfetch':
+        return doc.metadata?.capturedVia === 'WebFetch' || doc.metadata?.type === 'webpage' || doc.source?.startsWith('http')
+      case 'playbooks':
+        return doc.metadata?.type === 'playbook' || doc.metadata?.capturedVia === 'TodoSync'
+      default:
+        return true
+    }
+  })
   
   const handleRemoveDocument = async (docId: string) => {
     removeDoc.mutate(docId)
+  }
+  
+  const handleFilterClick = (filter: 'all' | 'webfetch' | 'playbooks') => {
+    setDocumentFilter(filter)
+    setActiveTab('documents')
+    
+    // Atualizar a URL
+    const filterParam = filter === 'all' ? '' : filter === 'webfetch' ? 'Via-WebFetch' : 'Playbooks'
+    const newUrl = filterParam ? `/rag/${filterParam}` : '/rag'
+    window.history.pushState({}, '', newUrl)
   }
   
   const handleAddUrls = async () => {
@@ -43,10 +86,22 @@ export function RAGManagerEnhanced() {
       return
     }
     
+    toast.loading(`Indexando ${urls.length} URL${urls.length > 1 ? 's' : ''}...`, {
+      id: 'indexing-urls'
+    })
+    
     addBatch.mutate(urls, {
-      onSuccess: () => {
+      onSuccess: (data) => {
+        toast.success(`${data.added} de ${data.total} URLs indexadas com sucesso!`, {
+          id: 'indexing-urls'
+        })
         setUrlsToAdd('')
         setActiveTab('documents')
+      },
+      onError: (error: any) => {
+        toast.error(`Erro na indexação: ${error.message}`, {
+          id: 'indexing-urls'
+        })
       }
     })
   }
@@ -85,24 +140,39 @@ export function RAGManagerEnhanced() {
       
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-white rounded-lg shadow-sm p-4">
+        <div 
+          className={`bg-white rounded-lg shadow-sm p-4 cursor-pointer transition-colors ${
+            documentFilter === 'all' ? 'ring-2 ring-blue-500 bg-blue-50' : 'hover:bg-gray-50'
+          }`}
+          onClick={() => handleFilterClick('all')}
+        >
           <div className="flex items-center justify-between">
-            <span className="text-gray-500 text-sm">Total de Documentos</span>
+            <span className="text-gray-500 text-sm">Total</span>
             <span className="text-2xl font-bold text-blue-600">{totalDocs}</span>
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm p-4">
+        <div 
+          className={`bg-white rounded-lg shadow-sm p-4 cursor-pointer transition-colors ${
+            documentFilter === 'webfetch' ? 'ring-2 ring-green-500 bg-green-50' : 'hover:bg-gray-50'
+          }`}
+          onClick={() => handleFilterClick('webfetch')}
+        >
           <div className="flex items-center justify-between">
-            <span className="text-gray-500 text-sm">Via WebFetch</span>
-            <span className="text-2xl font-bold text-green-600">{webDocs}</span>
+            <span className="text-gray-500 text-sm">Web Pages</span>
+            <span className="text-2xl font-bold text-green-600">{webDocsCount}</span>
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm p-4">
+        <div 
+          className={`bg-white rounded-lg shadow-sm p-4 cursor-pointer transition-colors ${
+            documentFilter === 'playbooks' ? 'ring-2 ring-purple-500 bg-purple-50' : 'hover:bg-gray-50'
+          }`}
+          onClick={() => handleFilterClick('playbooks')}
+        >
           <div className="flex items-center justify-between">
-            <span className="text-gray-500 text-sm">Sessões Claude</span>
-            <span className="text-2xl font-bold text-purple-600">{sessionDocs}</span>
+            <span className="text-gray-500 text-sm">Playbooks</span>
+            <span className="text-2xl font-bold text-purple-600">{playbookDocs}</span>
           </div>
         </div>
         
@@ -126,7 +196,7 @@ export function RAGManagerEnhanced() {
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
-              📄 Documentos ({totalDocs})
+              📄 Total ({filteredDocuments.length})
             </button>
             
             <button
@@ -151,9 +221,33 @@ export function RAGManagerEnhanced() {
               ➕ Adicionar URLs
             </button>
             
+            {documentFilter === 'playbooks' && (
+              <button
+                onClick={async () => {
+                  toast.loading('Sincronizando playbooks...', { id: 'sync-todos' })
+                  try {
+                    const response = await fetch(`${API_URL}/api/rag/sync-todos`)
+                    const data = await response.json()
+                    if (response.ok) {
+                      toast.success(`${data.stats.added} playbooks sincronizados!`, { id: 'sync-todos' })
+                      // Recarregar documentos
+                      window.location.reload()
+                    } else {
+                      toast.error('Erro ao sincronizar playbooks', { id: 'sync-todos' })
+                    }
+                  } catch (error) {
+                    toast.error('Erro ao sincronizar playbooks', { id: 'sync-todos' })
+                  }
+                }}
+                className="px-4 py-2 m-2 text-sm bg-purple-600 text-white hover:bg-purple-700 rounded-md transition-colors"
+              >
+                🔄 Sincronizar Playbooks
+              </button>
+            )}
+            
             <button
               onClick={exportCache}
-              className="ml-auto px-4 py-2 m-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+              className="px-4 py-2 m-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
             >
               📥 Exportar Cache
             </button>
@@ -168,76 +262,251 @@ export function RAGManagerEnhanced() {
                 <div className="flex justify-center py-8">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                 </div>
-              ) : documents.length === 0 ? (
+              ) : filteredDocuments.length === 0 ? (
                 <div className="text-center py-12">
-                  <div className="text-6xl mb-4">📭</div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhum documento no cache RAG</h3>
-                  <p className="text-gray-600 mb-6">Comece adicionando conteúdo ao sistema de recuperação</p>
-                  <div className="space-y-2 text-sm text-gray-500">
-                    <p>• Use o WebFetch para capturar páginas web</p>
-                    <p>• Adicione URLs manualmente na aba "Adicionar URLs"</p>
-                    <p>• Os documentos serão salvos localmente em ~/.claude/mcp-rag-cache</p>
+                  <div className="text-6xl mb-4">
+                    {documentFilter === 'all' ? '📭' : '🔍'}
                   </div>
-                  <button
-                    onClick={() => setActiveTab('add')}
-                    className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Adicionar URLs
-                  </button>
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">
+                    {documentFilter === 'all' 
+                      ? 'Nenhum documento no cache RAG'
+                      : documentFilter === 'webfetch'
+                        ? 'Nenhuma página web indexada'
+                        : 'Nenhum playbook indexado'
+                    }
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    {documentFilter === 'all' 
+                      ? 'Comece adicionando conteúdo ao sistema de recuperação'
+                      : documentFilter === 'webfetch'
+                        ? 'Adicione URLs para indexar páginas web'
+                        : 'Não há playbooks indexados ainda'
+                    }
+                  </p>
+                  {documentFilter !== 'all' && (
+                    <button
+                      onClick={() => setDocumentFilter('all')}
+                      className="mb-4 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                    >
+                      Ver todos os documentos
+                    </button>
+                  )}
+                  {documentFilter !== 'playbooks' && (
+                    <div className="space-y-2 text-sm text-gray-500">
+                      <p>• Use o WebFetch para capturar páginas web</p>
+                      <p>• Adicione URLs manualmente na aba "Adicionar URLs"</p>
+                      <p>• Os documentos serão salvos localmente em ~/.claude/mcp-rag-cache</p>
+                    </div>
+                  )}
+                  {documentFilter === 'all' && (
+                    <button
+                      onClick={() => setActiveTab('add')}
+                      className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Adicionar URLs
+                    </button>
+                  )}
                 </div>
               ) : (
-                <div className="space-y-3 max-h-[600px] overflow-y-auto">
-                  {documents.map((doc) => (
-                    <div
-                      key={doc.id}
-                      className={`border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer ${
-                        selectedDoc === doc.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
-                      }`}
-                      onClick={() => setSelectedDoc(selectedDoc === doc.id ? null : doc.id)}
-                    >
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <h3 className="font-medium text-gray-900">
-                            {doc.metadata?.title || doc.source}
-                          </h3>
-                          {doc.metadata?.url && (
-                            <a
-                              href={doc.metadata.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-sm text-blue-600 hover:underline"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              {new URL(doc.metadata.url).hostname}
-                            </a>
-                          )}
-                          <p className="text-sm text-gray-600 mt-1">
-                            {doc.content.substring(0, 150)}...
-                          </p>
-                          {selectedDoc === doc.id && (
-                            <pre className="mt-3 p-3 bg-gray-100 rounded text-xs overflow-x-auto">
-                              {doc.content}
-                            </pre>
-                          )}
-                        </div>
-                        <div className="flex items-center gap-2 ml-4">
-                          <span className="text-xs text-gray-500">
-                            {format(new Date(doc.timestamp), 'dd/MM HH:mm')}
-                          </span>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              handleRemoveDocument(doc.id)
-                            }}
-                            className="text-red-500 hover:text-red-700"
-                            disabled={removeDoc.isPending}
-                          >
-                            🗑️
-                          </button>
-                        </div>
+                <div>
+                  {documentFilter !== 'all' && (
+                    <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-blue-700">
+                          Mostrando {filteredDocuments.length} de {totalDocs} documentos 
+                          {documentFilter === 'webfetch' && ' (Web Pages)'}
+                          {documentFilter === 'playbooks' && ' (Playbooks)'}
+                        </span>
+                        <button
+                          onClick={() => setDocumentFilter('all')}
+                          className="text-xs text-blue-600 hover:text-blue-800 underline"
+                        >
+                          Limpar filtro
+                        </button>
                       </div>
                     </div>
-                  ))}
+                  )}
+                  <div className="space-y-3 max-h-[600px] overflow-y-auto">
+                    {(() => {
+                      // Agrupar documentos por domínio quando mostrar Web Pages
+                      if (documentFilter === 'webfetch' || documentFilter === 'all') {
+                        const webDocs = filteredDocuments.filter(doc => 
+                          doc.metadata?.capturedVia === 'WebFetch' || 
+                          doc.metadata?.type === 'webpage' ||
+                          doc.source?.startsWith('http')
+                        )
+                        const otherDocs = filteredDocuments.filter(doc => 
+                          !doc.metadata?.capturedVia?.includes('WebFetch') && 
+                          !doc.metadata?.type?.includes('web') &&
+                          !doc.source?.startsWith('http')
+                        )
+                        
+                        // Agrupar web docs por domínio
+                        const groupedWebDocs = webDocs.reduce((acc, doc) => {
+                          const url = doc.metadata?.url || doc.source
+                          if (url && url.startsWith('http')) {
+                            const domain = new URL(url).hostname
+                            if (!acc[domain]) acc[domain] = []
+                            acc[domain].push(doc)
+                          }
+                          return acc
+                        }, {} as Record<string, typeof webDocs>)
+                        
+                        return (
+                          <>
+                            {/* Renderizar documentos web agrupados por domínio */}
+                            {Object.entries(groupedWebDocs).map(([domain, docs]) => (
+                              <div key={domain} className="space-y-2">
+                                {docs.length > 1 && (
+                                  <div className="text-xs text-gray-500 font-medium px-2 flex items-center gap-2">
+                                    <span>🌐 {domain}</span>
+                                    <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs">
+                                      {docs.length} páginas
+                                    </span>
+                                  </div>
+                                )}
+                                {docs.map((doc) => (
+                                  <div
+                                    key={doc.id}
+                                    className={`border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer ${
+                                      selectedDoc === doc.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                                    } ${docs.length > 1 ? 'ml-4' : ''}`}
+                                    onClick={() => setSelectedDoc(selectedDoc === doc.id ? null : doc.id)}
+                                  >
+                                    <div className="flex justify-between items-start">
+                                      <div className="flex-1">
+                                        <h3 className="font-medium text-gray-900">
+                                          {doc.metadata?.title || doc.source}
+                                        </h3>
+                                        {doc.metadata?.url && (
+                                          <a
+                                            href={doc.metadata.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-xs text-blue-600 hover:underline"
+                                            onClick={(e) => e.stopPropagation()}
+                                          >
+                                            {doc.metadata.url}
+                                          </a>
+                                        )}
+                                        <p className="text-sm text-gray-600 mt-1">
+                                          {doc.content.substring(0, 150)}...
+                                        </p>
+                                        {selectedDoc === doc.id && (
+                                          <pre className="mt-3 p-3 bg-gray-100 rounded text-xs overflow-x-auto">
+                                            {doc.content}
+                                          </pre>
+                                        )}
+                                      </div>
+                                      <div className="flex items-center gap-2 ml-4">
+                                        <span className="text-xs text-gray-500">
+                                          {format(new Date(doc.timestamp), 'dd/MM HH:mm')}
+                                        </span>
+                                        <button
+                                          onClick={(e) => {
+                                            e.stopPropagation()
+                                            handleRemoveDocument(doc.id)
+                                          }}
+                                          className="text-red-500 hover:text-red-700"
+                                          disabled={removeDoc.isPending}
+                                        >
+                                          🗑️
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            ))}
+                            
+                            {/* Renderizar outros documentos (não web) */}
+                            {otherDocs.map((doc) => (
+                              <div
+                                key={doc.id}
+                                className={`border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer ${
+                                  selectedDoc === doc.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                                }`}
+                                onClick={() => setSelectedDoc(selectedDoc === doc.id ? null : doc.id)}
+                              >
+                                <div className="flex justify-between items-start">
+                                  <div className="flex-1">
+                                    <h3 className="font-medium text-gray-900">
+                                      {doc.source}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 mt-1">
+                                      {doc.content.substring(0, 150)}...
+                                    </p>
+                                    {selectedDoc === doc.id && (
+                                      <pre className="mt-3 p-3 bg-gray-100 rounded text-xs overflow-x-auto">
+                                        {doc.content}
+                                      </pre>
+                                    )}
+                                  </div>
+                                  <div className="flex items-center gap-2 ml-4">
+                                    <span className="text-xs text-gray-500">
+                                      {format(new Date(doc.timestamp), 'dd/MM HH:mm')}
+                                    </span>
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation()
+                                        handleRemoveDocument(doc.id)
+                                      }}
+                                      className="text-red-500 hover:text-red-700"
+                                      disabled={removeDoc.isPending}
+                                    >
+                                      🗑️
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </>
+                        )
+                      }
+                      
+                      // Para playbooks, renderizar sem agrupamento
+                      return filteredDocuments.map((doc) => (
+                        <div
+                          key={doc.id}
+                          className={`border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer ${
+                            selectedDoc === doc.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                          }`}
+                          onClick={() => setSelectedDoc(selectedDoc === doc.id ? null : doc.id)}
+                        >
+                          <div className="flex justify-between items-start">
+                            <div className="flex-1">
+                              <h3 className="font-medium text-gray-900">
+                                {doc.source}
+                              </h3>
+                              <p className="text-sm text-gray-600 mt-1">
+                                {doc.content.substring(0, 150)}...
+                              </p>
+                              {selectedDoc === doc.id && (
+                                <pre className="mt-3 p-3 bg-gray-100 rounded text-xs overflow-x-auto">
+                                  {doc.content}
+                                </pre>
+                              )}
+                            </div>
+                            <div className="flex items-center gap-2 ml-4">
+                              <span className="text-xs text-gray-500">
+                                {format(new Date(doc.timestamp), 'dd/MM HH:mm')}
+                              </span>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  handleRemoveDocument(doc.id)
+                                }}
+                                className="text-red-500 hover:text-red-700"
+                                disabled={removeDoc.isPending}
+                              >
+                                🗑️
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    })()}
+                  </div>
                 </div>
               )}
             </div>
@@ -254,48 +523,37 @@ export function RAGManagerEnhanced() {
                   placeholder="Digite pelo menos 3 caracteres para buscar..."
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-                {search.isSearching && (
-                  <p className="text-sm text-gray-500 mt-2">Buscando...</p>
-                )}
               </div>
               
-              {search.error && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
-                  <p className="text-sm text-red-700">{search.error}</p>
+              {search.isSearching && (
+                <div className="flex justify-center py-8">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                 </div>
               )}
               
-              {search.hasResults && (
-                <div className="space-y-3">
-                  <p className="text-sm text-gray-600 mb-2">
-                    {search.results.length} resultados encontrados
+              {search.results && (
+                <div>
+                  <p className="text-sm text-gray-600 mb-3">
+                    {search.results.length} resultado{search.results.length !== 1 ? 's' : ''} encontrado{search.results.length !== 1 ? 's' : ''}
                   </p>
-                  {search.results.map((result) => (
-                    <div key={result.id} className="border rounded-lg p-4 hover:bg-gray-50">
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <h4 className="font-medium text-gray-900">
-                            {result.metadata?.title || result.source}
-                          </h4>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {result.content.substring(0, 200)}...
-                          </p>
-                          {result.similarity && (
-                            <span className="text-xs text-green-600 mt-2 inline-block">
-                              Relevância: {(result.similarity * 100).toFixed(1)}%
-                            </span>
-                          )}
-                        </div>
+                  <div className="space-y-3">
+                    {search.results.map((doc) => (
+                      <div key={doc.id} className="border rounded-lg p-4 hover:bg-gray-50">
+                        <h4 className="font-medium text-gray-900 mb-1">
+                          {doc.source}
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          {doc.content.substring(0, 200)}...
+                        </p>
+                        {doc.similarity && (
+                          <span className="text-xs text-gray-500 mt-2 inline-block">
+                            Relevância: {(doc.similarity * 100).toFixed(0)}%
+                          </span>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              )}
-              
-              {!search.hasResults && search.query && !search.isSearching && (
-                <p className="text-center text-gray-500 py-8">
-                  Nenhum resultado encontrado
-                </p>
               )}
             </div>
           )}
@@ -305,27 +563,32 @@ export function RAGManagerEnhanced() {
             <div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  URLs para Indexar (uma por linha)
+                  URLs para indexar (uma por linha)
                 </label>
                 <textarea
                   value={urlsToAdd}
                   onChange={(e) => setUrlsToAdd(e.target.value)}
-                  placeholder="https://example.com/docs&#10;https://another-site.com/api"
-                  className="w-full h-40 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  placeholder="https://example.com/page1\nhttps://example.com/page2"
+                  className="w-full h-40 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               
-              <div className="flex justify-between items-center">
-                <p className="text-sm text-gray-600">
-                  As URLs serão processadas via WebFetch e adicionadas ao cache RAG
-                </p>
-                <button
-                  onClick={handleAddUrls}
-                  disabled={!urlsToAdd.trim() || addBatch.isPending}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {addBatch.isPending ? 'Processando...' : 'Adicionar URLs'}
-                </button>
+              <button
+                onClick={handleAddUrls}
+                disabled={!urlsToAdd.trim() || addBatch.isPending}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+              >
+                {addBatch.isPending ? 'Indexando...' : 'Indexar URLs'}
+              </button>
+              
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-medium text-gray-700 mb-2">💡 Dicas</h4>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• As URLs devem começar com http:// ou https://</li>
+                  <li>• O conteúdo será extraído e indexado automaticamente</li>
+                  <li>• URLs duplicadas serão atualizadas</li>
+                  <li>• O cache é salvo localmente em ~/.claude/mcp-rag-cache</li>
+                </ul>
               </div>
             </div>
           )}

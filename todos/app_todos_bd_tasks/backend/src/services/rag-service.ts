@@ -67,6 +67,61 @@ export class RAGService {
   }
 
   async addDocument(doc: Omit<RAGDocument, 'id' | 'created_at'>): Promise<RAGDocument> {
+    // Verificar duplicatas para URLs
+    if (doc.metadata?.url || doc.source?.startsWith('http')) {
+      const url = doc.metadata?.url || doc.source
+      
+      // Verificar se já existe documento com exatamente a mesma URL
+      const existingIndex = this.cache.documents.findIndex(existingDoc => {
+        const existingUrl = existingDoc.metadata?.url || existingDoc.source
+        return existingUrl === url
+      })
+      
+      // Se encontrar duplicata exata, atualizar ao invés de adicionar
+      if (existingIndex >= 0) {
+        const updatedDoc: RAGDocument = {
+          ...this.cache.documents[existingIndex],
+          ...doc,
+          id: this.cache.documents[existingIndex].id,
+          created_at: this.cache.documents[existingIndex].created_at,
+          metadata: {
+            ...this.cache.documents[existingIndex].metadata,
+            ...doc.metadata,
+            updated_at: new Date().toISOString()
+          }
+        }
+        this.cache.documents[existingIndex] = updatedDoc
+        await this.saveCache()
+        return updatedDoc
+      }
+    }
+    
+    // Verificar duplicatas para playbooks (baseado no source/filepath)
+    if (doc.type === 'playbook' && doc.source) {
+      const existingIndex = this.cache.documents.findIndex(
+        existingDoc => existingDoc.source === doc.source && existingDoc.type === 'playbook'
+      )
+      
+      if (existingIndex >= 0) {
+        // Atualizar documento existente
+        const updatedDoc: RAGDocument = {
+          ...this.cache.documents[existingIndex],
+          ...doc,
+          id: this.cache.documents[existingIndex].id,
+          created_at: this.cache.documents[existingIndex].created_at,
+          metadata: {
+            ...this.cache.documents[existingIndex].metadata,
+            ...doc.metadata,
+            updated_at: new Date().toISOString()
+          }
+        }
+        this.cache.documents[existingIndex] = updatedDoc
+        await this.saveCache()
+        return updatedDoc
+      }
+    }
+    
+    // Se não for duplicata, adicionar novo documento
     const newDoc: RAGDocument = {
       ...doc,
       id: `doc_${Date.now()}`,

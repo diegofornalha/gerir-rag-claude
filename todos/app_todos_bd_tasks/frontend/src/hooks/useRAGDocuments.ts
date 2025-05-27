@@ -192,24 +192,42 @@ export function useRAGAddBatch() {
   
   return useMutation({
     mutationFn: async (urls: string[]) => {
-      const response = await fetch(`${API_URL}/api/rag/add-batch`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ urls })
-      })
+      // Usar novo endpoint que faz fetch real do conteúdo
+      const results = await Promise.all(
+        urls.map(async (url) => {
+          try {
+            const response = await fetch(`${API_URL}/api/rag/index-url`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ url })
+            })
+            
+            if (!response.ok) {
+              const error = await response.json()
+              throw new Error(error.details || `Erro ao indexar ${url}`)
+            }
+            
+            const data = await response.json()
+            return { url, success: true, document: data.document }
+          } catch (error: any) {
+            return { url, success: false, error: error.message }
+          }
+        })
+      )
       
-      if (!response.ok) {
-        throw new Error('Erro ao adicionar URLs')
+      const successCount = results.filter(r => r.success).length
+      if (successCount === 0) {
+        throw new Error('Nenhuma URL foi indexada')
       }
       
-      return response.json()
+      return { added: successCount, total: urls.length }
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ['rag-documents'] })
       queryClient.invalidateQueries({ queryKey: ['rag-stats'] })
-      toast.success(`${data.added} URLs adicionadas ao RAG!`)
+      toast.success(`${data.added} de ${data.total} URLs adicionadas ao RAG!`)
     },
     onError: (error: any) => {
       toast.error(`Erro ao adicionar URLs: ${error.message}`)
