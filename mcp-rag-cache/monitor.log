@@ -1,0 +1,3668 @@
+==================================================
+🤖 Sistema RAG em Tempo Real
+==================================================
+🚀 Monitor RAG em tempo real iniciado!
+📁 Monitorando: ['/Users/agents/.claude/projects', '/Users/agents/.claude/todos']
+
+📋 Indexação inicial...
+  ✅ index_directory executado com sucesso
+  ✅ index_directory executado com sucesso
+
+🔄 Mudança detectada: 1746117e-5e89-485d-93d9-345f3341b8e5.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: 6b94d8a6-40c5-4885-9275-9ce28afca3b6.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: dd0dc938-819a-4854-8e08-a7931138e8ed.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: 431f9873-d237-490f-83cc-a3d31c527e98.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: b350d9d1-43ca-4bd3-b15c-d2815f18a0c8.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: 53743da6-b140-4d67-9798-7564c43321d4.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: 158ba559-5c82-4f2c-a9d3-7cffca166279.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: 8ef5fd56-a8f2-400f-b8ee-327ca17ee162.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: 55b85df7-e207-4dab-ae15-7b68420449eb.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 1746117e-5e89-485d-93d9-345f3341b8e5.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 6b94d8a6-40c5-4885-9275-9ce28afca3b6.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 158ba559-5c82-4f2c-a9d3-7cffca166279.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: dd0dc938-819a-4854-8e08-a7931138e8ed.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 55b85df7-e207-4dab-ae15-7b68420449eb.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 431f9873-d237-490f-83cc-a3d31c527e98.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: b350d9d1-43ca-4bd3-b15c-d2815f18a0c8.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 53743da6-b140-4d67-9798-7564c43321d4.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 8ef5fd56-a8f2-400f-b8ee-327ca17ee162.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: document-names.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.node.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.app.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: biome.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: settings.local.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .pnpm-workspace-state.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tasks-mock.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 0003_snapshot.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 0000_snapshot.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: _journal.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 0001_snapshot.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 0002_snapshot.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.eslint.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: settings.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: body.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: csp.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: example-static-specification.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: test-package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: example-static-specification.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: test-package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: replacements.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: rule-type-list.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: formatters-meta.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: typesMap.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .prettierrc.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: db.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: caseFolding.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: replacements.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: rule-type-list.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: formatters-meta.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: a.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: e.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: d.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: c.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: b.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: types-metadata.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: typesMap.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .attw.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: globals.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-secure.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-07.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-06.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: schema.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: schema.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: content.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: unevaluated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: format-annotation.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: applicator.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: meta-data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: core.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: validation.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: content.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: applicator.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: meta-data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: core.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: validation.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: format.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-secure.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-07.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-06.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: schema.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: schema.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: content.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: unevaluated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: format-annotation.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: applicator.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: meta-data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: core.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: validation.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: content.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: applicator.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: meta-data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: core.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: validation.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: format.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-secure.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-04.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-07.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-06.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .release-it.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .release-it.beta.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: umd.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: min.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: esm.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: cjs.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: base.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: declarations.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: test.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: core.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: example-static-specification.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: test-package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .prettierrc.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package-support.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.eslint.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: settings.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: body.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: core.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: lerna.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: ref.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: required.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: required.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: required.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: pkg.config.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig-named.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: db.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: abi_registry.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tests.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: component.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: codes.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: csp.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: example-static-specification.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: test-package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: pkg.config.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: sample.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: baz.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: sample.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: .pnpm-workspace-state.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: manifest.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: migrations.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: 0000_snapshot.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: _journal.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: _metadata.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: replacements.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: rule-type-list.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: formatters-meta.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: typesMap.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: diagnosticMessages.generated.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: corejs2-built-ins.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: overlapping-plugins.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: corejs3-shipped-proposals.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: native-modules.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: plugin-bugfixes.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: plugins.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: envs.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: release-schedule.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: globals.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-secure.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-04.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: data.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-07.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: json-schema-draft-06.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: test.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: typings.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: globals.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: full-versions.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: versions.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: full-chromium-versions.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: chromium-versions.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: tsconfig.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: globals.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: configuration_schema.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: _metadata.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: package.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: e29d86fd-3cba-41a7-91ab-5d828f1cd093.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: e29d86fd-3cba-41a7-91ab-5d828f1cd093.json
+  ✅ add executado com sucesso
+
+🔄 Mudança detectada: e29d86fd-3cba-41a7-91ab-5d828f1cd093.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl
+  ✅ index_session executado com sucesso
+
+🔄 Mudança detectada: f325b97b-7248-40e7-94e4-13cb8c037d6a.jsonl

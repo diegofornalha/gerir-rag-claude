@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Toaster } from 'react-hot-toast'
+import { ErrorBoundary } from './components/ErrorBoundary'
 import { useState, useRef, useEffect } from 'react'
 
 // Importar páginas antigas
@@ -9,7 +11,7 @@ import { ClaudeSessions } from './pages/ClaudeSessions'
 import { Chat } from './pages/Chat'
 import Documents from './pages/Documents'
 import { ClaudeSessionDetailSimple } from './pages/ClaudeSessionDetailSimple'
-import { RAGManagerSimple } from './components/RAGManagerSimple'
+import { RAGManagerEnhanced } from './components/RAGManagerEnhanced'
 
 // Criar QueryClient
 const queryClient = new QueryClient({
@@ -399,7 +401,7 @@ function AppContent() {
         <Route path="/claude-sessions/:sessionId/:filter" element={<ClaudeSessionDetailSimple />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/documents" element={<Documents />} />
-        <Route path="/rag" element={<RAGManagerSimple />} />
+        <Route path="/rag" element={<RAGManagerEnhanced />} />
         
         {/* Dashboard Principal - Sistema de Migração */}
         <Route path="/" element={<MigrationDashboard />} />
@@ -413,10 +415,13 @@ function AppContent() {
 // Componente App com Providers
 export function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+        <Toaster position="top-right" />
+      </QueryClientProvider>
+    </ErrorBoundary>
   )
 }

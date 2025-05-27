@@ -139,3 +139,38 @@ Do what has been asked; nothing more, nothing less.
 NEVER create files unless they're absolutely necessary for achieving your goal.
 ALWAYS prefer editing an existing file to creating a new one.
 NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
+
+
+O MCP Everything é um servidor de demonstração que inclui:
+
+  Ferramentas básicas:
+  - echo - Retorna mensagens
+  - add - Soma números
+  - printEnv - Mostra variáveis de ambiente
+
+  Recursos avançados:
+  - longRunningOperation - Demonstra operações com progresso
+  - sampleLLM - Usa sampling de LLM via MCP
+  - getTinyImage - Retorna imagens
+  - annotatedMessage - Demonstra anotações em conteúdo
+  - getResourceReference - Referencia recursos MCP
+
+  MCP do GitHub permite:
+- Criar e gerenciar projetos
+- Buscar e analisar código
+- Automatizar processos de review
+- Integrar com CI/CD
+- Gerenciar colaboração em equipe
+## Limpeza Automática de Todos
+
+O sistema agora realiza limpeza automática semanal dos arquivos de tarefas (todos), removendo:
+- Arquivos vazios
+- Arquivos contendo apenas um array vazio "[]"
+- Arquivos sem tarefas válidas
+
+Para limpar manualmente a qualquer momento:
+```bash
+~/.claude/clean_todos.sh
+```
+
+A limpeza preserva todos os arquivos com tarefas válidas e o arquivo de documentação todos.md.

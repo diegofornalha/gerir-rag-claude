@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Investigar erro 'Erro ao remover documento' no sistema RAG",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Verificar logs do backend para detalhes do erro",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analisar código de remoção de documentos",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Corrigir o problema e testar a solução",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Adicionar rota DELETE /api/rag/documents/:id no backend",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Reiniciar servidores MCP e backend",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  }
+]

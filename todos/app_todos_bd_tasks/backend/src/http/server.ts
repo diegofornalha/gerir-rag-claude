@@ -15,6 +15,7 @@ import { cleanupRoutes } from "./cleanup-routes";
 import { documentsRoutes } from "./documents-routes";
 import webfetchRoutes from "./webfetch-routes";
 import ragRoutes from "./rag-routes";
+import ragSyncRoutes from "./rag-sync-routes";
 
 const app = fastify({ 
   logger: {
@@ -472,7 +473,7 @@ await app.register(documentsRoutes)
 // Registrar rotas de WebFetch (Hono para Fastify)
 await app.register(async function (fastify) {
   // Adaptador simples para Hono -> Fastify
-  fastify.all('/webfetch/*', async (request, reply) => {
+  fastify.all('/api/webfetch/*', async (request, reply) => {
     const path = request.url.replace('/api/webfetch', '')
     const method = request.method
     
@@ -490,11 +491,11 @@ await app.register(async function (fastify) {
     reply.status(honoResponse.status)
     return honoResponse.json()
   })
-})
+}, { prefix: '' })
 
 // Registrar rotas de RAG (Hono para Fastify)
 await app.register(async function (fastify) {
-  fastify.all('/rag/*', async (request, reply) => {
+  fastify.all('/api/rag/*', async (request, reply) => {
     const path = request.url.replace('/api/rag', '')
     const method = request.method
     
@@ -509,7 +510,26 @@ await app.register(async function (fastify) {
     reply.status(honoResponse.status)
     return honoResponse.json()
   })
-})
+}, { prefix: '' })
+
+// Registrar rotas de sincronização RAG (Hono para Fastify)
+await app.register(async function (fastify) {
+  fastify.all('/api/rag/sync/*', async (request, reply) => {
+    const path = request.url.replace('/api/rag/sync', '')
+    const method = request.method
+    
+    const honoRequest = new Request(`http://localhost${path}`, {
+      method: method,
+      headers: request.headers as any,
+      body: method !== 'GET' && method !== 'HEAD' ? JSON.stringify(request.body) : undefined
+    })
+    
+    const honoResponse = await ragSyncRoutes.fetch(honoRequest)
+    
+    reply.status(honoResponse.status)
+    return honoResponse.json()
+  })
+}, { prefix: '' })
 
 app.setErrorHandler((error, _request, reply) => {
   app.log.error(error)

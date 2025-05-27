@@ -11,6 +11,7 @@ interface RAGDocument {
     timestamp?: string
   }
   timestamp: string
+  similarity?: number
 }
 
 export function RAGManagerSimple() {
@@ -18,6 +19,7 @@ export function RAGManagerSimple() {
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
   const [activeTab, setActiveTab] = useState('documents')
+  const [error, setError] = useState<string | null>(null)
 
   // Carregar documentos
   useEffect(() => {
@@ -27,33 +29,78 @@ export function RAGManagerSimple() {
   const loadDocuments = async () => {
     try {
       setLoading(true)
-      // Por enquanto, usar dados mock
-      const mockData: RAGDocument[] = [
-        {
-          id: '1',
-          content: 'Conteúdo de exemplo do Claude Code...',
-          source: 'WebFetch',
-          metadata: {
-            url: 'https://docs.anthropic.com',
-            title: 'Claude Documentation',
-            capturedVia: 'WebFetch'
-          },
-          timestamp: new Date().toISOString()
-        }
-      ]
-      setDocuments(mockData)
+      setError(null)
+      
+      // Buscar documentos da API real
+      const response = await fetch('http://localhost:3333/api/rag/documents?limit=50')
+      
+      if (!response.ok) {
+        throw new Error('Erro ao buscar documentos')
+      }
+      
+      const data = await response.json()
+      
+      // Transformar dados do backend para o formato do frontend
+      const formattedDocs: RAGDocument[] = data.documents.map((doc: any) => ({
+        id: doc.id || doc.source,
+        content: doc.content,
+        source: doc.source,
+        metadata: doc.metadata || {},
+        timestamp: doc.timestamp || new Date().toISOString()
+      }))
+      
+      setDocuments(formattedDocs)
     } catch (error) {
-      console.error('Erro ao carregar:', error)
+      console.error('Erro ao carregar documentos:', error)
+      setError('Erro ao carregar documentos. Verifique se o servidor está rodando.')
+      setDocuments([])
     } finally {
       setLoading(false)
     }
   }
 
-  const filteredDocs = documents.filter(doc => 
-    searchQuery === '' || 
-    doc.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    doc.source.toLowerCase().includes(searchQuery.toLowerCase())
-  )
+  const handleSearch = async () => {
+    if (!searchQuery.trim()) {
+      // Se não há query, mostrar todos os documentos
+      await loadDocuments()
+      return
+    }
+    
+    try {
+      setLoading(true)
+      setError(null)
+      const response = await fetch('http://localhost:3333/api/rag/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: searchQuery, top_k: 10 })
+      })
+      
+      if (!response.ok) {
+        throw new Error('Erro na busca')
+      }
+      
+      const data = await response.json()
+      
+      // Transformar resultados da busca
+      const searchResults: RAGDocument[] = data.results.map((result: any) => ({
+        id: result.id || result.source,
+        content: result.content,
+        source: result.source,
+        metadata: result.metadata || {},
+        timestamp: result.timestamp || new Date().toISOString(),
+        similarity: result.similarity
+      }))
+      
+      setDocuments(searchResults)
+    } catch (error) {
+      console.error('Erro na busca:', error)
+      setError('Erro ao buscar documentos. Verifique se o servidor está rodando.')
+    } finally {
+      setLoading(false)
+    }
+  }
+  
+  const filteredDocs = documents
 
   return (
     <div className="max-w-6xl mx-auto p-4">
@@ -113,9 +160,24 @@ export function RAGManagerSimple() {
         <div className="p-4">
           {activeTab === 'documents' && (
             <div>
-              <div className="mb-4 text-sm text-gray-600">
-                Documentos salvos em: <code className="bg-gray-100 px-2 py-1 rounded">~/.claude/mcp-rag-cache/documents.json</code>
+              <div className="mb-4 flex items-center justify-between">
+                <div className="text-sm text-gray-600">
+                  Documentos salvos em: <code className="bg-gray-100 px-2 py-1 rounded">~/.claude/mcp-rag-cache/documents.json</code>
+                </div>
+                <button
+                  onClick={loadDocuments}
+                  disabled={loading}
+                  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-sm"
+                >
+                  {loading ? 'Carregando...' : 'Atualizar'}
+                </button>
               </div>
+              
+              {error && (
+                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  {error}
+                </div>
+              )}
               
               {loading ? (
                 <div className="text-center py-8">Carregando...</div>
@@ -126,19 +188,21 @@ export function RAGManagerSimple() {
               ) : (
                 <div className="space-y-4">
                   {filteredDocs.map(doc => (
-                    <div key={doc.id} className="border rounded-lg p-4">
+                    <div key={doc.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
                       <div className="flex justify-between items-start mb-2">
-                        <div>
+                        <div className="flex-1">
                           <h3 className="font-medium">
                             {doc.metadata.title || `Documento ${doc.id}`}
                           </h3>
                           <div className="text-sm text-gray-600">
                             Fonte: {doc.source} | {doc.metadata.capturedVia && `Via: ${doc.metadata.capturedVia}`}
                           </div>
+                          {doc.similarity !== undefined && (
+                            <div className="text-sm text-blue-600 mt-1">
+                              Similaridade: {(doc.similarity * 100).toFixed(1)}%
+                            </div>
+                          )}
                         </div>
-                        <button className="text-red-500 hover:text-red-700">
-                          🗑️
-                        </button>
                       </div>
                       <p className="text-sm text-gray-700 line-clamp-2">
                         {doc.content}
@@ -157,18 +221,74 @@ export function RAGManagerSimple() {
 
           {activeTab === 'search' && (
             <div>
-              <div className="mb-4">
+              <div className="mb-4 flex items-center gap-4">
                 <input
                   type="text"
                   placeholder="Buscar documentos..."
-                  className="w-full px-4 py-2 border rounded-lg"
+                  className="flex-1 px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                 />
+                <button
+                  onClick={handleSearch}
+                  disabled={loading}
+                  className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                >
+                  {loading ? 'Buscando...' : 'Buscar'}
+                </button>
               </div>
-              <div className="text-sm text-gray-600">
-                {searchQuery && `${filteredDocs.length} resultados encontrados`}
-              </div>
+              
+              {error && (
+                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  {error}
+                </div>
+              )}
+              
+              {loading ? (
+                <div className="text-center py-8">Buscando...</div>
+              ) : searchQuery && filteredDocs.length === 0 ? (
+                <div className="text-center py-8 text-gray-500">
+                  Nenhum documento encontrado para "{searchQuery}"
+                </div>
+              ) : filteredDocs.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="text-sm text-gray-600 mb-2">
+                    {filteredDocs.length} resultados encontrados
+                  </div>
+                  {filteredDocs.map(doc => (
+                    <div key={doc.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <div className="flex justify-between items-start mb-2">
+                        <div className="flex-1">
+                          <h3 className="font-medium">
+                            {doc.metadata.title || `Documento ${doc.id}`}
+                          </h3>
+                          <div className="text-sm text-gray-600">
+                            Fonte: {doc.source}
+                          </div>
+                          {doc.similarity !== undefined && (
+                            <div className="text-sm text-blue-600 mt-1">
+                              Similaridade: {(doc.similarity * 100).toFixed(1)}%
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <p className="text-sm text-gray-700 line-clamp-3">
+                        {doc.content}
+                      </p>
+                      {doc.metadata.url && (
+                        <div className="mt-2 text-xs text-blue-600">
+                          {doc.metadata.url}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-8 text-gray-400">
+                  Digite uma consulta para buscar documentos
+                </div>
+              )}
             </div>
           )}
 

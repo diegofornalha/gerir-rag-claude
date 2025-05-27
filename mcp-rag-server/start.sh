@@ -1,3 +1,5 @@
 #!/bin/bash
 # Start MCP RAG Server
-exec /opt/homebrew/bin/python3 /Users/agents/.claude/mcp-rag-server/working_rag.py
+cd /Users/agents/.claude/mcp-rag-server
+source venv/bin/activate
+exec python server.py
