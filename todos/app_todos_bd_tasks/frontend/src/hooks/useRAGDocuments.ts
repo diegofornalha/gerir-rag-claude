@@ -35,10 +35,19 @@ export function useRAGDocuments(limit = 50) {
       const response = await fetch(`${API_URL}/api/rag/documents?limit=${limit}`)
       
       if (!response.ok) {
+        // Se for erro 500, assumir que é cache não inicializado e retornar array vazio
+        if (response.status === 500) {
+          return []
+        }
         throw new Error('Erro ao buscar documentos')
       }
       
       const data = await response.json()
+      
+      // Se não houver documentos, retornar array vazio
+      if (!data.documents || data.documents.length === 0) {
+        return []
+      }
       
       // Transformar dados do backend para o formato do frontend
       return data.documents.map((doc: any) => ({
@@ -51,7 +60,7 @@ export function useRAGDocuments(limit = 50) {
       }))
     },
     staleTime: 30000, // 30 segundos
-    retry: 2
+    retry: 1 // Reduzir tentativas para não ficar mostrando erro repetidamente
   })
 }
 

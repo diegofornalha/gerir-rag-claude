@@ -19,13 +19,7 @@ interface MCPResponse {
   };
 }
 
-interface MCPTool {
-  name: string;
-  description: string;
-  inputSchema: any;
-}
-
-export class MCPClient extends EventEmitter {
+export class SimpleMCPClient extends EventEmitter {
   private process: ChildProcess | null = null;
   private requestId = 0;
   private pendingRequests = new Map<number, {
@@ -33,7 +27,6 @@ export class MCPClient extends EventEmitter {
     reject: (reason: any) => void;
   }>();
   private buffer = '';
-  private initialized = false;
 
   constructor(private command: string, private args: string[] = []) {
     super();
@@ -54,7 +47,7 @@ export class MCPClient extends EventEmitter {
     });
 
     this.process.stderr?.on('data', (data) => {
-      // Ignorar stderr silenciosamente
+      // Ignorar stderr - servidor Python pode enviar logs para stderr
     });
 
     this.process.on('close', (code) => {
@@ -66,7 +59,15 @@ export class MCPClient extends EventEmitter {
     });
 
     // Initialize the connection
-    await this.initialize();
+    await this.sendRequest('initialize', { capabilities: {} });
+    
+    // Send initialized notification
+    if (this.process?.stdin) {
+      this.process.stdin.write(JSON.stringify({
+        jsonrpc: '2.0',
+        method: 'initialized'
+      }) + '\n');
+    }
   }
 
   private processBuffer(): void {
@@ -77,25 +78,47 @@ export class MCPClient extends EventEmitter {
       if (line.trim()) {
         try {
           const response: MCPResponse = JSON.parse(line);
-          this.handleResponse(response);
+          const pending = this.pendingRequests.get(response.id);
+          if (pending) {
+            this.pendingRequests.delete(response.id);
+            
+            if (response.error) {
+              pending.reject(new Error(response.error.message));
+            } else {
+              pending.resolve(response.result);
+            }
+          }
         } catch (error) {
-          // Silenciosamente ignorar erros de parse
+          // Ignorar linhas que não são JSON válido
         }
       }
     }
   }
 
-  private handleResponse(response: MCPResponse): void {
-    const pending = this.pendingRequests.get(response.id);
-    if (pending) {
-      this.pendingRequests.delete(response.id);
-      
-      if (response.error) {
-        pending.reject(new Error(response.error.message));
-      } else {
-        pending.resolve(response.result);
+  async callTool(name: string, args: any = {}): Promise<any> {
+    if (!this.process || !this.process.stdin) {
+      throw new Error('Not connected');
+    }
+
+    const result = await this.sendRequest('tools/call', {
+      name,
+      arguments: args
+    });
+    
+    // Extract text content if present
+    if (result.content && Array.isArray(result.content)) {
+      const textContent = result.content.find((c: any) => c.type === 'text');
+      if (textContent) {
+        return JSON.parse(textContent.text);
       }
     }
+    
+    return result;
+  }
+
+  async listTools(): Promise<any[]> {
+    const result = await this.sendRequest('tools/list');
+    return result.tools || [];
   }
 
   private async sendRequest(method: string, params?: any): Promise<any> {
@@ -116,62 +139,14 @@ export class MCPClient extends EventEmitter {
       
       this.process!.stdin!.write(JSON.stringify(request) + '\n');
       
-      // Timeout after 30 seconds
+      // Timeout after 10 seconds
       setTimeout(() => {
         if (this.pendingRequests.has(id)) {
           this.pendingRequests.delete(id);
           reject(new Error('Request timeout'));
         }
-      }, 30000);
+      }, 10000);
     });
-  }
-
-  private async initialize(): Promise<void> {
-    const result = await this.sendRequest('initialize', {
-      capabilities: {}
-    });
-    
-    this.initialized = true;
-    
-    // Send initialized notification
-    if (this.process?.stdin) {
-      this.process.stdin.write(JSON.stringify({
-        jsonrpc: '2.0',
-        method: 'initialized'
-      }) + '\n');
-    }
-    
-    return result;
-  }
-
-  async listTools(): Promise<MCPTool[]> {
-    if (!this.initialized) {
-      throw new Error('Not initialized');
-    }
-    
-    const result = await this.sendRequest('tools/list');
-    return result.tools || [];
-  }
-
-  async callTool(name: string, arguments: any = {}): Promise<any> {
-    if (!this.initialized) {
-      throw new Error('Not initialized');
-    }
-    
-    const result = await this.sendRequest('tools/call', {
-      name,
-      arguments
-    });
-    
-    // Extract text content if present
-    if (result.content && Array.isArray(result.content)) {
-      const textContent = result.content.find((c: any) => c.type === 'text');
-      if (textContent) {
-        return textContent.text;
-      }
-    }
-    
-    return result;
   }
 
   async disconnect(): Promise<void> {
@@ -190,15 +165,14 @@ export class MCPClient extends EventEmitter {
     }
     this.pendingRequests.clear();
     
-    this.initialized = false;
     this.buffer = '';
     this.requestId = 0;
   }
 }
 
 // Factory function for RAG MCP client
-export function createRAGClient(): MCPClient {
-  return new MCPClient('/usr/bin/python3', [
+export function createRAGClient(): SimpleMCPClient {
+  return new SimpleMCPClient('/usr/bin/python3', [
     '/Users/agents/.claude/mcp-rag-server/rag_server.py'
   ]);
 }

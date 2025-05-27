@@ -14,7 +14,7 @@ import { missionsRoutes } from "./missions-routes";
 import { cleanupRoutes } from "./cleanup-routes";
 import { documentsRoutes } from "./documents-routes";
 import webfetchRoutes from "./webfetch-routes";
-import ragRoutes from "./rag-routes";
+import ragRoutes from "./rag-routes-simple";
 import ragSyncRoutes from "./rag-sync-routes";
 
 const app = fastify({ 
@@ -496,19 +496,40 @@ await app.register(async function (fastify) {
 // Registrar rotas de RAG (Hono para Fastify)
 await app.register(async function (fastify) {
   fastify.all('/api/rag/*', async (request, reply) => {
-    const path = request.url.replace('/api/rag', '')
-    const method = request.method
-    
-    const honoRequest = new Request(`http://localhost${path}`, {
-      method: method,
-      headers: request.headers as any,
-      body: method !== 'GET' && method !== 'HEAD' ? JSON.stringify(request.body) : undefined
-    })
-    
-    const honoResponse = await ragRoutes.fetch(honoRequest)
-    
-    reply.status(honoResponse.status)
-    return honoResponse.json()
+    try {
+      const path = request.url.replace('/api/rag', '')
+      const method = request.method
+      
+      let body = undefined
+      if (method !== 'GET' && method !== 'HEAD' && method !== 'DELETE') {
+        body = JSON.stringify(request.body)
+      }
+      
+      const honoRequest = new Request(`http://localhost${path}`, {
+        method: method,
+        headers: request.headers as any,
+        body: body
+      })
+      
+      const honoResponse = await ragRoutes.fetch(honoRequest)
+      
+      reply.status(honoResponse.status)
+      
+      // Verifica se a resposta tem conteúdo
+      const text = await honoResponse.text()
+      if (text) {
+        try {
+          return JSON.parse(text)
+        } catch {
+          return { message: text }
+        }
+      }
+      return {}
+    } catch (error) {
+      console.error('Erro na rota RAG:', error)
+      reply.status(500)
+      return { error: 'Erro interno no servidor' }
+    }
   })
 }, { prefix: '' })
 

@@ -4,7 +4,27 @@
   4. sempre que constatar e dizer agora você pode acessar que a aplicação funciona tente em seguida tirar um print ou navegar com puppeteer para confirmar.
   5. sim não precisa me perguntar apenas execute as tarefas até o fim, a não ser
 │   que seja ao critico que vai precisar de uma decisão estrategica.
-  6. busque sempre manter as tarefas atualizadas   
+  6. busque sempre manter as tarefas atualizadas
+  7. USE SEMPRE o Sequential Thinking MCP para resolver problemas complexos, análises profundas e tarefas que precisam de raciocínio estruturado. É uma ferramenta poderosa para manter contexto e permitir revisões durante o processo de resolução.
+
+# Configuração do Sequential Thinking MCP
+
+O Sequential Thinking é uma ferramenta essencial para resolução estruturada de problemas complexos. Use-o para:
+- Dividir problemas complexos em etapas menores
+- Manter contexto ao longo de análises longas
+- Permitir revisão e correção de raciocínio
+- Explorar múltiplas abordagens (branches)
+- Documentar todo o processo de pensamento
+
+Exemplo de uso:
+```
+sequentialthinking({
+  thought: "Analisando o problema X, preciso primeiro entender Y",
+  nextThoughtNeeded: true,
+  thoughtNumber: 1,
+  totalThoughts: 5  // pode ser ajustado conforme necessário
+})
+```
 
 # Configuração do Desktop Commander
 
