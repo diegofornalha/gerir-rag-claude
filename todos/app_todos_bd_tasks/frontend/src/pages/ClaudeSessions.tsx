@@ -105,39 +105,73 @@ export function ClaudeSessions() {
           Playbooks Inativos {actualHiddenCount > 0 && `(${actualHiddenCount})`}
         </button>
         
-        {/* Botão de limpar sessões ocultas */}
+        {/* Botões de limpeza */}
         {showHidden && actualHiddenCount > 0 && (
-          <button
-            onClick={async () => {
-              try {
-                // Primeiro executa o script de limpeza
-                const response = await fetch(`${API_URL}/api/cleanup/empty-todos`, {
-                  method: 'POST'
-                })
-                
-                if (response.ok) {
-                  const result = await response.json()
-                  console.log(`Removidos: ${result.removed} arquivos vazios`)
+          <div className="ml-auto flex gap-2">
+            <button
+              onClick={async () => {
+                try {
+                  // Primeiro executa o script de limpeza
+                  const response = await fetch(`${API_URL}/api/cleanup/empty-todos`, {
+                    method: 'POST'
+                  })
                   
-                  // Limpa a lista de ocultos do localStorage
-                  clearHidden()
-                  
-                  // Força atualização das sessões
-                  queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
-                  
-                  // Volta para aba ativa
-                  setShowHidden(false)
+                  if (response.ok) {
+                    const result = await response.json()
+                    console.log(`Removidos: ${result.removed} arquivos vazios`)
+                    
+                    // Limpa a lista de ocultos do localStorage
+                    clearHidden()
+                    
+                    // Força atualização das sessões
+                    queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
+                    
+                    // Volta para aba ativa
+                    setShowHidden(false)
+                  }
+                } catch (error) {
+                  console.error('Erro ao limpar sessões:', error)
                 }
-              } catch (error) {
-                console.error('Erro ao limpar sessões:', error)
-              }
-            }}
-            className="ml-auto px-3 py-1 text-sm text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors flex items-center gap-1"
-            title="Limpar todas as sessões vazias (remove arquivos)"
-          >
-            <span>🗑️</span>
-            <span>Limpar vazias</span>
-          </button>
+              }}
+              className="px-3 py-1 text-sm text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors flex items-center gap-1"
+              title="Limpar todas as sessões vazias (remove arquivos)"
+            >
+              <span>🗑️</span>
+              <span>Limpar vazias</span>
+            </button>
+            
+            <button
+              onClick={async () => {
+                try {
+                  // Executa limpeza inteligente de projetos órfãos
+                  const response = await fetch(`${API_URL}/api/cleanup/orphaned-todos`, {
+                    method: 'POST'
+                  })
+                  
+                  if (response.ok) {
+                    const result = await response.json()
+                    console.log(`Removidos: ${result.orphaned} arquivos órfãos, ${result.empty} vazios`)
+                    
+                    // Limpa a lista de ocultos do localStorage
+                    clearHidden()
+                    
+                    // Força atualização das sessões
+                    queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
+                    
+                    // Volta para aba ativa
+                    setShowHidden(false)
+                  }
+                } catch (error) {
+                  console.error('Erro ao excluir inativos:', error)
+                }
+              }}
+              className="px-3 py-1 text-sm text-orange-600 hover:text-orange-800 hover:bg-orange-50 rounded-md transition-colors flex items-center gap-1"
+              title="Excluir todos de projetos que não existem mais"
+            >
+              <span>🔄</span>
+              <span>Excluir inativos</span>
+            </button>
+          </div>
         )}
       </div>
       

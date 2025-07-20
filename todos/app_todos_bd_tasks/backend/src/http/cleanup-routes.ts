@@ -109,4 +109,51 @@ export async function cleanupRoutes(app: FastifyInstance) {
       })
     }
   })
+
+  // Nova rota para limpeza inteligente (projetos órfãos)
+  app.post('/api/cleanup/orphaned-todos', {
+    schema: {
+      response: {
+        200: z.object({
+          success: z.boolean(),
+          message: z.string(),
+          orphaned: z.number(),
+          empty: z.number(),
+          preserved: z.number(),
+        }),
+        500: z.object({
+          error: z.string(),
+        }),
+      },
+    },
+  }, async (request, reply) => {
+    try {
+      const scriptPath = `${process.env.HOME}/.claude/todos/limpar_todo_vazia.sh`
+      
+      // Executa o script melhorado
+      const { stdout } = await execAsync(`bash ${scriptPath}`)
+      
+      // Extrai números do output atualizado
+      const orphanedMatch = stdout.match(/Arquivos órfãos removidos[^:]*:\s*(\d+)/)
+      const emptyMatch = stdout.match(/Arquivos vazios removidos[^:]*:\s*(\d+)/)
+      const preservedMatch = stdout.match(/Arquivos preservados[^:]*:\s*(\d+)/)
+      
+      const orphaned = orphanedMatch ? parseInt(orphanedMatch[1]) : 0
+      const empty = emptyMatch ? parseInt(emptyMatch[1]) : 0
+      const preserved = preservedMatch ? parseInt(preservedMatch[1]) : 0
+      
+      return reply.send({
+        success: true,
+        message: 'Limpeza inteligente executada com sucesso',
+        orphaned,
+        empty,
+        preserved,
+      })
+    } catch (error) {
+      console.error('Erro ao executar limpeza inteligente:', error)
+      return reply.status(500).send({
+        error: 'Erro ao executar script de limpeza inteligente',
+      })
+    }
+  })
 }

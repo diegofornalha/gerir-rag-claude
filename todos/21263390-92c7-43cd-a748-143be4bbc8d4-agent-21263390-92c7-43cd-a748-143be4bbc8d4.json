@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Localizar página de playbooks no frontend",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Encontrar botão 'limpar vazias' existente",
+    "status": "completed",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Adicionar botão 'excluir inativos' ao lado",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Integrar script de limpeza inteligente",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

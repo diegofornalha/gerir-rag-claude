@@ -1,15 +1,18 @@
 #!/bin/bash
 # Script para limpar arquivos vazios ou com apenas um array vazio no diretório todos
+# Agora com verificação de projetos órfãos
 
 # Cores para saída
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
+RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 TODOS_DIR="${HOME}/.claude/todos"
+PROJECTS_DIR="${HOME}/.claude/projects"
 
-echo -e "${CYAN}=== Limpeza de Arquivos de Tarefas (Todos) ===${NC}\n"
+echo -e "${CYAN}=== Limpeza Inteligente de Arquivos de Tarefas (Todos) ===${NC}\n"
 
 # Verifica se o diretório existe
 if [ ! -d "$TODOS_DIR" ]; then
@@ -21,6 +24,7 @@ fi
 removed_count=0
 empty_array_count=0
 preserved_count=0
+orphaned_count=0
 
 # Função para verificar se o arquivo contém apenas "[]"
 is_empty_array() {
@@ -44,6 +48,29 @@ has_valid_tasks() {
   fi
 }
 
+# Função para extrair ID do projeto do nome do arquivo
+get_project_id() {
+  local filename="$1"
+  # Extrai o primeiro UUID do nome do arquivo (projeto principal)
+  echo "$filename" | grep -oE '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}' | head -1
+}
+
+# Função para verificar se o projeto existe
+project_exists() {
+  local project_id="$1"
+  if [ -z "$project_id" ]; then
+    return 1  # Falso (ID vazio)
+  fi
+  
+  # Verifica se existe algum arquivo .jsonl com esse ID nos projetos
+  if [ -d "$PROJECTS_DIR" ]; then
+    find "$PROJECTS_DIR" -name "*${project_id}*.jsonl" -type f | grep -q .
+    return $?
+  fi
+  
+  return 1  # Falso (diretório de projetos não existe)
+}
+
 # Lista todos os arquivos JSON no diretório
 echo -e "Procurando arquivos de tarefas...\n"
 
@@ -54,6 +81,12 @@ for file in "$TODOS_DIR"/*.json; do
   fi
   
   filename=$(basename "$file")
+  
+  # Pula arquivos que não são de todos (não contêm "agent" no nome)
+  if [[ ! "$filename" =~ agent ]]; then
+    echo -e "${CYAN}Ignorando arquivo não relacionado a agentes:${NC} $filename"
+    continue
+  fi
   
   # Verifica se é um arquivo vazio
   if [ ! -s "$file" ]; then
@@ -71,10 +104,20 @@ for file in "$TODOS_DIR"/*.json; do
     continue
   fi
   
+  # Extrai ID do projeto
+  project_id=$(get_project_id "$filename")
+  
   # Verifica se tem tarefas válidas
   if has_valid_tasks "$file"; then
-    echo -e "${GREEN}Preservando arquivo com tarefas válidas:${NC} $filename"
-    ((preserved_count++))
+    # Verifica se o projeto ainda existe
+    if project_exists "$project_id"; then
+      echo -e "${GREEN}Preservando arquivo com tarefas válidas (projeto ativo):${NC} $filename"
+      ((preserved_count++))
+    else
+      echo -e "${RED}Removendo arquivo órfão (projeto inexistente):${NC} $filename [ID: $project_id]"
+      rm "$file"
+      ((orphaned_count++))
+    fi
   else
     echo -e "${YELLOW}Removendo arquivo sem tarefas válidas:${NC} $filename"
     rm "$file"
@@ -88,11 +131,18 @@ if [ -f "$TODOS_DIR/todos.md" ]; then
 fi
 
 # Resumo da operação
-echo -e "\n${CYAN}=== Resumo da Limpeza ===${NC}"
-echo -e "${GREEN}Arquivos preservados:${NC} $preserved_count"
+echo -e "\n${CYAN}=== Resumo da Limpeza Inteligente ===${NC}"
+echo -e "${GREEN}Arquivos preservados (projetos ativos):${NC} $preserved_count"
 echo -e "${YELLOW}Arquivos vazios removidos:${NC} $removed_count"
 echo -e "${YELLOW}Arquivos com array vazio removidos:${NC} $empty_array_count"
-echo -e "${YELLOW}Total de arquivos removidos:${NC} $((removed_count + empty_array_count))"
+echo -e "${RED}Arquivos órfãos removidos (projetos inexistentes):${NC} $orphaned_count"
+echo -e "${YELLOW}Total de arquivos removidos:${NC} $((removed_count + empty_array_count + orphaned_count))"
+
+# Mostra projetos órfãos encontrados
+if [ $orphaned_count -gt 0 ]; then
+  echo -e "\n${CYAN}Projetos órfãos detectados e removidos:${NC}"
+  echo -e "${RED}→ Todos relacionados a projetos que não existem mais em $PROJECTS_DIR${NC}"
+fi
 
 # Criação de hook para execução automática
 HOOKS_DIR="${HOME}/.claude/hooks"
@@ -129,12 +179,13 @@ O sistema agora realiza limpeza automática semanal dos arquivos de tarefas (tod
 - Arquivos vazios
 - Arquivos contendo apenas um array vazio "[]"
 - Arquivos sem tarefas válidas
+- **Arquivos órfãos de projetos que não existem mais**
 
 Para limpar manualmente a qualquer momento:
 \`\`\`bash
 ~/.claude/clean_todos.sh
 \`\`\`
 
-A limpeza preserva todos os arquivos com tarefas válidas e o arquivo de documentação todos.md.
+A limpeza preserva todos os arquivos com tarefas válidas relacionados a projetos ativos em \`~/.claude/projects\` e o arquivo de documentação todos.md.
 EOF
 fi
