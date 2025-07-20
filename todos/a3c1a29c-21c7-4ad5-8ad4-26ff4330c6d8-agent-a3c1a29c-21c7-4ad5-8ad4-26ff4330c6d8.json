@@ -72,6 +72,12 @@
     "id": "a2a_jsonrpc_arch"
   },
   {
+    "content": "URGENTE: Remover Google API Key exposta do código",
+    "status": "completed",
+    "priority": "high",
+    "id": "security_fix_api_key"
+  },
+  {
     "content": "SPARC Impl: Implementar JSON-RPC server com suporte a SSE streaming",
     "status": "in_progress",
     "priority": "high",
@@ -172,11 +178,5 @@
     "status": "pending",
     "priority": "low",
     "id": "documentation_impl"
-  },
-  {
-    "content": "URGENTE: Remover Google API Key exposta do código",
-    "status": "pending",
-    "priority": "high",
-    "id": "security_fix_api_key"
   }
 ]
