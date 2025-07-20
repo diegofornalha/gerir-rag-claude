@@ -904,3 +904,18 @@ Claude Flow extends the base coordination with:
 ---
 
 Remember: **Claude Flow coordinates, Claude Code creates!** Start with `mcp__claude-flow__swarm_init` to enhance your development workflow.
+
+## Limpeza Automática de Todos
+
+O sistema agora realiza limpeza automática semanal dos arquivos de tarefas (todos), removendo:
+- Arquivos vazios
+- Arquivos contendo apenas um array vazio "[]"
+- Arquivos sem tarefas válidas
+- **Arquivos órfãos de projetos que não existem mais**
+
+Para limpar manualmente a qualquer momento:
+```bash
+~/.claude/clean_todos.sh
+```
+
+A limpeza preserva todos os arquivos com tarefas válidas relacionados a projetos ativos em `~/.claude/projects` e o arquivo de documentação todos.md.
