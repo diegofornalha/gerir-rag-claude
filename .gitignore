@@ -1,3 +1,4 @@
+ui/
 /.env
 logs/lightrag_error.log
 logs/lightrag_flask_error.log

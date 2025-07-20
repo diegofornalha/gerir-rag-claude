@@ -61,19 +61,19 @@
   },
   {
     "content": "SPARC Pseudo: Mapear endpoints A2A (message/send, message/stream, tasks/*)",
-    "status": "in_progress",
+    "status": "completed",
     "priority": "high",
     "id": "a2a_jsonrpc_pseudo"
   },
   {
     "content": "SPARC Arch: Projetar JSON-RPC server com routing e middleware",
-    "status": "pending",
+    "status": "completed",
     "priority": "high",
     "id": "a2a_jsonrpc_arch"
   },
   {
     "content": "SPARC Impl: Implementar JSON-RPC server com suporte a SSE streaming",
-    "status": "pending",
+    "status": "in_progress",
     "priority": "high",
     "id": "a2a_jsonrpc_impl"
   },
@@ -172,5 +172,11 @@
     "status": "pending",
     "priority": "low",
     "id": "documentation_impl"
+  },
+  {
+    "content": "URGENTE: Remover Google API Key exposta do código",
+    "status": "pending",
+    "priority": "high",
+    "id": "security_fix_api_key"
   }
 ]

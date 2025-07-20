@@ -13,13 +13,13 @@
   },
   {
     "content": "Criar sistema de backup automático",
-    "status": "pending",
+    "status": "completed",
     "priority": "medium",
     "id": "3"
   },
   {
     "content": "Adicionar logs e métricas de performance",
-    "status": "pending",
+    "status": "completed",
     "priority": "medium",
     "id": "4"
   },
@@ -28,5 +28,11 @@
     "status": "completed",
     "priority": "high",
     "id": "5"
+  },
+  {
+    "content": "Completar monitoramento para 10/10",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
   }
 ]

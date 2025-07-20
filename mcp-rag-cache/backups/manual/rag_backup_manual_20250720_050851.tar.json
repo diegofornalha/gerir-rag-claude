@@ -1,0 +1,18 @@
+{
+  "timestamp": "20250720_050851",
+  "type": "manual",
+  "size_bytes": 14759,
+  "size_mb": 0.014075279235839844,
+  "compression": true,
+  "files_included": [
+    "documents.json",
+    "index.pkl",
+    "vectors.npy",
+    "logs/monitor.log",
+    "logs/monitoring.log",
+    "logs/backup.log",
+    "logs/server.log",
+    "config/urls_to_index.json"
+  ],
+  "created_at": "2025-07-20T05:08:51.799471"
+}
