@@ -234,6 +234,20 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
     }
   })
 
+  // Mutation para deletar sessão
+  const deleteSessionMutation = useMutation({
+    mutationFn: async (sessionId: string) => {
+      const response = await fetch(`${API_URL}/api/documents/${sessionId}`, {
+        method: 'DELETE'
+      })
+      if (!response.ok) throw new Error('Erro ao deletar sessão')
+      return response.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['claude-sessions'] })
+    }
+  })
+
   const handleStartEditName = () => {
     setEditingSessionName(true)
     setEditingNameContent(session.customName || session.sessionId)
@@ -250,6 +264,10 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
   const handleCancelEditName = () => {
     setEditingSessionName(false)
     setEditingNameContent('')
+  }
+
+  const handleDeleteSession = () => {
+    deleteSessionMutation.mutate(session.sessionId)
   }
 
   return (
@@ -472,14 +490,26 @@ function SessionCard({ session, isHidden, onHide, onUnhide }: SessionCardProps) 
           Ver detalhes →
         </Link>
         
-        {/* Botão de ocultar/desocultar */}
-        <button
-          onClick={isHidden ? onUnhide : onHide}
-          className="p-1 text-gray-400 hover:text-gray-600 transition-colors text-lg"
-          title={isHidden ? 'Desocultar sessão' : 'Ocultar sessão'}
-        >
-          {isHidden ? '👁️' : '🙈'}
-        </button>
+        <div className="flex items-center gap-2">
+          {/* Botão de deletar */}
+          <button
+            onClick={handleDeleteSession}
+            className="p-1 text-red-400 hover:text-red-600 transition-colors text-lg"
+            title="Deletar sessão"
+            disabled={deleteSessionMutation.isPending}
+          >
+            🗑️
+          </button>
+          
+          {/* Botão de ocultar/desocultar */}
+          <button
+            onClick={isHidden ? onUnhide : onHide}
+            className="p-1 text-gray-400 hover:text-gray-600 transition-colors text-lg"
+            title={isHidden ? 'Desocultar sessão' : 'Ocultar sessão'}
+          >
+            {isHidden ? '👁️' : '🙈'}
+          </button>
+        </div>
       </div>
     </div>
   )

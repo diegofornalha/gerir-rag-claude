@@ -5,7 +5,7 @@ import { join } from 'path';
 import { createReadStream } from 'fs';
 import { unlink } from 'fs/promises';
 
-const PROJECTS_DIR = '/Users/agents/.claude/projects/-Users-agents--claude';
+const PROJECTS_BASE_DIR = '/Users/agents/.claude/projects';
 const CUSTOM_NAMES_FILE = '/Users/agents/.claude/todos/app_todos_bd_tasks/document-names.json';
 
 // Interface para armazenar nomes customizados
@@ -39,50 +39,74 @@ export async function documentsRoutes(app: FastifyInstance) {
   // Listar todos os documentos
   app.get('/api/documents', async (request, reply) => {
     try {
-      const files = await readdir(PROJECTS_DIR);
-      const jsonlFiles = files.filter(f => f.endsWith('.jsonl'));
+      // Buscar em todos os subdiretórios do projects
+      const subDirs = await readdir(PROJECTS_BASE_DIR, { withFileTypes: true });
       const customNames = await loadCustomNames();
       
-      const documents = await Promise.all(
-        jsonlFiles.map(async (file) => {
-          const filePath = join(PROJECTS_DIR, file);
-          const stats = await stat(filePath);
-          const sessionId = file.replace('.jsonl', '');
-          
-          // Contar linhas do arquivo
-          const content = await readFile(filePath, 'utf-8');
-          const lines = content.trim().split('\n').filter(line => line.trim()).length;
-          
-          // Verificar se existe arquivo de todos associado e contar tarefas
-          const todosPath = `/Users/agents/.claude/todos/${sessionId}.json`;
-          let hasTodos = false;
-          let todosCount = 0;
+      const documents = [];
+      
+      // Buscar arquivos JSONL em cada subdiretório
+      for (const dirent of subDirs) {
+        if (dirent.isDirectory()) {
+          const subDirPath = join(PROJECTS_BASE_DIR, dirent.name);
           try {
-            await stat(todosPath);
-            hasTodos = true;
-            // Ler arquivo de todos e contar tarefas
-            const todosContent = await readFile(todosPath, 'utf-8');
-            const todosData = JSON.parse(todosContent);
-            if (Array.isArray(todosData)) {
-              todosCount = todosData.length;
+            const files = await readdir(subDirPath);
+            const jsonlFiles = files.filter(f => f.endsWith('.jsonl'));
+            
+            for (const file of jsonlFiles) {
+              const filePath = join(subDirPath, file);
+              const stats = await stat(filePath);
+              const sessionId = file.replace('.jsonl', '');
+              
+              // Contar linhas do arquivo
+              const content = await readFile(filePath, 'utf-8');
+              const lines = content.trim().split('\n').filter(line => line.trim()).length;
+              
+              // Verificar se existe arquivo de todos associado e contar tarefas
+              let hasTodos = false;
+              let todosCount = 0;
+              
+              try {
+                // Buscar qualquer arquivo que comece com o sessionId
+                const todosDir = '/Users/agents/.claude/todos';
+                const todosFiles = await readdir(todosDir);
+                const matchingFile = todosFiles.find(f => 
+                  f.startsWith(sessionId) && f.endsWith('.json')
+                );
+                
+                if (matchingFile) {
+                  const todosPath = join(todosDir, matchingFile);
+                  hasTodos = true;
+                  // Ler arquivo de todos e contar tarefas
+                  const todosContent = await readFile(todosPath, 'utf-8');
+                  const todosData = JSON.parse(todosContent);
+                  if (Array.isArray(todosData)) {
+                    todosCount = todosData.length;
+                  }
+                }
+              } catch {
+                // Erro ao buscar todos
+                hasTodos = false;
+                todosCount = 0;
+              }
+              
+              documents.push({
+                sessionId,
+                customName: customNames[sessionId],
+                size: stats.size,
+                modifiedAt: stats.mtime.toISOString(),
+                lines,
+                path: filePath,
+                hasTodos,
+                todosCount
+              });
             }
-          } catch {
-            hasTodos = false;
-            todosCount = 0;
+          } catch (error) {
+            // Se não conseguir ler um subdiretório, apenas log e continua
+            app.log.warn(`Erro ao ler subdiretório ${subDirPath}:`, error);
           }
-          
-          return {
-            sessionId,
-            customName: customNames[sessionId],
-            size: stats.size,
-            modifiedAt: stats.mtime.toISOString(),
-            lines,
-            path: filePath,
-            hasTodos,
-            todosCount
-          };
-        })
-      );
+        }
+      }
       
       // Ordenar por data de modificação (mais recente primeiro)
       documents.sort((a, b) => new Date(b.modifiedAt).getTime() - new Date(a.modifiedAt).getTime());
@@ -109,7 +133,27 @@ export async function documentsRoutes(app: FastifyInstance) {
     try {
       const { sessionId } = request.params;
       const { page, limit } = request.query;
-      const filePath = join(PROJECTS_DIR, `${sessionId}.jsonl`);
+      
+      // Buscar o arquivo em todos os subdiretórios
+      let filePath = null;
+      const subDirs = await readdir(PROJECTS_BASE_DIR, { withFileTypes: true });
+      
+      for (const dirent of subDirs) {
+        if (dirent.isDirectory()) {
+          const candidatePath = join(PROJECTS_BASE_DIR, dirent.name, `${sessionId}.jsonl`);
+          try {
+            await stat(candidatePath);
+            filePath = candidatePath;
+            break;
+          } catch {
+            // Arquivo não existe neste subdiretório, continua procurando
+          }
+        }
+      }
+      
+      if (!filePath) {
+        return reply.status(404).send({ error: 'Documento não encontrado' });
+      }
       
       const content = await readFile(filePath, 'utf-8');
       const allLines = content.trim().split('\n').filter(line => line.trim());
@@ -146,9 +190,26 @@ export async function documentsRoutes(app: FastifyInstance) {
       const { sessionId } = request.params;
       const { customName } = request.body;
       
-      // Verificar se o arquivo existe
-      const filePath = join(PROJECTS_DIR, `${sessionId}.jsonl`);
-      await stat(filePath);
+      // Buscar o arquivo em todos os subdiretórios para verificar se existe
+      let fileExists = false;
+      const subDirs = await readdir(PROJECTS_BASE_DIR, { withFileTypes: true });
+      
+      for (const dirent of subDirs) {
+        if (dirent.isDirectory()) {
+          const candidatePath = join(PROJECTS_BASE_DIR, dirent.name, `${sessionId}.jsonl`);
+          try {
+            await stat(candidatePath);
+            fileExists = true;
+            break;
+          } catch {
+            // Arquivo não existe neste subdiretório, continua procurando
+          }
+        }
+      }
+      
+      if (!fileExists) {
+        return reply.status(404).send({ error: 'Documento não encontrado' });
+      }
       
       const customNames = await loadCustomNames();
       customNames[sessionId] = customName;
@@ -171,10 +232,27 @@ export async function documentsRoutes(app: FastifyInstance) {
   }, async (request, reply) => {
     try {
       const { sessionId } = request.params;
-      const filePath = join(PROJECTS_DIR, `${sessionId}.jsonl`);
       
-      // Verificar se o arquivo existe
-      await stat(filePath);
+      // Buscar o arquivo em todos os subdiretórios
+      let filePath = null;
+      const subDirs = await readdir(PROJECTS_BASE_DIR, { withFileTypes: true });
+      
+      for (const dirent of subDirs) {
+        if (dirent.isDirectory()) {
+          const candidatePath = join(PROJECTS_BASE_DIR, dirent.name, `${sessionId}.jsonl`);
+          try {
+            await stat(candidatePath);
+            filePath = candidatePath;
+            break;
+          } catch {
+            // Arquivo não existe neste subdiretório, continua procurando
+          }
+        }
+      }
+      
+      if (!filePath) {
+        return reply.status(404).send({ error: 'Documento não encontrado' });
+      }
       
       const customNames = await loadCustomNames();
       const filename = customNames[sessionId] 
@@ -201,10 +279,27 @@ export async function documentsRoutes(app: FastifyInstance) {
   }, async (request, reply) => {
     try {
       const { sessionId } = request.params;
-      const filePath = join(PROJECTS_DIR, `${sessionId}.jsonl`);
       
-      // Verificar se o arquivo existe
-      await stat(filePath);
+      // Buscar o arquivo em todos os subdiretórios
+      let filePath = null;
+      const subDirs = await readdir(PROJECTS_BASE_DIR, { withFileTypes: true });
+      
+      for (const dirent of subDirs) {
+        if (dirent.isDirectory()) {
+          const candidatePath = join(PROJECTS_BASE_DIR, dirent.name, `${sessionId}.jsonl`);
+          try {
+            await stat(candidatePath);
+            filePath = candidatePath;
+            break;
+          } catch {
+            // Arquivo não existe neste subdiretório, continua procurando
+          }
+        }
+      }
+      
+      if (!filePath) {
+        return reply.status(404).send({ error: 'Documento não encontrado' });
+      }
       
       // Excluir arquivo
       await unlink(filePath);
