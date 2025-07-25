@@ -130,7 +130,7 @@ Transformar a interface RAG atual (mockada) em um sistema completo de busca e vi
    // services/ragWebSocket.ts
    class RAGWebSocketManager {
      connect() {
-       this.ws = new WebSocket('ws://localhost:3333/rag-updates')
+       this.ws = new WebSocket('ws://localhost:3344/rag-updates')
        this.ws.onmessage = (event) => {
          const update = JSON.parse(event.data)
          this.handleUpdate(update)

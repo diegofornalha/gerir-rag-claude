@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { issues } from '../db/collections/issues-local'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3344'
 
 export function EditIssueLocal() {
   const { id } = useParams<{ id: string }>()

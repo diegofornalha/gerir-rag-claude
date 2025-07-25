@@ -22,7 +22,7 @@ interface SessionDetail {
   }
 }
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3344'
 
 const priorityColors = {
   high: 'bg-red-100 text-red-800 border-red-200',

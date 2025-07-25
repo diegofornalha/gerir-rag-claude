@@ -5,7 +5,7 @@
  */
 
 async function testSync() {
-  const baseUrl = 'http://localhost:3333/api/rag/sync';
+  const baseUrl = 'http://localhost:3344/api/rag/sync';
   
   console.log('🧪 Testando sincronização RAG...\n');
   
@@ -51,7 +51,7 @@ async function testSync() {
     
   } catch (error) {
     console.error('❌ Erro no teste:', error.message);
-    console.log('\n💡 Certifique-se de que o servidor backend está rodando na porta 3333');
+    console.log('\n💡 Certifique-se de que o servidor backend está rodando na porta 3344');
   }
 }
 

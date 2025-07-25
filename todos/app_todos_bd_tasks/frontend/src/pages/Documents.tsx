@@ -39,7 +39,7 @@ export default function Documents() {
   const { data: documents, isLoading, error } = useQuery<Document[]>({
     queryKey: ['documents'],
     queryFn: async () => {
-      const response = await fetch('http://localhost:3333/api/documents');
+      const response = await fetch('http://localhost:3344/api/documents');
       if (!response.ok) throw new Error('Erro ao buscar documentos');
       return response.json();
     },
@@ -48,7 +48,7 @@ export default function Documents() {
   // Buscar conteúdo de um documento
   const fetchDocumentContent = async (sessionId: string, page: number = 1) => {
     const response = await fetch(
-      `http://localhost:3333/api/documents/${sessionId}/content?page=${page}&limit=${linesPerPage}`
+      `http://localhost:3344/api/documents/${sessionId}/content?page=${page}&limit=${linesPerPage}`
     );
     if (!response.ok) throw new Error('Erro ao buscar conteúdo');
     const data = await response.json();
@@ -58,7 +58,7 @@ export default function Documents() {
   // Mutation para atualizar nome customizado
   const updateNameMutation = useMutation({
     mutationFn: async ({ sessionId, customName }: { sessionId: string; customName: string }) => {
-      const response = await fetch(`http://localhost:3333/api/documents/${sessionId}/name`, {
+      const response = await fetch(`http://localhost:3344/api/documents/${sessionId}/name`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ customName }),
@@ -77,7 +77,7 @@ export default function Documents() {
   // Mutation para excluir documento
   const deleteMutation = useMutation({
     mutationFn: async (sessionId: string) => {
-      const response = await fetch(`http://localhost:3333/api/documents/${sessionId}`, {
+      const response = await fetch(`http://localhost:3344/api/documents/${sessionId}`, {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error('Erro ao excluir documento');
@@ -91,7 +91,7 @@ export default function Documents() {
   // Download de documento
   const handleDownload = async (doc: Document) => {
     try {
-      const response = await fetch(`http://localhost:3333/api/documents/${doc.sessionId}/download`);
+      const response = await fetch(`http://localhost:3344/api/documents/${doc.sessionId}/download`);
       if (!response.ok) throw new Error('Erro ao baixar arquivo');
       
       const blob = await response.blob();

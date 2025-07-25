@@ -32,7 +32,7 @@ export function RAGManagerSimple() {
       setError(null)
       
       // Buscar documentos da API real
-      const response = await fetch('http://localhost:3333/api/rag/documents?limit=50')
+      const response = await fetch('http://localhost:3344/api/rag/documents?limit=50')
       
       if (!response.ok) {
         throw new Error('Erro ao buscar documentos')
@@ -74,7 +74,7 @@ export function RAGManagerSimple() {
     try {
       setLoading(true)
       setError(null)
-      const response = await fetch('http://localhost:3333/api/rag/search', {
+      const response = await fetch('http://localhost:3344/api/rag/search', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: searchQuery, top_k: 10 })

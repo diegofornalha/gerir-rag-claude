@@ -26,7 +26,7 @@ export class SyncEngine {
   private conflicts = 0;
   
   private options: Required<SyncEngineOptions> = {
-    wsUrl: process.env.REACT_APP_WS_URL || 'ws://localhost:3333/sync',
+    wsUrl: process.env.REACT_APP_WS_URL || 'ws://localhost:3344/sync',
     batchSize: 100,
     syncInterval: 30000, // 30 seconds
     enableAutoSync: true,

@@ -24,7 +24,7 @@ export function RAGSyncManager() {
   const { data: status, isLoading, refetch } = useQuery<SyncStatus>({
     queryKey: ['rag-sync-status'],
     queryFn: async () => {
-      const response = await fetch('http://localhost:3333/api/rag/sync/status');
+      const response = await fetch('http://localhost:3344/api/rag/sync/status');
       if (!response.ok) throw new Error('Erro ao buscar status');
       const result = await response.json();
       return result.data;
@@ -35,7 +35,7 @@ export function RAGSyncManager() {
   // Mutation para sincronizar cache → DB
   const syncCacheToDb = useMutation({
     mutationFn: async () => {
-      const response = await fetch('http://localhost:3333/api/rag/sync/cache-to-db', {
+      const response = await fetch('http://localhost:3344/api/rag/sync/cache-to-db', {
         method: 'POST'
       });
       if (!response.ok) throw new Error('Erro na sincronização');
@@ -53,7 +53,7 @@ export function RAGSyncManager() {
   // Mutation para verificar DB → Cache
   const syncDbToCache = useMutation({
     mutationFn: async () => {
-      const response = await fetch('http://localhost:3333/api/rag/sync/db-to-cache', {
+      const response = await fetch('http://localhost:3344/api/rag/sync/db-to-cache', {
         method: 'POST'
       });
       if (!response.ok) throw new Error('Erro na verificação');
@@ -75,7 +75,7 @@ export function RAGSyncManager() {
   // Mutation para ativar sync automático
   const toggleAutoSync = useMutation({
     mutationFn: async () => {
-      const response = await fetch('http://localhost:3333/api/rag/sync/auto', {
+      const response = await fetch('http://localhost:3344/api/rag/sync/auto', {
         method: 'POST'
       });
       if (!response.ok) throw new Error('Erro ao configurar sync automático');

@@ -578,8 +578,8 @@ app.setErrorHandler((error, _request, reply) => {
 
 const start = async () => {
   try {
-    await app.listen({ port: 3333, host: '0.0.0.0' })
-    app.log.info('🚀 HTTP server running on http://localhost:3333')
+    await app.listen({ port: 3344, host: '0.0.0.0' })
+    app.log.info('🚀 HTTP server running on http://localhost:3344')
   } catch (err) {
     app.log.error(err)
     process.exit(1)

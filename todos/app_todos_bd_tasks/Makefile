@@ -134,7 +134,7 @@ db-seed:
 ## api-docs: Abre documentação da API
 api-docs:
 	@echo "$(BLUE)📚 Abrindo documentação da API...$(NC)"
-	@open http://localhost:3333/docs || xdg-open http://localhost:3333/docs
+	@open http://localhost:3344/docs || xdg-open http://localhost:3344/docs
 
 ## dev: Atalho para desenvolvimento (clean-start + logs em nova janela)
 dev:
@@ -144,8 +144,8 @@ dev:
 	@echo ""
 	@echo "$(BLUE)URLs:$(NC)"
 	@echo "  Frontend: http://localhost:5173"
-	@echo "  Backend:  http://localhost:3333"
-	@echo "  API Docs: http://localhost:3333/docs"
+	@echo "  Backend:  http://localhost:3344"
+	@echo "  API Docs: http://localhost:3344/docs"
 	@echo ""
 	@echo "$(YELLOW)💡 Para ver logs em tempo real:$(NC)"
 	@echo "  make logs"

@@ -36,7 +36,7 @@ echo -e "${BLUE}🔧 Iniciando serviços...${NC}"
 
 # Backend
 cd "$BASE_DIR/backend"
-echo -e "${YELLOW}Iniciando backend na porta 3333...${NC}"
+echo -e "${YELLOW}Iniciando backend na porta 3344...${NC}"
 pnpm dev &
 BACKEND_PID=$!
 
@@ -52,7 +52,7 @@ echo -e "${GREEN}✅ Serviços iniciados!${NC}"
 echo ""
 echo -e "${BLUE}URLs:${NC}"
 echo "  Frontend: http://localhost:5173"
-echo "  Backend:  http://localhost:3333"
+echo "  Backend:  http://localhost:3344"
 echo "  Claude Sessions: http://localhost:5173/claude-sessions"
 echo ""
 echo -e "${YELLOW}PIDs dos processos:${NC}"

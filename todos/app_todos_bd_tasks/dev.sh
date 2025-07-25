@@ -79,9 +79,9 @@ stop_services() {
     echo -e "${YELLOW}🛑 Parando serviços...${NC}"
     
     # Para processos nas portas específicas
-    if check_process 3333; then
-        echo "  Parando backend (porta 3333)..."
-        kill $(lsof -t -i:3333) 2>/dev/null || true
+    if check_process 3344; then
+        echo "  Parando backend (porta 3344)..."
+        kill $(lsof -t -i:3344) 2>/dev/null || true
     fi
     
     if check_process 5173; then
@@ -102,8 +102,8 @@ start_services() {
     echo -e "${YELLOW}🚀 Iniciando serviços...${NC}"
     
     # Verifica se as portas estão livres
-    if check_process 3333; then
-        echo -e "${RED}❌ Backend já está rodando na porta 3333${NC}"
+    if check_process 3344; then
+        echo -e "${RED}❌ Backend já está rodando na porta 3344${NC}"
         echo "   Use './dev.sh restart' para reiniciar"
         exit 1
     fi
@@ -130,8 +130,8 @@ start_services() {
     sleep 3
     
     # Verifica se iniciaram corretamente
-    if check_process 3333; then
-        echo -e "  ${GREEN}✓ Backend rodando em http://localhost:3333${NC}"
+    if check_process 3344; then
+        echo -e "  ${GREEN}✓ Backend rodando em http://localhost:3344${NC}"
     else
         echo -e "  ${RED}✗ Falha ao iniciar backend${NC}"
     fi
@@ -151,8 +151,8 @@ show_status() {
     echo -e "${BLUE}=== Status dos Serviços ===${NC}"
     echo ""
     
-    if check_process 3333; then
-        echo -e "Backend:  ${GREEN}● Rodando${NC} (porta 3333)"
+    if check_process 3344; then
+        echo -e "Backend:  ${GREEN}● Rodando${NC} (porta 3344)"
     else
         echo -e "Backend:  ${RED}○ Parado${NC}"
     fi

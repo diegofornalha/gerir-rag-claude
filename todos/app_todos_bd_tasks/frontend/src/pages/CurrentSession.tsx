@@ -4,7 +4,7 @@ import { ptBR } from 'date-fns/locale'
 
 // ID da sessão atual
 const CURRENT_SESSION_ID = '320197f4-9f03-475e-9703-7b9ce2c918e8'
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3344'
 
 interface Todo {
   id: string

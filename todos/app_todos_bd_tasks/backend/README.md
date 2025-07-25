@@ -85,7 +85,7 @@ pnpm db:seed
 ```bash
 pnpm dev
 ```
-O servidor iniciará em http://localhost:3333
+O servidor iniciará em http://localhost:3344
 
 ### Produção
 ```bash

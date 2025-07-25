@@ -6,7 +6,7 @@ import { ptBR } from 'date-fns/locale'
 import toast from 'react-hot-toast'
 import { useParams } from 'react-router-dom'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3344'
 
 export function RAGManagerEnhanced() {
   const [activeTab, setActiveTab] = useState<'documents' | 'search' | 'add'>('documents')

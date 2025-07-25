@@ -52,7 +52,7 @@ Retorna issues transformadas em formato de tarefas.
 
 **Exemplo de Requisição:**
 ```bash
-curl "http://localhost:3333/tasks?page=1&limit=10&userId=1"
+curl "http://localhost:3344/tasks?page=1&limit=10&userId=1"
 ```
 
 **Exemplo de Resposta:**
@@ -102,7 +102,7 @@ Novo endpoint que:
 ### JavaScript/TypeScript
 ```javascript
 // Buscar tarefas
-const response = await fetch('http://localhost:3333/tasks?limit=5');
+const response = await fetch('http://localhost:3344/tasks?limit=5');
 const tasks = await response.json();
 
 console.log(tasks);
