@@ -3,12 +3,7 @@
 > vite
 
 
-  VITE v6.3.5  ready in 367 ms
+  VITE v6.3.5  ready in 373 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
-03:15:17 [vite] (client) hmr update /src/app.tsx, /src/index.css
-04:37:22 [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
-04:37:31 [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
-04:37:41 [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
-04:39:33 [vite] (client) hmr update /src/pages/ClaudeSessions.tsx, /src/index.css
